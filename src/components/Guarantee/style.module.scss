@@ -1,0 +1,121 @@
+.container {
+  background: #040122;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  padding-block: 90px;
+  padding-inline: 90px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+}
+
+.leftside {
+  color: #fff;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  padding-bottom: 30px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -65%);
+    background-image: url("/seven.svg");
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 160%;
+    z-index: 1;
+  }
+
+  .leftsideContent {
+    position: relative;
+    z-index: 2;
+    h5 {
+      color: #fff;
+      font-family: Syne;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 51.2px;
+      text-transform: uppercase;
+    }
+  }
+
+  .stars {
+    display: flex;
+
+    img {
+      margin: 0 2px; // Spacing between stars
+      width: 20px; // Star image width
+      height: auto; // Keep aspect ratio
+    }
+  }
+}
+
+.rightside {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 30px;
+  h5 {
+    color: #fff;
+    font-family: Syne;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 51.2px;
+    span {
+      color: #4b3cff;
+    }
+  }
+  p {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28.8px;
+  }
+}
+
+.bottom {
+  display: flex;
+  gap: 76px;
+  padding-top: 87px;
+}
+
+.info {
+  display: flex;
+  gap: 15px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  h5 {
+    color: #fff;
+    font-family: Syne;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 35.2px;
+  }
+  p {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28.8px;
+  }
+}
