@@ -1,11 +1,12 @@
 .container {
   background-image: linear-gradient(
       to right,
-      rgba(4, 1, 25, 0.8) 50%,
-      rgba(0, 0, 0, 0) 110%
+      rgba(4, 1, 25, 0.96) 50%,
+      rgba(0, 0, 0, 0) 160%
     ),
     url("/code.webp"),
     linear-gradient(180deg, rgba(4, 1, 25, 0.8) 56%, #0e004d 100%);
+
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover, cover, cover;
@@ -131,7 +132,7 @@
 @keyframes float1 {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateY(50px);
   }
   50% {
     transform: translateY(-20px);
@@ -161,7 +162,7 @@
 @keyframes float4 {
   0%,
   100% {
-    transform: translateY(10px);
+    transform: translateY(-120px);
   }
   50% {
     transform: translateY(-20px);
