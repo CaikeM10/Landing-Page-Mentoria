@@ -32,14 +32,24 @@
 .bottom {
   display: flex;
   justify-content: space-around;
+  padding-block: 35px;
 }
 
 .leftbox,
 .rightbox {
   display: flex;
   flex-direction: column;
-  padding-block: 20px;
+  padding-block: 40px;
+  padding-inline: 30px;
   gap: 30px;
+}
+
+.leftbox {
+  background: linear-gradient(0deg, #000001, #202021);
+}
+
+.rightbox {
+  background: linear-gradient(0deg, #050324, #4939fb);
 }
 
 .title {
@@ -61,6 +71,7 @@
 .pros {
   display: flex;
   gap: 15px;
+  align-items: center;
   p {
     color: #fff;
     text-align: center;
