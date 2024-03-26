@@ -19,27 +19,27 @@ const SectionTwo = () => {
                 <h5>Curso meio boca</h5>
               </div>
               <div className={styles.cons}>
-                <img src="" />
+                <img src="/redX.svg" />
                 <p>Faturamento incerto</p>
               </div>
               <div className={styles.cons}>
-                <img src="" />
+                <img src="/redX.svg" />
                 <p>Professor que não vive o que ensina</p>
               </div>
               <div className={styles.cons}>
-                <img src="" />
+                <img src="/redX.svg" />
                 <p>Falta de organização</p>
               </div>
               <div className={styles.cons}>
-                <img src="" />
+                <img src="/redX.svg" />
                 <p>Curso básico</p>
               </div>
               <div className={styles.cons}>
-                <img src="" />
+                <img src="/redX.svg" />
                 <p>Não ensina sobre o mercado real</p>
               </div>
               <div className={styles.cons}>
-                <img src="" />
+                <img src="/redX.svg" />
                 <p>Sem suporte</p>
               </div>
             </div>
@@ -50,23 +50,23 @@ const SectionTwo = () => {
                 </h5>
               </div>
               <div className={styles.pros}>
-                <img src="" />
+                <img src="correct.svg" />
                 <p>Faturamento alto</p>
               </div>
               <div className={styles.pros}>
-                <img src="" />
+                <img src="correct.svg" />
                 <p>Professor vive o que ensina</p>
               </div>
               <div className={styles.pros}>
-                <img src="" />
+                <img src="correct.svg" />
                 <p>Curso ponta a ponta</p>
               </div>
               <div className={styles.pros}>
-                <img src="" />
+                <img src="correct.svg" />
                 <p>Bônus sobre mercado de trabalho</p>
               </div>
               <div className={styles.pros}>
-                <img src="" />
+                <img src="correct.svg" />
                 <p>Suporte exclusivo do rei</p>
               </div>
               <div className={styles.logo}>
