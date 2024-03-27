@@ -1,15 +1,15 @@
 .container {
   background-image: linear-gradient(
       to right,
-      rgba(4, 1, 25, 0.96) 50%,
-      rgba(0, 0, 0, 0) 160%
+      rgba(2, 0, 30, 0.979) 50%,
+      rgba(2, 0, 60, 0.8) 100%
     ),
     url("/code.webp"),
-    linear-gradient(180deg, rgba(4, 1, 25, 0.8) 56%, #0e004d 100%);
+    linear-gradient(180deg, rgba(2, 0, 30, 0.8) 0%, #0a004d 100%);
 
   background-repeat: no-repeat;
-  background-position: right;
-  background-size: cover, cover, cover;
+  background-position: right, center, center;
+  background-size: cover;
 }
 
 .content {
