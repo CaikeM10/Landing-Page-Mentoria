@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import { Swiper as SwiperClass } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -6,6 +8,40 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./style.module.scss";
 
 const Students = () => {
+  const [swiperInstance, setSwiperInstance] = useState<SwiperClass | null>(
+    null
+  );
+
+  useEffect(() => {
+    let lastKnownScrollPosition = 0;
+    let ticking = false;
+
+    const handleScroll = () => {
+      lastKnownScrollPosition = window.scrollY;
+
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (swiperInstance) {
+            const windowHeight = window.innerHeight;
+            const totalScrollHeight = document.body.offsetHeight - windowHeight;
+            const scrollFraction = lastKnownScrollPosition / totalScrollHeight;
+            const maxSlideIndex = swiperInstance.slides.length - 1;
+            const targetSlideIndex = Math.round(maxSlideIndex * scrollFraction);
+
+            swiperInstance.slideTo(targetSlideIndex, 1000); // Adjust speed for smoother transition
+          }
+          ticking = false;
+        });
+
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [swiperInstance]);
+
   return (
     <>
       <main className={styles.container}>
@@ -19,9 +55,11 @@ const Students = () => {
           <div className={styles.swiper}>
             <Swiper
               modules={[Navigation, EffectCoverflow, Autoplay]}
+              onSwiper={setSwiperInstance}
               effect={"coverflow"}
               slidesPerView={3}
-              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              speed={1000}
+              // autoplay={{ delay: 3000, disableOnInteraction: false }}
               pagination={{ clickable: true }}
               coverflowEffect={{
                 rotate: 0,
