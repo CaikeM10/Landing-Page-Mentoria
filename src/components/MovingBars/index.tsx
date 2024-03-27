@@ -1,30 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./style.module.scss";
 
 const MovingBars = () => {
-  const [scrollPercentage, setScrollPercentage] = useState(0);
-
-  useEffect(() => {
-    const updateScrollPercentage = () => {
-      const windowHeight = document.body.offsetHeight - window.innerHeight;
-      const scrollProgress = window.scrollY / windowHeight;
-      const factor = 2;
-      setScrollPercentage((1 - scrollProgress) * 100 * factor - 50 * factor);
-    };
-
-    window.addEventListener("scroll", updateScrollPercentage);
-
-    return () => window.removeEventListener("scroll", updateScrollPercentage);
-  }, []);
-
   return (
     <>
       <div className={styles.movingBars}>
         <div className={styles.topBar}>
-          <div
-            className={styles.topBarContent}
-            style={{ transform: `translateX(${scrollPercentage - 100}%)` }}
-          >
+          <div className={styles.topBarContent}>
             <React.Fragment key="0">
               <img src="/diamond.svg" />
               <span>ACESSO VITALÍCIO</span>
@@ -96,10 +78,7 @@ const MovingBars = () => {
           </div>
         </div>
         <div className={styles.bottomBar}>
-          <div
-            className={styles.bottomBarContent}
-            style={{ transform: `translateX(${scrollPercentage - 100}%)` }}
-          >
+          <div className={styles.bottomBarContent}>
             <React.Fragment key="0">
               <img src="/diamond.svg" />
               <span>ACESSO VITALÍCIO</span>

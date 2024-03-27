@@ -1,6 +1,7 @@
 import Guarantee from "@/components/Guarantee";
 import Header from "@/components/Header";
 import MovingBars from "@/components/MovingBars";
+import HorizontalScrollPage from "@/components/NewTest";
 import SectionOne from "@/components/SectionOne";
 import SectionTwo from "@/components/SectionTwo";
 import Students from "@/components/Swiper";
@@ -16,6 +17,8 @@ export default function Home() {
       <Guarantee />
       <Students />
       <Who />
+
+      <HorizontalScrollPage />
     </>
   );
 }
