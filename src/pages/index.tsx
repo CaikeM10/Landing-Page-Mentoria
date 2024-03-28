@@ -14,9 +14,17 @@ import { useState } from "react";
 
 export default function Home() {
   const [hasScrolledToEnd, setHasScrolledToEnd] = useState(false);
+  const [canScrollUpPastHorizontalPage, setCanScrollUpPastHorizontalPage] =
+    useState(true);
 
   const handleScrollToEnd = () => {
     setHasScrolledToEnd(true);
+    setCanScrollUpPastHorizontalPage(false); // Prevent scrolling up past HorizontalScrollPage
+  };
+
+  const handleScrollToStart = () => {
+    setHasScrolledToEnd(false);
+    setCanScrollUpPastHorizontalPage(true); // Allow scrolling up past HorizontalScrollPage
   };
 
   return (
@@ -28,7 +36,11 @@ export default function Home() {
       <Guarantee />
       <Students />
       <Who />
-      <HorizontalScrollPage onScrollEnd={handleScrollToEnd} />
+
+      <HorizontalScrollPage
+        onScrollEnd={handleScrollToEnd}
+        onScrollStart={handleScrollToStart}
+      />
       {hasScrolledToEnd && (
         <>
           <Bonus />
