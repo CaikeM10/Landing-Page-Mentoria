@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./styles.module.scss";
 
-const HorizontalScrollPage: React.FC<{ onScrollEnd: () => void }> = ({
-  onScrollEnd,
-}) => {
+const HorizontalScrollPage: React.FC<{
+  onScrollEnd: () => void;
+  onScrollStart: () => void;
+}> = ({ onScrollEnd, onScrollStart }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isDarkBackground, setIsDarkBackground] = useState(false);
 
@@ -31,6 +32,8 @@ const HorizontalScrollPage: React.FC<{ onScrollEnd: () => void }> = ({
       const { scrollLeft, clientWidth, scrollWidth } = container;
       if (scrollLeft + clientWidth >= scrollWidth) {
         onScrollEnd();
+      } else if (scrollLeft === 0) {
+        onScrollStart();
       }
       if (!container) return;
       const threshold = 1;
