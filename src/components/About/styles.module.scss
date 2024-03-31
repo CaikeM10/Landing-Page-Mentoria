@@ -1,7 +1,10 @@
 .container {
   background: url("/last.svg") lightgray 0px -38.04px / 100% 107.977% no-repeat;
-  background-size: cover; /* Cover the entire area of the element */
+  background-size: cover;
   background-position: center;
+  @media screen and (max-width: 768px) {
+    background-position: 60% center;
+  }
 }
 
 .content {
@@ -9,6 +12,10 @@
   max-width: 1440px;
   margin: 0 auto;
   padding-block: 200px;
+  @media screen and (max-width: 768px) {
+    padding-block: 150px;
+    padding-inline: 45px;
+  }
 }
 
 .texts {
@@ -18,6 +25,9 @@
   text-align: left;
   padding-left: 81px;
   gap: 20px;
+  @media screen and (max-width: 768px) {
+    padding-left: 0px;
+  }
 }
 
 .title {
@@ -28,6 +38,10 @@
     font-style: normal;
     font-weight: 600;
     line-height: 57.6px;
+    @media screen and (max-width: 768px) {
+      font-size: 32px;
+      line-height: 40px;
+    }
     span {
       color: #4b3cff;
     }

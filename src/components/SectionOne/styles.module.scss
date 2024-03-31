@@ -19,12 +19,18 @@
   padding-inline: 170px;
   padding-block: 60px;
   margin: 0 auto;
+  @media screen and (max-width: 768px) {
+    padding-inline: 45px;
+  }
 }
 
 .leftside {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media screen and (max-width: 768px) {
+    z-index: 10;
+  }
   img {
     width: 200px;
     height: 100px;
@@ -37,6 +43,9 @@
     font-weight: 600;
     line-height: 43px;
     white-space: normal;
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
     span {
       color: #4b3cff;
       padding-left: 10px;
@@ -49,6 +58,9 @@
     font-style: normal;
     font-weight: 400;
     line-height: 30px;
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+    }
   }
   button {
     border-radius: 3px;
@@ -58,6 +70,10 @@
     padding-block: 20px;
     border: none;
     cursor: pointer;
+    @media screen and (max-width: 768px) {
+      white-space: nowrap;
+      padding-inline: 55px;
+    }
     p {
       color: #fff;
       text-align: center;
@@ -104,29 +120,47 @@
       animation-duration: 10s;
       animation-timing-function: ease-in-out;
       animation-iteration-count: infinite;
+      @media screen and (max-width: 768px) {
+        opacity: 0.5;
+      }
     }
 
     img:nth-child(1) {
       animation-name: float1;
       left: -60%;
+      @media screen and (max-width: 768px) {
+        left: -130%;
+      }
     }
     img:nth-child(2) {
       animation-name: float2;
       left: 40%;
+      @media screen and (max-width: 768px) {
+        left: -250%;
+      }
     }
     img:nth-child(3) {
       animation-name: float3;
       right: 80%;
+      @media screen and (max-width: 768px) {
+        right: 270%;
+      }
     }
     img:nth-child(4) {
       animation-name: float4;
       right: -60%;
+      @media screen and (max-width: 768px) {
+        right: 150%;
+      }
     }
   }
 
   .herbert {
     position: absolute;
     z-index: 10;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 }
 

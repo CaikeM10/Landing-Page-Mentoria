@@ -24,11 +24,18 @@ const Students = () => {
           if (swiperInstance) {
             const windowHeight = window.innerHeight;
             const totalScrollHeight = document.body.offsetHeight - windowHeight;
-            const scrollFraction = lastKnownScrollPosition / totalScrollHeight;
+            // Adjust scroll sensitivity based on device width
+            const deviceWidth = window.innerWidth;
+            const scrollSensitivity = deviceWidth <= 738 ? 3 : 2; // Increase or decrease this value to adjust sensitivity
+            const scrollFraction =
+              (lastKnownScrollPosition / totalScrollHeight) * scrollSensitivity;
             const maxSlideIndex = swiperInstance.slides.length - 1;
-            const targetSlideIndex = Math.round(maxSlideIndex * scrollFraction);
+            const targetSlideIndex = Math.min(
+              Math.round(maxSlideIndex * scrollFraction),
+              maxSlideIndex
+            );
 
-            swiperInstance.slideTo(targetSlideIndex, 1000); // Adjust speed for smoother transition
+            swiperInstance.slideTo(targetSlideIndex, 1000);
           }
           ticking = false;
         });
