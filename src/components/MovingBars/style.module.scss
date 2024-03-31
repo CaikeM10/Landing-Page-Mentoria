@@ -36,6 +36,9 @@
   gap: 30px;
   width: 100%;
   animation: scrolling-left 20s linear infinite;
+  @media screen and (max-width: 768px) {
+    animation: scrolling-left 10s linear infinite;
+  }
   span {
     color: #fff;
     font-family: Montserrat;

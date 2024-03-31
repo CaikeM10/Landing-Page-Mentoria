@@ -24,9 +24,8 @@ const Students = () => {
           if (swiperInstance) {
             const windowHeight = window.innerHeight;
             const totalScrollHeight = document.body.offsetHeight - windowHeight;
-            // Adjust scroll sensitivity based on device width
             const deviceWidth = window.innerWidth;
-            const scrollSensitivity = deviceWidth <= 738 ? 3 : 2; // Increase or decrease this value to adjust sensitivity
+            const scrollSensitivity = deviceWidth <= 738 ? 3 : 2;
             const scrollFraction =
               (lastKnownScrollPosition / totalScrollHeight) * scrollSensitivity;
             const maxSlideIndex = swiperInstance.slides.length - 1;
@@ -66,7 +65,6 @@ const Students = () => {
               effect={"coverflow"}
               slidesPerView={3}
               speed={1000}
-              // autoplay={{ delay: 3000, disableOnInteraction: false }}
               pagination={{ clickable: true }}
               coverflowEffect={{
                 rotate: 0,

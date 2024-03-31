@@ -12,6 +12,7 @@
   @media screen and (max-width: 768px) {
     padding-inline: 45px;
     padding-top: 90px;
+    padding-bottom: 60px;
   }
 }
 
@@ -81,6 +82,9 @@
   flex-direction: column;
   gap: 20px;
   padding-bottom: 30px;
+  @media screen and (max-width: 768px) {
+    padding-bottom: 0px;
+  }
   h5 {
     color: #fff;
     font-family: Syne;
