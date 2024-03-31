@@ -11,10 +11,9 @@
 .title {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+
   justify-content: center;
   @media screen and (max-width: 768px) {
-    gap: 0px;
     padding-inline: 39px;
   }
   h2 {

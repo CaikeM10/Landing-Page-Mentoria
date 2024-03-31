@@ -9,8 +9,10 @@ const SectionOne = () => {
             <img className={styles.logo} src="/logo.svg" />
             <h1>
               Tudo o que você precisa saber para mudar de vida e
-              <span>ganhar mais de 5 mil reais por semana</span> criando sites
-              da sua casa.
+              <span className={styles.auroraSpan}>
+                ganhar mais de 5 mil reais por semana
+              </span>{" "}
+              criando sites da sua casa.
             </h1>
             <h5>
               Aprenda com quem vive o que fala, a fazer da sua casa o que vai
