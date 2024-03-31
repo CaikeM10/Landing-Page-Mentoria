@@ -25,6 +25,9 @@
     font-style: normal;
     font-weight: 600;
     line-height: 51.2px;
+    @media screen and (max-width: 768px) {
+      text-align: left;
+    }
     span {
       color: #4b3cff;
     }
