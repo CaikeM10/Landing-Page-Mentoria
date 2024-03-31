@@ -20,7 +20,7 @@ const Guarantee = () => {
           </div>
           <div className={styles.rightside}>
             <h5>
-              Experimente por <span>7 dias</span>
+              Experimente por <span className={styles.auroraSpan}>7 dias</span>
             </h5>
             <p>Garantindo a sua vaga agora, você não corre risco nenhum!</p>
             <p>

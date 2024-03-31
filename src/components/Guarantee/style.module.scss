@@ -96,9 +96,6 @@
       font-size: 30px;
       line-height: 45.2px;
     }
-    span {
-      color: #4b3cff;
-    }
   }
   p {
     color: #fff;
@@ -154,5 +151,34 @@
     @media screen and (max-width: 768px) {
       font-size: 16px;
     }
+  }
+}
+
+.auroraSpan {
+  position: relative;
+  background: linear-gradient(
+    270deg,
+    #00c2ff,
+    #33ff8c,
+    #ffc640,
+    #e54cff,
+    #00c2ff,
+    #33ff8c
+  );
+  background-size: 600% auto;
+  color: transparent;
+  -webkit-text-fill-color: transparent; // Necessary for WebKit browsers
+  background-clip: text;
+  -webkit-background-clip: text; // Necessary for WebKit browsers
+  display: inline-block;
+  animation: shift 5s linear infinite;
+}
+
+@keyframes shift {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
