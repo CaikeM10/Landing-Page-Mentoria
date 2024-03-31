@@ -9,6 +9,9 @@
   justify-content: end;
   max-width: 1440px;
   margin: 0 auto;
+  @media screen and (max-width: 768px) {
+    padding-inline: 20px;
+  }
 }
 
 .top {
@@ -23,6 +26,9 @@
     font-style: normal;
     font-weight: 600;
     line-height: 51.2px;
+    @media screen and (max-width: 768px) {
+      font-size: 26px;
+    }
   }
   span {
     color: #4b3cff;
@@ -34,6 +40,9 @@
   justify-content: center;
   gap: 85px;
   padding-block: 35px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .leftbox,
@@ -43,6 +52,9 @@
   padding-block: 40px;
   padding-inline: 30px;
   gap: 30px;
+  @media screen and (max-width: 768px) {
+    padding-inline: 15px;
+  }
 }
 
 .leftbox {
@@ -81,6 +93,10 @@
     font-style: normal;
     font-weight: 600;
     line-height: 16px;
+    @media screen and (max-width: 768px) {
+      font-family: 12px;
+      white-space: nowrap;
+    }
   }
 }
 
@@ -95,6 +111,9 @@
     padding-block: 20px;
     border: none;
     cursor: pointer;
+    @media screen and (max-width: 768px) {
+      padding-inline: 46px;
+    }
   }
   p {
     color: #fff;

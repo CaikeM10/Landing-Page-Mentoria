@@ -24,7 +24,7 @@ const HorizontalScrollPage: React.FC<{
       }
 
       e.preventDefault();
-      const scrollSpeedMultiplier = 3;
+      const scrollSpeedMultiplier = 1;
       container.scrollLeft += deltaY * scrollSpeedMultiplier;
     };
 
@@ -36,7 +36,7 @@ const HorizontalScrollPage: React.FC<{
         onScrollStart();
       }
       if (!container) return;
-      const threshold = 1;
+      const threshold = 100;
       if (container.scrollLeft > threshold !== isDarkBackground) {
         setIsDarkBackground(!isDarkBackground);
       }
@@ -52,7 +52,7 @@ const HorizontalScrollPage: React.FC<{
   }, [isDarkBackground]);
 
   return (
-    <div ref={containerRef} className={styles.horizontalScrollContainer}>
+    <div className={styles.horizontalScrollContainer}>
       <div
         className={`${styles.sectionOne} ${
           isDarkBackground ? styles.darkBackground : styles.lightBackground

@@ -9,11 +9,18 @@
   max-width: 1440px;
   margin: 0 auto;
   padding-block: 40px;
+  @media screen and (max-width: 768px) {
+    position: relative;
+  }
 }
 
 .leftside {
   position: relative;
   flex: 1;
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    z-index: -1;
+  }
 
   &::after {
     content: "";
@@ -32,6 +39,9 @@
     display: block;
     position: relative;
     z-index: 0;
+    @media screen and (max-width: 768px) {
+      transform: translateX(180px);
+    }
   }
 }
 
@@ -44,6 +54,9 @@
   gap: 18px;
   text-align: left;
   padding-inline: 100px;
+  @media screen and (max-width: 768px) {
+    padding-inline: 45px;
+  }
   h2 {
     color: #fff;
     font-family: Syne;

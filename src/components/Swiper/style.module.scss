@@ -13,6 +13,10 @@
   flex-direction: column;
   gap: 10px;
   justify-content: center;
+  @media screen and (max-width: 768px) {
+    gap: 0px;
+    padding-inline: 39px;
+  }
   h2 {
     color: #fff;
     text-align: center;
@@ -56,6 +60,9 @@
     padding-block: 20px;
     border: none;
     cursor: pointer;
+    @media screen and (max-width: 768px) {
+      padding-inline: 55px;
+    }
   }
   p {
     color: #fff;
