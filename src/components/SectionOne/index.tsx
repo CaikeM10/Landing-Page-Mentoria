@@ -1,3 +1,4 @@
+import ScrollAnimation from 'react-animate-on-scroll';
 import styles from './styles.module.scss';
 
 const SectionOne = () => {
@@ -28,19 +29,21 @@ const SectionOne = () => {
                             <p>Apenas R$ 16,99.</p>
                         </div>
                     </div>
-                    <div className={styles.rightside}>
-                        <div className={styles.backgroundImages}>
-                            <img src="/pix1.svg" alt="Background 1" />
-                            <img src="/pix2.svg" alt="Background 2" />
-                            <img src="/pix3.svg" alt="Background 3" />
-                            <img src="/pix4.svg" alt="Background 4" />
+                    <ScrollAnimation animateIn="fadeIn">
+                        <div className={styles.rightside}>
+                            <div className={styles.backgroundImages}>
+                                <img src="/pix1.svg" alt="Background 1" />
+                                <img src="/pix2.svg" alt="Background 2" />
+                                <img src="/pix3.svg" alt="Background 3" />
+                                <img src="/pix4.svg" alt="Background 4" />
+                            </div>
+                            <img
+                                src="/herbertOnly.svg"
+                                alt="Herbert"
+                                className={styles.herbert}
+                            />
                         </div>
-                        <img
-                            src="/herbertOnly.svg"
-                            alt="Herbert"
-                            className={styles.herbert}
-                        />
-                    </div>
+                    </ScrollAnimation>
                 </div>
             </main>
         </>
