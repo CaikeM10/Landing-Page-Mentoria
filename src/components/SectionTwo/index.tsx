@@ -88,17 +88,19 @@ const SectionTwo = () => {
                                     <img src="correct.svg" />
                                     <p>Suporte exclusivo do rei</p>
                                 </div>
-                                <div className={styles.logo}>
-                                    <img src="/logo.svg" />
-                                </div>
                             </div>
                         </ScrollAnimation>
                     </div>
-                    <div className={styles.button}>
-                        <button>
-                            <p>QUERO APRENDER COM O REI</p>
-                        </button>
-                    </div>
+                    <ScrollAnimation
+                        animateIn="bounceInUp"
+                        animateOut="fadeOut"
+                    >
+                        <div className={styles.button}>
+                            <button>
+                                <p>QUERO APRENDER COM O REI</p>
+                            </button>
+                        </div>
+                    </ScrollAnimation>
                 </div>
             </main>
         </>
