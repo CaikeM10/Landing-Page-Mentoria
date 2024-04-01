@@ -4,6 +4,7 @@
   border-radius: 20px;
   width: 100%;
   cursor: pointer;
+  transition: transform 0.3s ease-out;
 
   &::before {
     content: "";
@@ -22,12 +23,36 @@
   }
 }
 
+.container:hover {
+  transform: scale(1.05); /* Adjust the scale value to control the zoom level */
+}
+
+.content,
+.icon,
+.text {
+  transition: transform 0.3s ease-out;
+}
+
+.lightEffect {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+  border-radius: 50%;
+  transition: opacity 0.3s ease-out, transform 0.2s ease-out;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
 .content {
   display: flex;
   flex-direction: column;
   padding-block: 34px;
   padding-left: 38px;
   gap: 14px;
+  @media screen and (max-width: 768px) {
+    padding-inline: 30px;
+  }
 }
 
 .icon {
