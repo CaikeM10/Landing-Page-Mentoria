@@ -4,9 +4,9 @@ import styles from './style.module.scss';
 const Guarantee = () => {
     return (
         <main className={styles.container}>
-            <div className={styles.content}>
-                <div className={styles.top}>
-                    <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+            <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+                <div className={styles.content}>
+                    <div className={styles.top}>
                         <div className={styles.leftside}>
                             <div className={styles.leftsideContent}>
                                 <h5>Dias de</h5>
@@ -39,14 +39,9 @@ const Guarantee = () => {
                             </p>
                             <p>O risco é todo meu.</p>
                         </div>
-                    </ScrollAnimation>
-                </div>
-                <div className={styles.bottom}>
-                    <div className={styles.info}>
-                        <ScrollAnimation
-                            animateIn="fadeInUp"
-                            animateOut="fadeOut"
-                        >
+                    </div>
+                    <div className={styles.bottom}>
+                        <div className={styles.info}>
                             <div className={styles.icon}>
                                 <img src="/safePayment.svg" />
                             </div>
@@ -57,13 +52,8 @@ const Guarantee = () => {
                                     segurança.
                                 </p>
                             </div>
-                        </ScrollAnimation>
-                    </div>
-                    <div className={styles.info}>
-                        <ScrollAnimation
-                            animateIn="fadeInUp"
-                            animateOut="fadeOut"
-                        >
+                        </div>
+                        <div className={styles.info}>
                             <div className={styles.icon}>
                                 <img src="/lock.svg" />
                             </div>
@@ -74,13 +64,8 @@ const Guarantee = () => {
                                     comprar.
                                 </p>
                             </div>
-                        </ScrollAnimation>
-                    </div>
-                    <div className={styles.info}>
-                        <ScrollAnimation
-                            animateIn="fadeInUp"
-                            animateOut="fadeOut"
-                        >
+                        </div>
+                        <div className={styles.info}>
                             <div className={styles.icon}>
                                 <img src="infinite.svg" />
                             </div>
@@ -91,10 +76,10 @@ const Guarantee = () => {
                                     renovação.
                                 </p>
                             </div>
-                        </ScrollAnimation>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </ScrollAnimation>
         </main>
     );
 };
