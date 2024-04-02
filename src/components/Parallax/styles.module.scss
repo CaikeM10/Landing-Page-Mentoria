@@ -13,7 +13,7 @@
             width: 100%;
             height: 100%;
             top: 0;
-            position: fixed;
+            position: absolute;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -40,9 +40,8 @@
 
 .endClass {
     position: absolute !important;
-    // padding-bottom: 600px;
 }
 
-.endContainer {
-    // background: #fff !important;
+.startClass {
+    position: fixed !important;
 }
