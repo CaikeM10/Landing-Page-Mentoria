@@ -1,0 +1,24 @@
+.container {
+    height: 100vh;
+    background: #fff;
+    position: relative;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    transition: all 1s ease;
+
+    \ .teste {
+        color: #000;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.teste {
+    color: #000;
+    // margin-top: 300px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}

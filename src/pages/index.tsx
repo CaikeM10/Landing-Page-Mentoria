@@ -1,9 +1,11 @@
 import Guarantee from '@/components/Guarantee';
 import Header from '@/components/Header';
 import MovingBars from '@/components/MovingBars';
+import Parallax from '@/components/Parallax';
 import SectionOne from '@/components/SectionOne';
 import SectionTwo from '@/components/SectionTwo';
 import Students from '@/components/Swiper';
+import Teste from '@/components/teste';
 import { useState } from 'react';
 
 export default function Home() {
@@ -29,14 +31,8 @@ export default function Home() {
             <MovingBars />
             <Guarantee />
             <Students />
-            {/* <Who />
-      <HybridScroll />
-      <Bonus />
-      <Price />
-      <About />
-      <Footer /> */}
-            {/* <GlowingButton />
-      <Aurora /> */}
+            <Parallax />
+            <Teste />
         </>
     );
 }
