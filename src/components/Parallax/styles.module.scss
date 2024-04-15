@@ -1,13 +1,19 @@
 .container {
-    height: 173vh;
+    height: 150vh;
     position: relative;
-    // transition: background-color 0s ease;
-    background: #000;
+    background: #010425;
+    z-index: 999;
+    transition: all 0.1s ease;
+
+    @media only screen and (max-width: 768px) {
+        height: 115vh;
+    }
     .sticky {
         position: sticky;
         overflow: hidden;
         top: 0;
-        height: 100vh;
+        height: 90vh;
+
         .el {
             width: 100%;
             height: 100%;
@@ -16,6 +22,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @media only screen and (max-width: 768px) {
+                height: 50%;
+                margin-top: 40%;
+            }
 
             .imageContainer {
                 position: relative;
@@ -26,10 +37,36 @@
                 p {
                     color: white;
                     font-size: 56px;
-                    margin-top: 1%;
+                    margin-top: 3%;
+                    font-family: Syne;
+                    font-style: normal;
+                    font-weight: 600;
+                    text-align: center;
+
+                    span {
+                        position: relative;
+                        display: inline;
+                        background: linear-gradient(
+                            270deg,
+                            #00c2ff,
+                            #33ff8c,
+                            #ffc640,
+                            #e54cff,
+                            #00c2ff,
+                            #33ff8c
+                        );
+                        background-size: 600% auto;
+                        color: transparent;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        animation: shift 5s linear infinite;
+                    }
 
                     @media only screen and (max-width: 768px) {
-                        font-size: 22px;
+                        font-size: 36px;
+                        margin-top: -10%;
+                        text-align: center;
                     }
                 }
             }
@@ -43,4 +80,13 @@
 
 .startClass {
     position: fixed !important;
+}
+
+@keyframes shift {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
