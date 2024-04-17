@@ -31,7 +31,7 @@ const Squares3 = () => {
         className={styles.container}
         variants={variants}
         initial="hidden"
-        animate={inView ? "visible" : "hidden"} // Animate when the element is in view
+        animate={inView ? "visible" : "hidden"}
       >
         <div className={styles.content}>
           <div className={styles.texts}>
