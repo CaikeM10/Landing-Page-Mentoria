@@ -1,61 +1,167 @@
 .container {
-  background: rgba(75, 60, 255, 0.3);
-  z-index: 1;
+  background: radial-gradient(
+    66.4% 49.55% at 61.92% 46.43%,
+    rgba(51, 35, 244, 0.35) 0%,
+    rgba(4, 1, 34, 0.35) 100%
+  );
 }
 
 .content {
   display: flex;
-  gap: 60px;
   max-width: 1440px;
   margin: 0 auto;
-  z-index: 5;
-  padding-inline: 70px;
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    padding-inline: 45px;
-  }
+  padding-inline: 60px;
+  gap: 70px;
 }
 
 .leftside {
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  padding-block: 40px;
-  gap: 20px;
-  h3 {
+  gap: 15px;
+  h2 {
     color: #fff;
     font-family: Syne;
-    font-size: 32px;
+    font-size: 45px;
     font-style: normal;
     font-weight: 600;
-    line-height: 38px;
-    @media screen and (max-width: 768px) {
-      font-size: 30px;
-    }
+    line-height: 57px;
   }
-  h4 {
-    color: #fff;
-    font-family: Montserrat;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 51.2px;
-    @media screen and (max-width: 768px) {
-      font-size: 30px;
-    }
-    span {
-      color: #4b3cff;
-    }
+  span {
+    background: linear-gradient(90deg, #4b3cff -23.64%, #fa00ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   h5 {
     color: #fff;
-    font-family: Montserrat;
-    font-size: 18px;
+    font-family: Syne;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 28.8px;
-    @media screen and (max-width: 768px) {
-      font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.middle {
+  margin-block: 50px;
+  background: radial-gradient(
+    75.14% 104.5% at 50% 10.84%,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  border-radius: 20px;
+  border: 1px solid #606060;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  padding-top: 24px;
+  padding-bottom: 45px;
+}
+
+.money {
+  display: flex;
+  gap: 11px;
+  padding-inline: 11px;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.bigMoney {
+  display: flex;
+  gap: 10px;
+  padding-top: 50px;
+  align-items: baseline;
+  h2 {
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 102.4px;
+  }
+  h3 {
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 41.6px;
+  }
+}
+
+.middleMoney {
+  padding-top: 10px;
+  padding-bottom: 28px;
+  h3 {
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 44.8px;
+  }
+}
+
+.button {
+  button {
+    border-radius: 3px;
+    background: #4b3cff;
+    box-shadow: 0px 10px 50px 0px rgba(75, 60, 255, 0.56);
+    display: flex;
+    border: none;
+    padding-block: 15px;
+    padding-inline: 20px;
+    align-items: center;
+    gap: 9px;
+    cursor: pointer;
+    p {
+      color: #fff;
+      text-align: center;
+      font-family: Syne;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 16px;
+      text-transform: uppercase;
     }
+  }
+}
+
+.hr {
+  width: 402.005px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  margin-top: 28px;
+}
+
+.payments {
+  padding-block: 55px;
+  padding-inline: 55px;
+}
+
+.rightside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 17px;
+  h3 {
+    color: #fff;
+    font-family: Syne;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48px;
+    padding-bottom: 25px;
   }
 }
 
@@ -65,108 +171,10 @@
   p {
     color: #fff;
     font-family: Montserrat;
-    font-size: 20px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: 32px;
-  }
-}
-
-.rightside {
-  display: flex;
-  flex-direction: column;
-  padding-inline: 46px;
-  padding-block: 70px;
-  z-index: 10;
-  align-items: center;
-  gap: 20px;
-  background: linear-gradient(180deg, #4b3cff 0%, #040122 100%);
-  margin-top: -50px; // Adjust as necessary for overflow above
-  margin-bottom: -50px;
-  padding-inline: 30px; // Adjust as necessary for overflow below
-  position: relative;
-  @media screen and (max-width: 768px) {
-  }
-  h4 {
-    color: #fff;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 44.8px;
-    @media screen and (max-width: 768px) {
-      font-size: 26px;
-    }
-  }
-  button {
-    border-radius: 3px;
-    background: #4b3cff;
-    box-shadow: 0px 10px 50px 0px rgba(75, 60, 255, 0.56);
-    cursor: pointer;
-    padding-inline: 70px;
-    padding-block: 20px;
-    border: none;
-    margin-top: 20px;
-    p {
-      color: #fff;
-      text-align: center;
-      font-family: Syne;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 16px;
-      text-transform: uppercase;
-      @media screen and (max-width: 768px) {
-        line-height: 20px;
-      }
-    }
-  }
-}
-
-.line {
-  display: flex;
-  flex-direction: column;
-  h3 {
-    color: #fff;
-    text-align: center;
-    font-family: Syne;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 44.8px;
-    @media screen and (max-width: 768px) {
-      font-size: 26px;
-    }
-  }
-}
-
-.price {
-  display: flex;
-  gap: 5px;
-  align-items: flex-end;
-
-  h6 {
-    color: #fff;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 26px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 41.6px;
-    @media screen and (max-width: 768px) {
-      font-size: 20px;
-    }
-  }
-  h2 {
-    color: #fff;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 600;
-    @media screen and (max-width: 768px) {
-      font-size: 44px;
-    }
+    white-space: nowrap;
   }
 }
