@@ -1,9 +1,38 @@
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import styles from "./styles.module.scss";
 
 const Squares3 = () => {
+  const variants = {
+    hidden: {
+      opacity: 0,
+      x: -50,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 0.8,
+      },
+    },
+  };
+
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
   return (
     <>
-      <div className={styles.container}>
+      <motion.div
+        ref={ref}
+        className={styles.container}
+        variants={variants}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"} // Animate when the element is in view
+      >
         <div className={styles.content}>
           <div className={styles.texts}>
             <div className={styles.top}>
@@ -28,7 +57,7 @@ const Squares3 = () => {
             </h4>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

@@ -10,8 +10,7 @@
   display: flex;
   max-width: 1440px;
   margin: 0 auto;
-  padding-inline: 60px;
-  gap: 70px;
+  padding-left: 60px;
 }
 
 .leftside {
@@ -45,17 +44,16 @@
 
 .middle {
   margin-block: 50px;
-  background: radial-gradient(
-    75.14% 104.5% at 50% 10.84%,
-    rgba(255, 255, 255, 0.15) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(to bottom, #000000, #272727, #000000);
+
   border-radius: 20px;
   border: 1px solid #606060;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   align-items: center;
   display: flex;
   flex-direction: column;
+  margin-left: 85px;
+  margin-right: 69px;
 }
 
 .logo {
@@ -66,10 +64,36 @@
 .money {
   display: flex;
   gap: 11px;
+  padding-block: 5px;
   padding-inline: 11px;
   align-items: center;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.25);
+  position: relative;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 70px; // Width of the side line
+    height: 4%; // Height of the line, adjust as needed
+    background: rgba(255, 255, 255, 0.25); // Line color, change as needed
+    transform: translateY(-50%); // Center the line vertically
+  }
+
+  &:before {
+    left: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transform: translateX(-100%);
+  }
+
+  &:after {
+    right: 0;
+    border-top-right-radius: 10px;
+    transform: translateX(100%);
+    border-bottom-right-radius: 10px;
+  }
 }
 
 .bigMoney {
@@ -168,6 +192,7 @@
 .modules {
   display: flex;
   gap: 5px;
+  align-items: center;
   p {
     color: #fff;
     font-family: Montserrat;
@@ -176,5 +201,9 @@
     font-weight: 400;
     line-height: 32px;
     white-space: nowrap;
+  }
+  img {
+    width: 10px;
+    height: 15px;
   }
 }
