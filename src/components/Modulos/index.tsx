@@ -18,7 +18,7 @@ const Modulos = () => {
     const checkScroll = () => {
       const progress = scrollYProgress.get();
 
-      if (progress >= 0.85) {
+      if (progress >= 0.6) {
         setIsSpecificPointReached(true);
       } else {
         setIsSpecificPointReached(false);
