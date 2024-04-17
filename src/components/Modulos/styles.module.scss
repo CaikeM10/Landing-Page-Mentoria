@@ -1,0 +1,57 @@
+.container {
+  height: 100%;
+  // background: #fff;
+  position: relative;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  transition: all 1s ease;
+
+  \ .teste {
+    color: #000;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.teste {
+  color: #000;
+  margin-top: 300%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  padding-block: 50px;
+  h2 {
+    color: #fff;
+    font-family: Syne;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 43px;
+    span {
+      background: linear-gradient(90deg, #4b3cff 0%, #fa00ff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.content {
+  padding-bottom: 65px;
+}
+
+.row {
+  display: flex;
+  gap: 35px;
+  max-width: 1440px;
+  width: 100%;
+  padding-inline: 170px;
+  padding-bottom: 30px;
+}

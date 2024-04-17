@@ -6,6 +6,41 @@ const Price = () => {
       <main className={styles.container}>
         <div className={styles.content}>
           <div className={styles.leftside}>
+            <h2>
+              Quanto você precisará <span>investir?</span>
+            </h2>
+            <h5>
+              Torne-se um programador e mude de vida criando sites e landing
+              pages!
+            </h5>
+          </div>
+          <div className={styles.middle}>
+            <div className={styles.logo}>
+              <img src="/logo.svg" />
+            </div>
+            <div className={styles.money}>
+              <img src="/money.svg" />
+              <p>TUDO ISSO POR APENAS</p>
+            </div>
+            <div className={styles.bigMoney}>
+              <h2>R$ 17,00</h2>
+              <h3>/Mês</h3>
+            </div>
+            <div className={styles.middleMoney}>
+              <h3>ou R$ 250,00 / Ano</h3>
+            </div>
+            <div className={styles.button}>
+              <button>
+                <p>Quero mudar minha vida Com sites</p>
+                <img src="buttonArrow.svg" />
+              </button>
+            </div>
+            <hr className={styles.hr} />
+            <div className={styles.payments}>
+              <img src="/payments.svg" />
+            </div>
+          </div>
+          <div className={styles.rightside}>
             <h3>Relembrando tudo que você vai ter acesso agora:</h3>
             <div className={styles.modules}>
               <img src="/smallCheck.svg" />
@@ -31,31 +66,6 @@ const Price = () => {
               <img src="/smallCheck.svg" />
               <p>Suporte do REI - imensurável</p>
             </div>
-            <h4>
-              Total: <span>R$ 2.693,80</span>
-            </h4>
-            <h5>
-              Mas você não vai precisar investir tudo isso para conseguir sua
-              vaga agora e mudar de vida.
-            </h5>
-          </div>
-          <div className={styles.rightside}>
-            <div className={styles.logo}>
-              <img src="/blackLogo.svg" />
-            </div>
-            <div className={styles.line}>
-              <h3>Hoje, para garantir seu futuro,</h3>
-              <h3>você precisa</h3>
-              <h3>investir apenas:</h3>
-            </div>
-            <div className={styles.price}>
-              <h6>12x de</h6>
-              <h2>R$ 41,33</h2>
-            </div>
-            <h4>ou R$ 497,00 à vista</h4>
-            <button>
-              <p>Garantir minha vaga</p>
-            </button>
           </div>
         </div>
       </main>
