@@ -9,6 +9,11 @@
   gap: 68px;
   padding-top: 160px;
   padding-bottom: 100px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding-inline: 32px;
+    padding-top: 60px;
+  }
 }
 
 .leftside {
@@ -16,6 +21,9 @@
   flex-direction: column;
   padding-left: 90px;
   justify-content: center;
+  @media screen and (max-width: 768px) {
+    padding-left: 0px;
+  }
 }
 
 .title {
@@ -28,6 +36,11 @@
     font-weight: 600;
     line-height: 38px;
     white-space: nowrap;
+    @media screen and (max-width: 768px) {
+      font-size: 26px;
+      white-space: normal;
+      text-align: center;
+    }
   }
   span {
     background: linear-gradient(90deg, #fa00ff 54.51%, #3323f4 99.84%);
@@ -39,6 +52,7 @@
 
 .subtitle {
   padding-bottom: 48px;
+
   h4 {
     color: #fff;
     font-family: Syne;
@@ -46,6 +60,11 @@
     font-style: normal;
     font-weight: 400;
     line-height: 38px;
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      font-size: 18px;
+      line-height: 28px;
+    }
   }
 }
 
@@ -60,16 +79,32 @@
   align-items: center;
   gap: 20px;
   cursor: pointer;
+  @media screen and (max-width: 768px) {
+    padding-inline: 25px;
+    padding-block: 26px;
+    gap: 10px;
+  }
 }
 
 .box {
   margin-bottom: 55px;
 }
 
+.icon {
+  @media screen and (max-width: 768px) {
+    img {
+      width: 44px;
+    }
+  }
+}
+
 .text {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  @media screen and (max-width: 768px) {
+    gap: 0px;
+  }
   h3 {
     color: #fff;
     font-family: Syne;
@@ -78,6 +113,11 @@
     font-weight: 400;
     line-height: 38px;
     white-space: nowrap;
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+      white-space: normal;
+      line-height: 25px;
+    }
   }
   span {
     background: linear-gradient(90deg, #4b3cff 51.36%, #fa00ff 99.91%);
@@ -92,6 +132,10 @@
     font-style: normal;
     font-weight: 400;
     line-height: 38px;
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+      line-height: 25px;
+    }
   }
 }
 
@@ -101,4 +145,8 @@
   justify-content: center;
   width: 50%;
   padding-right: 55px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding-right: 0px;
+  }
 }

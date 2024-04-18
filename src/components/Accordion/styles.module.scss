@@ -26,6 +26,9 @@
   font-weight: 600;
   line-height: 38px;
   transition: background-color 1s ease;
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
 
   &:focus {
     outline: none;
@@ -53,9 +56,15 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.8s ease; // Smooth transition for max-height
-  padding: 0 1em; // Keep the padding here for a nicer effect
+  padding: 0 1em;
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
 }
 
 .show {
-  max-height: 50px; // Set a max-height that your content will not exceed
+  max-height: 50px;
+  @media screen and (max-width: 768px) {
+    max-height: 70px;
+  }
 }
