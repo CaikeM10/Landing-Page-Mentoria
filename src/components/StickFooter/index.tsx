@@ -5,7 +5,7 @@ const StickFooter = () => {
     <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.logo}>
-          <img src="/newLogo.svg" />
+          <img src="/logo2.svg" />
         </div>
         <div className={styles.button}>
           <button>

@@ -8,7 +8,7 @@ const SectionOne = () => {
         <div className={styles.content}>
           <ScrollAnimation animateIn="fadeIn">
             <div className={styles.leftside}>
-              <img className={styles.logo} src="/newLogo.svg" />
+              <img className={styles.logo} src="/logo2.svg" />
               <h1>
                 Tudo o que você precisa saber para mudar de vida e{" "}
                 <span className={styles.auroraSpan}>
