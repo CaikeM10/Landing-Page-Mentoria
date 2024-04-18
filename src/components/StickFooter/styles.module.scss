@@ -5,13 +5,12 @@
   z-index: 1000;
   border-radius: 200px 200px 200px 200px;
   background: #19222357;
+  backdrop-filter: blur(10px);
   padding-block: 20px;
   padding-inline: 20px;
   @media screen and (max-width: 768px) {
     bottom: 5px;
-    right: 5px;
-    padding-block: 15px;
-    padding-inline: 15px;
+    right: 10px;
   }
 }
 
@@ -20,7 +19,8 @@
   gap: 20px;
   align-items: center;
   @media screen and (max-width: 768px) {
-    gap: 10px;
+    gap: 45px;
+    padding-inline: 20px;
   }
   img {
     width: 150px;
