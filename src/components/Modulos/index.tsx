@@ -13,22 +13,31 @@ import styles from "./styles.module.scss";
 const Modulos = () => {
   const { scrollYProgress } = useViewportScroll();
   const [isSpecificPointReached, setIsSpecificPointReached] = useState(false);
+  const [progressThreshold, setProgressThreshold] = useState(0.6);
+
+  useEffect(() => {
+    const adjustThresholdForDevice = () => {
+      const isMobile = window.innerWidth <= 768;
+      setProgressThreshold(isMobile ? 0.5 : 0.6);
+    };
+
+    adjustThresholdForDevice();
+    window.addEventListener("resize", adjustThresholdForDevice);
+
+    return () => {
+      window.removeEventListener("resize", adjustThresholdForDevice);
+    };
+  }, []);
 
   useEffect(() => {
     const checkScroll = () => {
       const progress = scrollYProgress.get();
-
-      if (progress >= 0.6) {
-        setIsSpecificPointReached(true);
-      } else {
-        setIsSpecificPointReached(false);
-      }
+      setIsSpecificPointReached(progress >= progressThreshold);
     };
 
     const unsubscribe = scrollYProgress.onChange(checkScroll);
-
     return () => unsubscribe();
-  }, [scrollYProgress]);
+  }, [scrollYProgress, progressThreshold]);
 
   const backgroundColor = isSpecificPointReached ? "#010425" : "white";
   const color = isSpecificPointReached ? "white" : "black";

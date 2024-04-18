@@ -14,6 +14,30 @@ const Price = () => {
               pages!
             </h5>
           </div>
+          <div className={styles.modulesResponsive}>
+            <img src="/smallCheck.svg" />
+            <p>Módulo 01: Design com figma - R$ 697,00</p>
+          </div>
+          <div className={styles.modulesResponsive}>
+            <img src="/smallCheck.svg" />
+            <p>Módulo 02: WordPress - R$ 97,00</p>
+          </div>
+          <div className={styles.modulesResponsive}>
+            <img src="/smallCheck.svg" />
+            <p>Módulo 03: Estratégias de venda - R$ 67,00</p>
+          </div>
+          <div className={styles.modulesResponsive}>
+            <img src="/smallCheck.svg" />
+            <p>Módulo 04: Programação do zero ao pro - R$ 97,00</p>
+          </div>
+          <div className={styles.modulesResponsive}>
+            <img src="/smallCheck.svg" />
+            <p>Módulo 05: Anúncios online - R$ 67,00</p>
+          </div>
+          <div className={styles.modulesResponsive}>
+            <img src="/smallCheck.svg" />
+            <p>Suporte do REI - imensurável</p>
+          </div>
           <div className={styles.middle}>
             <div className={styles.logo}>
               <img src="/logo.svg" />

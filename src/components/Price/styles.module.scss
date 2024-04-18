@@ -11,6 +11,11 @@
   max-width: 1440px;
   margin: 0 auto;
   padding-left: 60px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding-left: 0px;
+    padding-inline: 30px;
+  }
 }
 
 .leftside {
@@ -18,6 +23,9 @@
   justify-content: center;
   flex-direction: column;
   gap: 15px;
+  @media screen and (max-width: 768px) {
+    padding-top: 60px;
+  }
   h2 {
     color: #fff;
     font-family: Syne;
@@ -25,6 +33,11 @@
     font-style: normal;
     font-weight: 600;
     line-height: 57px;
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      font-size: 32px;
+      line-height: 46px;
+    }
   }
   span {
     background: linear-gradient(90deg, #4b3cff -23.64%, #fa00ff 100%);
@@ -39,6 +52,10 @@
     font-style: normal;
     font-weight: 400;
     line-height: 26px;
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      padding-bottom: 34px;
+    }
   }
 }
 
@@ -54,6 +71,11 @@
   flex-direction: column;
   margin-left: 85px;
   margin-right: 69px;
+  @media screen and (max-width: 768px) {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-block: 20px;
+  }
 }
 
 .logo {
@@ -70,15 +92,29 @@
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   position: relative;
+  p {
+    color: #fff;
+    font-family: Syne;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px;
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
   &:before,
   &:after {
     content: "";
     position: absolute;
     top: 50%;
-    width: 70px; // Width of the side line
-    height: 4%; // Height of the line, adjust as needed
-    background: rgba(255, 255, 255, 0.25); // Line color, change as needed
-    transform: translateY(-50%); // Center the line vertically
+    width: 70px;
+    height: 4%;
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-50%);
+    @media screen and (max-width: 768px) {
+      width: 35px;
+    }
   }
 
   &:before {
@@ -101,6 +137,9 @@
   gap: 10px;
   padding-top: 50px;
   align-items: baseline;
+  @media screen and (max-width: 768px) {
+    padding-top: 30px;
+  }
   h2 {
     color: #fff;
     text-align: center;
@@ -109,6 +148,10 @@
     font-style: normal;
     font-weight: 600;
     line-height: 102.4px;
+    @media screen and (max-width: 768px) {
+      font-size: 42px;
+      line-height: 76.8px;
+    }
   }
   h3 {
     color: #fff;
@@ -118,12 +161,18 @@
     font-style: normal;
     font-weight: 600;
     line-height: 41.6px;
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+    }
   }
 }
 
 .middleMoney {
   padding-top: 10px;
   padding-bottom: 28px;
+  @media screen and (max-width: 768px) {
+    padding-top: 0px;
+  }
   h3 {
     color: #fff;
     text-align: center;
@@ -132,6 +181,9 @@
     font-style: normal;
     font-weight: 400;
     line-height: 44.8px;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -147,6 +199,10 @@
     align-items: center;
     gap: 9px;
     cursor: pointer;
+    @media screen and (max-width: 768px) {
+      padding-block: 14px;
+      padding-inline: 18px;
+    }
     p {
       color: #fff;
       text-align: center;
@@ -156,6 +212,9 @@
       font-weight: 600;
       line-height: 16px;
       text-transform: uppercase;
+      @media screen and (max-width: 768px) {
+        font-size: 10px;
+      }
     }
   }
 }
@@ -166,11 +225,21 @@
   background: rgba(255, 255, 255, 0.25);
   border: none;
   margin-top: 28px;
+  @media screen and (max-width: 768px) {
+    width: 300px;
+  }
 }
 
 .payments {
   padding-block: 55px;
   padding-inline: 55px;
+
+  @media screen and (max-width: 768px) {
+    padding-block: 30px;
+    img {
+      width: 280px;
+    }
+  }
 }
 
 .rightside {
@@ -186,6 +255,9 @@
     font-weight: 600;
     line-height: 48px;
     padding-bottom: 25px;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 }
 
@@ -193,6 +265,9 @@
   display: flex;
   gap: 5px;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
   p {
     color: #fff;
     font-family: Montserrat;
@@ -201,6 +276,28 @@
     font-weight: 400;
     line-height: 32px;
     white-space: nowrap;
+  }
+  img {
+    width: 10px;
+    height: 15px;
+  }
+}
+
+.modulesResponsive {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding-bottom: 17px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  p {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
   }
   img {
     width: 10px;
