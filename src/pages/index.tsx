@@ -8,6 +8,7 @@ import Price from "@/components/Price";
 import Questions from "@/components/Questions";
 import SectionOne from "@/components/SectionOne";
 import SectionTwo from "@/components/SectionTwo";
+import StickFooter from "@/components/StickFooter";
 import Students from "@/components/Swiper";
 import { useState } from "react";
 
@@ -39,6 +40,7 @@ export default function Home() {
       <Price />
       <Questions />
       <Footer />
+      <StickFooter />
     </>
   );
 }

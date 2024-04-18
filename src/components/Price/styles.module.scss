@@ -81,6 +81,15 @@
 .logo {
   padding-top: 24px;
   padding-bottom: 45px;
+  @media screen and (max-width: 768px) {
+    padding-bottom: 35px;
+  }
+  img {
+    width: 250px;
+    @media screen and (max-width: 768px) {
+      width: 200px;
+    }
+  }
 }
 
 .money {
