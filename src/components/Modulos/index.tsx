@@ -18,7 +18,7 @@ const Modulos = () => {
   useEffect(() => {
     const adjustThresholdForDevice = () => {
       const isMobile = window.innerWidth <= 768;
-      setProgressThreshold(isMobile ? 0.5 : 0.6);
+      setProgressThreshold(isMobile ? 0.5 : 0.7);
     };
 
     adjustThresholdForDevice();

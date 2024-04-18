@@ -40,7 +40,7 @@ const Price = () => {
           </div>
           <div className={styles.middle}>
             <div className={styles.logo}>
-              <img src="/logo.svg" />
+              <img src="/newLogo.svg" />
             </div>
             <div className={styles.money}>
               <img src="/money.svg" />
