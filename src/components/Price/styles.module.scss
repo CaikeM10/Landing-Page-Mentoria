@@ -40,10 +40,23 @@
     }
   }
   span {
-    background: linear-gradient(90deg, #4b3cff -23.64%, #fa00ff 100%);
+    position: relative;
+    display: inline;
+    background: linear-gradient(
+      270deg,
+      #00c2ff,
+      #33ff8c,
+      #ffc640,
+      #e54cff,
+      #00c2ff,
+      #33ff8c
+    );
+    background-size: 600% auto;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    animation: shift 5s linear infinite;
   }
   h5 {
     color: #fff;
@@ -311,5 +324,54 @@
   img {
     width: 10px;
     height: 15px;
+  }
+}
+
+@keyframes float1 {
+  0%,
+  100% {
+    transform: translateY(50px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes float2 {
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes float3 {
+  0%,
+  100% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float4 {
+  0%,
+  100% {
+    transform: translateY(-120px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes shift {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
