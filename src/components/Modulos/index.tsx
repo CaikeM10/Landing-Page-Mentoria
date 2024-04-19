@@ -18,7 +18,7 @@ const Modulos = () => {
   useEffect(() => {
     const adjustThresholdForDevice = () => {
       const isMobile = window.innerWidth <= 768;
-      setProgressThreshold(isMobile ? 0.5 : 0.7);
+      setProgressThreshold(isMobile ? 0.6 : 0.7);
     };
 
     adjustThresholdForDevice();
@@ -49,7 +49,7 @@ const Modulos = () => {
           <div className={styles.content}>
             <div className={styles.title}>
               <h2>
-                MÓDULOS <span>EXCLUSIVOS</span>
+                <span> MÓDULOS EXCLUSIVOS</span>
               </h2>
             </div>
             <div className={styles.row}>
