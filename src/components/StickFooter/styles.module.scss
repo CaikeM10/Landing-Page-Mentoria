@@ -1,7 +1,7 @@
 @keyframes slideInAndOut {
   0%,
   100% {
-    right: -400px; /* Adjust as needed to fully hide the footer */
+    right: -400px;
   }
   10%,
   90% {
@@ -19,7 +19,7 @@
   backdrop-filter: blur(10px);
   padding-block: 20px;
   padding-inline: 20px;
-  opacity: 0; /* Start invisible */
+  opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
   animation: slideInAndOut 10s infinite ease-in-out;

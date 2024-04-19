@@ -49,7 +49,7 @@ const Modulos = () => {
           <div className={styles.content}>
             <div className={styles.title}>
               <h2>
-                <span> MÓDULOS EXCLUSIVOS</span>
+                <span className={styles.auroraSpan}> MÓDULOS EXCLUSIVOS</span>
               </h2>
             </div>
             <div className={styles.row}>

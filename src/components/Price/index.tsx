@@ -47,7 +47,7 @@ const Price = () => {
               <p>TUDO ISSO POR APENAS</p>
             </div>
             <div className={styles.bigMoney}>
-              <h2>R$ 17,00</h2>
+              <h2>R$ 16,99</h2>
               <h3>/Mês</h3>
             </div>
             <div className={styles.middleMoney}>
