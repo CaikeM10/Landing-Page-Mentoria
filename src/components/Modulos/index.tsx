@@ -40,12 +40,14 @@ const Modulos = () => {
   }, [scrollYProgress, progressThreshold]);
 
   const backgroundColor = isSpecificPointReached ? "#010425" : "white";
-  const color = isSpecificPointReached ? "white" : "black";
+  const textColor = isSpecificPointReached ? "white" : "black";
+  const borderColor = isSpecificPointReached ? "white" : "#ccc";
+  const containerColor = isSpecificPointReached ? "#0a0730" : "#F0F0F0";
 
   return (
     <motion.div className={styles.container} style={{ backgroundColor }}>
       <ScrollAnimation animateIn="fadeIn">
-        <section className={styles.container} style={{ color }}>
+        <section className={styles.container} style={{ color: textColor }}>
           <div className={styles.content}>
             <div className={styles.title}>
               <h2>
@@ -53,17 +55,45 @@ const Modulos = () => {
               </h2>
             </div>
             <div className={styles.row}>
-              <Squares1 />
-              <Squares2 />
+              <Squares1
+                color={textColor}
+                borderColor={borderColor}
+                containerColor={containerColor}
+              />
+              <Squares2
+                color={textColor}
+                borderColor={borderColor}
+                containerColor={containerColor}
+              />
             </div>
             <div className={styles.row}>
-              <Squares3 />
-              <Squares4 />
+              <Squares3
+                color={textColor}
+                borderColor={borderColor}
+                containerColor={containerColor}
+              />
+              <Squares4
+                color={textColor}
+                borderColor={borderColor}
+                containerColor={containerColor}
+              />
             </div>
             <div className={styles.row}>
-              <Squares5 />
-              <Squares6 />
-              <Squares7 />
+              <Squares5
+                color={textColor}
+                borderColor={borderColor}
+                containerColor={containerColor}
+              />
+              <Squares6
+                color={textColor}
+                borderColor={borderColor}
+                containerColor={containerColor}
+              />
+              <Squares7
+                color={textColor}
+                borderColor={borderColor}
+                containerColor={containerColor}
+              />
             </div>
           </div>
         </section>

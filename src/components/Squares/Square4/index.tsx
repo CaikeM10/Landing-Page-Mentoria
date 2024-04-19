@@ -2,7 +2,13 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import styles from "./styles.module.scss";
 
-const Squares4 = () => {
+interface Squares4Props {
+  color: string;
+  borderColor: string;
+  containerColor: string;
+}
+
+const Squares4 = ({ color, borderColor, containerColor }: Squares4Props) => {
   const variants = {
     hidden: {
       opacity: 0,
@@ -32,17 +38,18 @@ const Squares4 = () => {
         variants={variants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
+        style={{ borderColor, color, backgroundColor: containerColor }}
       >
         <div className={styles.content}>
           <div className={styles.texts}>
             <div className={styles.top}>
-              <h4>Módulo 4</h4>
+              <h4 style={{ color }}>Módulo 4</h4>
             </div>
             <div className={styles.title}>
-              <h3>Programação do zero ao pro</h3>
+              <h3 style={{ color }}>Programação do zero ao pro</h3>
             </div>
             <div className={styles.body}>
-              <h5>
+              <h5 style={{ color }}>
                 Aprenda conceitos fundamentais e avançados de programação, com
                 técnicas práticas para construir projetos sólidos. Com nosso
                 curso, você terá as habilidades necessárias para se destacar no
@@ -50,9 +57,9 @@ const Squares4 = () => {
               </h5>
             </div>
           </div>
-          <hr className={styles.hr} />
+          <hr className={styles.hr} style={{ backgroundColor: borderColor }} />
           <div className={styles.bottom}>
-            <h4>
+            <h4 style={{ color }}>
               Preço: <span>R$319,00</span>
             </h4>
           </div>
