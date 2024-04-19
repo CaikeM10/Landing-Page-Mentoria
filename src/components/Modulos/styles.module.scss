@@ -51,9 +51,9 @@
       );
       background-size: 600% auto;
       color: transparent;
-      -webkit-text-fill-color: transparent;
+      // -webkit-text-fill-color: transparent;
       background-clip: text;
-      -webkit-background-clip: text;
+      // -webkit-background-clip: text;
       animation: shift 5s linear infinite;
     }
   }

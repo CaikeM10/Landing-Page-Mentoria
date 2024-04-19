@@ -56,9 +56,9 @@
     );
     background-size: 600% auto;
     color: transparent;
-    -webkit-text-fill-color: transparent;
+    // -webkit-text-fill-color: transparent;
     background-clip: text;
-    -webkit-background-clip: text;
+    // -webkit-background-clip: text;
     animation: shift 5s linear infinite;
   }
 }
@@ -138,8 +138,8 @@
   span {
     background: linear-gradient(90deg, #4b3cff 51.36%, #fa00ff 99.91%);
     background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
   }
   p {
     color: #fff;
