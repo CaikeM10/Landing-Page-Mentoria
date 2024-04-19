@@ -29,8 +29,8 @@
     line-height: 43px;
     background: linear-gradient(90deg, #4b3cff 0%, #fa00ff 100%);
     background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
   }
 }
 
@@ -78,7 +78,7 @@
   span {
     background: linear-gradient(269deg, #fa00ff -34.16%, #2d2499 60.28%);
     background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
   }
 }
