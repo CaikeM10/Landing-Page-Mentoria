@@ -34,14 +34,14 @@ const Squares5 = ({ color, borderColor, containerColor }: Squares5Props) => {
                     <h4 style={{ color }}>Módulo 5</h4>
                   </div>
                   <div className={styles.title}>
-                    <h3 style={{ color }}>Estratégias de venda</h3>
+                    <h3 style={{ color }}>Html, CSS e Javascript</h3>
                   </div>
                   <div className={styles.body}>
                     <h5 style={{ color }}>
-                      Potencialize suas vendas! Aprenda a conectar-se com
-                      clientes, criar ofertas atrativas e fechar negócios de
-                      forma eficiente. Transforme possibilidades em lucros
-                      conosco e destaque-se no mundo das vendas!
+                      Aprenda tudo! Com o conhecimento dessas linguagens você
+                      pode construir não só sites, mas softwares incríveis com
+                      funcionalidades que vão te surpreender. Depois que você
+                      aprender essas o resto fica fácil!
                     </h5>
                   </div>
                 </div>
