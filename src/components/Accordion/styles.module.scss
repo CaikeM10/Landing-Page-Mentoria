@@ -28,6 +28,7 @@
   transition: background-color 1s ease;
   @media screen and (max-width: 768px) {
     font-size: 14px;
+    line-height: 20px;
   }
 
   &:focus {

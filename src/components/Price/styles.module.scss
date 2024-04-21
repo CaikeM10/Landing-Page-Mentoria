@@ -76,7 +76,7 @@
 }
 
 .middle {
-  animation: float 4s ease-in-out infinite;
+  animation: pulse 3s ease-in-out infinite;
 
   margin-block: 50px;
   background: linear-gradient(to bottom, #000000, #272727, #000000);
@@ -144,7 +144,7 @@
     background: rgba(255, 255, 255, 0.25);
     transform: translateY(-50%);
     @media screen and (max-width: 768px) {
-      width: 35px;
+      width: 25px;
     }
   }
 
@@ -231,8 +231,9 @@
     gap: 9px;
     cursor: pointer;
     @media screen and (max-width: 768px) {
-      padding-block: 14px;
-      padding-inline: 18px;
+      padding-block: 10px;
+      padding-inline: 10px;
+      gap: 3px;
     }
     p {
       color: #fff;
@@ -385,12 +386,14 @@
   }
 }
 
-@keyframes float {
+@keyframes pulse {
   0%,
   100% {
-    transform: translateY(0);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transform: scale(1);
   }
   50% {
-    transform: translateY(-20px);
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.5);
+    transform: scale(1.03);
   }
 }

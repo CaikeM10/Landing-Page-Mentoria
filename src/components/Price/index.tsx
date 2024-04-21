@@ -31,30 +31,43 @@ const Price = () => {
               </motion.div>
             )}
           </InView>
-          <div className={styles.modulesResponsive}>
-            <img src="/smallCheck.svg" />
-            <p>Módulo 01: Design com figma </p>
-          </div>
-          <div className={styles.modulesResponsive}>
-            <img src="/smallCheck.svg" />
-            <p>Módulo 02: WordPress </p>
-          </div>
-          <div className={styles.modulesResponsive}>
-            <img src="/smallCheck.svg" />
-            <p>Módulo 03: Estratégias de venda </p>
-          </div>
-          <div className={styles.modulesResponsive}>
-            <img src="/smallCheck.svg" />
-            <p>Módulo 04: Programação do zero ao pro </p>
-          </div>
-          <div className={styles.modulesResponsive}>
-            <img src="/smallCheck.svg" />
-            <p>Módulo 05: Anúncios online </p>
-          </div>
-          <div className={styles.modulesResponsive}>
-            <img src="/smallCheck.svg" />
-            <p>Suporte do REI </p>
-          </div>
+          <InView threshold={0.5} triggerOnce={false}>
+            {({ inView, ref }) => (
+              <motion.div
+                ref={ref}
+                className={styles.leftsideResponsive}
+                variants={animationVariants}
+                initial="hidden"
+                animate={inView ? "visible" : "hidden"}
+                transition={{ duration: 0.5 }}
+              >
+                <div className={styles.modulesResponsive}>
+                  <img src="/smallCheck.svg" />
+                  <p>Módulo 01: Design com figma </p>
+                </div>
+                <div className={styles.modulesResponsive}>
+                  <img src="/smallCheck.svg" />
+                  <p>Módulo 02: WordPress </p>
+                </div>
+                <div className={styles.modulesResponsive}>
+                  <img src="/smallCheck.svg" />
+                  <p>Módulo 03: Estratégias de venda </p>
+                </div>
+                <div className={styles.modulesResponsive}>
+                  <img src="/smallCheck.svg" />
+                  <p>Módulo 04: Programação do zero ao pro </p>
+                </div>
+                <div className={styles.modulesResponsive}>
+                  <img src="/smallCheck.svg" />
+                  <p>Módulo 05: Anúncios online </p>
+                </div>
+                <div className={styles.modulesResponsive}>
+                  <img src="/smallCheck.svg" />
+                  <p>Suporte do REI </p>
+                </div>
+              </motion.div>
+            )}
+          </InView>
           <InView threshold={0.5} triggerOnce={false}>
             {({ inView, ref }) => (
               <motion.div
