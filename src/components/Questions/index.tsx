@@ -43,31 +43,31 @@ const Questions = () => {
         <div className={styles.rightside}>
           <Accordion
             title="Como faço para me cadastrar?"
-            content="Para se cadastrar, basta acessar a página de cadastro e preencher os campos obrigatórios."
+            content="Para se cadastrar, basta clicar no botão 'Me Inscrever' em baixo na direita."
           />
           <Accordion
-            title="Como faço para me cadastrar?"
-            content="Para se cadastrar, basta acessar a página de cadastro e preencher os campos obrigatórios."
+            title="Quanto é o preço do curso?"
+            content="O curso é um investimento de apenas $16,99 por mês!"
           />
           <Accordion
-            title="Como faço para me cadastrar?"
-            content="Para se cadastrar, basta acessar a página de cadastro e preencher os campos obrigatórios."
+            title="O que eu vou aprender?"
+            content="Nesse curso tem vários modulos diferentes, como: HTML, CSS, JavaScript, Next.js, entre outros!"
           />
           <Accordion
-            title="Como faço para me cadastrar?"
-            content="Para se cadastrar, basta acessar a página de cadastro e preencher os campos obrigatórios."
+            title="Eu posso cancelar a qualquer momento?"
+            content="Sim, você pode cancelar a qualquer momento, sem taxas adicionais."
           />
           <Accordion
-            title="Como faço para me cadastrar?"
-            content="Para se cadastrar, basta acessar a página de cadastro e preencher os campos obrigatórios."
+            title="Quais são as formas de pagamento?"
+            content="Você pode pagar com cartão de crédito, débito ou até mesmo PIX!."
           />
           <Accordion
-            title="Como faço para me cadastrar?"
-            content="Para se cadastrar, basta acessar a página de cadastro e preencher os campos obrigatórios."
+            title="Serve para iniciantes?"
+            content="Com certeza! O curso ensinará tudo o que você precisa para se tornar um programador de verdade!"
           />
           <Accordion
-            title="Como faço para me cadastrar?"
-            content="Para se cadastrar, basta acessar a página de cadastro e preencher os campos obrigatórios."
+            title="Não gostou e quer cancelar?"
+            content="Sem problemas! Você tem até 7 dias para cancelar e receber seu dinheiro de volta!"
           />
         </div>
       </div>

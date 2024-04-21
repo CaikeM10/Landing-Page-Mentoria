@@ -1,96 +1,136 @@
+import { motion } from "framer-motion";
+import { InView } from "react-intersection-observer";
 import styles from "./styles.module.scss";
 
 const Price = () => {
+  const animationVariants = {
+    visible: { opacity: 1, translateY: 0 },
+    hidden: { opacity: 0, translateY: 50 },
+  };
   return (
     <>
       <main className={styles.container}>
         <div className={styles.content}>
-          <div className={styles.leftside}>
-            <h2>
-              Quanto você precisará <span>investir?</span>
-            </h2>
-            <h5>
-              Torne-se um programador e mude de vida criando sites e landing
-              pages!
-            </h5>
+          <InView threshold={0.5} triggerOnce={false}>
+            {({ inView, ref }) => (
+              <motion.div
+                ref={ref}
+                className={styles.leftside}
+                variants={animationVariants}
+                initial="hidden"
+                animate={inView ? "visible" : "hidden"}
+                transition={{ duration: 0.5 }}
+              >
+                <h2>
+                  Quanto você precisará <span>investir?</span>
+                </h2>
+                <h5>
+                  Torne-se um programador e mude de vida criando sites e landing
+                  pages!
+                </h5>
+              </motion.div>
+            )}
+          </InView>
+          <div className={styles.modulesResponsive}>
+            <img src="/smallCheck.svg" />
+            <p>Módulo 01: Design com figma </p>
           </div>
           <div className={styles.modulesResponsive}>
             <img src="/smallCheck.svg" />
-            <p>Módulo 01: Design com figma - R$ 697,00</p>
+            <p>Módulo 02: WordPress </p>
           </div>
           <div className={styles.modulesResponsive}>
             <img src="/smallCheck.svg" />
-            <p>Módulo 02: WordPress - R$ 97,00</p>
+            <p>Módulo 03: Estratégias de venda </p>
           </div>
           <div className={styles.modulesResponsive}>
             <img src="/smallCheck.svg" />
-            <p>Módulo 03: Estratégias de venda - R$ 67,00</p>
+            <p>Módulo 04: Programação do zero ao pro </p>
           </div>
           <div className={styles.modulesResponsive}>
             <img src="/smallCheck.svg" />
-            <p>Módulo 04: Programação do zero ao pro - R$ 97,00</p>
+            <p>Módulo 05: Anúncios online </p>
           </div>
           <div className={styles.modulesResponsive}>
             <img src="/smallCheck.svg" />
-            <p>Módulo 05: Anúncios online - R$ 67,00</p>
+            <p>Suporte do REI </p>
           </div>
-          <div className={styles.modulesResponsive}>
-            <img src="/smallCheck.svg" />
-            <p>Suporte do REI - imensurável</p>
-          </div>
-          <div className={styles.middle}>
-            <div className={styles.logo}>
-              <img src="/logo2.svg" />
-            </div>
-            <div className={styles.money}>
-              <img src="/money.svg" />
-              <p>TUDO ISSO POR APENAS</p>
-            </div>
-            <div className={styles.bigMoney}>
-              <h2>R$ 16,99</h2>
-              <h3>/Mês</h3>
-            </div>
-            <div className={styles.middleMoney}>
-              <h3>ou R$ 250,00 / Ano</h3>
-            </div>
-            <div className={styles.button}>
-              <button>
-                <p>Quero mudar minha vida Com sites</p>
-                <img src="buttonArrow.svg" />
-              </button>
-            </div>
-            <hr className={styles.hr} />
-            <div className={styles.payments}>
-              <img src="/payments.svg" />
-            </div>
-          </div>
-          <div className={styles.rightside}>
-            <h3>Relembrando tudo que você vai ter acesso agora:</h3>
-            <div className={styles.modules}>
-              <img src="/smallCheck.svg" />
-              <p>Módulo 01: Design com figma - R$ 697,00</p>
-            </div>
-            <div className={styles.modules}>
-              <img src="/smallCheck.svg" />
-              <p>Módulo 02: WordPress - R$ 97,00</p>
-            </div>
-            <div className={styles.modules}>
-              <img src="/smallCheck.svg" />
-              <p>Módulo 03: Estratégias de venda - R$ 67,00</p>
-            </div>
-            <div className={styles.modules}>
-              <img src="/smallCheck.svg" />
-              <p>Módulo 04: Programação do zero ao pro - R$ 97,00</p>
-            </div>
-            <div className={styles.modules}>
-              <img src="/smallCheck.svg" />
-              <p>Módulo 05: Anúncios online - R$ 67,00</p>
-            </div>
-            <div className={styles.modules}>
-              <img src="/smallCheck.svg" />
-              <p>Suporte do REI - imensurável</p>
-            </div>
-          </div>
+          <InView threshold={0.5} triggerOnce={false}>
+            {({ inView, ref }) => (
+              <motion.div
+                ref={ref}
+                className={styles.middle}
+                variants={animationVariants}
+                initial="hidden"
+                animate={inView ? "visible" : "hidden"}
+                transition={{ duration: 0.5 }}
+              >
+                <div className={styles.logo}>
+                  <img src="/logo2.svg" />
+                </div>
+                <div className={styles.money}>
+                  <img src="/money.svg" />
+                  <p>TUDO ISSO POR APENAS</p>
+                </div>
+                <div className={styles.bigMoney}>
+                  <h2>R$ 16,99</h2>
+                  <h3>/Mês</h3>
+                </div>
+                <div className={styles.middleMoney}>
+                  <h3>ou R$ 250,00 / Ano</h3>
+                </div>
+                <div className={styles.button}>
+                  <button>
+                    <p>Quero mudar minha vida Com sites</p>
+                    <img src="buttonArrow.svg" />
+                  </button>
+                </div>
+                <hr className={styles.hr} />
+                <div className={styles.payments}>
+                  <img src="/newPayment.svg" />
+                </div>
+              </motion.div>
+            )}
+          </InView>
+          <InView threshold={0.5} triggerOnce={false}>
+            {({ inView, ref }) => (
+              <motion.div
+                ref={ref}
+                className={styles.rightside}
+                variants={animationVariants}
+                initial="hidden"
+                animate={inView ? "visible" : "hidden"}
+                transition={{ duration: 0.5 }}
+              >
+                {" "}
+                <h3>Relembrando tudo que você vai ter acesso agora:</h3>
+                <div className={styles.modules}>
+                  <img src="/smallCheck.svg" />
+                  <p>Módulo 01: Design com figma </p>
+                </div>
+                <div className={styles.modules}>
+                  <img src="/smallCheck.svg" />
+                  <p>Módulo 02: WordPress </p>
+                </div>
+                <div className={styles.modules}>
+                  <img src="/smallCheck.svg" />
+                  <p>Módulo 03: Estratégias de venda </p>
+                </div>
+                <div className={styles.modules}>
+                  <img src="/smallCheck.svg" />
+                  <p>Módulo 04: Programação do zero ao pro </p>
+                </div>
+                <div className={styles.modules}>
+                  <img src="/smallCheck.svg" />
+                  <p>Módulo 05: Anúncios online </p>
+                </div>
+                <div className={styles.modules}>
+                  <img src="/smallCheck.svg" />
+                  <p>Suporte do REI </p>
+                </div>
+              </motion.div>
+            )}
+          </InView>{" "}
         </div>
       </main>
     </>

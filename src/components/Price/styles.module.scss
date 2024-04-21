@@ -16,6 +16,9 @@
     padding-left: 0px;
     padding-inline: 30px;
   }
+  @media screen and (max-width: 1439px) {
+    padding-left: 20px;
+  }
 }
 
 .leftside {
@@ -73,6 +76,8 @@
 }
 
 .middle {
+  animation: float 4s ease-in-out infinite;
+
   margin-block: 50px;
   background: linear-gradient(to bottom, #000000, #272727, #000000);
 
@@ -88,6 +93,10 @@
     margin-left: 0px;
     margin-right: 0px;
     margin-block: 20px;
+  }
+  @media screen and (max-width: 1439px) {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
@@ -373,5 +382,15 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
   }
 }

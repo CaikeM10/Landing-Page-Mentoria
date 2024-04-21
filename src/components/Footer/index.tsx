@@ -6,7 +6,7 @@ const Footer = () => {
       <main className={styles.container}>
         <div className={styles.content}>
           <div className={styles.middle}>
-            <h3>REI DOS SITES © 2024</h3>
+            <h3>DO ZERO AO SITES © 2024</h3>
           </div>
         </div>
       </main>
