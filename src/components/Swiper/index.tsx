@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 import { Swiper as SwiperClass } from "swiper";
@@ -121,9 +122,11 @@ const Students = () => {
           </ScrollAnimation>
           <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
             <div className={styles.button}>
-              <button>
-                <p>GARANTIR MINHA VAGA</p>
-              </button>
+              <Link href="https://pay.kiwify.com.br/mY5zqOy">
+                <button>
+                  <p>GARANTIR MINHA VAGA</p>
+                </button>
+              </Link>
             </div>
           </ScrollAnimation>
         </div>
