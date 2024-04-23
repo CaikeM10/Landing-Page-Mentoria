@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { InView } from "react-intersection-observer";
 import styles from "./styles.module.scss";
 
@@ -93,10 +94,12 @@ const Price = () => {
                   <h3>ou R$ 250,00 / Ano</h3>
                 </div>
                 <div className={styles.button}>
-                  <button>
-                    <p>Quero mudar minha vida Com sites</p>
-                    <img src="buttonArrow.svg" />
-                  </button>
+                  <Link href="https://pay.kiwify.com.br/mY5zqOy">
+                    <button>
+                      <p>Quero mudar minha vida Com sites</p>
+                      <img src="buttonArrow.svg" />
+                    </button>
+                  </Link>
                 </div>
                 <hr className={styles.hr} />
                 <div className={styles.payments}>

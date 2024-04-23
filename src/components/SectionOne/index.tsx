@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ScrollAnimation from "react-animate-on-scroll";
 import styles from "./styles.module.scss";
 
@@ -22,9 +23,11 @@ const SectionOne = () => {
                 casa e ganhar mais de R$10mil por mês apartir dos próximos 30
                 dias.
               </h5>
-              <button>
-                <p>QUERO MUDAR DE VIDA</p>
-              </button>
+              <Link href="https://pay.kiwify.com.br/mY5zqOy">
+                <button>
+                  <p>QUERO MUDAR DE VIDA</p>
+                </button>
+              </Link>
               <div className={styles.discount}>
                 <img src="/discountTag.svg" />
                 <p>Apenas R$ 16,99.</p>

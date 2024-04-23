@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 
@@ -32,9 +33,11 @@ const StickFooter = () => {
           <img src="/logo2.svg" />
         </div>
         <div className={styles.button}>
-          <button>
-            <p>ME INSCREVER</p>
-          </button>
+          <Link href="https://pay.kiwify.com.br/mY5zqOy">
+            <button>
+              <p>ME INSCREVER</p>
+            </button>
+          </Link>
         </div>
       </div>
     </div>
