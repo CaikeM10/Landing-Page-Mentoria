@@ -1,3 +1,4 @@
+import router from "next/router";
 import { useState } from "react";
 import styles from "./styles.module.scss";
 
@@ -26,12 +27,18 @@ const Cost = () => {
     setLightPosition((prevPosition) => ({ ...prevPosition, visible: false }));
   };
 
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    router.push("https://wa.link/o1y7jz");
+  };
+
   return (
     <>
       <section
         className={styles.container}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
+        onClick={handleClick}
       >
         <div
           className={styles.lightEffect}
