@@ -91,7 +91,7 @@ const Price = () => {
                   <h3>/Mês</h3>
                 </div>
                 <div className={styles.middleMoney}>
-                  <h3>ou R$ 250,00 / Ano</h3>
+                  <h3>Assinatura</h3>
                 </div>
                 <div className={styles.button}>
                   <Link href="https://pay.kiwify.com.br/mY5zqOy">

@@ -12,11 +12,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url("/REI.jpg");
-    background-position: 50%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("/lightherbert2.svg");
+    background-position: center 5%;
     background-size: cover;
-    filter: blur(2px);
+    filter: blur(4px);
     border-radius: 20px;
     z-index: 0;
   }
