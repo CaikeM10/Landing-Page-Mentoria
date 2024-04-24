@@ -1,9 +1,33 @@
-import "@/styles/globals.scss";
-import "animate.css/animate.compat.css";
-import type { AppProps } from "next/app";
-import Head from "next/head"; // Import Head from next/head
+import '@/styles/globals.scss';
+import 'animate.css/animate.compat.css';
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
+import ReactPixel from 'react-facebook-pixel';
 
 export default function App({ Component, pageProps }: AppProps) {
+  const advancedMatching = {
+    em: 'some@email.com',
+
+    fn: '',
+    ln: '',
+    ph: '',
+    ge: '',
+    db: '',
+    ct: '',
+    st: '',
+    zp: '',
+    country: '',
+  };
+
+  const options = {
+    autoConfig: true,
+    debug: false,
+  };
+
+  ReactPixel.init('750336220578249', advancedMatching, options);
+
+  ReactPixel.pageView();
+
   return (
     <>
       <Head>
