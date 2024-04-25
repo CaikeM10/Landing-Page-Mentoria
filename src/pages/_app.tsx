@@ -8,7 +8,8 @@ export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       import('react-facebook-pixel')
-        .then((ReactPixel) => {
+        .then((module) => {
+          const ReactPixel = module.default; // Access the default export
           ReactPixel.init(
             '750336220578249',
             {
