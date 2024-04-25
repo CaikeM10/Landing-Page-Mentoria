@@ -1,6 +1,6 @@
-import router from "next/router";
-import { useState } from "react";
-import styles from "./styles.module.scss";
+import router from 'next/router';
+import { useState } from 'react';
+import styles from './styles.module.scss';
 
 const Course = () => {
   const [lightPosition, setLightPosition] = useState({
@@ -29,7 +29,7 @@ const Course = () => {
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    router.push("/curso");
+    router.push('/curso');
   };
 
   return (
@@ -50,14 +50,11 @@ const Course = () => {
         />
         <div className={styles.content}>
           <div className={styles.icon}>
-            <img src="/arrow.svg" />
+            <img src="/newicon.png" />
           </div>
           <div className={styles.text}>
             <h2>Do zero aos sites</h2>
-            <h5>
-              Nesse curso você vai aprender tudo que você precisa para sair do
-              zero, e aprender programação.
-            </h5>
+            <h5>Aprenda a programar por R$ 16,99</h5>
           </div>
         </div>
       </section>
