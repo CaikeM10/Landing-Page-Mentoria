@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
         .then((module) => {
           const ReactPixel = module.default; // Access the default export
           ReactPixel.init(
-            '750336220578249',
+            '330900406345654',
             {
               em: 'some@email.com',
               fn: 'FirstName', // First name
