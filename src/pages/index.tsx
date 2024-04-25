@@ -17,12 +17,12 @@ export default function Home() {
               <Course />
             </div>
             <div className={styles.right}>
+              <Cost />
               <TikTok />
-              <Youtube />
             </div>
           </div>
           <div className={styles.bottom}>
-            <Cost />
+            <Youtube />
           </div>
           <div className={styles.footer}>
             <img src="/logo2.svg" />
