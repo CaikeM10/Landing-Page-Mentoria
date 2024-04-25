@@ -1,8 +1,8 @@
-import Cost from "@/components/Cost";
-import TikTok from "@/components/TikTok";
-import Youtube from "@/components/YouTube";
-import Course from "../components/Course";
-import styles from "../styles/Home.module.scss";
+import Cost from '@/components/Cost';
+import TikTok from '@/components/TikTok';
+import Youtube from '@/components/YouTube';
+import Course from '../components/Course';
+import styles from '../styles/Home.module.scss';
 
 export default function Home() {
   return (
@@ -17,12 +17,13 @@ export default function Home() {
               <Course />
             </div>
             <div className={styles.right}>
-              <TikTok />
+              <Cost />
+
               <Youtube />
             </div>
           </div>
           <div className={styles.bottom}>
-            <Cost />
+            <TikTok />
           </div>
           <div className={styles.footer}>
             <img src="/logo2.svg" />
