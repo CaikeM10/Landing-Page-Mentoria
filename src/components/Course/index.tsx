@@ -53,8 +53,11 @@ const Course = () => {
             <img src="/newicon.png" />
           </div>
           <div className={styles.text}>
-            <h2>Do zero aos sites</h2>
-            <h5>Aprenda a programar por R$ 16,99</h5>
+            <h2>Aprenda por R$17,00</h2>
+            <h5>
+              Nesse curso você vai aprender tudo que você precisa para sair do
+              zero, e aprender programação.
+            </h5>
           </div>
         </div>
       </section>
