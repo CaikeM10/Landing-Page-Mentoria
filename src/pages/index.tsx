@@ -27,7 +27,6 @@ export default function Home() {
           </div>
           <div className={styles.footer}>
             <img src="/Logo.gif" />
-            <p>SOLID TECH © CNPJ 38.405.446/0001-79</p>
           </div>
         </div>
       </section>
