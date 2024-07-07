@@ -1,3 +1,4 @@
+import SmoothScroll from '@/components/Lenis';
 import '@/styles/globals.scss';
 import 'animate.css/animate.compat.css';
 import type { AppProps } from 'next/app';
@@ -23,6 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
                 <title>Do Zero aos Sites</title>
             </Head>
+            <SmoothScroll />
             <Component {...pageProps} />
         </>
     );
