@@ -30,18 +30,22 @@ const Course = () => {
 
   const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    try {
-      const response = await axios.post("/api/conversion", {
-        eventName: "Entrou em Contato",
-        eventTime: Math.floor(Date.now() / 1000),
-        actionSource: "website",
-        testEventCode: "TEST7466",
-        // Removendo userData
-      });
-      console.log("Event sent successfully!", response.data);
-    } catch (error) {
-      console.error("Failed to send event", error);
+
+    if (typeof window !== "undefined") {
+      import("react-facebook-pixel")
+        .then((module) => {
+          const ReactPixel = module.default;
+          ReactPixel.track("Lead", {
+            content_name: "Curso",
+            value: 17.0,
+            currency: "BRL",
+          });
+        })
+        .catch((err) =>
+          console.error("Failed to load React Facebook Pixel", err)
+        );
     }
+
     router.push("/curso");
   };
 
@@ -77,4 +81,5 @@ const Course = () => {
     </>
   );
 };
+
 export default Course;

@@ -4,7 +4,6 @@ import "animate.css/animate.compat.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import axios from "axios";
 
 // Define the interface for user data
 interface UserData {
@@ -48,35 +47,18 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
 
   useEffect(() => {
-    if (userData && typeof window !== "undefined") {
+    if (typeof window !== "undefined") {
       import("react-facebook-pixel")
         .then((module) => {
           const ReactPixel = module.default;
           ReactPixel.init("875794081268430");
           ReactPixel.pageView();
-
-          const sendEvent = async () => {
-            try {
-              const response = await axios.post("/api/conversion", {
-                eventName: "PageView",
-                eventTime: Math.floor(Date.now() / 1000),
-                actionSource: "website",
-                userData,
-              });
-
-              console.log("Event sent successfully!", response.data);
-            } catch (error) {
-              console.error("Failed to send event", error);
-            }
-          };
-
-          sendEvent();
         })
         .catch((err) =>
           console.error("Failed to load React Facebook Pixel", err)
         );
     }
-  }, [userData]);
+  }, []);
 
   return (
     <>
