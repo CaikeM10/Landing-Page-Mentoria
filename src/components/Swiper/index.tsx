@@ -8,8 +8,29 @@ import "swiper/css/pagination";
 import { Autoplay, EffectCoverflow, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./style.module.scss";
+import Router from "next/router";
 
 const Students = () => {
+  const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+
+    if (typeof window !== "undefined") {
+      import("react-facebook-pixel")
+        .then((module) => {
+          const ReactPixel = module.default;
+          ReactPixel.track("InitiateCheckout", {
+            content_name: "Curso",
+            value: 17.0,
+            currency: "BRL",
+          });
+        })
+        .catch((err) =>
+          console.error("Failed to load React Facebook Pixel", err)
+        );
+    }
+
+    Router.push("https://pay.kiwify.com.br/mY5zqOy");
+  };
   const [swiperInstance, setSwiperInstance] = useState<SwiperClass | null>(
     null
   );
@@ -122,11 +143,9 @@ const Students = () => {
           </ScrollAnimation>
           <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
             <div className={styles.button}>
-              <Link href="https://pay.kiwify.com.br/mY5zqOy">
-                <button>
-                  <p>GARANTIR MINHA VAGA</p>
-                </button>
-              </Link>
+              <button onClick={handleClick}>
+                <p>GARANTIR MINHA VAGA</p>
+              </button>
             </div>
           </ScrollAnimation>
         </div>

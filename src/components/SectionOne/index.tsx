@@ -1,8 +1,29 @@
 import Link from "next/link";
+import router from "next/router";
 import ScrollAnimation from "react-animate-on-scroll";
 import styles from "./styles.module.scss";
 
 const SectionOne = () => {
+  const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+
+    if (typeof window !== "undefined") {
+      import("react-facebook-pixel")
+        .then((module) => {
+          const ReactPixel = module.default;
+          ReactPixel.track("InitiateCheckout", {
+            content_name: "Curso",
+            value: 17.0,
+            currency: "BRL",
+          });
+        })
+        .catch((err) =>
+          console.error("Failed to load React Facebook Pixel", err)
+        );
+    }
+
+    router.push("https://pay.kiwify.com.br/mY5zqOy");
+  };
   return (
     <>
       <main className={styles.container}>
@@ -23,11 +44,11 @@ const SectionOne = () => {
                 casa e ganhar mais de R$10mil por mês apartir dos próximos 30
                 dias.
               </h5>
-              <Link href="https://pay.kiwify.com.br/mY5zqOy">
-                <button>
-                  <p>QUERO MUDAR DE VIDA</p>
-                </button>
-              </Link>
+
+              <button onClick={handleClick}>
+                <p>QUERO MUDAR DE VIDA</p>
+              </button>
+
               <div className={styles.discount}>
                 <img src="/discountTag.svg" />
                 <p>Apenas R$ 16,99.</p>
