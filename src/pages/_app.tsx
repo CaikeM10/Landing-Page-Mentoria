@@ -53,16 +53,15 @@ export default function App({ Component, pageProps }: AppProps) {
         .then((module) => {
           const ReactPixel = module.default;
           ReactPixel.init("875794081268430");
-          ReactPixel.pageView(); // Track page view
+          ReactPixel.pageView();
 
-          // Send event to the conversion API using axios
           const sendEvent = async () => {
             try {
               const response = await axios.post("/api/conversion", {
                 eventName: "PageView",
                 eventTime: Math.floor(Date.now() / 1000),
                 actionSource: "website",
-                userData, // Include user data
+                userData,
               });
 
               console.log("Event sent successfully!", response.data);
