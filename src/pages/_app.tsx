@@ -38,47 +38,46 @@ export default function App({ Component, pageProps }: AppProps) {
     };
   }
 
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     const fetchUserData = async () => {
-  //       const data = await fetchUserDetails();
-  //       setUserData(data);
-  //     };
+  useEffect(() => {
+    const fetchUserData = async () => {
+      const data = await fetchUserDetails();
+      setUserData(data);
+    };
 
-  //     fetchUserData();
+    fetchUserData();
+  }, []);
 
-  //     import("react-facebook-pixel")
-  //       .then((module) => {
-  //         const ReactPixel = module.default;
-  //         if (userData) {
-  //           ReactPixel.init("875794081268430");
-  //           ReactPixel.pageView();
+  useEffect(() => {
+    if (userData && typeof window !== "undefined") {
+      import("react-facebook-pixel")
+        .then((module) => {
+          const ReactPixel = module.default;
+          ReactPixel.init("875794081268430");
+          ReactPixel.pageView(); // Track page view
 
-  //           // Send event to the conversion API using axios
-  //           const sendEvent = async () => {
-  //             try {
-  //               const response = await axios.post("/api/conversion", {
-  //                 eventName: "Entrou em Contato",
-  //                 eventTime: Math.floor(Date.now() / 1000),
-  //                 actionSource: "website",
-  //                 testEventCode: "TEST7466",
-  //                 userData, // Include user data
-  //               });
+          // Send event to the conversion API using axios
+          const sendEvent = async () => {
+            try {
+              const response = await axios.post("/api/conversion", {
+                eventName: "PageView",
+                eventTime: Math.floor(Date.now() / 1000),
+                actionSource: "website",
+                userData, // Include user data
+              });
 
-  //               console.log("Event sent successfully!", response.data);
-  //             } catch (error) {
-  //               console.error("Failed to send event", error);
-  //             }
-  //           };
+              console.log("Event sent successfully!", response.data);
+            } catch (error) {
+              console.error("Failed to send event", error);
+            }
+          };
 
-  //           sendEvent();
-  //         }
-  //       })
-  //       .catch((err) =>
-  //         console.error("Failed to load React Facebook Pixel", err)
-  //       );
-  //   }
-  // }, [userData]);
+          sendEvent();
+        })
+        .catch((err) =>
+          console.error("Failed to load React Facebook Pixel", err)
+        );
+    }
+  }, [userData]);
 
   return (
     <>
