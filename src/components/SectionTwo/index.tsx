@@ -1,7 +1,28 @@
 import ScrollAnimation from "react-animate-on-scroll";
 import styles from "./style.module.scss";
+import Router from "next/router";
 
 const SectionTwo = () => {
+  const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+
+    if (typeof window !== "undefined") {
+      import("react-facebook-pixel")
+        .then((module) => {
+          const ReactPixel = module.default;
+          ReactPixel.track("InitiateCheckout", {
+            content_name: "Curso",
+            value: 17.0,
+            currency: "BRL",
+          });
+        })
+        .catch((err) =>
+          console.error("Failed to load React Facebook Pixel", err)
+        );
+    }
+
+    Router.push("https://pay.kiwify.com.br/mY5zqOy");
+  };
   return (
     <>
       <main className={styles.container}>
@@ -89,7 +110,7 @@ const SectionTwo = () => {
           </div>
           <ScrollAnimation animateIn="bounceInUp" animateOut="fadeOut">
             <div className={styles.button}>
-              <button>
+              <button onClick={handleClick}>
                 <p>QUERO APRENDER COM O REI</p>
               </button>
             </div>

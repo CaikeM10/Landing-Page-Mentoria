@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
+import Router from "next/router";
 
 const StickFooter = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,6 +21,27 @@ const StickFooter = () => {
       window.removeEventListener("scroll", toggleVisibility);
     };
   }, []);
+
+  const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+
+    if (typeof window !== "undefined") {
+      import("react-facebook-pixel")
+        .then((module) => {
+          const ReactPixel = module.default;
+          ReactPixel.track("InitiateCheckout", {
+            content_name: "Curso",
+            value: 17.0,
+            currency: "BRL",
+          });
+        })
+        .catch((err) =>
+          console.error("Failed to load React Facebook Pixel", err)
+        );
+    }
+
+    Router.push("https://pay.kiwify.com.br/mY5zqOy");
+  };
   return (
     <div
       className={styles.container}
@@ -33,11 +55,9 @@ const StickFooter = () => {
           <img src="/logo2.svg" />
         </div>
         <div className={styles.button}>
-          <Link href="https://pay.kiwify.com.br/mY5zqOy">
-            <button>
-              <p>ME INSCREVER</p>
-            </button>
-          </Link>
+          <button onClick={handleClick}>
+            <p>ME INSCREVER</p>
+          </button>
         </div>
       </div>
     </div>
