@@ -36,18 +36,7 @@ const Course = () => {
         eventTime: Math.floor(Date.now() / 1000),
         actionSource: "website",
         testEventCode: "TEST7466",
-        userData: {
-          email: "user@example.com",
-          firstName: "John",
-          lastName: "Doe",
-          phone: "1234567890",
-          gender: "male",
-          dateOfBirth: "1990-01-01",
-          city: "CityName",
-          state: "StateName",
-          zipCode: "12345",
-          country: "CountryName",
-        },
+        // Removendo userData
       });
       console.log("Event sent successfully!", response.data);
     } catch (error) {
