@@ -29,18 +29,6 @@ export default async function handler(
             event_name: eventName,
             event_time: eventTime,
             action_source: actionSource,
-            user_data: {
-              em: [sha256(userData.email)], // Email hash
-              ph: [sha256(userData.phone)], // Phone hash
-              fn: sha256(userData.firstName),
-              ln: sha256(userData.lastName),
-              ge: sha256(userData.gender),
-              db: sha256(userData.dateOfBirth),
-              ct: sha256(userData.city),
-              st: sha256(userData.state),
-              zp: sha256(userData.zipCode),
-              country: sha256(userData.country),
-            },
           },
         ],
         test_event_code: testEventCode,
