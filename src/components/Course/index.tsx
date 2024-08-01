@@ -35,7 +35,7 @@ const Course = () => {
       import("react-facebook-pixel")
         .then((module) => {
           const ReactPixel = module.default;
-          ReactPixel.track("Lead", {
+          ReactPixel.track("ViewContent", {
             content_name: "Curso",
             value: 17.0,
             currency: "BRL",
