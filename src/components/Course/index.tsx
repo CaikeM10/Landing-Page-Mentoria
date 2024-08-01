@@ -1,6 +1,7 @@
 import router from "next/router";
 import { useState } from "react";
 import styles from "./styles.module.scss";
+import axios from "axios";
 
 const Course = () => {
   const [lightPosition, setLightPosition] = useState({
@@ -27,8 +28,31 @@ const Course = () => {
     setLightPosition((prevPosition) => ({ ...prevPosition, visible: false }));
   };
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
+    try {
+      const response = await axios.post("/api/conversion", {
+        eventName: "Entrou em Contato",
+        eventTime: Math.floor(Date.now() / 1000),
+        actionSource: "website",
+        testEventCode: "TEST7466",
+        userData: {
+          email: "user@example.com",
+          firstName: "John",
+          lastName: "Doe",
+          phone: "1234567890",
+          gender: "male",
+          dateOfBirth: "1990-01-01",
+          city: "CityName",
+          state: "StateName",
+          zipCode: "12345",
+          country: "CountryName",
+        },
+      });
+      console.log("Event sent successfully!", response.data);
+    } catch (error) {
+      console.error("Failed to send event", error);
+    }
     router.push("/curso");
   };
 

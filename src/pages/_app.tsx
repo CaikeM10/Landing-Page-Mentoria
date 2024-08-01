@@ -1,63 +1,105 @@
-import SmoothScroll from '@/components/Lenis';
-import '@/styles/globals.scss';
-import 'animate.css/animate.compat.css';
-import type { AppProps } from 'next/app';
-import Head from 'next/head';
-import { useEffect } from 'react';
+import SmoothScroll from "@/components/Lenis";
+import "@/styles/globals.scss";
+import "animate.css/animate.compat.css";
+import type { AppProps } from "next/app";
+import Head from "next/head";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+// Define the interface for user data
+interface UserData {
+  email: string;
+  firstName: string;
+  lastName: string;
+  phone: string;
+  gender: string;
+  dateOfBirth: string;
+  city: string;
+  state: string;
+  zipCode: string;
+  country: string;
+}
 
 export default function App({ Component, pageProps }: AppProps) {
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            import('react-facebook-pixel')
-                .then((module) => {
-                    const ReactPixel = module.default; // Access the default export
-                    ReactPixel.init(
-                        '330900406345654',
-                        {
-                            em: 'some@email.com',
-                            fn: 'FirstName', // First name
-                            ln: 'LastName', // Last name
-                            ph: 'PhoneNumber', // Phone number
-                            ge: 'Gender', // Gender
-                            db: 'DateOfBirth', // Date of birth
-                            ct: 'City', // City
-                            st: 'State', // State
-                            zp: 'ZipCode', // Zip code
-                            country: 'Country', // Country
-                        },
-                        {
-                            autoConfig: true,
-                            debug: false,
-                        }
-                    );
-                    ReactPixel.pageView();
-                })
-                .catch((err) =>
-                    console.error('Failed to load React Facebook Pixel', err)
-                );
-        }
-    }, []);
+  const [userData, setUserData] = useState<UserData | null>(null);
 
-    return (
-        <>
-            <Head>
-                <link rel="icon" href="/favicon.ico" sizes="any" />
-                <meta
-                    name="description"
-                    content="Descubra o mundo da tecnologia e desenvolvimento web com o Rei dos Sites. Aprenda a criar sites do zero e transforme suas ideias em realidade."
-                />
-                <meta
-                    name="og:description"
-                    content="Descubra o mundo da tecnologia e desenvolvimento web com o Rei dos Sites. Aprenda a criar sites do zero e transforme suas ideias em realidade."
-                />
-                <meta
-                    property="og:image"
-                    content="https://firebasestorage.googleapis.com/v0/b/nextgain-37481.appspot.com/o/Screenshot%202024-04-01%20at%2022.58.47.png?alt=media&token=c87429da-d568-4acc-9b39-e4cb579bb9ac"
-                />
-                <title>Do Zero aos Sites</title>
-            </Head>
-            <SmoothScroll />
-            <Component {...pageProps} />
-        </>
-    );
+  async function fetchUserDetails(): Promise<UserData> {
+    return {
+      email: "user@example.com",
+      firstName: "John",
+      lastName: "Doe",
+      phone: "1234567890",
+      gender: "male",
+      dateOfBirth: "1990-01-01",
+      city: "CityName",
+      state: "StateName",
+      zipCode: "12345",
+      country: "CountryName",
+    };
+  }
+
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     const fetchUserData = async () => {
+  //       const data = await fetchUserDetails();
+  //       setUserData(data);
+  //     };
+
+  //     fetchUserData();
+
+  //     import("react-facebook-pixel")
+  //       .then((module) => {
+  //         const ReactPixel = module.default;
+  //         if (userData) {
+  //           ReactPixel.init("875794081268430");
+  //           ReactPixel.pageView();
+
+  //           // Send event to the conversion API using axios
+  //           const sendEvent = async () => {
+  //             try {
+  //               const response = await axios.post("/api/conversion", {
+  //                 eventName: "Entrou em Contato",
+  //                 eventTime: Math.floor(Date.now() / 1000),
+  //                 actionSource: "website",
+  //                 testEventCode: "TEST7466",
+  //                 userData, // Include user data
+  //               });
+
+  //               console.log("Event sent successfully!", response.data);
+  //             } catch (error) {
+  //               console.error("Failed to send event", error);
+  //             }
+  //           };
+
+  //           sendEvent();
+  //         }
+  //       })
+  //       .catch((err) =>
+  //         console.error("Failed to load React Facebook Pixel", err)
+  //       );
+  //   }
+  // }, [userData]);
+
+  return (
+    <>
+      <Head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta
+          name="description"
+          content="Descubra o mundo da tecnologia e desenvolvimento web com o Rei dos Sites. Aprenda a criar sites do zero e transforme suas ideias em realidade."
+        />
+        <meta
+          name="og:description"
+          content="Descubra o mundo da tecnologia e desenvolvimento web com o Rei dos Sites. Aprenda a criar sites do zero e transforme suas ideias em realidade."
+        />
+        <meta
+          property="og:image"
+          content="https://firebasestorage.googleapis.com/v0/b/nextgain-37481.appspot.com/o/Screenshot%202024-04-01%20at%2022.58.47.png?alt=media&token=c87429da-d568-4acc-9b39-e4cb579bb9ac"
+        />
+        <title>Do Zero aos Sites</title>
+      </Head>
+      <SmoothScroll />
+      <Component {...pageProps} />
+    </>
+  );
 }
