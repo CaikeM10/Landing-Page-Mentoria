@@ -143,7 +143,7 @@ const Students = () => {
           </ScrollAnimation>
           <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
             <div className={styles.button}>
-              <button onClick={handleClick}>
+              <button onClick={handleClick} id="iniciar-checkout">
                 <p>GARANTIR MINHA VAGA</p>
               </button>
             </div>

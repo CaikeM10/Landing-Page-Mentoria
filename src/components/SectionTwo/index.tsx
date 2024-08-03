@@ -110,7 +110,7 @@ const SectionTwo = () => {
           </div>
           <ScrollAnimation animateIn="bounceInUp" animateOut="fadeOut">
             <div className={styles.button}>
-              <button onClick={handleClick}>
+              <button onClick={handleClick} id="iniciar-checkout">
                 <p>QUERO APRENDER COM O REI</p>
               </button>
             </div>

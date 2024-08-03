@@ -55,7 +55,7 @@ const StickFooter = () => {
           <img src="/logo2.svg" />
         </div>
         <div className={styles.button}>
-          <button onClick={handleClick}>
+          <button onClick={handleClick} id="iniciar-checkout">
             <p>ME INSCREVER</p>
           </button>
         </div>

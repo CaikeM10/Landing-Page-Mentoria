@@ -45,7 +45,7 @@ const SectionOne = () => {
                 dias.
               </h5>
 
-              <button onClick={handleClick}>
+              <button onClick={handleClick} id="iniciar-checkout">
                 <p>QUERO MUDAR DE VIDA</p>
               </button>
 
