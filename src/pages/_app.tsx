@@ -80,7 +80,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>Do Zero aos Sites</title>
       </Head>
       <SmoothScroll />
-      <GoogleTagManager gtmId="GTM-WXJL9KWJ" />
+      <GoogleTagManager gtmId="GTM-WXJL9KW" />
       <Component {...pageProps} />
     </>
   );
