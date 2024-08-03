@@ -1,5 +1,6 @@
 import SmoothScroll from "@/components/Lenis";
 import "@/styles/globals.scss";
+import { GoogleTagManager } from "@next/third-parties/google";
 import "animate.css/animate.compat.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
@@ -79,6 +80,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>Do Zero aos Sites</title>
       </Head>
       <SmoothScroll />
+      <GoogleTagManager gtmId="GTM-WXJL9KWJ" />
       <Component {...pageProps} />
     </>
   );
