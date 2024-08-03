@@ -116,7 +116,7 @@ const Price = () => {
                   <h3>Assinatura</h3>
                 </div>
                 <div className={styles.button}>
-                  <button onClick={handleClick}>
+                  <button onClick={handleClick} id="iniciar-checkout">
                     <p>Quero mudar minha vida Com sites</p>
                     <img src="buttonArrow.svg" />
                   </button>
