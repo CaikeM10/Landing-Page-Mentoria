@@ -19,9 +19,16 @@ const SectionTwo = () => {
         .catch((err) =>
           console.error("Failed to load React Facebook Pixel", err)
         );
-    }
 
-    Router.push("https://pay.kiwify.com.br/mY5zqOy");
+      const urlParams = new URLSearchParams(window.location.search);
+      const utmSource = urlParams.get("utm_source");
+      const redirectUrl =
+        utmSource === "facebook"
+          ? "https://pay.kiwify.com.br/IzsZX9g"
+          : "https://pay.kiwify.com.br/mY5zqOy";
+
+      Router.push(redirectUrl);
+    }
   };
   return (
     <>
