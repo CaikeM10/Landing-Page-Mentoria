@@ -10,12 +10,18 @@ import SectionOne from "@/components/SectionOne";
 import SectionTwo from "@/components/SectionTwo";
 import StickFooter from "@/components/StickFooter";
 import Students from "@/components/Swiper";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const [hasScrolledToEnd, setHasScrolledToEnd] = useState(false);
   const [canScrollUpPastHorizontalPage, setCanScrollUpPastHorizontalPage] =
     useState(true);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.ttq) {
+      window.ttq.track("ViewContent");
+    }
+  }, []);
 
   const handleScrollToEnd = () => {
     setHasScrolledToEnd(true);
