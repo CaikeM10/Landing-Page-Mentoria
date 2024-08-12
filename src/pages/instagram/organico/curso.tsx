@@ -3,6 +3,7 @@ import Guarantee from "@/components/Guarantee";
 import Header from "@/components/Header";
 import Modulos from "@/components/Modulos";
 import MovingBars from "@/components/MovingBars";
+import PageTitle from "@/components/PageTitle";
 import Parallax from "@/components/Parallax";
 import Price from "@/components/Price";
 import Questions from "@/components/Questions";
@@ -35,6 +36,7 @@ export default function Home() {
 
   return (
     <>
+      <PageTitle title="instagram-organico" />
       <Header />
       <SectionOne />
       <SectionTwo />
