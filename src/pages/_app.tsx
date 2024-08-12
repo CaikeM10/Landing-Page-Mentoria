@@ -1,12 +1,11 @@
 import SmoothScroll from "@/components/Lenis";
 import "@/styles/globals.scss";
-import { GoogleTagManager } from "@next/third-parties/google";
 import "animate.css/animate.compat.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
-// Define the interface for user data
 interface UserData {
   email: string;
   firstName: string;
@@ -80,7 +79,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>Do Zero aos Sites</title>
       </Head>
       <SmoothScroll />
-      <GoogleTagManager gtmId="GTM-WXJL9KW" />
+      <GoogleAnalytics gaId="G-32JCH9GGY4" />
       <Component {...pageProps} />
     </>
   );
