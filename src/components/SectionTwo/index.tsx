@@ -19,6 +19,14 @@ const SectionTwo = () => {
         .catch((err) =>
           console.error("Failed to load React Facebook Pixel", err)
         );
+      if (window.gtag) {
+        window.gtag("event", "InitiateCheckout", {
+          event_category: "engagement",
+          event_label: "Curso Checkout",
+          value: 17.0,
+          currency: "BRL",
+        });
+      }
 
       const urlParams = new URLSearchParams(window.location.search);
       const utmSource = urlParams.get("utm_source");
