@@ -1,28 +1,28 @@
-import '@/styles/globals.scss';
-import 'animate.css/animate.compat.css';
-import type { AppProps } from 'next/app';
-import Head from 'next/head';
-import { useEffect } from 'react';
+import "@/styles/globals.scss";
+import "animate.css/animate.compat.css";
+import type { AppProps } from "next/app";
+import Head from "next/head";
+import { useEffect } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      import('react-facebook-pixel')
+    if (typeof window !== "undefined") {
+      import("react-facebook-pixel")
         .then((module) => {
           const ReactPixel = module.default; // Access the default export
           ReactPixel.init(
-            '330900406345654',
+            "330900406345654",
             {
-              em: 'some@email.com',
-              fn: 'FirstName', // First name
-              ln: 'LastName', // Last name
-              ph: 'PhoneNumber', // Phone number
-              ge: 'Gender', // Gender
-              db: 'DateOfBirth', // Date of birth
-              ct: 'City', // City
-              st: 'State', // State
-              zp: 'ZipCode', // Zip code
-              country: 'Country', // Country
+              em: "some@email.com",
+              fn: "FirstName", // First name
+              ln: "LastName", // Last name
+              ph: "PhoneNumber", // Phone number
+              ge: "Gender", // Gender
+              db: "DateOfBirth", // Date of birth
+              ct: "City", // City
+              st: "State", // State
+              zp: "ZipCode", // Zip code
+              country: "Country", // Country
             },
             {
               autoConfig: true,
@@ -32,7 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
           ReactPixel.pageView();
         })
         .catch((err) =>
-          console.error('Failed to load React Facebook Pixel', err)
+          console.error("Failed to load React Facebook Pixel", err)
         );
     }
   }, []);
