@@ -34,14 +34,14 @@ const Squares7 = ({ color, borderColor, containerColor }: Squares7Props) => {
                     <h4 style={{ color }}>Módulo 7</h4>
                   </div>
                   <div className={styles.title}>
-                    <h3 style={{ color }}>NextJs</h3>
+                    <h3 style={{ color }}>React</h3>
                   </div>
                   <div className={styles.body}>
                     <h5 style={{ color }}>
-                      Potencialize suas vendas! Aprenda a conectar-se com
-                      clientes, criar ofertas atrativas e fechar negócios de
-                      forma eficiente. Transforme possibilidades em lucros
-                      conosco e destaque-se no mundo das vendas!
+                      Crie Interfaces Incríveis! Com React, você aprenderá a
+                      desenvolver interfaces modernas, dinâmicas e eficientes.
+                      Após dominar essa biblioteca, criar aplicações web será
+                      muito mais simples!
                     </h5>
                   </div>
                 </div>
@@ -51,7 +51,7 @@ const Squares7 = ({ color, borderColor, containerColor }: Squares7Props) => {
                 />
                 <div className={styles.bottom}>
                   <h4 style={{ color }}>
-                    Preço: <span>R$319,00</span>
+                    Preço: <span>R$289,00</span>
                   </h4>
                 </div>
               </div>
