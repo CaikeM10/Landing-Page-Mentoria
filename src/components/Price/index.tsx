@@ -2,12 +2,51 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { InView } from "react-intersection-observer";
 import styles from "./styles.module.scss";
+import Router from "next/router";
 
 const Price = () => {
   const animationVariants = {
     visible: { opacity: 1, translateY: 0 },
     hidden: { opacity: 0, translateY: 50 },
   };
+
+  const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+
+    if (typeof window !== "undefined") {
+      import("react-facebook-pixel")
+        .then((module) => {
+          const ReactPixel = module.default;
+          ReactPixel.track("InitiateCheckout", {
+            content_name: "Curso",
+            value: 17.0,
+            currency: "BRL",
+          });
+        })
+        .catch((err) =>
+          console.error("Failed to load React Facebook Pixel", err)
+        );
+
+      if (window.gtag) {
+        window.gtag("event", "InitiateCheckout", {
+          event_category: "engagement",
+          event_label: "Curso Checkout",
+          value: 17.0,
+          currency: "BRL",
+        });
+      }
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const utmSource = urlParams.get("utm_source");
+      const redirectUrl =
+        utmSource === "facebook"
+          ? "https://pay.kiwify.com.br/IzsZX9g"
+          : "https://pay.kiwify.com.br/mY5zqOy";
+
+      Router.push(redirectUrl);
+    }
+  };
+
   return (
     <>
       <main className={styles.container}>
@@ -94,12 +133,10 @@ const Price = () => {
                   <h3>Assinatura</h3>
                 </div>
                 <div className={styles.button}>
-                  <Link href="https://pay.kiwify.com.br/mY5zqOy">
-                    <button>
-                      <p>Quero mudar minha vida Com sites</p>
-                      <img src="buttonArrow.svg" />
-                    </button>
-                  </Link>
+                  <button onClick={handleClick} id="iniciar-checkout">
+                    <p>Quero mudar minha vida Com sites</p>
+                    <img src="buttonArrow.svg" />
+                  </button>
                 </div>
                 <hr className={styles.hr} />
                 <div className={styles.payments}>
