@@ -1,34 +1,57 @@
+import SmoothScroll from "@/components/Lenis";
 import "@/styles/globals.scss";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "animate.css/animate.compat.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
+interface UserData {
+  email: string;
+  firstName: string;
+  lastName: string;
+  phone: string;
+  gender: string;
+  dateOfBirth: string;
+  city: string;
+  state: string;
+  zipCode: string;
+  country: string;
+}
 
 export default function App({ Component, pageProps }: AppProps) {
+  const [userData, setUserData] = useState<UserData | null>(null);
+
+  async function fetchUserDetails(): Promise<UserData> {
+    return {
+      email: "user@example.com",
+      firstName: "John",
+      lastName: "Doe",
+      phone: "1234567890",
+      gender: "male",
+      dateOfBirth: "1990-01-01",
+      city: "CityName",
+      state: "StateName",
+      zipCode: "12345",
+      country: "CountryName",
+    };
+  }
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      const data = await fetchUserDetails();
+      setUserData(data);
+    };
+
+    fetchUserData();
+  }, []);
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       import("react-facebook-pixel")
         .then((module) => {
-          const ReactPixel = module.default; // Access the default export
-          ReactPixel.init(
-            "330900406345654",
-            {
-              em: "some@email.com",
-              fn: "FirstName", // First name
-              ln: "LastName", // Last name
-              ph: "PhoneNumber", // Phone number
-              ge: "Gender", // Gender
-              db: "DateOfBirth", // Date of birth
-              ct: "City", // City
-              st: "State", // State
-              zp: "ZipCode", // Zip code
-              country: "Country", // Country
-            },
-            {
-              autoConfig: true,
-              debug: false,
-            }
-          );
+          const ReactPixel = module.default;
+          ReactPixel.init("875794081268430");
           ReactPixel.pageView();
         })
         .catch((err) =>
@@ -55,6 +78,8 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <title>Do Zero aos Sites</title>
       </Head>
+      <SmoothScroll />
+      <GoogleAnalytics gaId="G-32JCH9GGY4" />
       <Component {...pageProps} />
     </>
   );
