@@ -1,10 +1,10 @@
 import SmoothScroll from "@/components/Lenis";
 import "@/styles/globals.scss";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "animate.css/animate.compat.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import { GoogleAnalytics } from "@next/third-parties/google";
 
 interface UserData {
   email: string;

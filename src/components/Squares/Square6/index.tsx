@@ -38,10 +38,10 @@ const Squares6 = ({ color, borderColor, containerColor }: Squares6Props) => {
                   </div>
                   <div className={styles.body}>
                     <h5 style={{ color }}>
-                      Potencialize suas vendas! Aprenda a conectar-se com
-                      clientes, criar ofertas atrativas e fechar negócios de
-                      forma eficiente. Transforme possibilidades em lucros
-                      conosco e destaque-se no mundo das vendas!
+                      Domine o GitHub! Aprenda a gerenciar seus projetos,
+                      versionar seu código e colaborar em equipe com facilidade.
+                      Com essas habilidades, você estará pronto para enfrentar
+                      qualquer desafio no desenvolvimento!
                     </h5>
                   </div>
                 </div>
@@ -51,7 +51,7 @@ const Squares6 = ({ color, borderColor, containerColor }: Squares6Props) => {
                 />
                 <div className={styles.bottom}>
                   <h4 style={{ color }}>
-                    Preço: <span>R$319,00</span>
+                    Preço: <span>R219,00</span>
                   </h4>
                 </div>
               </div>

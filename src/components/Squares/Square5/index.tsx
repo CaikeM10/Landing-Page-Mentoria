@@ -48,7 +48,7 @@ const Squares5 = ({ color, borderColor, containerColor }: Squares5Props) => {
                 <hr className={styles.hr} />
                 <div className={styles.bottom}>
                   <h4 style={{ color }}>
-                    Preço: <span>R$319,00</span>
+                    Preço: <span>R$349,00</span>
                   </h4>
                 </div>
               </div>
