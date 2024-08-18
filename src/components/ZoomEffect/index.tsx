@@ -15,7 +15,8 @@ const ZoomEffect = () => {
       const isMobile = window.innerWidth <= 768;
 
       // Set different xPercent and yPercent based on device
-      const xPercent = isMobile ? 7500 : -4300;
+      const scale = isMobile ? 100 : 700;
+      const xPercent = isMobile ? 1500 : -4300;
       const yPercent = isMobile ? -20000 : -50;
       // Clear previous triggers to avoid multiple executions
       scrollTriggerInstance.getAll().forEach((trigger) => trigger.kill());
