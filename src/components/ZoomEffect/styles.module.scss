@@ -62,7 +62,7 @@
     display: none;
   }
   color: #040122;
-
+  text-align: left;
   bottom: 0; /* Inicia na parte inferior */
   transform: translateY(100%); /* Posiciona abaixo da viewport */
   font-family: Syne;
@@ -94,4 +94,9 @@
   font-family: Syne;
   opacity: 0; /* Inicia com opacidade baixa */
   transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Transição suave */
+}
+.textWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
