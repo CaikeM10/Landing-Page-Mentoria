@@ -10,6 +10,7 @@ import SectionOne from "@/components/SectionOne";
 import SectionTwo from "@/components/SectionTwo";
 import StickFooter from "@/components/StickFooter";
 import Students from "@/components/Swiper";
+import ZoomEffect from "@/components/ZoomEffect";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -41,7 +42,8 @@ export default function Home() {
       <MovingBars />
       <Guarantee />
       <Students />
-      <Parallax />
+      <ZoomEffect />
+      {/* <Parallax /> */}
       <Modulos />
       <Price />
       <Questions />
