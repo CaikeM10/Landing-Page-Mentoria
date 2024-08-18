@@ -13,12 +13,23 @@ const ZoomEffect = () => {
 
       gsapModule.default.registerPlugin(scrollTriggerInstance);
       const isMobile = window.innerWidth <= 768;
+      const isMobilePequeno = window.innerWidth <= 413;
 
-      // Set different xPercent and yPercent based on device
-      const scale = isMobile ? 170 : 700;
-      const xPercent = isMobile ? -500 : -4300;
-      const yPercent = isMobile ? -4500 : -50;
-      // Clear previous triggers to avoid multiple executions
+      let scale, xPercent, yPercent;
+
+      if (isMobilePequeno) {
+        scale = 170; // Smaller scale for very small devices
+        xPercent = 50; // Adjust positioning for smaller screens
+        yPercent = -4000;
+      } else if (isMobile) {
+        scale = 170;
+        xPercent = -500;
+        yPercent = -4500;
+      } else {
+        scale = 700;
+        xPercent = -4300;
+        yPercent = -50;
+      }
       scrollTriggerInstance.getAll().forEach((trigger) => trigger.kill());
 
       gsapModule.default.to("#zoom-text", {
