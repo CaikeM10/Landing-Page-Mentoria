@@ -31,7 +31,7 @@ const ZoomEffect = () => {
         scrollTrigger: {
           trigger: "#zoom-in",
           pin: true,
-          end: `+=${innerHeight}`,
+          end: `+=${innerHeight / 2}`,
           scrub: 0.5,
         },
       });
