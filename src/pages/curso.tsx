@@ -3,7 +3,6 @@ import Guarantee from "@/components/Guarantee";
 import Header from "@/components/Header";
 import Modulos from "@/components/Modulos";
 import MovingBars from "@/components/MovingBars";
-import Parallax from "@/components/Parallax";
 import Price from "@/components/Price";
 import Questions from "@/components/Questions";
 import SectionOne from "@/components/SectionOne";
@@ -33,22 +32,21 @@ export default function Home() {
     setHasScrolledToEnd(false);
     setCanScrollUpPastHorizontalPage(true);
   };
-
+  const pageTitle = "curso";
   return (
     <>
       <Header />
-      <SectionOne />
-      <SectionTwo />
+      <SectionOne title={pageTitle} />
+      <SectionTwo title={pageTitle} />
       <MovingBars />
       <Guarantee />
-      <Students />
+      <Students title={pageTitle} />
       <ZoomEffect />
-      {/* <Parallax /> */}
       <Modulos />
-      <Price />
+      <Price title={pageTitle} />
       <Questions />
       <Footer />
-      <StickFooter />
+      <StickFooter title={pageTitle} />
     </>
   );
 }
