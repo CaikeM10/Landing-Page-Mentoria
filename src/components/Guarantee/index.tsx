@@ -55,7 +55,7 @@ const Guarantee = () => {
             </div>
             <div className={styles.info}>
               <div className={styles.icon}>
-                <img src="infinite.svg" />
+                <img src="/infinite.svg" />
               </div>
               <div className={styles.text}>
                 <h5>Acesso permanente</h5>
