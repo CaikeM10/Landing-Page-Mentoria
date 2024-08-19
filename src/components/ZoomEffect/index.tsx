@@ -18,8 +18,8 @@ const ZoomEffect = () => {
       let scale, xPercent, yPercent;
 
       if (isMobilePequeno) {
-        scale = 170; // Smaller scale for very small devices
-        xPercent = 50; // Adjust positioning for smaller screens
+        scale = 170;
+        xPercent = 50;
         yPercent = -4000;
       } else if (isMobile) {
         scale = 170;

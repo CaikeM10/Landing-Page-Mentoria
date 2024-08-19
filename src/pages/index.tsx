@@ -3,8 +3,12 @@ import TikTok from "@/components/TikTok";
 import Youtube from "@/components/YouTube";
 import Course from "../components/Course";
 import styles from "../styles/Home.module.scss";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
+  const queryParams = router.query;
+  console.log(queryParams);
   return (
     <>
       <section className={styles.container}>
@@ -14,7 +18,7 @@ export default function Home() {
           </div>
           <div className={styles.top}>
             <div className={styles.left}>
-              <Course />
+              <Course urlParams={queryParams} />
             </div>
             <div className={styles.right}>
               <Cost />

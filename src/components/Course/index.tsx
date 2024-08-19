@@ -2,8 +2,11 @@ import router from "next/router";
 import { useState } from "react";
 import styles from "./styles.module.scss";
 import axios from "axios";
-
-const Course = () => {
+import { ParsedUrlQuery } from "querystring";
+interface CourseProps {
+  urlParams: ParsedUrlQuery;
+}
+const Course = ({ urlParams }: CourseProps) => {
   const [lightPosition, setLightPosition] = useState({
     x: 0,
     y: 0,
@@ -45,15 +48,21 @@ const Course = () => {
           console.error("Failed to load React Facebook Pixel", err)
         );
     }
-    if (window.gtag) {
-      window.gtag("event", "InitiateCheckout", {
-        event_category: "engagement",
-        event_label: "Curso Checkout",
-        value: 17.0,
-        currency: "BRL",
-      });
+    if ("instragram-organico" in urlParams) {
+      router.push("/instagram/organico/curso");
+    } else if ("instagram-ads" in urlParams) {
+      router.push("/instagram/ads/curso");
+    } else if ("tiktok-organico" in urlParams) {
+      router.push("/tiktok/organico/curso");
+    } else if ("tiktok-ads" in urlParams) {
+      router.push("/tiktok/ads/curso");
+    } else if ("facebook-organico" in urlParams) {
+      router.push("/facebook/organico/curso");
+    } else if ("facebook-ads" in urlParams) {
+      router.push("/facebook/ads/curso");
+    } else {
+      router.push("/curso");
     }
-    router.push("/curso");
   };
 
   return (

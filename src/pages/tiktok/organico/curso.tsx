@@ -4,13 +4,13 @@ import Header from "@/components/Header";
 import Modulos from "@/components/Modulos";
 import MovingBars from "@/components/MovingBars";
 import PageTitle from "@/components/PageTitle";
-import Parallax from "@/components/Parallax";
 import Price from "@/components/Price";
 import Questions from "@/components/Questions";
 import SectionOne from "@/components/SectionOne";
 import SectionTwo from "@/components/SectionTwo";
 import StickFooter from "@/components/StickFooter";
 import Students from "@/components/Swiper";
+import ZoomEffect from "@/components/ZoomEffect";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -33,22 +33,22 @@ export default function Home() {
     setHasScrolledToEnd(false);
     setCanScrollUpPastHorizontalPage(true);
   };
-
+  const pageTitle = "tiktok-organico";
   return (
     <>
-      <PageTitle title="tiktok-organico" />
+      <PageTitle title={pageTitle} />
       <Header />
-      <SectionOne />
-      <SectionTwo />
+      <SectionOne title={pageTitle} />
+      <SectionTwo title={pageTitle} />
       <MovingBars />
       <Guarantee />
-      <Students />
-      <Parallax />
+      <Students title={pageTitle} />
+      <ZoomEffect />
       <Modulos />
-      <Price />
+      <Price title={pageTitle} />
       <Questions />
       <Footer />
-      <StickFooter />
+      <StickFooter title={pageTitle} />
     </>
   );
 }
