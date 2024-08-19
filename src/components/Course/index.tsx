@@ -48,7 +48,7 @@ const Course = ({ urlParams }: CourseProps) => {
           console.error("Failed to load React Facebook Pixel", err)
         );
     }
-    if ("instragram-organico" in urlParams) {
+    if ("instagram-organico" in urlParams) {
       router.push("/instagram/organico/curso");
     } else if ("instagram-ads" in urlParams) {
       router.push("/instagram/ads/curso");
