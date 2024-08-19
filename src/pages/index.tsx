@@ -7,8 +7,7 @@ import { useRouter } from "next/router";
 
 export default function Home() {
   const router = useRouter();
-  const queryParams = router.query;
-  console.log(queryParams);
+  const queryParams = "curso";
   return (
     <>
       <section className={styles.container}>
