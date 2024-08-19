@@ -52,7 +52,7 @@ const Course = ({ urlParams }: CourseProps) => {
       router.push("/instagram/organico/curso");
     } else if (urlParams.includes("instagram-ads")) {
       router.push("/instagram/ads/curso");
-    } else if (urlParams.includes("tiktok-organico")) {
+    } else if (urlParams.includes("tiktok")) {
       router.push("/tiktok/organico/curso");
     } else if (urlParams.includes("tiktok-ads")) {
       router.push("/tiktok/ads/curso");
