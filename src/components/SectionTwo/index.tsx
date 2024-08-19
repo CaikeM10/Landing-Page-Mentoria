@@ -108,27 +108,27 @@ const SectionTwo = ({ title }: SectionTwoProps) => {
                   </h5>
                 </div>
                 <div className={styles.pros}>
-                  <img src="correct.svg" />
+                  <img src="/correct.svg" />
                   <p>Faturamento alto</p>
                 </div>
                 <div className={styles.pros}>
-                  <img src="correct.svg" />
+                  <img src="/correct.svg" />
                   <p>Professor vive o que ensina</p>
                 </div>
                 <div className={styles.pros}>
-                  <img src="correct.svg" />
+                  <img src="/correct.svg" />
                   <p>Curso ponta a ponta</p>
                 </div>
                 <div className={styles.pros}>
-                  <img src="correct.svg" />
+                  <img src="/correct.svg" />
                   <p>Bônus sobre mercado de trabalho</p>
                 </div>
                 <div className={styles.pros}>
-                  <img src="correct.svg" />
+                  <img src="/correct.svg" />
                   <p>Dicas exclusivas</p>
                 </div>
                 <div className={styles.pros}>
-                  <img src="correct.svg" />
+                  <img src="/correct.svg" />
                   <p>Suporte exclusivo do rei</p>
                 </div>
               </div>
