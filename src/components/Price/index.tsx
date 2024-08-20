@@ -38,19 +38,19 @@ const Price = ({ title }: PriceProps) => {
         });
       }
 
-      let redirectUrl = "https://pay.kiwify.com.br/mY5zqOy";
+      let redirectUrl = "https://pay.kiwify.com.br/E5DBgq5";
       if (title === "tiktok-organico") {
-        redirectUrl = "https://pay.kiwify.com.br/UYmSna2";
+        redirectUrl = "https://pay.kiwify.com.br/NxpvNSu";
       } else if (title === "tiktok-ads") {
-        redirectUrl = "https://pay.kiwify.com.br/Sx41BcE";
+        redirectUrl = "https://pay.kiwify.com.br/6kcnp7F";
       } else if (title === "facebook-organico") {
-        redirectUrl = "https://pay.kiwify.com.br/0eH5lZu";
+        redirectUrl = "https://pay.kiwify.com.br/1bhPSsx";
       } else if (title === "facebook-ads") {
-        redirectUrl = "https://pay.kiwify.com.br/HUUZFXk";
+        redirectUrl = "https://pay.kiwify.com.br/ekc0n1f";
       } else if (title === "instagram-ads") {
-        redirectUrl = "https://pay.kiwify.com.br/EfzuaxR";
+        redirectUrl = "https://pay.kiwify.com.br/jnrSAAX";
       } else if (title === "instagram-organico") {
-        redirectUrl = "https://pay.kiwify.com.br/3mh1P9q";
+        redirectUrl = "https://pay.kiwify.com.br/89nQcag";
       }
 
       Router.push(redirectUrl);
@@ -136,7 +136,7 @@ const Price = ({ title }: PriceProps) => {
                   <p>TUDO ISSO POR APENAS</p>
                 </div>
                 <div className={styles.bigMoney}>
-                  <h2>R$ 16,99</h2>
+                  <h2>R$ 29,00</h2>
                   <h3>/Mês</h3>
                 </div>
                 <div className={styles.middleMoney}>
