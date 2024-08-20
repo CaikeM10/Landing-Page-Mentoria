@@ -1,5 +1,6 @@
 import ScrollAnimation from "react-animate-on-scroll";
 import styles from "./style.module.scss";
+import Image from "next/image";
 
 const Guarantee = () => {
   return (
