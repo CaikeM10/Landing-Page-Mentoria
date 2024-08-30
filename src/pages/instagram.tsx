@@ -7,7 +7,8 @@ import { useRouter } from "next/router";
 
 export default function Home() {
   const router = useRouter();
-  const queryParams = "curso";
+  const queryParams = "/instagram";
+  console.log(queryParams);
   return (
     <>
       <section className={styles.container}>

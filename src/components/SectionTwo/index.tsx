@@ -2,7 +2,10 @@ import ScrollAnimation from "react-animate-on-scroll";
 import styles from "./style.module.scss";
 import Router from "next/router";
 
-const SectionTwo = () => {
+interface SectionTwoProps {
+  title: string;
+}
+const SectionTwo = ({ title }: SectionTwoProps) => {
   const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
@@ -28,12 +31,20 @@ const SectionTwo = () => {
         });
       }
 
-      const urlParams = new URLSearchParams(window.location.search);
-      const utmSource = urlParams.get("utm_source");
-      const redirectUrl =
-        utmSource === "facebook"
-          ? "https://pay.kiwify.com.br/IzsZX9g"
-          : "https://pay.kiwify.com.br/mY5zqOy";
+      let redirectUrl = "https://pay.kiwify.com.br/RDbteAm";
+      if (title === "tiktok-organico") {
+        redirectUrl = "https://pay.kiwify.com.br/NxpvNSu";
+      } else if (title === "tiktok-ads") {
+        redirectUrl = "https://pay.kiwify.com.br/6kcnp7F";
+      } else if (title === "facebook-organico") {
+        redirectUrl = "https://pay.kiwify.com.br/Tt8mnfn";
+      } else if (title === "facebook-ads") {
+        redirectUrl = "https://pay.kiwify.com.br/Ur4o0Se";
+      } else if (title === "instagram-ads") {
+        redirectUrl = "https://pay.kiwify.com.br/ytCppeS";
+      } else if (title === "instagram-organico") {
+        redirectUrl = "https://pay.kiwify.com.br/KX1Qo71";
+      }
 
       Router.push(redirectUrl);
     }
@@ -97,27 +108,27 @@ const SectionTwo = () => {
                   </h5>
                 </div>
                 <div className={styles.pros}>
-                  <img src="correct.svg" />
+                  <img src="/correct.svg" />
                   <p>Faturamento alto</p>
                 </div>
                 <div className={styles.pros}>
-                  <img src="correct.svg" />
+                  <img src="/correct.svg" />
                   <p>Professor vive o que ensina</p>
                 </div>
                 <div className={styles.pros}>
-                  <img src="correct.svg" />
+                  <img src="/correct.svg" />
                   <p>Curso ponta a ponta</p>
                 </div>
                 <div className={styles.pros}>
-                  <img src="correct.svg" />
+                  <img src="/correct.svg" />
                   <p>Bônus sobre mercado de trabalho</p>
                 </div>
                 <div className={styles.pros}>
-                  <img src="correct.svg" />
+                  <img src="/correct.svg" />
                   <p>Dicas exclusivas</p>
                 </div>
                 <div className={styles.pros}>
-                  <img src="correct.svg" />
+                  <img src="/correct.svg" />
                   <p>Suporte exclusivo do rei</p>
                 </div>
               </div>

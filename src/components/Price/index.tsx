@@ -3,8 +3,10 @@ import Link from "next/link";
 import { InView } from "react-intersection-observer";
 import styles from "./styles.module.scss";
 import Router from "next/router";
-
-const Price = () => {
+interface PriceProps {
+  title: string;
+}
+const Price = ({ title }: PriceProps) => {
   const animationVariants = {
     visible: { opacity: 1, translateY: 0 },
     hidden: { opacity: 0, translateY: 50 },
@@ -36,12 +38,20 @@ const Price = () => {
         });
       }
 
-      const urlParams = new URLSearchParams(window.location.search);
-      const utmSource = urlParams.get("utm_source");
-      const redirectUrl =
-        utmSource === "facebook"
-          ? "https://pay.kiwify.com.br/IzsZX9g"
-          : "https://pay.kiwify.com.br/mY5zqOy";
+      let redirectUrl = "https://pay.kiwify.com.br/RDbteAm";
+      if (title === "tiktok-organico") {
+        redirectUrl = "https://pay.kiwify.com.br/NxpvNSu";
+      } else if (title === "tiktok-ads") {
+        redirectUrl = "https://pay.kiwify.com.br/6kcnp7F";
+      } else if (title === "facebook-organico") {
+        redirectUrl = "https://pay.kiwify.com.br/Tt8mnfn";
+      } else if (title === "facebook-ads") {
+        redirectUrl = "https://pay.kiwify.com.br/Ur4o0Se";
+      } else if (title === "instagram-ads") {
+        redirectUrl = "https://pay.kiwify.com.br/ytCppeS";
+      } else if (title === "instagram-organico") {
+        redirectUrl = "https://pay.kiwify.com.br/KX1Qo71";
+      }
 
       Router.push(redirectUrl);
     }
@@ -126,7 +136,7 @@ const Price = () => {
                   <p>TUDO ISSO POR APENAS</p>
                 </div>
                 <div className={styles.bigMoney}>
-                  <h2>R$ 16,99</h2>
+                  <h2>R$ 29,00</h2>
                   <h3>/Mês</h3>
                 </div>
                 <div className={styles.middleMoney}>

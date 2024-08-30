@@ -1,5 +1,6 @@
 import ScrollAnimation from "react-animate-on-scroll";
 import styles from "./style.module.scss";
+import Image from "next/image";
 
 const Guarantee = () => {
   return (
@@ -55,7 +56,7 @@ const Guarantee = () => {
             </div>
             <div className={styles.info}>
               <div className={styles.icon}>
-                <img src="infinite.svg" />
+                <img src="/infinite.svg" />
               </div>
               <div className={styles.text}>
                 <h5>Acesso permanente</h5>
