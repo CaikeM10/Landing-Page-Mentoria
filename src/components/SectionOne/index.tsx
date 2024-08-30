@@ -2,8 +2,10 @@ import Link from "next/link";
 import router from "next/router";
 import ScrollAnimation from "react-animate-on-scroll";
 import styles from "./styles.module.scss";
-
-const SectionOne = () => {
+interface SectionOneProps {
+  title: string;
+}
+const SectionOne = ({ title }: SectionOneProps) => {
   const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
@@ -30,12 +32,20 @@ const SectionOne = () => {
         });
       }
 
-      const urlParams = new URLSearchParams(window.location.search);
-      const utmSource = urlParams.get("utm_source");
-      const redirectUrl =
-        utmSource === "facebook"
-          ? "https://pay.kiwify.com.br/IzsZX9g"
-          : "https://pay.kiwify.com.br/mY5zqOy";
+      let redirectUrl = "https://pay.kiwify.com.br/RDbteAm";
+      if (title === "tiktok-organico") {
+        redirectUrl = "https://pay.kiwify.com.br/NxpvNSu";
+      } else if (title === "tiktok-ads") {
+        redirectUrl = "https://pay.kiwify.com.br/6kcnp7F";
+      } else if (title === "facebook-organico") {
+        redirectUrl = "https://pay.kiwify.com.br/Tt8mnfn";
+      } else if (title === "facebook-ads") {
+        redirectUrl = "https://pay.kiwify.com.br/Ur4o0Se";
+      } else if (title === "instagram-ads") {
+        redirectUrl = "https://pay.kiwify.com.br/ytCppeS";
+      } else if (title === "instagram-organico") {
+        redirectUrl = "https://pay.kiwify.com.br/KX1Qo71";
+      }
 
       router.push(redirectUrl);
     }
@@ -67,7 +77,7 @@ const SectionOne = () => {
 
               <div className={styles.discount}>
                 <img src="/discountTag.svg" />
-                <p>Apenas R$ 16,99.</p>
+                <p>Apenas R$ 29,00.</p>
               </div>
             </div>
           </ScrollAnimation>

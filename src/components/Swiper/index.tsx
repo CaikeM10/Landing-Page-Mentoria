@@ -9,8 +9,10 @@ import { Autoplay, EffectCoverflow, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./style.module.scss";
 import Router from "next/router";
-
-const Students = () => {
+interface StudentsProps {
+  title: string;
+}
+const Students = ({ title }: StudentsProps) => {
   const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
@@ -37,12 +39,20 @@ const Students = () => {
         });
       }
 
-      const urlParams = new URLSearchParams(window.location.search);
-      const utmSource = urlParams.get("utm_source");
-      const redirectUrl =
-        utmSource === "facebook"
-          ? "https://pay.kiwify.com.br/IzsZX9g"
-          : "https://pay.kiwify.com.br/mY5zqOy";
+      let redirectUrl = "https://pay.kiwify.com.br/RDbteAm";
+      if (title === "tiktok-organico") {
+        redirectUrl = "https://pay.kiwify.com.br/NxpvNSu";
+      } else if (title === "tiktok-ads") {
+        redirectUrl = "https://pay.kiwify.com.br/6kcnp7F";
+      } else if (title === "facebook-organico") {
+        redirectUrl = "https://pay.kiwify.com.br/Tt8mnfn";
+      } else if (title === "facebook-ads") {
+        redirectUrl = "https://pay.kiwify.com.br/Ur4o0Se";
+      } else if (title === "instagram-ads") {
+        redirectUrl = "https://pay.kiwify.com.br/ytCppeS";
+      } else if (title === "instagram-organico") {
+        redirectUrl = "https://pay.kiwify.com.br/KX1Qo71";
+      }
 
       Router.push(redirectUrl);
     }

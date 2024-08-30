@@ -2,8 +2,10 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 import Router from "next/router";
-
-const StickFooter = () => {
+interface StickFooterProps {
+  title: string;
+}
+const StickFooter = ({ title }: StickFooterProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -46,12 +48,20 @@ const StickFooter = () => {
           currency: "BRL",
         });
       }
-      const urlParams = new URLSearchParams(window.location.search);
-      const utmSource = urlParams.get("utm_source");
-      const redirectUrl =
-        utmSource === "facebook"
-          ? "https://pay.kiwify.com.br/IzsZX9g"
-          : "https://pay.kiwify.com.br/mY5zqOy";
+      let redirectUrl = "https://pay.kiwify.com.br/RDbteAm";
+      if (title === "tiktok-organico") {
+        redirectUrl = "https://pay.kiwify.com.br/NxpvNSu";
+      } else if (title === "tiktok-ads") {
+        redirectUrl = "https://pay.kiwify.com.br/6kcnp7F";
+      } else if (title === "facebook-organico") {
+        redirectUrl = "https://pay.kiwify.com.br/Tt8mnfn";
+      } else if (title === "facebook-ads") {
+        redirectUrl = "https://pay.kiwify.com.br/Ur4o0Se";
+      } else if (title === "instagram-ads") {
+        redirectUrl = "https://pay.kiwify.com.br/ytCppeS";
+      } else if (title === "instagram-organico") {
+        redirectUrl = "https://pay.kiwify.com.br/KX1Qo71";
+      }
 
       Router.push(redirectUrl);
     }
