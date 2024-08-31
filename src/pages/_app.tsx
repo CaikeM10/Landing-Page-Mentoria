@@ -55,7 +55,7 @@ export default function App({ Component, pageProps }: AppProps) {
           ReactPixel.pageView();
         })
         .catch((err) =>
-          console.error("Failed to load React Facebook Pixel", err)
+          console.error("Failed to load React Facebook Pixel", err),
         );
     }
   }, []);

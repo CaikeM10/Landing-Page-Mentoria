@@ -61,7 +61,8 @@ $ls: clamp(-1.75px, -0.25vw, -3.5px);
 
   .aurora__item:nth-of-type(1) {
     background-color: $clr-1;
-    animation: aurora-border 6s ease-in-out infinite,
+    animation:
+      aurora-border 6s ease-in-out infinite,
       aurora-1 12s ease-in-out infinite alternate;
   }
 
@@ -69,7 +70,8 @@ $ls: clamp(-1.75px, -0.25vw, -3.5px);
     background-color: $clr-3;
     right: 0;
     top: 0;
-    animation: aurora-border 6s ease-in-out infinite,
+    animation:
+      aurora-border 6s ease-in-out infinite,
       aurora-2 12s ease-in-out infinite alternate;
   }
 
@@ -77,7 +79,8 @@ $ls: clamp(-1.75px, -0.25vw, -3.5px);
     background-color: $clr-2;
     left: 0;
     bottom: 0;
-    animation: aurora-border 6s ease-in-out infinite,
+    animation:
+      aurora-border 6s ease-in-out infinite,
       aurora-3 8s ease-in-out infinite alternate;
   }
 
@@ -85,7 +88,8 @@ $ls: clamp(-1.75px, -0.25vw, -3.5px);
     background-color: $clr-4;
     right: 0;
     bottom: -50%;
-    animation: aurora-border 6s ease-in-out infinite,
+    animation:
+      aurora-border 6s ease-in-out infinite,
       aurora-4 24s ease-in-out infinite alternate;
   }
 

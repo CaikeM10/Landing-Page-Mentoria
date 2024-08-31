@@ -3,7 +3,7 @@ import axios from "axios";
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method Not Allowed" });
@@ -39,7 +39,7 @@ export default async function handler(
         headers: {
           "Content-Type": "application/json",
         },
-      }
+      },
     );
 
     console.log("Facebook API response:", response.data);
@@ -53,7 +53,7 @@ export default async function handler(
   } catch (error: any) {
     console.error(
       "Error sending event:",
-      error.response ? error.response.data : error.message
+      error.response ? error.response.data : error.message,
     );
     res
       .status(500)

@@ -8,7 +8,7 @@
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: Syne;
+
   color: #040122; /* Cor inicial do texto */
   @media only screen and (max-width: 768px) {
     padding-inline: 20px;
@@ -24,7 +24,7 @@
   color: white;
   transform-origin: center center;
   position: absolute;
-  font-family: Syne;
+
   span {
     position: relative;
     display: inline;
@@ -51,7 +51,7 @@
 //   color: #040122;
 //   position: absolute;
 //   // top: 80%; /* Start below the viewport */
-//   font-family: Syne;
+//
 //   opacity: 1; /* Start with very low opacity */
 // }
 .nextText {
@@ -65,9 +65,11 @@
   text-align: left;
   bottom: 0; /* Inicia na parte inferior */
   transform: translateY(100%); /* Posiciona abaixo da viewport */
-  font-family: Syne;
+
   opacity: 0; /* Inicia com opacidade baixa */
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Transição suave */
+  transition:
+    transform 0.5s ease-out,
+    opacity 0.5s ease-out; /* Transição suave */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -91,9 +93,11 @@
 
   bottom: 0; /* Inicia na parte inferior */
   transform: translateY(100%); /* Posiciona abaixo da viewport */
-  font-family: Syne;
+
   opacity: 0; /* Inicia com opacidade baixa */
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Transição suave */
+  transition:
+    transform 0.5s ease-out,
+    opacity 0.5s ease-out; /* Transição suave */
 }
 .textWrap {
   display: flex;
