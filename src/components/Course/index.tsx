@@ -43,7 +43,7 @@ const Course = ({ urlParams }: CourseProps) => {
           });
         })
         .catch((err) =>
-          console.error("Failed to load React Facebook Pixel", err)
+          console.error("Failed to load React Facebook Pixel", err),
         );
     }
 

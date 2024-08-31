@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Mona Sans";
-  src: url("https://assets.codepen.io/64/Mona-Sans.woff2")
+  src:
+    url("https://assets.codepen.io/64/Mona-Sans.woff2")
       format("woff2 supports variations"),
     url("https://assets.codepen.io/64/Mona-Sans.woff2")
       format("woff2-variations");
@@ -157,8 +158,11 @@ $glow-rotate-unit: 1deg;
       &:after {
         --glow-translate-y: 0;
         animation-play-state: paused;
-        transition: --glow-translate-y 0s ease, --glow-blur 0.05s ease,
-          --glow-opacity 0.05s ease, --glow-scale 0.05s ease,
+        transition:
+          --glow-translate-y 0s ease,
+          --glow-blur 0.05s ease,
+          --glow-opacity 0.05s ease,
+          --glow-scale 0.05s ease,
           --glow-radius 0.05s ease;
       }
     }
@@ -224,7 +228,8 @@ $glow-rotate-unit: 1deg;
         );
       width: calc(100% + var(--border-width));
       height: calc(100% + var(--border-width));
-      animation: hue-animation var(--animation-speed) linear infinite,
+      animation:
+        hue-animation var(--animation-speed) linear infinite,
         rotate-bg var(--animation-speed) linear infinite;
       transition: --bg-size var(--interaction-speed) ease;
     }

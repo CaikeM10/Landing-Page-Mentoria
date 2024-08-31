@@ -60,7 +60,7 @@ const ZoomEffect = () => {
             scrub: true,
           },
           ease: "power3.out",
-        }
+        },
       );
 
       // Then, increase the opacity of individual words as they appear
@@ -78,7 +78,7 @@ const ZoomEffect = () => {
             scrub: true,
           },
           ease: "power3.out",
-        }
+        },
       );
     };
 
@@ -121,34 +121,34 @@ const ZoomEffect = () => {
         <div className={styles.textWrap}>
           <p id="next-text" className={styles.nextText}>
             {splitText(
-              "Impulsione sua carreira <br/>com nosso curso completo! <br/>Aprenda Figma, Wordpress."
+              "Impulsione sua carreira <br/>com nosso curso completo! <br/>Aprenda Figma, Wordpress.",
             )}
           </p>
           <p id="next-text" className={styles.nextText}>
             {splitText(
-              "HTML, CSS, JavaScript, <br/>e técnicas de venda. <br/>Cada módulo garante um aprendizado."
+              "HTML, CSS, JavaScript, <br/>e técnicas de venda. <br/>Cada módulo garante um aprendizado.",
             )}
           </p>
           <p id="next-text" className={styles.nextText}>
             {splitText(
-              "Prático e eficiente. <br/>Domine habilidades valiosas <br/>e alcance o sucesso no mundo digital."
+              "Prático e eficiente. <br/>Domine habilidades valiosas <br/>e alcance o sucesso no mundo digital.",
             )}
           </p>
         </div>
         <div className={styles.textWrap}>
           <p id="next-text" className={styles.nextTextMobile}>
             {splitText(
-              "Impulsione sua carreira <br/>com nosso curso completo! <br/>Aprenda Figma, Wordpress."
+              "Impulsione sua carreira <br/>com nosso curso completo! <br/>Aprenda Figma, Wordpress.",
             )}
           </p>
           <p id="next-text" className={styles.nextTextMobile}>
             {splitText(
-              "HTML, CSS, JavaScript, <br/>e técnicas de venda. <br/>Cada módulo garante <br/>um aprendizado."
+              "HTML, CSS, JavaScript, <br/>e técnicas de venda. <br/>Cada módulo garante <br/>um aprendizado.",
             )}
           </p>
           <p id="next-text" className={styles.nextTextMobile}>
             {splitText(
-              "Prático e eficiente. <br/>Domine habilidades valiosas <br/>e alcance o sucesso digital."
+              "Prático e eficiente. <br/>Domine habilidades valiosas <br/>e alcance o sucesso digital.",
             )}
           </p>
         </div>

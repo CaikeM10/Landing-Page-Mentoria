@@ -20,7 +20,7 @@ const SectionTwo = ({ title }: SectionTwoProps) => {
           });
         })
         .catch((err) =>
-          console.error("Failed to load React Facebook Pixel", err)
+          console.error("Failed to load React Facebook Pixel", err),
         );
       if (window.gtag) {
         window.gtag("event", "InitiateCheckout", {

@@ -13,7 +13,7 @@ const HybridScroll: React.FC = () => {
       stickSections.forEach((section) => {
         const offsetTop = section.offsetTop;
         const scrollSection = section.querySelector(
-          `.${styles.scrollSection}`
+          `.${styles.scrollSection}`,
         ) as HTMLElement | null;
         let percentage =
           ((window.scrollY - offsetTop) / window.innerHeight) * 100;
