@@ -5,10 +5,15 @@ import { Howl } from "howler";
 import styles from "@/styles/desafio.module.scss";
 import WebsiteModal from "@/components/WebsiteModal";
 import { color } from "framer-motion";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import LoadingSpinner from "@/components/LoadingSpinner";
 
 gsap.registerPlugin(MotionPathPlugin);
 
 export default function Desafio() {
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     gsap.to("#animatedImage", {
       duration: 10,
@@ -23,29 +28,101 @@ export default function Desafio() {
       },
     });
   }, []);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    url: "",
+    pixKey: "",
+    pixType: "",
+  });
 
   const hoverSound = new Howl({
     src: ["/sounds/buttonSound.mp3"],
     volume: 0.5,
   });
 
+  const handleInputChange = (e: any) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const handleSubmit = async () => {
+    setLoading(true);
+    try {
+      const response = await axios.post("/api/registerWebsite", formData);
+      if (response.status === 201) {
+        toast.success("Website registrado com sucesso!");
+      }
+    } catch (error: any) {
+      console.error(
+        "Erro ao registrar o site:",
+        error.response?.data || error.message
+      );
+      toast.error("Erro ao registrar o site. Por favor, tente novamente.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <>
+      {loading && <LoadingSpinner />}
       <div className={styles.container}>
+        <ToastContainer />
         <div className={styles.content}>
           <div className={styles.topBanner}>
             <div className={styles.formWrap}>
               <div className={styles.rightForm}>
                 <h1>DESAFIO DOS SITES</h1>
                 <div className={styles.form}>
-                  <input type="text" placeholder="Nome" />
-                  <input type="text" placeholder="E-mail" />
-                  <input type="text" placeholder="Link do Website" />
-                  <input type="text" placeholder="Chave PIX" />
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Nome"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="E-mail"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                  />
+                  <input
+                    type="url"
+                    name="url"
+                    placeholder="Link do Website"
+                    value={formData.url}
+                    onChange={handleInputChange}
+                  />
+                  <input
+                    type="text"
+                    name="pixKey"
+                    placeholder="Chave PIX"
+                    value={formData.pixKey}
+                    onChange={handleInputChange}
+                  />
+                  <select
+                    name="pixType"
+                    value={formData.pixType}
+                    onChange={handleInputChange}
+                  >
+                    <option value="" disabled>
+                      Tipo de chave pix
+                    </option>
+                    <option value="CPF">CPF</option>
+                    <option value="CNPJ">CNPJ</option>
+                    <option value="TELEFONE">TELEFONE</option>
+                    <option value="EMAIL">EMAIL</option>
+                    <option value="CHAVE_ALEATORIA">CHAVE ALEATÓRIA</option>
+                  </select>
                   <button
                     className={styles.button}
                     onMouseEnter={() => hoverSound.play()}
                     onMouseDown={() => hoverSound.play()}
+                    onClick={handleSubmit}
                   >
                     <span className={styles.line}></span>
                     ENVIAR SITE!
@@ -621,14 +698,53 @@ export default function Desafio() {
               <h1>DESAFIO DOS SITES</h1>
               <h2>ENVIE SEU SITE!</h2>
               <div className={styles.formMobile}>
-                <input type="text" placeholder="Nome" />
-                <input type="text" placeholder="E-mail" />
-                <input type="text" placeholder="Link do Website" />
-                <input type="text" placeholder="Chave PIX" />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Nome"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="E-mail"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                />
+                <input
+                  type="url"
+                  name="url"
+                  placeholder="Link do Website"
+                  value={formData.url}
+                  onChange={handleInputChange}
+                />
+                <input
+                  type="text"
+                  name="pixKey"
+                  placeholder="Chave PIX"
+                  value={formData.pixKey}
+                  onChange={handleInputChange}
+                />
+                <select
+                  name="pixType"
+                  value={formData.pixType}
+                  onChange={handleInputChange}
+                >
+                  <option value="" disabled>
+                    Tipo de chave pix
+                  </option>
+                  <option value="CPF">CPF</option>
+                  <option value="CNPJ">CNPJ</option>
+                  <option value="TELEFONE">TELEFONE</option>
+                  <option value="EMAIL">EMAIL</option>
+                  <option value="CHAVE_ALEATORIA">CHAVE ALEATÓRIA</option>
+                </select>
                 <button
                   className={styles.button}
                   onMouseEnter={() => hoverSound.play()}
                   onMouseDown={() => hoverSound.play()}
+                  onClick={handleSubmit}
                 >
                   <span className={styles.line}></span>
                   ENVIAR SITE!

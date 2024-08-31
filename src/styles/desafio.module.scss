@@ -254,7 +254,7 @@
   }
 }
 .formWrap {
-  padding-top: 3vw;
+  padding-top: 2vw;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -283,6 +283,12 @@
     padding: 3vw;
     outline: none;
   }
+  select {
+    border: 0.1vw solid #01d1d6;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 3vw;
+    outline: none;
+  }
 }
 .form {
   width: 100%;
@@ -296,6 +302,12 @@
   gap: 1vw;
 
   input {
+    border: 0.1vw solid #01d1d6;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.8vw;
+    outline: none;
+  }
+  select {
     border: 0.1vw solid #01d1d6;
     background: rgba(0, 0, 0, 0.5);
     padding: 0.8vw;
