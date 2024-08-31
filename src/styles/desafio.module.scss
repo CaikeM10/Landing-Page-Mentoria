@@ -165,7 +165,7 @@
   position: relative;
   border: solid 0.1vw rgba(0, 214, 252, 0.3);
   background: none;
-  color: rgba(0, 214, 252, 0.5);
+  color: rgba(0, 214, 252, 1);
   font-family: "Galderglynn Titling Bd", sans-serif;
   text-transform: uppercase;
   font-weight: normal;
@@ -281,13 +281,16 @@
     border: 0.1vw solid #01d1d6;
     background: rgba(0, 0, 0, 0.5);
     padding: 3vw;
+    font-size: 16px;
     outline: none;
   }
   select {
     border: 0.1vw solid #01d1d6;
     background: rgba(0, 0, 0, 0.5);
-    padding: 3vw;
+    padding: 0.8vw;
     outline: none;
+    -webkit-appearance: none;
+    appearance: none;
   }
 }
 .form {
@@ -306,12 +309,15 @@
     background: rgba(0, 0, 0, 0.5);
     padding: 0.8vw;
     outline: none;
+    font-size: 16px;
   }
   select {
     border: 0.1vw solid #01d1d6;
     background: rgba(0, 0, 0, 0.5);
     padding: 0.8vw;
     outline: none;
+    -webkit-appearance: none;
+    appearance: none;
   }
 }
 .slider {

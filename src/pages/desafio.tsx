@@ -53,6 +53,13 @@ export default function Desafio() {
       const response = await axios.post("/api/registerWebsite", formData);
       if (response.status === 201) {
         toast.success("Website registrado com sucesso!");
+        setFormData({
+          name: "",
+          email: "",
+          url: "",
+          pixKey: "",
+          pixType: "",
+        });
       }
     } catch (error: any) {
       console.error(
