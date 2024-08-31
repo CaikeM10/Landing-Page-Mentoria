@@ -3,6 +3,7 @@ import { gsap } from "gsap/dist/gsap";
 import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
 import { Howl } from "howler";
 import styles from "@/styles/desafio.module.scss";
+import router from "next/router";
 import WebsiteModal from "@/components/WebsiteModal";
 import { color } from "framer-motion";
 import axios from "axios";
@@ -14,6 +15,7 @@ gsap.registerPlugin(MotionPathPlugin);
 
 export default function Desafio() {
   const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     gsap.to("#animatedImage", {
       duration: 10,
@@ -40,6 +42,21 @@ export default function Desafio() {
     src: ["/sounds/buttonSound.mp3"],
     volume: 0.5,
   });
+  const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+
+    let redirectUrl = "https://pay.kiwify.com.br/RDbteAm";
+
+    router.push(redirectUrl);
+  };
+  const handleClickView = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+
+    let redirectUrl =
+      "https://dashboard.kiwify.com.br/course/premium/5356685e-a4d0-4ed3-9093-036c20df32f3";
+
+    router.push(redirectUrl);
+  };
 
   const handleInputChange = (e: any) => {
     setFormData({
@@ -760,7 +777,7 @@ export default function Desafio() {
               <p>
                 Todos os meses, soltamos um novo desafio, em que você pode
                 ganhar até 300R$. Você pode assistir ao desafio do mês,{" "}
-                <span>clique aqui.</span>
+                <span onClick={handleClickView}>clique aqui.</span>
               </p>
               <p>
                 Se seu site já foi feito, você pode enviar para análise
@@ -776,6 +793,7 @@ export default function Desafio() {
                 onMouseEnter={() => hoverSound.play()}
                 onMouseDown={() => hoverSound.play()}
                 style={{ maxWidth: "500px" }}
+                onClick={handleClick}
               >
                 <span className={styles.line}></span>
                 CURSO POR 5 REAIS
