@@ -2,6 +2,7 @@
   height: 100vh;
   display: flex;
   justify-content: center;
+  font-family: Syne;
   align-items: center;
   background-color: #040122; /* Cor inicial de fundo */
   position: relative;
@@ -16,6 +17,7 @@
 }
 
 .zoomText {
+  font-family: Syne;
   font-size: 50px;
   text-align: center;
   font-weight: 900;
@@ -57,6 +59,7 @@
 .nextText {
   font-size: 48px;
   text-align: center;
+  font-family: Syne;
   font-weight: 900;
   @media only screen and (max-width: 768px) {
     display: none;
@@ -67,9 +70,7 @@
   transform: translateY(100%); /* Posiciona abaixo da viewport */
 
   opacity: 0; /* Inicia com opacidade baixa */
-  transition:
-    transform 0.5s ease-out,
-    opacity 0.5s ease-out; /* Transição suave */
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Transição suave */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -95,9 +96,7 @@
   transform: translateY(100%); /* Posiciona abaixo da viewport */
 
   opacity: 0; /* Inicia com opacidade baixa */
-  transition:
-    transform 0.5s ease-out,
-    opacity 0.5s ease-out; /* Transição suave */
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Transição suave */
 }
 .textWrap {
   display: flex;
