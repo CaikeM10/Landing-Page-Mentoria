@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Accordion from "../Accordion";
 import styles from "./styles.module.scss";
 
@@ -19,7 +20,9 @@ const Questions = () => {
           </div>
           <div className={styles.box}>
             <div className={styles.icon}>
-              <img src="/whats.svg" />
+              <Link href="https://wa.link/q2hdv5">
+                <img src="/whats.svg" />
+              </Link>
             </div>
             <div className={styles.text}>
               <h3>

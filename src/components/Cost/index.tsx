@@ -29,7 +29,7 @@ const Cost = () => {
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    router.push("https://wa.link/o1y7jz");
+    router.push("https://wa.link/ua60u1");
   };
 
   return (
