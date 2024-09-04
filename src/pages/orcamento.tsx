@@ -79,8 +79,7 @@ export default function Desafio() {
       }
       const response = await axios.post("/api/budget", formData);
       if (response.status === 201) {
-        let redirectUrl =
-          "https://dashboard.kiwify.com.br/course/premium/5356685e-a4d0-4ed3-9093-036c20df32f3";
+        let redirectUrl = "https://wa.link/4ktma1";
 
         router.push(redirectUrl);
         toast.success(
