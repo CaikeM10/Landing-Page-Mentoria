@@ -2,13 +2,14 @@
   height: 100vh;
   display: flex;
   justify-content: center;
+  font-family: Syne;
   align-items: center;
   background-color: #040122; /* Cor inicial de fundo */
   position: relative;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: Syne;
+
   color: #040122; /* Cor inicial do texto */
   @media only screen and (max-width: 768px) {
     padding-inline: 20px;
@@ -16,6 +17,7 @@
 }
 
 .zoomText {
+  font-family: Syne;
   font-size: 50px;
   text-align: center;
   font-weight: 900;
@@ -24,7 +26,7 @@
   color: white;
   transform-origin: center center;
   position: absolute;
-  font-family: Syne;
+
   span {
     position: relative;
     display: inline;
@@ -51,12 +53,13 @@
 //   color: #040122;
 //   position: absolute;
 //   // top: 80%; /* Start below the viewport */
-//   font-family: Syne;
+//
 //   opacity: 1; /* Start with very low opacity */
 // }
 .nextText {
   font-size: 48px;
   text-align: center;
+  font-family: Syne;
   font-weight: 900;
   @media only screen and (max-width: 768px) {
     display: none;
@@ -65,7 +68,7 @@
   text-align: left;
   bottom: 0; /* Inicia na parte inferior */
   transform: translateY(100%); /* Posiciona abaixo da viewport */
-  font-family: Syne;
+
   opacity: 0; /* Inicia com opacidade baixa */
   transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Transição suave */
   -webkit-font-smoothing: antialiased;
@@ -91,7 +94,7 @@
 
   bottom: 0; /* Inicia na parte inferior */
   transform: translateY(100%); /* Posiciona abaixo da viewport */
-  font-family: Syne;
+
   opacity: 0; /* Inicia com opacidade baixa */
   transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Transição suave */
 }

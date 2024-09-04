@@ -28,7 +28,7 @@ const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
       let newPosition = scrollFraction * (backgroundColors.length - 1) * 100; // Adjust for gradient shift
       let contentIndex = Math.min(
         Math.floor(scrollFraction * contents.length),
-        contents.length - 1
+        contents.length - 1,
       );
       setGradientPosition(newPosition);
       setCurrentContent(contents[contentIndex]);
@@ -45,7 +45,7 @@ const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (componentRef.current) {
