@@ -27,7 +27,7 @@ const Students = ({ title }: StudentsProps) => {
           });
         })
         .catch((err) =>
-          console.error("Failed to load React Facebook Pixel", err)
+          console.error("Failed to load React Facebook Pixel", err),
         );
 
       if (window.gtag) {
@@ -58,7 +58,7 @@ const Students = ({ title }: StudentsProps) => {
     }
   };
   const [swiperInstance, setSwiperInstance] = useState<SwiperClass | null>(
-    null
+    null,
   );
 
   useEffect(() => {
@@ -80,7 +80,7 @@ const Students = ({ title }: StudentsProps) => {
             const maxSlideIndex = swiperInstance.slides.length - 1;
             const targetSlideIndex = Math.min(
               Math.round(maxSlideIndex * scrollFraction),
-              maxSlideIndex
+              maxSlideIndex,
             );
 
             swiperInstance.slideTo(targetSlideIndex, 1000);

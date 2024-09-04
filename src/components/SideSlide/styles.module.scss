@@ -42,7 +42,9 @@
 
 // Example of transition effects
 .transitionBackground {
-  transition: background-color 0.5s ease, color 0.5s ease; // Adjust timing and easing as needed
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease; // Adjust timing and easing as needed
 }
 
 .darkBackground {

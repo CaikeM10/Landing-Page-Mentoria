@@ -26,7 +26,7 @@ const Price = ({ title }: PriceProps) => {
           });
         })
         .catch((err) =>
-          console.error("Failed to load React Facebook Pixel", err)
+          console.error("Failed to load React Facebook Pixel", err),
         );
 
       if (window.gtag) {
