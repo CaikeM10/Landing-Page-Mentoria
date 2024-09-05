@@ -15,6 +15,8 @@ gsap.registerPlugin(MotionPathPlugin);
 
 export default function Desafio() {
   const [loading, setLoading] = useState(false);
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phoneRegex = /^\d+$/;
 
   useEffect(() => {
     gsap.to("#animatedImage", {
@@ -60,6 +62,20 @@ export default function Desafio() {
   };
   const handleSubmit = async () => {
     setLoading(true);
+    const isValidEmail = emailRegex.test(formData.email);
+    const isValidPhone = phoneRegex.test(formData.phone);
+
+    if (!isValidEmail) {
+      toast.error("Por favor, insira um email válido.");
+      setLoading(false);
+      return;
+    }
+    if (!isValidPhone) {
+      toast.error("Por favor, insira um número de telefone válido.");
+      setLoading(false);
+      return;
+    }
+
     try {
       if (typeof window !== "undefined") {
         import("react-facebook-pixel")
