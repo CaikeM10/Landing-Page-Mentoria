@@ -45,7 +45,7 @@ export default function Desafio() {
   const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
-    let redirectUrl = "https://pay.kiwify.com.br/RDbteAm";
+    let redirectUrl = "https://pay.kiwify.com.br/3xIj1nj";
 
     router.push(redirectUrl);
   };
