@@ -85,7 +85,7 @@ const Course = ({ urlParams }: CourseProps) => {
             <img src="/newicon.png" />
           </div>
           <div className={styles.text}>
-            <h2>Aprenda por R$10,00</h2>
+            <h2>Aprenda por R$29,00</h2>
             <h5>
               Nesse curso você vai aprender tudo que você precisa para sair do
               zero, e aprender programação.
