@@ -39,19 +39,19 @@ const Students = ({ title }: StudentsProps) => {
         });
       }
 
-      let redirectUrl = "https://pay.kiwify.com.br/3xIj1nj";
+      let redirectUrl = "https://pay.kiwify.com.br/E5DBgq5";
       if (title === "tiktok-organico") {
         redirectUrl = "https://pay.kiwify.com.br/NxpvNSu";
       } else if (title === "tiktok-ads") {
         redirectUrl = "https://pay.kiwify.com.br/6kcnp7F";
       } else if (title === "facebook-organico") {
-        redirectUrl = "https://pay.kiwify.com.br/ANmffEl";
+        redirectUrl = "https://pay.kiwify.com.br/1bhPSsx";
       } else if (title === "facebook-ads") {
-        redirectUrl = "https://pay.kiwify.com.br/AIANCMk";
+        redirectUrl = "https://pay.kiwify.com.br/ekc0n1f";
       } else if (title === "instagram-ads") {
-        redirectUrl = "https://pay.kiwify.com.br/z6Lbeqy";
+        redirectUrl = "https://pay.kiwify.com.br/jnrSAAX";
       } else if (title === "instagram-organico") {
-        redirectUrl = "https://pay.kiwify.com.br/4PE3Epu";
+        redirectUrl = "https://pay.kiwify.com.br/89nQcag";
       }
 
       Router.push(redirectUrl);
