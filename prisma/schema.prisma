@@ -19,15 +19,25 @@ model User {
   currentSignatureDate DateTime?
   renewSignatureDate   DateTime?
   paymentMethod        String?
+  cancelled            Boolean   @default(false)
 }
 
 model UserWebsite {
   id        String   @id @default(uuid())
   name      String
-  url       String 
+  url       String
   email     String
   pixKey    String
   pixType   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+
+model UserBudget {
+  id        String   @id @default(uuid())
+  email      String
+  phone       String 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

@@ -20,7 +20,7 @@ const SectionOne = ({ title }: SectionOneProps) => {
           });
         })
         .catch((err) =>
-          console.error("Failed to load React Facebook Pixel", err),
+          console.error("Failed to load React Facebook Pixel", err)
         );
 
       if (window.gtag) {
@@ -32,19 +32,19 @@ const SectionOne = ({ title }: SectionOneProps) => {
         });
       }
 
-      let redirectUrl = "https://pay.kiwify.com.br/RDbteAm";
+      let redirectUrl = "https://pay.kiwify.com.br/3xIj1nj";
       if (title === "tiktok-organico") {
         redirectUrl = "https://pay.kiwify.com.br/NxpvNSu";
       } else if (title === "tiktok-ads") {
         redirectUrl = "https://pay.kiwify.com.br/6kcnp7F";
       } else if (title === "facebook-organico") {
-        redirectUrl = "https://pay.kiwify.com.br/Tt8mnfn";
+        redirectUrl = "https://pay.kiwify.com.br/ANmffEl";
       } else if (title === "facebook-ads") {
-        redirectUrl = "https://pay.kiwify.com.br/Ur4o0Se";
+        redirectUrl = "https://pay.kiwify.com.br/AIANCMk";
       } else if (title === "instagram-ads") {
-        redirectUrl = "https://pay.kiwify.com.br/ytCppeS";
+        redirectUrl = "https://pay.kiwify.com.br/z6Lbeqy";
       } else if (title === "instagram-organico") {
-        redirectUrl = "https://pay.kiwify.com.br/KX1Qo71";
+        redirectUrl = "https://pay.kiwify.com.br/4PE3Epu";
       }
 
       router.push(redirectUrl);
