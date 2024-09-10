@@ -43,7 +43,7 @@ const Course = ({ urlParams }: CourseProps) => {
           });
         })
         .catch((err) =>
-          console.error("Failed to load React Facebook Pixel", err),
+          console.error("Failed to load React Facebook Pixel", err)
         );
     }
 
@@ -85,7 +85,7 @@ const Course = ({ urlParams }: CourseProps) => {
             <img src="/newicon.png" />
           </div>
           <div className={styles.text}>
-            <h2>Aprenda por R$5,00</h2>
+            <h2>Aprenda por R$10,00</h2>
             <h5>
               Nesse curso você vai aprender tudo que você precisa para sair do
               zero, e aprender programação.
