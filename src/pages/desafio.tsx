@@ -796,7 +796,7 @@ export default function Desafio() {
                 onClick={handleClick}
               >
                 <span className={styles.line}></span>
-                CURSO POR 5 REAIS
+                CURSO POR 29 REAIS
               </button>
             </div>
             <div className={styles.divisor}>
