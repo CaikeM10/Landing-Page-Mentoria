@@ -389,3 +389,15 @@
   justify-content: center;
   height: 100%;
 }
+
+.customText {
+  color: #ffffff;
+  font-family: "Galderglynn Titling Rg", sans-serif;
+  text-align: center;
+  font-size: 1.3vw;
+  margin-bottom: 1vw;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 4vw;
+  }
+}
