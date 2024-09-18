@@ -1,15 +1,13 @@
-import { useEffect, useState } from "react";
+import LoadingSpinner from "@/components/LoadingSpinner";
+import styles from "@/styles/orcamento.module.scss";
+import axios from "axios";
 import { gsap } from "gsap/dist/gsap";
 import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
 import { Howl } from "howler";
-import styles from "@/styles/orcamento.module.scss";
 import router from "next/router";
-import WebsiteModal from "@/components/WebsiteModal";
-import { color } from "framer-motion";
-import axios from "axios";
+import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import LoadingSpinner from "@/components/LoadingSpinner";
 
 gsap.registerPlugin(MotionPathPlugin);
 
@@ -128,20 +126,9 @@ export default function Desafio() {
               <div className={styles.rightForm}>
                 <h1>REALIZE UM ORÇAMENTO</h1>
                 <div className={styles.form}>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="E-mail"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                  />
-                  <input
-                    type="phone"
-                    name="phone"
-                    placeholder="Número de telefone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                  />
+                  <p className={styles.customText}>
+                    Entre em contato conosco para um orçamento personalizado!
+                  </p>
 
                   <button
                     className={styles.button}
@@ -1896,20 +1883,9 @@ export default function Desafio() {
               <h1>AUMENTE SEU FATURAMENTO!</h1>
               <h2>AUMENTE SEU FATURAMENTO!</h2>
               <div className={styles.formMobile}>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="E-mail"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                />
-                <input
-                  type="phone"
-                  name="phone"
-                  placeholder="Número de Telefone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                />
+                <p className={styles.customText}>
+                  Entre em contato conosco para um orçamento personalizado!
+                </p>
 
                 <button
                   className={styles.button}
