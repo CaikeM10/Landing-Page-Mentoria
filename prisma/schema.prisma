@@ -19,6 +19,7 @@ model User {
   currentSignatureDate DateTime?
   renewSignatureDate   DateTime?
   paymentMethod        String?
+  pricePaid            String? @default("1")
   cancelled            Boolean   @default(false)
 }
 
