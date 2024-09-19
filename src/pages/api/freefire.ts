@@ -1,13 +1,27 @@
 // pages/api/createUser.ts
 import { NextApiRequest, NextApiResponse } from "next";
 import { PrismaClient } from "@prisma/client";
+import Cors from "cors";
+import initMiddleware from "../../lib/init-middleware";
 
+// Inicializa o cliente Prisma
 const prisma = new PrismaClient();
+
+// Inicializa o middleware CORS
+const cors = initMiddleware(
+  Cors({
+    methods: ["GET", "POST", "OPTIONS"], // Permite apenas esses métodos
+    origin: "*", // Pode especificar uma URL específica do seu frontend ou deixar '*' para permitir de qualquer origem
+  })
+);
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  // Chama o middleware CORS antes de processar a requisição
+  await cors(req, res);
+
   if (req.method === "POST") {
     const { name, email, phone, dob } = req.body;
 
