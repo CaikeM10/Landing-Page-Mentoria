@@ -43,5 +43,6 @@
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
     "typescript": "^5.4.3"
-  }
+  },
+  "packageManager": "yarn@3.6.1"
 }

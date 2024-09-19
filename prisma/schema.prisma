@@ -41,3 +41,13 @@ model UserBudget {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model UserFreeFire {
+  id        String   @id @default(uuid())
+  name     String
+  email      String
+  phone       String 
+  dateOfBirth DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
