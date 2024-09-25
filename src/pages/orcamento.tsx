@@ -58,61 +58,66 @@ export default function Desafio() {
       [e.target.name]: e.target.value,
     });
   };
+  // const handleSubmit = async () => {
+  //   setLoading(true);
+  //   const isValidEmail = emailRegex.test(formData.email);
+  //   const isValidPhone = phoneRegex.test(formData.phone);
+
+  //   if (!isValidEmail) {
+  //     toast.error("Por favor, insira um email válido.");
+  //     setLoading(false);
+  //     return;
+  //   }
+  //   if (!isValidPhone) {
+  //     toast.error("Por favor, insira um número de telefone válido.");
+  //     setLoading(false);
+  //     return;
+  //   }
+
+  //   try {
+  //     if (typeof window !== "undefined") {
+  //       import("react-facebook-pixel")
+  //         .then((module) => {
+  //           const ReactPixel = module.default;
+  //           ReactPixel.track("Budget", {
+  //             content_name: "Orçamento",
+  //             currency: "BRL",
+  //           });
+  //         })
+  //         .catch((err) =>
+  //           console.error(
+  //             "Failed to track form submission with Facebook Pixel",
+  //             err
+  //           )
+  //         );
+  //     }
+  //     const response = await axios.post("/api/budget", formData);
+  //     if (response.status === 201) {
+  //       let redirectUrl = "https://wa.link/4ktma1";
+
+  //       router.push(redirectUrl);
+  //       toast.success(
+  //         "Registrado com sucesso! Realize o orçamento no whatsapp."
+  //       );
+  //       setFormData({
+  //         email: "",
+  //         phone: "",
+  //       });
+  //     }
+  //   } catch (error: any) {
+  //     console.error(
+  //       "Erro ao registrar tente novamente!",
+  //       error.response?.data || error.message
+  //     );
+  //     toast.error("Erro ao registrar o site. Por favor, tente novamente.");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
   const handleSubmit = async () => {
-    setLoading(true);
-    const isValidEmail = emailRegex.test(formData.email);
-    const isValidPhone = phoneRegex.test(formData.phone);
-
-    if (!isValidEmail) {
-      toast.error("Por favor, insira um email válido.");
-      setLoading(false);
-      return;
-    }
-    if (!isValidPhone) {
-      toast.error("Por favor, insira um número de telefone válido.");
-      setLoading(false);
-      return;
-    }
-
-    try {
-      if (typeof window !== "undefined") {
-        import("react-facebook-pixel")
-          .then((module) => {
-            const ReactPixel = module.default;
-            ReactPixel.track("Budget", {
-              content_name: "Orçamento",
-              currency: "BRL",
-            });
-          })
-          .catch((err) =>
-            console.error(
-              "Failed to track form submission with Facebook Pixel",
-              err
-            )
-          );
-      }
-      const response = await axios.post("/api/budget", formData);
-      if (response.status === 201) {
-        let redirectUrl = "https://wa.link/4ktma1";
-
-        router.push(redirectUrl);
-        toast.success(
-          "Registrado com sucesso! Realize o orçamento no whatsapp."
-        );
-        setFormData({
-          email: "",
-          phone: "",
-        });
-      }
-    } catch (error: any) {
-      console.error(
-        "Erro ao registrar tente novamente!",
-        error.response?.data || error.message
-      );
-      toast.error("Erro ao registrar o site. Por favor, tente novamente.");
-    } finally {
-      setLoading(false);
-    }
+    let redirectUrl = "https://wa.link/4ktma1";
+    window.location.href = redirectUrl;
   };
 
   return (
