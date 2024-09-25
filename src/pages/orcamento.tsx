@@ -156,7 +156,12 @@ export default function Desafio() {
               {Array.from({ length: 50 }).map((_, index) => (
                 <div key={index} className={styles.slide}>
                   {index % 2 === 0 ? (
-                    <img src={`/svg${((index / 2) % 3) + 1}.svg`} alt="" />
+                    <img
+                      src={`/svg${((index / 2) % 3) + 1}.svg`}
+                      alt=""
+                      width="32" // Defina a largura explícita
+                      height="32" // Defina a altura explícita
+                    />
                   ) : (
                     <p>
                       {index % 6 === 1
