@@ -12,6 +12,7 @@ const cors = initMiddleware(
   Cors({
     methods: ["GET", "POST", "OPTIONS"], // Permite apenas esses métodos
     origin: "*", // Pode especificar uma URL específica do seu frontend ou deixar '*' para permitir de qualquer origem
+    allowedHeaders: ["Content-Type"], // Adicione cabeçalhos permitidos
   })
 );
 
@@ -21,6 +22,10 @@ export default async function handler(
 ) {
   // Chama o middleware CORS antes de processar a requisição
   await cors(req, res);
+
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
   if (req.method === "POST") {
     const { name, email, phone } = req.body;
