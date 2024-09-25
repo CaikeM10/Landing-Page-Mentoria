@@ -116,6 +116,15 @@ export default function Desafio() {
   // };
 
   const handleSubmit = async () => {
+    if (typeof window !== "undefined") {
+      import("react-facebook-pixel").then((module) => {
+        const ReactPixel = module.default;
+        ReactPixel.track("Budget", {
+          content_name: "Orçamento",
+          currency: "BRL",
+        });
+      });
+    }
     let redirectUrl = "https://wa.link/4ktma1";
     window.location.href = redirectUrl;
   };
