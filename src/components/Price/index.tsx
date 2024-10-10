@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
-import Link from "next/link";
+import Router from "next/router";
 import { InView } from "react-intersection-observer";
 import styles from "./styles.module.scss";
-import Router from "next/router";
 interface PriceProps {
   title: string;
 }
@@ -21,7 +20,7 @@ const Price = ({ title }: PriceProps) => {
           const ReactPixel = module.default;
           ReactPixel.track("InitiateCheckout", {
             content_name: "Curso",
-            value: 17.0,
+            value: 49.0,
             currency: "BRL",
           });
         })
@@ -33,7 +32,7 @@ const Price = ({ title }: PriceProps) => {
         window.gtag("event", "InitiateCheckout", {
           event_category: "engagement",
           event_label: "Curso Checkout",
-          value: 17.0,
+          value: 49.0,
           currency: "BRL",
         });
       }
@@ -136,7 +135,7 @@ const Price = ({ title }: PriceProps) => {
                   <p>TUDO ISSO POR APENAS</p>
                 </div>
                 <div className={styles.bigMoney}>
-                  <h2>R$ 29,00</h2>
+                  <h2>R$ 49,00</h2>
                   <h3>/Mês</h3>
                 </div>
                 <div className={styles.middleMoney}>
