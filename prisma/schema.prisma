@@ -19,6 +19,7 @@ model User {
   currentSignatureDate DateTime?
   renewSignatureDate   DateTime?
   paymentMethod        String?
+  pricePaid            String? @default("1")
   cancelled            Boolean   @default(false)
 }
 
@@ -38,6 +39,25 @@ model UserBudget {
   id        String   @id @default(uuid())
   email      String
   phone       String 
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model UserFreeFire {
+  id        String   @id @default(uuid())
+  name     String
+  email      String
+  phone       String 
+  dateOfBirth DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+model UserLucia {
+  id        String   @id @default(uuid())
+  name     String
+  email      String
+  phone       String 
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
