@@ -1,15 +1,13 @@
-import { useEffect, useState } from "react";
+import LoadingSpinner from "@/components/LoadingSpinner";
+import styles from "@/styles/desafio.module.scss";
+import axios from "axios";
 import { gsap } from "gsap/dist/gsap";
 import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
 import { Howl } from "howler";
-import styles from "@/styles/desafio.module.scss";
 import router from "next/router";
-import WebsiteModal from "@/components/WebsiteModal";
-import { color } from "framer-motion";
-import axios from "axios";
+import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import LoadingSpinner from "@/components/LoadingSpinner";
 
 gsap.registerPlugin(MotionPathPlugin);
 
@@ -45,7 +43,7 @@ export default function Desafio() {
   const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
-    let redirectUrl = "https://pay.kiwify.com.br/E5DBgq5";
+    let redirectUrl = "https://pay.kiwify.com.br/moLe7Z1";
 
     router.push(redirectUrl);
   };
