@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { InlineWidget } from "react-calendly";
+import { useEffect } from "react";
 import styles from "./styles.module.scss";
 
 type ModalProps = {
@@ -9,7 +8,18 @@ type ModalProps = {
 };
 
 const Modal = ({ isOpen, onClose, title }: ModalProps) => {
-  const [showCalendly, setShowCalendly] = useState(false);
+  useEffect(() => {
+    // Adiciona o script do Calendly ao carregar o componente
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Remove o script ao desmontar o componente
+      document.body.removeChild(script);
+    };
+  }, []);
 
   if (!isOpen) return null;
 
@@ -26,37 +36,11 @@ const Modal = ({ isOpen, onClose, title }: ModalProps) => {
           </button>
         </div>
 
-        {!showCalendly ? (
-          <div className={styles.modalButtons}>
-            <button
-              className={styles.modalButton}
-              onClick={() => setShowCalendly(true)} // Mostra o widget do Calendly
-            >
-              Agendar video chamada
-            </button>
-            <button
-              className={styles.modalButton}
-              onClick={
-                () => (window.location.href = "https://wa.link/4ktma1") // Redireciona para o WhatsApp
-              }
-            >
-              Falar pelo WhatsApp
-            </button>
-          </div>
-        ) : (
-          <div className={styles.calendlyWrapper}>
-            <button
-              className={styles.backButton}
-              onClick={() => setShowCalendly(false)}
-            >
-              Voltar
-            </button>
-            <InlineWidget
-              url="https://calendly.com/leonardo-solidtech/reuniao-de-site" // Substitua pela sua URL do Calendly
-              styles={{ height: "500px", width: "100%" }}
-            />
-          </div>
-        )}
+        <div
+          className="calendly-inline-widget"
+          data-url="https://calendly.com/leonardo-solidtech/reuniao-de-site"
+          style={{ minWidth: "320px", height: "700px" }}
+        ></div>
       </div>
     </div>
   );
