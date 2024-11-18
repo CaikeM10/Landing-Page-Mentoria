@@ -47,7 +47,7 @@ const Modal = ({ isOpen, onClose, title }: ModalProps) => {
           <div className={styles.calendlyWrapper}>
             <button
               className={styles.backButton}
-              onClick={() => setShowCalendly(false)} // Volta às opções do modal
+              onClick={() => setShowCalendly(false)}
             >
               Voltar
             </button>
