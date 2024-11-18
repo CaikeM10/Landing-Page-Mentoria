@@ -1,12 +1,11 @@
+import Modal from "@/components/ContactModal";
 import LoadingSpinner from "@/components/LoadingSpinner";
 import styles from "@/styles/orcamento.module.scss";
-import axios from "axios";
 import { gsap } from "gsap/dist/gsap";
 import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
 import { Howl } from "howler";
-import router from "next/router";
 import { useEffect, useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 gsap.registerPlugin(MotionPathPlugin);
@@ -15,6 +14,14 @@ export default function Desafio() {
   const [loading, setLoading] = useState(false);
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const phoneRegex = /^\d+$/;
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleSubmit = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => setIsModalOpen(false);
 
   useEffect(() => {
     gsap.to("#animatedImage", {
@@ -43,6 +50,7 @@ export default function Desafio() {
     }
   }, []);
   const [formData, setFormData] = useState({
+    name: "",
     email: "",
     phone: "",
   });
@@ -115,7 +123,7 @@ export default function Desafio() {
   //   }
   // };
 
-  const handleSubmit = async () => {
+  const handleSubmitWhats = async () => {
     if (typeof window !== "undefined") {
       import("react-facebook-pixel").then((module) => {
         const ReactPixel = module.default;
@@ -140,10 +148,27 @@ export default function Desafio() {
               <div className={styles.rightForm}>
                 <h1>REALIZE UM ORÇAMENTO</h1>
                 <div className={styles.form}>
-                  <p className={styles.customText}>
-                    Entre em contato conosco para um orçamento personalizado!
-                  </p>
-
+                  <input
+                    type="name"
+                    name="name"
+                    placeholder="Nome"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="E-mail"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                  />
+                  <input
+                    type="phone"
+                    name="phone"
+                    placeholder="Whatsapp"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                  />
                   <button
                     className={styles.button}
                     onMouseEnter={() => hoverSound.play()}
@@ -254,6 +279,11 @@ export default function Desafio() {
             </label>
           </div>
         </div>
+        <Modal
+          isOpen={isModalOpen}
+          onClose={closeModal}
+          title="Como prefere que a gente te chame?"
+        />
       </div>
     </>
   );
