@@ -25,10 +25,7 @@ const Modal = ({ isOpen, onClose, title }: ModalProps) => {
 
   return (
     <div className={styles.overlay} onClick={onClose}>
-      <div
-        className={styles.modal}
-        onClick={(e) => e.stopPropagation()} // Evita fechar o modal ao clicar no conteúdo
-      >
+      <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
         <div className={styles.top}>
           <h2>{title}</h2>
           <button className={styles.closeButton} onClick={onClose}>
