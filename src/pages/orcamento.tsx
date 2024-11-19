@@ -5,19 +5,33 @@ import { gsap } from "gsap/dist/gsap";
 import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
 import { Howl } from "howler";
 import { useEffect, useState } from "react";
-import { ToastContainer } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 gsap.registerPlugin(MotionPathPlugin);
 
 export default function Desafio() {
   const [loading, setLoading] = useState(false);
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const phoneRegex = /^\d+$/;
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleSubmit = () => {
+    const { name, email, phone } = formData;
+
+    if (!name) {
+      toast.error("Por favor, preencha o nome.");
+      return;
+    }
+
+    if (!email) {
+      toast.error("Por favor, insira um email válido.");
+      return;
+    }
+
+    if (!phone) {
+      toast.error("Por favor, insira um número de telefone válido.");
+      return;
+    }
     setIsModalOpen(true);
   };
 
@@ -122,20 +136,6 @@ export default function Desafio() {
   //     setLoading(false);
   //   }
   // };
-
-  const handleSubmitWhats = async () => {
-    if (typeof window !== "undefined") {
-      import("react-facebook-pixel").then((module) => {
-        const ReactPixel = module.default;
-        ReactPixel.track("Budget", {
-          content_name: "Orçamento",
-          currency: "BRL",
-        });
-      });
-    }
-    let redirectUrl = "https://wa.link/4ktma1";
-    window.location.href = redirectUrl;
-  };
 
   return (
     <>
