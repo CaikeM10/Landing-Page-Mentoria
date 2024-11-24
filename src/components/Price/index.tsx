@@ -135,8 +135,8 @@ const Price = ({ title }: PriceProps) => {
                   <p>TUDO ISSO POR APENAS</p>
                 </div>
                 <div className={styles.bigMoney}>
-                  <h2>R$ 49,00</h2>
-                  <h3>/Mês</h3>
+                  <h2>R$ 97,00</h2>
+                  <h3>/Ano</h3>
                 </div>
                 <div className={styles.middleMoney}>
                   <h3>Assinatura</h3>

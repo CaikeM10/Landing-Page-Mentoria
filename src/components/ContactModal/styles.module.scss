@@ -28,6 +28,9 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @media screen and (max-width: 768px) {
+      font-size: 4vw;
+    }
   }
 }
 
@@ -41,6 +44,9 @@
   display: flex;
   gap: 50px;
   margin-top: 1.5rem;
+  @media screen and (max-width: 768px) {
+    gap: 20px;
+  }
 }
 
 .modalButton {
@@ -58,6 +64,10 @@
   padding: 0;
   transition: all 0.25s ease;
   outline: none;
+  @media screen and (max-width: 768px) {
+    font-size: 0.7rem;
+    letter-spacing: 0;
+  }
   &:before {
     content: "";
     position: absolute;

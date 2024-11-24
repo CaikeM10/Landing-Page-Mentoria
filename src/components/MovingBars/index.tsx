@@ -9,7 +9,7 @@ const MovingBars = () => {
           <div className={styles.topBarContent}>
             <React.Fragment key="0">
               <img src="/diamond.svg" />
-              <span>APENAS R$49,00</span>
+              <span>APENAS R$97,00</span>
             </React.Fragment>
             <React.Fragment key="1">
               <img src="/diamond.svg" />
@@ -25,7 +25,7 @@ const MovingBars = () => {
             </React.Fragment>
             <React.Fragment key="4">
               <img src="/diamond.svg" />
-              <span>APENAS R$49,00</span>
+              <span>APENAS R$97,00</span>
             </React.Fragment>
             <React.Fragment key="5">
               <img src="/diamond.svg" />
@@ -41,7 +41,7 @@ const MovingBars = () => {
             </React.Fragment>
             <React.Fragment key="8">
               <img src="/diamond.svg" />
-              <span>APENAS R$49,00</span>
+              <span>APENAS R$97,00</span>
             </React.Fragment>
             <React.Fragment key="9">
               <img src="/diamond.svg" />
@@ -57,7 +57,7 @@ const MovingBars = () => {
             </React.Fragment>
             <React.Fragment key="12">
               <img src="/diamond.svg" />
-              <span>APENAS R$49,00</span>
+              <span>APENAS R$97,00</span>
             </React.Fragment>
             <React.Fragment key="13">
               <img src="/diamond.svg" />
@@ -73,7 +73,7 @@ const MovingBars = () => {
             </React.Fragment>
             <React.Fragment key="16">
               <img src="/diamond.svg" />
-              <span>APENAS R$49,00</span>
+              <span>APENAS R$97,00</span>
             </React.Fragment>
           </div>
         </div>
@@ -81,7 +81,7 @@ const MovingBars = () => {
           <div className={styles.bottomBarContent}>
             <React.Fragment key="0">
               <img src="/diamond.svg" />
-              <span>APENAS R$49,00</span>
+              <span>APENAS R$97,00</span>
             </React.Fragment>
             <React.Fragment key="1">
               <img src="/diamond.svg" />
@@ -97,7 +97,7 @@ const MovingBars = () => {
             </React.Fragment>
             <React.Fragment key="4">
               <img src="/diamond.svg" />
-              <span>APENAS R$49,00</span>
+              <span>APENAS R$97,00</span>
             </React.Fragment>
             <React.Fragment key="5">
               <img src="/diamond.svg" />
@@ -113,7 +113,7 @@ const MovingBars = () => {
             </React.Fragment>
             <React.Fragment key="8">
               <img src="/diamond.svg" />
-              <span>APENAS R$49,00</span>
+              <span>APENAS R$97,00</span>
             </React.Fragment>
             <React.Fragment key="9">
               <img src="/diamond.svg" />
@@ -129,7 +129,7 @@ const MovingBars = () => {
             </React.Fragment>
             <React.Fragment key="12">
               <img src="/diamond.svg" />
-              <span>APENAS R$49,00</span>
+              <span>APENAS R$97,00</span>
             </React.Fragment>
             <React.Fragment key="13">
               <img src="/diamond.svg" />
@@ -145,7 +145,7 @@ const MovingBars = () => {
             </React.Fragment>
             <React.Fragment key="16">
               <img src="/diamond.svg" />
-              <span>APENAS R$49,00</span>
+              <span>APENAS R$97,00</span>
             </React.Fragment>
           </div>
         </div>
