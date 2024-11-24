@@ -76,7 +76,7 @@ const SectionOne = ({ title }: SectionOneProps) => {
 
               <div className={styles.discount}>
                 <img src="/discountTag.svg" />
-                <p>Apenas R$ 49,00.</p>
+                <p>Apenas R$ 97,00.</p>
               </div>
             </div>
           </ScrollAnimation>

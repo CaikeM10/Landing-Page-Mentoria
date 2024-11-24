@@ -311,6 +311,9 @@
     padding: 0.8vw;
     outline: none;
     font-size: 16px;
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
   select {
     border: 0.1vw solid #01d1d6;

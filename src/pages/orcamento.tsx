@@ -219,6 +219,28 @@ export default function Desafio() {
                   Entre em contato conosco para um orçamento personalizado!
                 </p>
 
+                <input
+                  type="name"
+                  name="name"
+                  placeholder="Nome"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="E-mail"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                />
+                <input
+                  type="phone"
+                  name="phone"
+                  placeholder="Whatsapp"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                />
+
                 <button
                   className={styles.button}
                   onMouseEnter={() => hoverSound.play()}
@@ -247,7 +269,7 @@ export default function Desafio() {
                 onMouseEnter={() => hoverSound.play()}
                 onMouseDown={() => hoverSound.play()}
                 style={{ maxWidth: "500px" }}
-                // onClick={handleClick}
+                onClick={handleSubmit}
               >
                 <span className={styles.line}></span>
                 ENTRE EM CONTATO
