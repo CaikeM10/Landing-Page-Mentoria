@@ -43,7 +43,7 @@ const SectionOne = ({ title }: SectionOneProps) => {
             } else if (title === 'instagram-ads') {
                 redirectUrl = 'https://pay.kiwify.com.br/kvegj2I';
             } else if (title === 'instagram-organico') {
-                redirectUrl = 'https://pay.kiwify.com.br/cluTKb4';
+                redirectUrl = 'https://pay.kiwify.com.br/UyOtZiG';
             }
 
             router.push(redirectUrl);
