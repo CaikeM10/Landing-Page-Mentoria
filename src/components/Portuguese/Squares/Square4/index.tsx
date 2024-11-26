@@ -50,10 +50,10 @@ const Squares4 = ({ color, borderColor, containerColor }: Squares4Props) => {
             </div>
             <div className={styles.body}>
               <h5 style={{ color }}>
-                Aprenda conceitos fundamentais e avançados de programação, com
-                técnicas práticas para construir projetos sólidos. Com nosso
-                curso, você terá as habilidades necessárias para se destacar no
-                mundo da tecnologia!
+                Aprenda concepto fundamentales y avazados de programacion, con
+                tecnicas practicas para contruir proyectos solidos. con nuestros
+                cursos, usted obtendra las habilidades necesarias para
+                destacarse en el mundo de la tecnologia!
               </h5>
             </div>
           </div>

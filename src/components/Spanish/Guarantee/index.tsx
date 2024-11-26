@@ -26,13 +26,16 @@ const Guarantee = () => {
                 Experimente por{" "}
                 <span className={styles.auroraSpan}>7 dias</span>
               </h5>
-              <p>Garantindo a sua vaga agora, você não corre risco nenhum!</p>
               <p>
-                Você pode ver todo o Protocolo por dentro e, caso perceba que
-                não faz sentido para o seu momento, basta me enviar um e-mail e
-                eu vou devolver 100% do seu investimento.
+                Garantize su lugar ahora mismo, usted no va a correr ningun
+                riesgo!
               </p>
-              <p>O risco é todo meu.</p>
+              <p>
+                Usted va a poder ver todo el Protocolo por dentro y, caso
+                perciba que no hace sentido en este momento, puedes enviarme un
+                e-mail y voy devolverte toda su oferta.
+              </p>
+              <p>El riesgo es todo mio.</p>
             </div>
           </div>
           <div className={styles.bottom}>
@@ -42,7 +45,9 @@ const Guarantee = () => {
               </div>
               <div className={styles.text}>
                 <h5>Pagamento seguro</h5>
-                <p>Diversas formas de pagar, todas com selo de segurança.</p>
+                <p>
+                  Diversas formas de pagar, todas com el sello de seguridad.
+                </p>
               </div>
             </div>
             <div className={styles.info}>
@@ -50,8 +55,10 @@ const Guarantee = () => {
                 <img src="/lock.svg" />
               </div>
               <div className={styles.text}>
-                <h5>Liberação imediata</h5>
-                <p>Receba seu login e senha na mesma hora que comprar.</p>
+                <h5>Liberacion imediata</h5>
+                <p>
+                  Reciba su login y contraseña en la misma hora que comprar.
+                </p>
               </div>
             </div>
             <div className={styles.info}>
@@ -59,8 +66,11 @@ const Guarantee = () => {
                 <img src="/infinite.svg" />
               </div>
               <div className={styles.text}>
-                <h5>Acesso permanente</h5>
-                <p>Enquanto estiver o plano, você terá acesso para sempre.</p>
+                <h5>Acceso permanente</h5>
+                <p>
+                  Encuanto tengas el plano, Ustes va a tener todo el acceso
+                  siempre.
+                </p>
               </div>
             </div>
           </div>

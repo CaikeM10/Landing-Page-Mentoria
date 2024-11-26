@@ -9,11 +9,11 @@ const MovingBars = () => {
           <div className={styles.topBarContent}>
             <React.Fragment key="0">
               <img src="/diamond.svg" />
-              <span>APENAS R$97,00</span>
+              <span>SOLO POR R$97,00</span>
             </React.Fragment>
             <React.Fragment key="1">
               <img src="/diamond.svg" />
-              <span>APRENDA COM O REI</span>
+              <span>APRENDA CON EL REY</span>
             </React.Fragment>
             <React.Fragment key="2">
               <img src="/diamond.svg" />
@@ -25,11 +25,11 @@ const MovingBars = () => {
             </React.Fragment>
             <React.Fragment key="4">
               <img src="/diamond.svg" />
-              <span>APENAS R$97,00</span>
+              <span>SOLO POR R$97,00</span>
             </React.Fragment>
             <React.Fragment key="5">
               <img src="/diamond.svg" />
-              <span>APRENDA COM O REI</span>
+              <span>APRENDA CON EL REY</span>
             </React.Fragment>
             <React.Fragment key="6">
               <img src="/diamond.svg" />
@@ -41,11 +41,11 @@ const MovingBars = () => {
             </React.Fragment>
             <React.Fragment key="8">
               <img src="/diamond.svg" />
-              <span>APENAS R$97,00</span>
+              <span>SOLO POR R$97,00</span>
             </React.Fragment>
             <React.Fragment key="9">
               <img src="/diamond.svg" />
-              <span>APRENDA COM O REI</span>
+              <span>APRENDA COM EL REY</span>
             </React.Fragment>
             <React.Fragment key="10">
               <img src="/diamond.svg" />
@@ -57,11 +57,11 @@ const MovingBars = () => {
             </React.Fragment>
             <React.Fragment key="12">
               <img src="/diamond.svg" />
-              <span>APENAS R$97,00</span>
+              <span>SOLO POR R$97,00</span>
             </React.Fragment>
             <React.Fragment key="13">
               <img src="/diamond.svg" />
-              <span>APRENDA COM O REI</span>
+              <span>APRENDA COM EL REY</span>
             </React.Fragment>
             <React.Fragment key="14">
               <img src="/diamond.svg" />
@@ -73,7 +73,7 @@ const MovingBars = () => {
             </React.Fragment>
             <React.Fragment key="16">
               <img src="/diamond.svg" />
-              <span>APENAS R$97,00</span>
+              <span>SOLO POR R$97,00</span>
             </React.Fragment>
           </div>
         </div>
@@ -81,11 +81,11 @@ const MovingBars = () => {
           <div className={styles.bottomBarContent}>
             <React.Fragment key="0">
               <img src="/diamond.svg" />
-              <span>APENAS R$97,00</span>
+              <span>SOLO POR R$97,00</span>
             </React.Fragment>
             <React.Fragment key="1">
               <img src="/diamond.svg" />
-              <span>APRENDA COM O REI</span>
+              <span>APRENDA CON EL O REY</span>
             </React.Fragment>
             <React.Fragment key="2">
               <img src="/diamond.svg" />
@@ -97,11 +97,11 @@ const MovingBars = () => {
             </React.Fragment>
             <React.Fragment key="4">
               <img src="/diamond.svg" />
-              <span>APENAS R$97,00</span>
+              <span>SOLO POR R$97,00</span>
             </React.Fragment>
             <React.Fragment key="5">
               <img src="/diamond.svg" />
-              <span>APRENDA COM O REI</span>
+              <span>APRENDA COM EL REY</span>
             </React.Fragment>
             <React.Fragment key="6">
               <img src="/diamond.svg" />
@@ -113,11 +113,11 @@ const MovingBars = () => {
             </React.Fragment>
             <React.Fragment key="8">
               <img src="/diamond.svg" />
-              <span>APENAS R$97,00</span>
+              <span>SOLO POR R$97,00</span>
             </React.Fragment>
             <React.Fragment key="9">
               <img src="/diamond.svg" />
-              <span>APRENDA COM O REI</span>
+              <span>APRENDA CON EL REY</span>
             </React.Fragment>
             <React.Fragment key="10">
               <img src="/diamond.svg" />
@@ -129,11 +129,11 @@ const MovingBars = () => {
             </React.Fragment>
             <React.Fragment key="12">
               <img src="/diamond.svg" />
-              <span>APENAS R$97,00</span>
+              <span>SOLO POR R$97,00</span>
             </React.Fragment>
             <React.Fragment key="13">
               <img src="/diamond.svg" />
-              <span>APRENDA COM O REI</span>
+              <span>APRENDA COM EL REY</span>
             </React.Fragment>
             <React.Fragment key="14">
               <img src="/diamond.svg" />
@@ -145,7 +145,7 @@ const MovingBars = () => {
             </React.Fragment>
             <React.Fragment key="16">
               <img src="/diamond.svg" />
-              <span>APENAS R$97,00</span>
+              <span>SOLO POR R$97,00</span>
             </React.Fragment>
           </div>
         </div>

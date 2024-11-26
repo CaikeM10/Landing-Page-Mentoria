@@ -50,17 +50,17 @@ const Squares3 = ({ color, borderColor, containerColor }: Squares3Props) => {
             </div>
             <div className={styles.body}>
               <h5 style={{ color }}>
-                Potencialize suas vendas! Aprenda a conectar-se com clientes,
-                criar ofertas atrativas e fechar negócios de forma eficiente.
-                Transforme possibilidades em lucros conosco e destaque-se no
-                mundo das vendas!
+                Potencialize sus ventas! Aprenda a conectarse con los clientes,
+                crear ofertas atractivas y encerrar negócios de forma eficiente.
+                Transforme posibilidad en lucros con nosotros y destacarse en
+                mundo de las ventas!
               </h5>
             </div>
           </div>
           <hr className={styles.hr} style={{ backgroundColor: borderColor }} />
           <div className={styles.bottom}>
             <h4 style={{ color }}>
-              Preço: <span>R$319,00</span>
+              Valor: <span>R$319,00</span>
             </h4>
           </div>
         </div>
