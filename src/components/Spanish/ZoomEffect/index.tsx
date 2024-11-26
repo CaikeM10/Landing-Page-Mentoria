@@ -60,7 +60,7 @@ const ZoomEffect = () => {
             scrub: true,
           },
           ease: "power3.out",
-        },
+        }
       );
 
       // Then, increase the opacity of individual words as they appear
@@ -78,7 +78,7 @@ const ZoomEffect = () => {
             scrub: true,
           },
           ease: "power3.out",
-        },
+        }
       );
     };
 
@@ -116,39 +116,39 @@ const ZoomEffect = () => {
     <div>
       <section id="zoom-in" className={styles.zoomSection}>
         <h2 id="zoom-text" className={styles.zoomText}>
-          O que <span>você</span> irá aprender?
+          Que es <span>lo que</span> vas aprender?
         </h2>
         <div className={styles.textWrap}>
           <p id="next-text" className={styles.nextText}>
             {splitText(
-              "Impulsione sua carreira <br/>com nosso curso completo! <br/>Aprenda Figma, Wordpress.",
+              "Impulsione su carrera <br/>con nuestro curso completo! <br/>Aprenda Figma, Wordpress."
             )}
           </p>
           <p id="next-text" className={styles.nextText}>
             {splitText(
-              "HTML, CSS, JavaScript, <br/>e técnicas de venda. <br/>Cada módulo garante um aprendizado.",
+              "HTML, CSS, JavaScript, <br/>y tecnicas de venta. <br/>Cada modulo garante un aprendizaje."
             )}
           </p>
           <p id="next-text" className={styles.nextText}>
             {splitText(
-              "Prático e eficiente. <br/>Domine habilidades valiosas <br/>e alcance o sucesso no mundo digital.",
+              "Practico y eficiente. <br/>Domine habilidades valiosas <br/>y alcance el exito en el mundo digital."
             )}
           </p>
         </div>
         <div className={styles.textWrap}>
           <p id="next-text" className={styles.nextTextMobile}>
             {splitText(
-              "Impulsione sua carreira <br/>com nosso curso completo! <br/>Aprenda Figma, Wordpress.",
+              "Impulsione su carrera <br/>con nuestro curso completo! <br/>Aprenda Figma, Wordpress."
             )}
           </p>
           <p id="next-text" className={styles.nextTextMobile}>
             {splitText(
-              "HTML, CSS, JavaScript, <br/>e técnicas de venda. <br/>Cada módulo garante <br/>um aprendizado.",
+              "HTML, CSS, JavaScript, <br/>y tecnicas de venta. <br/>Cada modulo garante <br/>un aprendizaje."
             )}
           </p>
           <p id="next-text" className={styles.nextTextMobile}>
             {splitText(
-              "Prático e eficiente. <br/>Domine habilidades valiosas <br/>e alcance o sucesso digital.",
+              "Practico y eficiente. <br/>Domine habilidades valiosas <br/>y alcance su exito digital."
             )}
           </p>
         </div>

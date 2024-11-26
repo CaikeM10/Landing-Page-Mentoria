@@ -34,13 +34,13 @@ const Squares1 = ({ color, borderColor, containerColor }: Squares1Props) => {
                     <h4 style={{ color }}>Módulo 1</h4>
                   </div>
                   <div className={styles.title}>
-                    <h3 style={{ color }}>Design com Figma</h3>
+                    <h3 style={{ color }}>Design con Figma</h3>
                   </div>
                   <div className={styles.body}>
                     <h5 style={{ color }}>
-                      Descubra como criar designs incríveis utilizando a
-                      poderosa ferramenta Figma. Aprenda técnicas de design que
-                      irão transformar seus projetos em verdadeiras obras de
+                      Descubra como crear design increibles utilizando la
+                      podersa herramienta Figma. aprenda tecnica de design que
+                      van a transformar sus proyectos en verdadera obras de
                       arte.
                     </h5>
                   </div>

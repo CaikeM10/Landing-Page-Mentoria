@@ -38,10 +38,10 @@ const Squares5 = ({ color, borderColor, containerColor }: Squares5Props) => {
                   </div>
                   <div className={styles.body}>
                     <h5 style={{ color }}>
-                      Aprenda tudo! Com o conhecimento dessas linguagens você
-                      pode construir não só sites, mas softwares incríveis com
-                      funcionalidades que vão te surpreender. Depois que você
-                      aprender essas o resto fica fácil!
+                      Aprenda todo! con el conocimiento de estas lenguages usted
+                      puede construir no solo paginas, mas softwares increibles
+                      con funciones que van a sorprenderte. depues que usted
+                      aprender esas lo demas quedara mas facil!
                     </h5>
                   </div>
                 </div>

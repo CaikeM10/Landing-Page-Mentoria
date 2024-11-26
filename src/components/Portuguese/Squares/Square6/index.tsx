@@ -38,10 +38,10 @@ const Squares6 = ({ color, borderColor, containerColor }: Squares6Props) => {
                   </div>
                   <div className={styles.body}>
                     <h5 style={{ color }}>
-                      Domine o GitHub! Aprenda a gerenciar seus projetos,
-                      versionar seu código e colaborar em equipe com facilidade.
-                      Com essas habilidades, você estará pronto para enfrentar
-                      qualquer desafio no desenvolvimento!
+                      Domine GitHub! aprenda a administrar proyectos, versionar
+                      su codigo y colaborar en equipo con facilidad con esas
+                      habilidades, usted estara pronto para enfrentar cualquier
+                      desafio en desenvolvimiento!
                     </h5>
                   </div>
                 </div>

@@ -38,10 +38,10 @@ const Squares7 = ({ color, borderColor, containerColor }: Squares7Props) => {
                   </div>
                   <div className={styles.body}>
                     <h5 style={{ color }}>
-                      Crie Interfaces Incríveis! Com React, você aprenderá a
-                      desenvolver interfaces modernas, dinâmicas e eficientes.
-                      Após dominar essa biblioteca, criar aplicações web será
-                      muito mais simples!
+                      crear interfaces increibles! con react, usted aprenderea a
+                      densenvolver interfaces modernas, dinamicas y eficientes
+                      luego a dominar esa biblioteca, crear aplicaciones wev
+                      sera mucho mas simples!
                     </h5>
                   </div>
                 </div>

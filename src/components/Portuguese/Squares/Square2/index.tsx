@@ -38,10 +38,10 @@ const Squares2 = ({ color, borderColor, containerColor }: Squares2Props) => {
                   </div>
                   <div className={styles.body}>
                     <h5 style={{ color }}>
-                      O WordPress é uma plataforma incrível para criação de
-                      websites, permitindo liberdade criativa com facilidade de
-                      uso. Oferece uma infinidade de plugins para ampliar
-                      funcionalidades, além de ser otimizado para SEO.
+                      El WordPress es una herramienta increible para creacion de
+                      paginas, permitindo libertad creativa con facilidade de
+                      uso. oferta una infinidad de plugins para ampliar
+                      funciones, mas alla de ser octimizado para SEO.
                     </h5>
                   </div>
                 </div>
