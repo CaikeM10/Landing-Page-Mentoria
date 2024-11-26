@@ -1,52 +1,53 @@
-import Footer from "@/components/Footer";
-import Guarantee from "@/components/Guarantee";
-import Header from "@/components/Header";
-import Modulos from "@/components/Modulos";
-import MovingBars from "@/components/MovingBars";
-import Price from "@/components/Price";
-import Questions from "@/components/Questions";
-import SectionOne from "@/components/SectionOne";
-import SectionTwo from "@/components/SectionTwo";
-import StickFooter from "@/components/StickFooter";
-import Students from "@/components/Swiper";
-import ZoomEffect from "@/components/ZoomEffect";
-import { useState, useEffect } from "react";
+import Footer from '@/components/Portuguese/Footer';
+import Guarantee from '@/components/Portuguese/Guarantee';
+import Header from '@/components/Portuguese/Header';
+import Modulos from '@/components/Portuguese/Modulos';
+import MovingBars from '@/components/Portuguese/MovingBars';
+import Price from '@/components/Portuguese/Price';
+import Questions from '@/components/Portuguese/Questions';
+import SectionOne from '@/components/Portuguese/SectionOne';
+import SectionTwo from '@/components/Portuguese/SectionTwo';
+import StickFooter from '@/components/Portuguese/StickFooter';
+import Students from '@/components/Portuguese/Swiper';
+import ZoomEffect from '@/components/Portuguese/ZoomEffect';
+
+import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const [hasScrolledToEnd, setHasScrolledToEnd] = useState(false);
-  const [canScrollUpPastHorizontalPage, setCanScrollUpPastHorizontalPage] =
-    useState(true);
+    const [hasScrolledToEnd, setHasScrolledToEnd] = useState(false);
+    const [canScrollUpPastHorizontalPage, setCanScrollUpPastHorizontalPage] =
+        useState(true);
 
-  useEffect(() => {
-    if (typeof window !== "undefined" && window.ttq) {
-      window.ttq.track("ViewContent");
-    }
-  }, []);
+    useEffect(() => {
+        if (typeof window !== 'undefined' && window.ttq) {
+            window.ttq.track('ViewContent');
+        }
+    }, []);
 
-  const handleScrollToEnd = () => {
-    setHasScrolledToEnd(true);
-    setCanScrollUpPastHorizontalPage(false);
-  };
+    const handleScrollToEnd = () => {
+        setHasScrolledToEnd(true);
+        setCanScrollUpPastHorizontalPage(false);
+    };
 
-  const handleScrollToStart = () => {
-    setHasScrolledToEnd(false);
-    setCanScrollUpPastHorizontalPage(true);
-  };
-  const pageTitle = "curso";
-  return (
-    <>
-      <Header />
-      <SectionOne title={pageTitle} />
-      <SectionTwo title={pageTitle} />
-      <MovingBars />
-      <Guarantee />
-      <Students title={pageTitle} />
-      <ZoomEffect />
-      <Modulos />
-      <Price title={pageTitle} />
-      <Questions />
-      <Footer />
-      <StickFooter title={pageTitle} />
-    </>
-  );
+    const handleScrollToStart = () => {
+        setHasScrolledToEnd(false);
+        setCanScrollUpPastHorizontalPage(true);
+    };
+    const pageTitle = 'curso';
+    return (
+        <>
+            <Header />
+            <SectionOne title={pageTitle} />
+            <SectionTwo title={pageTitle} />
+            <MovingBars />
+            <Guarantee />
+            <Students title={pageTitle} />
+            <ZoomEffect />
+            <Modulos />
+            <Price title={pageTitle} />
+            <Questions />
+            <Footer />
+            <StickFooter title={pageTitle} />
+        </>
+    );
 }

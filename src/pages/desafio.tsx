@@ -1,4 +1,4 @@
-import LoadingSpinner from '@/components/LoadingSpinner';
+import LoadingSpinner from '@/components/Portuguese/LoadingSpinner';
 import styles from '@/styles/desafio.module.scss';
 import axios from 'axios';
 import { gsap } from 'gsap/dist/gsap';
