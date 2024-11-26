@@ -4,13 +4,14 @@ import Header from '@/components/Portuguese/Header';
 import Modulos from '@/components/Portuguese/Modulos';
 import MovingBars from '@/components/Portuguese/MovingBars';
 import PageTitle from '@/components/Portuguese/PageTitle';
+import Price from '@/components/Portuguese/Price';
+import Questions from '@/components/Portuguese/Questions';
+import SectionOne from '@/components/Portuguese/SectionOne';
+import SectionTwo from '@/components/Portuguese/SectionTwo';
+import StickFooter from '@/components/Portuguese/StickFooter';
+import Students from '@/components/Portuguese/Swiper';
 import ZoomEffect from '@/components/Portuguese/ZoomEffect';
-import Price from '@/components/Price';
-import Questions from '@/components/Questions';
-import SectionOne from '@/components/SectionOne';
-import SectionTwo from '@/components/SectionTwo';
-import StickFooter from '@/components/StickFooter';
-import Students from '@/components/Swiper';
+
 import { useEffect, useState } from 'react';
 
 export default function Home() {
