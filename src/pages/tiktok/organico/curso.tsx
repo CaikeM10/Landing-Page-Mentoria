@@ -30,10 +30,6 @@ export default function Home() {
         setCanScrollUpPastHorizontalPage(false);
     };
 
-    const handleScrollToStart = () => {
-        setHasScrolledToEnd(false);
-        setCanScrollUpPastHorizontalPage(true);
-    };
     const pageTitle = 'tiktok-organico';
     return (
         <>
