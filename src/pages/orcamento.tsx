@@ -1,5 +1,5 @@
-import Banner from '@/components/Orcamento/Banner';
-import Footer from '@/components/Orcamento/Footer';
+import Banner from '@/components/Budget/Banner';
+import Footer from '@/components/Budget/Footer';
 import styles from '@/styles/orcamento.module.scss';
 
 export default function Desafio() {
