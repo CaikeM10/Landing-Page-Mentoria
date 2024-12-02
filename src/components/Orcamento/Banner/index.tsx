@@ -17,6 +17,9 @@ const Banner = () => {
             <button className={styles.button}>FAZER ORÇAMENTO GRATUITO</button>
           </div>
         </div>
+        <div className={styles.containerText}>
+          <h4>LANDING PAGE INSTITUCIONAL LOJA ONLINE</h4>
+        </div>
       </section>
     </>
   );
