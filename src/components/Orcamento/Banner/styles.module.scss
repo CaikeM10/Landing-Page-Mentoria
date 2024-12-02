@@ -6,16 +6,34 @@
     background-position: calc(50% - 20px) -130px;
     background-repeat: no-repeat;
     color: white;
-    font-family: 'PowerGrotesk';
+    font-family: 'Space Grotesk';
+    position: relative;
+}
+
+.containerText {
+    position: absolute;
+    bottom: 290px;
+    right: 20px;
+    text-align: right;
+    color: #606060;
+    font-family: 'PowerGrotesk', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 97.5%;
+    text-transform: uppercase;
+    width: 50%;
 }
 
 .titleBanner {
     padding-top: 70vh;
     padding-inline: 20px;
-
-    button {
+    position: relative;
+    text-align: left;
+    .orcamento {
         display: flex;
         align-items: center;
+        justify-content: center;
         border-radius: 7px;
         background: #27d005;
         padding-block: 6px;
@@ -28,14 +46,16 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        margin-bottom: 10px;
     }
+
     h1 {
         color: #fff;
         font-size: 10vw;
         font-style: normal;
         font-weight: 400;
         line-height: 1.5;
-        margin-bottom: 10px;
+        padding-bottom: 30px;
         position: relative;
         display: inline-block;
         text-align: left;
@@ -46,19 +66,31 @@
         margin-top: 50px;
         left: 48%;
         transform: translateX(-50%);
-        width: 85%;
+        width: 95%;
         height: auto;
     }
 
     p {
         color: rgba(215, 215, 215, 0.5);
         font-family: 'PowerGrotesk', sans-serif;
-
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        padding-bottom: 45px;
     }
+}
+
+.gridBackground {
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+        linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+        url('/grid.svg') no-repeat;
+    background: url('/grid.svg') no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
 }
 
 .button {
@@ -69,10 +101,10 @@
         #4178ff 55%,
         #034cff 104.41%
     );
-    padding: 25px;
+    padding: 20px;
     color: #fff;
     text-align: center;
-    font-family: 'Power Grotesk';
+    font-family: 'PowerGrotesk', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
