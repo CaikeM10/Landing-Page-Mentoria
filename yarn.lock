@@ -3455,7 +3455,7 @@ __metadata:
     react-intersection-observer: ^9.8.2
     react-toastify: ^10.0.5
     sass: ^1.72.0
-    swiper: ^11.0.7
+    swiper: ^11.1.15
     typescript: ^5.4.3
   languageName: unknown
   linkType: soft
@@ -3907,10 +3907,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"swiper@npm:*, swiper@npm:^11.0.7":
+"swiper@npm:*":
   version: 11.0.7
   resolution: "swiper@npm:11.0.7"
   checksum: dfb82ff649ff22a612bf6a55f2351caad314e394f1ed8327a994021ac2297072f807d4164f861d33fb52b80bcc502e35138f8a988ca11552c43dfe93fc302160
+  languageName: node
+  linkType: hard
+
+"swiper@npm:^11.1.15":
+  version: 11.1.15
+  resolution: "swiper@npm:11.1.15"
+  checksum: 2fd6d8ee4cfd27294614f8eec7e15ea440d6fcb40a9ca4c66b6b951931c880507bfceadbf3ea5556ddc18382112f38afec2a8b340a5ef4e4099f07fbdb86dbad
   languageName: node
   linkType: hard
 
