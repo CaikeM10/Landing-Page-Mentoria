@@ -7,7 +7,22 @@
   background-repeat: no-repeat;
   color: white;
   font-family: "Space Grotesk";
-  position: relative; /* Define o contêiner como referência */
+  position: relative;
+}
+
+.containerText {
+  position: absolute;
+  bottom: 290px;
+  right: 20px;
+  text-align: right;
+  color: #606060;
+  font-family: "PowerGrotesk", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 97.5%;
+  text-transform: uppercase;
+  width: 50%;
 }
 
 .titleBanner {
