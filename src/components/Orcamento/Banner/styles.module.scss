@@ -1,84 +1,84 @@
 .container {
-  background: #030303;
-  background-image: url("/again3.svg");
-  background-size: cover;
-  height: 100vh;
-  background-position: calc(50% - 20px) -130px;
-  background-repeat: no-repeat;
-  color: white;
-  font-family: "Space Grotesk";
+    background: #030303;
+    background-image: url('/again3.svg');
+    background-size: cover;
+    height: 100vh;
+    background-position: calc(50% - 20px) -130px;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'PowerGrotesk';
 }
 
 .titleBanner {
-  padding-top: 70vh;
-  padding-inline: 20px;
+    padding-top: 70vh;
+    padding-inline: 20px;
 
-  button {
-    display: flex;
-    align-items: center;
-    border-radius: 7px;
-    background: #27d005;
-    padding-block: 6px;
-    padding-inline: 10px;
-    border: none;
-    color: #333;
-    text-align: center;
-    font-family: "PowerGrotesk", sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-  h1 {
-    color: #fff;
-    font-size: 10vw;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5;
-    margin-bottom: 10px;
-    position: relative;
-    display: inline-block;
-    text-align: left;
-  }
+    button {
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+        background: #27d005;
+        padding-block: 6px;
+        padding-inline: 10px;
+        border: none;
+        color: #333;
+        text-align: center;
+        font-family: 'PowerGrotesk', sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    h1 {
+        color: #fff;
+        font-size: 10vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        position: relative;
+        display: inline-block;
+        text-align: left;
+    }
 
-  img {
-    position: absolute;
-    margin-top: 50px;
-    left: 48%;
-    transform: translateX(-50%);
-    width: 85%;
-    height: auto;
-  }
+    img {
+        position: absolute;
+        margin-top: 50px;
+        left: 48%;
+        transform: translateX(-50%);
+        width: 85%;
+        height: auto;
+    }
 
-  p {
-    color: rgba(215, 215, 215, 0.5);
-    font-family: "PowerGrotesk", sans-serif;
+    p {
+        color: rgba(215, 215, 215, 0.5);
+        font-family: 'PowerGrotesk', sans-serif;
 
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
 }
 
 .button {
-  border: 1px solid #fff;
-  background: linear-gradient(
-    91deg,
-    #034cff -9.04%,
-    #4178ff 55%,
-    #034cff 104.41%
-  );
-  padding: 25px;
-  color: #fff;
-  text-align: center;
-  font-family: "Power Grotesk";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 3.04px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+    border: 1px solid #fff;
+    background: linear-gradient(
+        91deg,
+        #034cff -9.04%,
+        #4178ff 55%,
+        #034cff 104.41%
+    );
+    padding: 25px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Power Grotesk';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 3.04px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
