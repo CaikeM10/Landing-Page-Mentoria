@@ -1,0 +1,23 @@
+.container {
+    background: #030303;
+    background-image: url('/again3.svg');
+    background-size: cover;
+    height: 100vh;
+    background-position: calc(50% - 20px) -130px;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Space Grotesk';
+}
+
+.titleBanner {
+    padding-top: 70vh;
+    padding-inline: 20px;
+
+    h1 {
+        color: #fff;
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 59px; /* 122.917% */
+    }
+}
