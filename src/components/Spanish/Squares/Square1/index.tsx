@@ -2,13 +2,13 @@ import { motion } from 'framer-motion';
 import { InView } from 'react-intersection-observer';
 import styles from './styles.module.scss';
 
-interface Squares2Props {
+interface Squares1Props {
     color: string;
     borderColor: string;
     containerColor: string;
 }
 
-const Squares2 = ({ color, borderColor, containerColor }: Squares2Props) => {
+const Squares1 = ({ color, borderColor, containerColor }: Squares1Props) => {
     const animationVariants = {
         visible: { opacity: 1, translateY: 0 },
         hidden: { opacity: 0, translateY: -50 },
@@ -29,26 +29,27 @@ const Squares2 = ({ color, borderColor, containerColor }: Squares2Props) => {
                             borderColor,
                             color,
                             backgroundColor: containerColor,
-                        }} // Apply container color
+                        }}
                     >
                         <div className={styles.container}>
                             <div className={styles.content}>
                                 <div className={styles.texts}>
                                     <div className={styles.top}>
-                                        <h4 style={{ color }}>Módulo 2</h4>
+                                        <h4 style={{ color }}>Módulo 1</h4>
                                     </div>
                                     <div className={styles.title}>
-                                        <h3 style={{ color }}>Wordpress</h3>
+                                        <h3 style={{ color }}>
+                                            Design con Figma
+                                        </h3>
                                     </div>
                                     <div className={styles.body}>
                                         <h5 style={{ color }}>
-                                            O WordPress é uma ferramenta
-                                            incrível para criação de páginas,
-                                            permitindo liberdade criativa com
-                                            facilidade de uso. Oferece uma
-                                            infinidade de plugins para ampliar
-                                            funções, além de ser otimizado para
-                                            SEO.
+                                            Descubra cómo crear diseños
+                                            increíbles utilizando la poderosa
+                                            herramienta Figma. Aprenda técnicas
+                                            de diseño que transformarán sus
+                                            proyectos en verdaderas obras de
+                                            arte.
                                         </h5>
                                     </div>
                                 </div>
@@ -58,7 +59,8 @@ const Squares2 = ({ color, borderColor, containerColor }: Squares2Props) => {
                                 />
                                 <div className={styles.bottom}>
                                     <h4 style={{ color }}>
-                                        Preço: <span>R$719,00</span>
+                                        Preço:{' '}
+                                        <span style={{ color }}>R$419,00</span>
                                     </h4>
                                 </div>
                             </div>
@@ -70,4 +72,4 @@ const Squares2 = ({ color, borderColor, containerColor }: Squares2Props) => {
     );
 };
 
-export default Squares2;
+export default Squares1;

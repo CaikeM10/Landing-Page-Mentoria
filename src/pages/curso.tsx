@@ -11,28 +11,15 @@ import StickFooter from '@/components/Portuguese/StickFooter';
 import Students from '@/components/Portuguese/Swiper';
 import ZoomEffect from '@/components/Portuguese/ZoomEffect';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 export default function Home() {
-    const [hasScrolledToEnd, setHasScrolledToEnd] = useState(false);
-    const [canScrollUpPastHorizontalPage, setCanScrollUpPastHorizontalPage] =
-        useState(true);
-
     useEffect(() => {
         if (typeof window !== 'undefined' && window.ttq) {
             window.ttq.track('ViewContent');
         }
     }, []);
 
-    const handleScrollToEnd = () => {
-        setHasScrolledToEnd(true);
-        setCanScrollUpPastHorizontalPage(false);
-    };
-
-    const handleScrollToStart = () => {
-        setHasScrolledToEnd(false);
-        setCanScrollUpPastHorizontalPage(true);
-    };
     const pageTitle = 'curso';
     return (
         <>
