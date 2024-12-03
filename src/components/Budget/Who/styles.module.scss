@@ -1,5 +1,7 @@
 .container {
-  background: transparent;
+  background-image: url("/text.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% + 40px) center;
 }
 
 .content {
@@ -19,8 +21,8 @@
   }
 
   img[alt="three"] {
-    position: relative; // Mantém "three.svg" em sua posição padrão
-    z-index: 1; // Garante que ela esteja acima, caso necessário
+    position: relative;
+    z-index: 1;
     width: 90%;
   }
 
@@ -34,7 +36,7 @@
 }
 
 .text {
-  margin-top: 60px; // Espaçamento para evitar sobreposição com as imagens
+  margin-top: 60px;
 }
 .text {
   display: flex;
