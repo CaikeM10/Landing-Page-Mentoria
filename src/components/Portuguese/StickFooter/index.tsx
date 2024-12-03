@@ -61,12 +61,11 @@ const StickFooter = ({ title }: StickFooterProps) => {
             }}
         >
             <div className={styles.content}>
-                <div className={styles.logo}>
-                    <img src="/logo2.svg" />
-                </div>
                 <div className={styles.button}>
                     <button onClick={handleClick} id="iniciar-checkout">
-                        <p>ME INSCREVER</p>
+                        <p>
+                            liberar acesso <img src="buttonArrow.svg" />
+                        </p>
                     </button>
                 </div>
             </div>
