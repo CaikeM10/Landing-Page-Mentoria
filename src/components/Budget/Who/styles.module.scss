@@ -1,0 +1,94 @@
+.container {
+  background: transparent;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-inline: 20px;
+  padding-bottom: 80px;
+}
+
+.images {
+  position: relative;
+
+  img {
+    position: absolute;
+    border-radius: 5px;
+  }
+
+  img[alt="three"] {
+    position: relative; // Mantém "three.svg" em sua posição padrão
+    z-index: 1; // Garante que ela esteja acima, caso necessário
+    width: 90%;
+  }
+
+  img[alt="one"] {
+    bottom: -40px;
+    right: -10px;
+    z-index: 2;
+    width: 50%;
+    box-shadow: -13.907px -8.85px 10.936px 1.264px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.text {
+  margin-top: 60px; // Espaçamento para evitar sobreposição com as imagens
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  h3 {
+    color: #d7d7d7;
+    font-family: "PowerGrotesk", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+  h2 {
+    color: #fff;
+    font-family: "PowerGrotesk", sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+  }
+  span {
+    color: var(--Blue, #034cff);
+  }
+  p {
+    color: rgba(215, 215, 215, 0.5);
+    font-family: "PowerGrotesk", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding-bottom: 20px;
+  }
+  button {
+    border: 1px solid #fff;
+    background: linear-gradient(
+      91deg,
+      #034cff -9.04%,
+      #4178ff 55%,
+      #034cff 104.41%
+    );
+    padding-block: 25px;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-family: "PowerGrotesk", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 3.04px;
+    text-transform: uppercase;
+  }
+}
