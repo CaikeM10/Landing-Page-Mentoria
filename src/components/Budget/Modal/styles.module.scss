@@ -1,0 +1,114 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8); /* Fundo escuro transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+  background: #000; /* Fundo do modal */
+  color: #fff;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%; /* Controla a largura da imagem */
+  height: 100%;
+  background-image: url("/banner.webp"); /* Foto de fundo */
+  background-size: cover;
+  background-position: top right; /* Posiciona no topo direito */
+  z-index: 0;
+  opacity: 0.9;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  h2 {
+    color: #fff;
+    font-family: "Power Grotesk";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+}
+
+.highlight {
+  color: #185bff;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background: #111;
+    color: #fff;
+  }
+
+  form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background: linear-gradient(
+      91deg,
+      #034cff -9.04%,
+      #4178ff 55%,
+      #034cff 104.41%
+    );
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+  }
+
+  form button:hover {
+    background: linear-gradient(
+      91deg,
+      #4178ff -9.04%,
+      #034cff 55%,
+      #4178ff 104.41%
+    );
+  }
+}

@@ -23,6 +23,14 @@ export default function Document() {
                         `,
                     }}
                 />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WCTQ0CSDG1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WCTQ0CSDG1');
+</script>
             </Head>
             <body>
                 <Main />
