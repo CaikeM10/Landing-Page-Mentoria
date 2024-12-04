@@ -28,10 +28,10 @@ export default function SwiperComponent() {
           <div className={styles.gradientLeft}></div>
 
           <Swiper
-            slidesPerView={1.5} // Mostra 1.5 slides ao mesmo tempo
-            spaceBetween={20} // Espaçamento entre os slides
-            centeredSlides={true} // Centraliza o slide ativo
-            initialSlide={1} // Começa no slide do meio
+            slidesPerView={1.5}
+            spaceBetween={20}
+            centeredSlides={true}
+            initialSlide={1}
             onSlideChange={handleSlideChange}
             className={styles.customSwiper}
           >
@@ -45,7 +45,7 @@ export default function SwiperComponent() {
               <img src="/testimony3.jpg" alt="Client Feedback 3" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/testimony4.jpg" alt="Client Feedback 3" />
+              <img src="/testimony4.jpg" alt="Client Feedback 4" />
             </SwiperSlide>
           </Swiper>
           <div className={styles.gradientRight}></div>
