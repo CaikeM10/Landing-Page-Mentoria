@@ -1,6 +1,17 @@
+import { useState } from "react";
 import styles from "./styles.module.scss";
+import ModalForm from "../Modal";
 
 const Banner = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleModalOpen = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  };
   return (
     <>
       <section className={styles.container}>
@@ -14,13 +25,16 @@ const Banner = () => {
               Um site profissional, rápido e otimizado para atrair mais clientes
               e aumentar suas vendas.
             </p>
-            <button className={styles.button}>FAZER ORÇAMENTO GRATUITO</button>
+            <button className={styles.button} onClick={handleModalOpen}>
+              FAZER ORÇAMENTO GRATUITO
+            </button>
           </div>
         </div>
         <div className={styles.containerText}>
           <h4>LANDING PAGE INSTITUCIONAL LOJA ONLINE</h4>
         </div>
       </section>
+      {isModalOpen && <ModalForm onClose={handleModalClose} />}
     </>
   );
 };
