@@ -1,17 +1,59 @@
 @font-face {
-    font-family: 'Galderglynn Titling Bd';
-    src: url('/fonts/galderglynn titling bd.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: "Galderglynn Titling Bd";
+  src: url("/fonts/galderglynn titling bd.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Galderglynn Titling Rg';
-    src: url('/fonts/galderglynn titling rg.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Galderglynn Titling Rg";
+  src: url("/fonts/galderglynn titling rg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 .container {
-    background: #030303;
+  background: #030303;
+  position: relative;
+}
+
+.whatsappButton {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+
+  padding: 10px;
+  transition: transform 0.3s ease;
+
+  img {
+    width: 40px;
+    height: 40px;
+    animation: shakeRotate 5s infinite;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes shakeRotate {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  20% {
+    transform: translateX(-5px) rotate(-10deg);
+  }
+  40% {
+    transform: translateX(5px) rotate(10deg);
+  }
+  60% {
+    transform: translateX(-3px) rotate(-5deg);
+  }
+  80% {
+    transform: translateX(3px) rotate(5deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
 }

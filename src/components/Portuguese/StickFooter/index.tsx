@@ -1,76 +1,80 @@
-import Router from 'next/router';
-import { useEffect, useState } from 'react';
-import styles from './styles.module.scss';
+import Router from "next/router";
+import { useEffect, useState } from "react";
+import styles from "./styles.module.scss";
+
 interface StickFooterProps {
-    title: string;
+  title: string;
+  buttonText: string; // Nova prop para o texto do botão
 }
-const StickFooter = ({ title }: StickFooterProps) => {
-    const [isVisible, setIsVisible] = useState(false);
 
-    useEffect(() => {
-        const toggleVisibility = () => {
-            if (window.pageYOffset > 400) {
-                setIsVisible(true);
-            } else {
-                setIsVisible(false);
-            }
-        };
+const StickFooter = ({ title, buttonText }: StickFooterProps) => {
+  const [isVisible, setIsVisible] = useState(false);
 
-        window.addEventListener('scroll', toggleVisibility);
-
-        return () => {
-            window.removeEventListener('scroll', toggleVisibility);
-        };
-    }, []);
-
-    const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault();
-
-        if (typeof window !== 'undefined') {
-            import('react-facebook-pixel')
-                .then((module) => {
-                    const ReactPixel = module.default;
-                    ReactPixel.track('InitiateCheckout', {
-                        content_name: 'Curso',
-                        value: 17.0,
-                        currency: 'BRL',
-                    });
-                })
-                .catch((err) =>
-                    console.error('Failed to load React Facebook Pixel', err)
-                );
-            if (window.gtag) {
-                window.gtag('event', 'InitiateCheckout', {
-                    event_category: 'engagement',
-                    event_label: 'Curso Checkout',
-                    value: 17.0,
-                    currency: 'BRL',
-                });
-            }
-            let redirectUrl = 'https://pay.kiwify.com.br/UyOtZiG';
-
-            Router.push(redirectUrl);
-        }
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 400) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
     };
-    return (
-        <div
-            className={styles.container}
-            style={{
-                opacity: isVisible ? 1 : 0,
-                visibility: isVisible ? 'visible' : 'hidden',
-            }}
-        >
-            <div className={styles.content}>
-                <div className={styles.button}>
-                    <button onClick={handleClick} id="iniciar-checkout">
-                        <p>
-                            liberar acesso <img src="buttonArrow.svg" />
-                        </p>
-                    </button>
-                </div>
-            </div>
+
+    window.addEventListener("scroll", toggleVisibility);
+
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility);
+    };
+  }, []);
+
+  const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+
+    if (typeof window !== "undefined") {
+      import("react-facebook-pixel")
+        .then((module) => {
+          const ReactPixel = module.default;
+          ReactPixel.track("InitiateCheckout", {
+            content_name: "Curso",
+            value: 17.0,
+            currency: "BRL",
+          });
+        })
+        .catch((err) =>
+          console.error("Failed to load React Facebook Pixel", err)
+        );
+      if (window.gtag) {
+        window.gtag("event", "InitiateCheckout", {
+          event_category: "engagement",
+          event_label: "Curso Checkout",
+          value: 17.0,
+          currency: "BRL",
+        });
+      }
+      let redirectUrl = "https://pay.kiwify.com.br/UyOtZiG";
+
+      Router.push(redirectUrl);
+    }
+  };
+
+  return (
+    <div
+      className={styles.container}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        visibility: isVisible ? "visible" : "hidden",
+      }}
+    >
+      <div className={styles.content}>
+        <div className={styles.button}>
+          <button onClick={handleClick} id="iniciar-checkout">
+            <p>
+              {buttonText} <img src="buttonArrow.svg" />
+            </p>
+          </button>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default StickFooter;
