@@ -1,12 +1,13 @@
-import { Head, Html, Main, NextScript } from 'next/document';
+import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Document() {
-    return (
-        <Html lang="en">
-            <Head>
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
+  return (
+    <Html lang="en">
+      <Head>
+        {/* TikTok Pixel */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
                             !function (w, d, t) {
                               w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];
                               ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],
@@ -21,21 +22,28 @@ export default function Document() {
                               ttq.load('CT7L8SBC77U9L9BMN3OG'); ttq.page();
                             }(window, document, 'ttq');
                         `,
-                    }}
-                />
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WCTQ0CSDG1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-WCTQ0CSDG1');
-</script>
-            </Head>
-            <body>
-                <Main />
-                <NextScript />
-            </body>
-        </Html>
-    );
+          }}
+        />
+        {/* Google Tag Manager */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-WCTQ0CSDG1"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+                            window.dataLayer = window.dataLayer || [];
+                            window.gtag = function() { dataLayer.push(arguments); };
+                            gtag('js', new Date());
+                            gtag('config', 'G-WCTQ0CSDG1');
+                        `,
+          }}
+        />
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  );
 }
