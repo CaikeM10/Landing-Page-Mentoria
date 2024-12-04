@@ -75,14 +75,9 @@
   }
   button {
     border: 1px solid #fff;
-    background: linear-gradient(
-      91deg,
-      #034cff -9.04%,
-      #4178ff 55%,
-      #034cff 104.41%
-    );
-    padding-block: 25px;
-    border: none;
+    background: linear-gradient(91deg, #0025ff -20%, #00a1ff 50%, #0025ff 120%);
+    background-size: 300% 300%;
+    padding: 20px;
     color: #fff;
     text-align: center;
     font-family: "PowerGrotesk", sans-serif;
@@ -91,6 +86,28 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: 3.04px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     text-transform: uppercase;
+    animation: gradientCircle 4s linear infinite;
+  }
+}
+
+@keyframes gradientCircle {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
   }
 }

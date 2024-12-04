@@ -1,6 +1,6 @@
 .container {
   background: #030303;
-  background-image: url("/again3.svg");
+  background-image: url("/banner.webp");
   background-size: cover;
   height: 100vh;
   background-position: calc(50% - 20px) -130px;
@@ -12,12 +12,12 @@
 
 .containerText {
   position: absolute;
-  bottom: 290px;
+  bottom: 260px;
   right: 20px;
   text-align: right;
   color: #606060;
   font-family: "PowerGrotesk", sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: 97.5%;
@@ -26,7 +26,7 @@
 }
 
 .titleBanner {
-  padding-top: 70vh;
+  padding-top: 60vh;
   padding-inline: 20px;
   position: relative;
   text-align: left;
@@ -95,12 +95,8 @@
 
 .button {
   border: 1px solid #fff;
-  background: linear-gradient(
-    91deg,
-    #034cff -9.04%,
-    #4178ff 55%,
-    #034cff 104.41%
-  );
+  background: linear-gradient(91deg, #0025ff -20%, #00a1ff 50%, #0025ff 120%);
+  background-size: 300% 300%;
   padding: 20px;
   color: #fff;
   text-align: center;
@@ -113,4 +109,23 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  animation: gradientCircle 4s linear infinite;
+}
+
+@keyframes gradientCircle {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }

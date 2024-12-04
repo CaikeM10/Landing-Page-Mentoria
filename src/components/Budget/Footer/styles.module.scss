@@ -1,81 +1,102 @@
 .container {
-    background: #030303;
-    background-image: url('/footerBackground.svg');
-    background-size: cover;
-    height: 70vh;
-    background-position: center -130px;
-    background-repeat: no-repeat;
-    color: white;
-    font-family: 'PowerGrotesk';
-    padding-inline: 20px;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
+  background: #030303;
+  background-image: url("/footerBackground.svg");
+  background-size: cover;
+  height: 100%;
+  background-position: center -130px;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: "PowerGrotesk";
+  padding-inline: 20px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 
-    hr {
-        margin-top: 35px;
-        height: 1px;
-        background: #fff;
-        opacity: 0.25;
-    }
+  hr {
+    margin-top: 35px;
+    height: 1px;
+    background: #fff;
+    opacity: 0.25;
+  }
 
-    button {
-        width: 100%;
-        margin-inline: auto;
-        padding-block: 25px;
-
-        color: #fff;
-        text-align: center;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: 3.04px;
-
-        border: 1px solid #fff;
-        background: linear-gradient(
-            91deg,
-            #034cff -9.04%,
-            #4178ff 55%,
-            #034cff 104.41%
-        );
-    }
-}
-
-.container h5 {
-    color: var(--White, #fff);
+  button {
+    border: 1px solid #fff;
+    background: linear-gradient(
+      91deg,
+      #0025ff -20%,
+      /* Azul escuro intenso */ #00a1ff 50%,
+      /* Azul claro vibrante */ #0025ff 120% /* Azul escuro intenso novamente */
+    );
+    background-size: 300% 300%; /* Amplia o gradiente para criar movimento */
+    padding: 20px;
+    color: #fff;
     text-align: center;
-    font-family: 'PowerGrotesk';
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: uppercase;
-    padding-top: 150px;
-
-    span {
-        color: #034cff;
-    }
-}
-
-.container p {
-    margin-top: 16px;
-    color: rgba(215, 215, 215, 0.5);
-    text-align: center;
+    font-family: "PowerGrotesk", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px;
-    margin-bottom: 90px;
+    line-height: normal;
+    letter-spacing: 3.04px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    animation: gradientCircle 4s linear infinite; /* Animação circular */
+  }
+}
+
+.container h5 {
+  color: var(--White, #fff);
+  text-align: center;
+  font-family: "PowerGrotesk";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  padding-top: 150px;
+
+  span {
+    color: #034cff;
+  }
+}
+
+.container p {
+  margin-top: 16px;
+  color: rgba(215, 215, 215, 0.5);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 90px;
 }
 
 .rights {
-    color: var(--White, #fff);
-    text-align: center;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 14px; /* 100% */
-    margin-inline: auto;
-    margin-top: 12px;
+  color: var(--White, #fff);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  margin-inline: auto;
+  margin-top: 12px;
+  padding-bottom: 50px;
+}
+
+@keyframes gradientCircle {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }

@@ -5,8 +5,8 @@ export default function Who() {
     <section className={styles.container}>
       <div className={styles.content}>
         <div className={styles.images}>
-          <img src="/three.svg" alt="three" />
-          <img src="/one.svg" alt="one" />
+          <img src="/pic2.webp" alt="three" />
+          <img src="/pic1.webp" alt="one" />
         </div>
         <div className={styles.text}>
           <h3>sobre</h3>

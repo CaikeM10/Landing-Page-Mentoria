@@ -36,19 +36,22 @@ export default function SwiperComponent() {
             className={styles.customSwiper}
           >
             <SwiperSlide>
-              <img src="/proof.svg" alt="Client Feedback 1" />
+              <img src="/testimony1.jpg" alt="Client Feedback 1" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/proof.svg" alt="Client Feedback 2" />
+              <img src="/testimony2.jpg" alt="Client Feedback 2" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/proof.svg" alt="Client Feedback 3" />
+              <img src="/testimony3.jpg" alt="Client Feedback 3" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/testimony4.jpg" alt="Client Feedback 3" />
             </SwiperSlide>
           </Swiper>
           <div className={styles.gradientRight}></div>
 
           <div className={styles.pagination}>
-            {[0, 1, 2].map((index) => (
+            {[0, 1, 2, 3].map((index) => (
               <div
                 key={index}
                 className={`${styles.paginationBullet} ${
