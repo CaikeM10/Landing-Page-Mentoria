@@ -39,7 +39,7 @@ const Squares1 = ({ color, borderColor, containerColor }: Squares1Props) => {
                                     </div>
                                     <div className={styles.title}>
                                         <h3 style={{ color }}>
-                                            Design con Figma
+                                            Design com Figma
                                         </h3>
                                     </div>
                                     <div className={styles.body}>
