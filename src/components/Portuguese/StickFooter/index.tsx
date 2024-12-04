@@ -12,9 +12,15 @@ const StickFooter = ({ title, buttonText }: StickFooterProps) => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 400) {
+      const scrollTop = window.pageYOffset;
+      const windowHeight = window.innerHeight;
+      const fullHeight = document.documentElement.scrollHeight;
+
+      if (scrollTop > 400 && scrollTop + windowHeight < fullHeight - 50) {
+        // Mostra o botão se o scroll passar de 400 e não estiver no final
         setIsVisible(true);
       } else {
+        // Esconde o botão ao voltar ou chegar ao final da página
         setIsVisible(false);
       }
     };
@@ -62,6 +68,7 @@ const StickFooter = ({ title, buttonText }: StickFooterProps) => {
       style={{
         opacity: isVisible ? 1 : 0,
         visibility: isVisible ? "visible" : "hidden",
+        transition: "opacity 0.3s ease, visibility 0.3s ease",
       }}
     >
       <div className={styles.content}>
