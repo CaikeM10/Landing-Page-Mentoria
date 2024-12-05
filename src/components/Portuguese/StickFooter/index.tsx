@@ -1,6 +1,7 @@
 import Router from "next/router";
 import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
+import ModalForm from "@/components/Budget/Modal";
 
 interface StickFooterProps {
   title: string;
@@ -62,25 +63,37 @@ const StickFooter = ({ title, buttonText }: StickFooterProps) => {
     }
   };
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleModalOpen = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  };
   return (
-    <div
-      className={styles.container}
-      style={{
-        opacity: isVisible ? 1 : 0,
-        visibility: isVisible ? "visible" : "hidden",
-        transition: "opacity 0.3s ease, visibility 0.3s ease",
-      }}
-    >
-      <div className={styles.content}>
-        <div className={styles.button}>
-          <button onClick={handleClick} id="iniciar-checkout">
-            <p>
-              {buttonText} <img src="buttonArrow.svg" />
-            </p>
-          </button>
+    <>
+      <div
+        className={styles.container}
+        style={{
+          opacity: isVisible ? 1 : 0,
+          visibility: isVisible ? "visible" : "hidden",
+          transition: "opacity 0.3s ease, visibility 0.3s ease",
+        }}
+      >
+        <div className={styles.content}>
+          <div className={styles.button}>
+            <button onClick={handleModalOpen} id="iniciar-checkout">
+              <p>
+                {buttonText} <img src="buttonArrow.svg" />
+              </p>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+      {isModalOpen && <ModalForm onClose={handleModalClose} />}
+    </>
   );
 };
 
