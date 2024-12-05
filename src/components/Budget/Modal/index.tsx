@@ -21,13 +21,11 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
 
     const { name, email, phone, budget, instagram, site } = formData;
 
-    // Validação simples
-    if (!name || !email || !phone || !budget || !instagram || !site) {
+    if (!name || !email || !phone) {
       alert("Por favor, preencha todos os campos antes de enviar!");
       return;
     }
 
-    // Dados para enviar ao endpoint
     const payload = {
       name,
       email,
@@ -38,7 +36,6 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
     };
 
     try {
-      // Envio para o endpoint
       const response = await fetch(
         "https://n8n.maistickets.com.br/webhook-test/rd-station",
         {
@@ -99,21 +96,21 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
           <input
             type="text"
             name="budget"
-            placeholder="Orçamento"
+            placeholder="Orçamento (opicional)"
             value={formData.budget}
             onChange={handleInputChange}
           />
           <input
             type="text"
             name="instagram"
-            placeholder="Instagram"
+            placeholder="Instagram (opicional)"
             value={formData.instagram}
             onChange={handleInputChange}
           />
           <input
             type="text"
             name="site"
-            placeholder="Site"
+            placeholder="Site (opicional)"
             value={formData.site}
             onChange={handleInputChange}
           />
