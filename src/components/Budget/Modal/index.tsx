@@ -4,8 +4,11 @@ import styles from "./styles.module.scss";
 const ModalForm = ({ onClose }: { onClose: () => void }) => {
   const [formData, setFormData] = useState({
     name: "",
-    phone: "",
     email: "",
+    phone: "",
+    budget: "",
+    instagram: "",
+    site: "",
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -13,23 +16,49 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const { name, phone, email } = formData;
+    const { name, email, phone, budget, instagram, site } = formData;
 
-    if (!name || !phone || !email) {
+    // Validação simples
+    if (!name || !email || !phone || !budget || !instagram || !site) {
       alert("Por favor, preencha todos os campos antes de enviar!");
       return;
     }
 
-    const message = `Olá, gostaria de pedir um orçamento grátis!%0A
-    Nome: ${name}%0A
-    Telefone: ${phone}%0A
-    Email: ${email}`;
+    // Dados para enviar ao endpoint
+    const payload = {
+      name,
+      email,
+      phone,
+      budget,
+      instagram,
+      site,
+    };
 
-    const whatsappUrl = `https://wa.me/5541999179672?text=${message}`;
-    window.open(whatsappUrl, "_blank");
+    try {
+      // Envio para o endpoint
+      const response = await fetch(
+        "https://n8n.maistickets.com.br/webhook-test/rd-station",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      if (response.ok) {
+        alert("Formulário enviado com sucesso!");
+      } else {
+        alert("Erro ao enviar o formulário. Tente novamente.");
+      }
+    } catch (error) {
+      console.error("Erro ao enviar o formulário:", error);
+      alert("Erro ao enviar o formulário. Tente novamente.");
+    }
   };
 
   return (
@@ -54,6 +83,13 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
             onChange={handleInputChange}
           />
           <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleInputChange}
+          />
+          <input
             type="tel"
             name="phone"
             placeholder="Telefone"
@@ -61,10 +97,24 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
             onChange={handleInputChange}
           />
           <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
+            type="text"
+            name="budget"
+            placeholder="Orçamento"
+            value={formData.budget}
+            onChange={handleInputChange}
+          />
+          <input
+            type="text"
+            name="instagram"
+            placeholder="Instagram"
+            value={formData.instagram}
+            onChange={handleInputChange}
+          />
+          <input
+            type="text"
+            name="site"
+            placeholder="Site"
+            value={formData.site}
             onChange={handleInputChange}
           />
           <button type="submit">RECEBER ORÇAMENTO GRÁTIS</button>
