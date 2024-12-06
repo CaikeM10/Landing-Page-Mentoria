@@ -21,6 +21,7 @@ const SectionTwo = ({ title }: SectionTwoProps) => {
             <main className={styles.container}>
                 <div className={styles.content}>
                     <div className={styles.top}>
+                        {/*@ts-ignore*/}
                         <ScrollAnimation
                             animateIn="fadeIn"
                             animateOut="fadeOut"
@@ -34,6 +35,7 @@ const SectionTwo = ({ title }: SectionTwoProps) => {
                         </ScrollAnimation>
                     </div>
                     <div className={styles.bottom}>
+                        {/*@ts-ignore*/}
                         <ScrollAnimation
                             animateIn="bounceInLeft"
                             animateOut="bounceOutRight"
@@ -68,6 +70,7 @@ const SectionTwo = ({ title }: SectionTwoProps) => {
                                 </div>
                             </div>
                         </ScrollAnimation>
+                        {/*@ts-ignore*/}
                         <ScrollAnimation
                             animateIn="bounceInRight"
                             animateOut="bounceOutLeft"
