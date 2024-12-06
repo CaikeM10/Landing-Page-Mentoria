@@ -29,8 +29,9 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
 
     const cleanedPhone = phone.replace(/\D/g, "");
     const formattedPhone = cleanedPhone.startsWith("55")
-      ? `+${cleanedPhone}`
-      : `+55${cleanedPhone}`;
+      ? cleanedPhone
+      : `55${cleanedPhone}`;
+
     const msg_send = `Olá ${name}! Você poderia explicar um pouco como seria o seu site?`;
 
     const payload = {
