@@ -89,6 +89,7 @@ const Students = ({ title }: StudentsProps) => {
         <>
             <main className={styles.container}>
                 <div className={styles.content}>
+                    {/*@ts-ignore*/}
                     <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
                         <div className={styles.title}>
                             <h2>
@@ -97,6 +98,7 @@ const Students = ({ title }: StudentsProps) => {
                             </h2>
                         </div>
                     </ScrollAnimation>
+                    {/*@ts-ignore*/}
                     <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
                         <div className={styles.swiper}>
                             <Swiper
@@ -159,6 +161,7 @@ const Students = ({ title }: StudentsProps) => {
                             </Swiper>
                         </div>
                     </ScrollAnimation>
+                    {/*@ts-ignore*/}
                     <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
                         <div className={styles.button}>
                             <button onClick={handleClick} id="iniciar-checkout">

@@ -40,6 +40,7 @@ const SectionOne = ({ title }: SectionOneProps) => {
     <>
       <main className={styles.container}>
         <div className={styles.content}>
+          {/*@ts-ignore*/}
           <ScrollAnimation animateIn="fadeIn">
             <div className={styles.leftside}>
               <img className={styles.logo} src="/logo2.svg" />
@@ -67,6 +68,7 @@ const SectionOne = ({ title }: SectionOneProps) => {
               </div>
             </div>
           </ScrollAnimation>
+          {/*@ts-ignore*/}
           <ScrollAnimation animateIn="fadeIn">
             <div className={styles.rightside}>
               <div className={styles.backgroundImages}>
