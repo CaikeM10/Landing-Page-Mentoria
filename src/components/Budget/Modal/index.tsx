@@ -38,9 +38,9 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
       name,
       email,
       phone: formattedPhone,
-      budget,
-      instagram,
-      site,
+      // budget,
+      // instagram,
+      // site,
       msg_send,
     };
 
@@ -102,27 +102,27 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
             value={formData.phone}
             onChange={handleInputChange}
           />
-          <input
+          {/* <input
             type="text"
             name="budget"
             placeholder="Orçamento (opicional)"
             value={formData.budget}
             onChange={handleInputChange}
-          />
-          <input
+          /> */}
+          {/* <input
             type="text"
             name="instagram"
             placeholder="Instagram (opicional)"
             value={formData.instagram}
             onChange={handleInputChange}
-          />
-          <input
+          /> */}
+          {/* <input
             type="text"
             name="site"
             placeholder="Site (opicional)"
             value={formData.site}
             onChange={handleInputChange}
-          />
+          /> */}
           <button type="submit">RECEBER ORÇAMENTO GRÁTIS</button>
         </form>
       </div>
