@@ -46,19 +46,6 @@ export default function App({ Component, pageProps }: AppProps) {
         fetchUserData();
     }, []);
 
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            import('react-facebook-pixel')
-                .then((module) => {
-                    const ReactPixel = module.default;
-                    ReactPixel.init('875794081268430');
-                    ReactPixel.pageView();
-                })
-                .catch((err) =>
-                    console.error('Failed to load React Facebook Pixel', err)
-                );
-        }
-    }, []);
 
     return (
         <>
