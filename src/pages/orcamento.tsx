@@ -8,7 +8,7 @@ import StickFooter from "@/components/Portuguese/StickFooter";
 import styles from "@/styles/orcamento.module.scss";
 
 export default function Desafio() {
-  const pageTitle = "curso";
+  const pageTitle = "orçamento";
 
   return (
     <section className={styles.container}>

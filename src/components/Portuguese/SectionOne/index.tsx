@@ -9,27 +9,6 @@ const SectionOne = ({ title }: SectionOneProps) => {
         e.preventDefault();
 
         if (typeof window !== 'undefined') {
-            import('react-facebook-pixel')
-                .then((module) => {
-                    const ReactPixel = module.default;
-                    ReactPixel.track('InitiateCheckout', {
-                        content_name: 'Curso',
-                        value: 17.0,
-                        currency: 'BRL',
-                    });
-                })
-                .catch((err) =>
-                    console.error('Failed to load React Facebook Pixel', err)
-                );
-
-            if (window.gtag) {
-                window.gtag('event', 'InitiateCheckout', {
-                    event_category: 'engagement',
-                    event_label: 'Curso Checkout',
-                    value: 17.0,
-                    currency: 'BRL',
-                });
-            }
 
             let redirectUrl = 'https://pay.kiwify.com.br/UyOtZiG';
             if (title === 'tiktok-organico') {
