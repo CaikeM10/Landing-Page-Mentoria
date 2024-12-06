@@ -47,6 +47,7 @@ const Modulos = () => {
 
     return (
         <motion.div className={styles.container} style={{ backgroundColor }}>
+            {/*@ts-ignore*/}
             <ScrollAnimation animateIn="fadeIn">
                 <section
                     className={styles.container}

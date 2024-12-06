@@ -41,6 +41,7 @@ const SectionTwo = ({ title }: SectionTwoProps) => {
       <main className={styles.container}>
         <div className={styles.content}>
           <div className={styles.top}>
+            {/*@ts-ignore*/}
             <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
               <h2>
                 La gran diferencia entre lo que usted esta{" "}
@@ -121,6 +122,7 @@ const SectionTwo = ({ title }: SectionTwoProps) => {
               </div>
             </ScrollAnimation>
           </div>
+          {/*@ts-ignore*/}
           <ScrollAnimation animateIn="bounceInUp" animateOut="fadeOut">
             <div className={styles.button}>
               <button onClick={handleClick} id="iniciar-checkout">
