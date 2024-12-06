@@ -9,6 +9,7 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
     budget: "",
     instagram: "",
     site: "",
+    msg_send: "",
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -26,13 +27,18 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
       return;
     }
 
+    const formattedPhone = phone.startsWith("+55") ? phone : `+55${phone}`;
+
+    const msg_send = `Olá ${name}! Você poderia explicar um pouco como seria o seu site?`;
+
     const payload = {
       name,
       email,
-      phone,
+      phone: formattedPhone,
       budget,
       instagram,
       site,
+      msg_send,
     };
 
     try {
