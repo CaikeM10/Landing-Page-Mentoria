@@ -64,6 +64,7 @@ const SectionTwo = ({ title }: SectionTwoProps) => {
                 </div>
               </div>
             </ScrollAnimation>
+            {/*@ts-ignore*/}
             <ScrollAnimation
               animateIn="bounceInRight"
               animateOut="bounceOutLeft"
