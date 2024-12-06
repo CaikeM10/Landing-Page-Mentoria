@@ -17,7 +17,6 @@ const Price = ({ title }: PriceProps) => {
 
             Router.push(redirectUrl);
         }
-    };
 
     return (
         <>

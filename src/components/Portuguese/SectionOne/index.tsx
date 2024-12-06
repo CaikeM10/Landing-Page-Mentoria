@@ -28,6 +28,7 @@ const SectionOne = ({ title }: SectionOneProps) => {
             router.push(redirectUrl);
         }
     };
+    // @ts-ignore
     return (
         <>
             <main className={styles.container}>
@@ -60,6 +61,7 @@ const SectionOne = ({ title }: SectionOneProps) => {
                             </div>
                         </div>
                     </ScrollAnimation>
+                    {/*@ts-ignore*/}
                     <ScrollAnimation animateIn="fadeIn">
                         <div className={styles.rightside}>
                             <div className={styles.backgroundImages}>
