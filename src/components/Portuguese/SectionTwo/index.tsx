@@ -10,37 +10,18 @@ const SectionTwo = ({ title }: SectionTwoProps) => {
         e.preventDefault();
 
         if (typeof window !== 'undefined') {
-            import('react-facebook-pixel')
-                .then((module) => {
-                    const ReactPixel = module.default;
-                    ReactPixel.track('InitiateCheckout', {
-                        content_name: 'Curso',
-                        value: 17.0,
-                        currency: 'BRL',
-                    });
-                })
-                .catch((err) =>
-                    console.error('Failed to load React Facebook Pixel', err)
-                );
-            if (window.gtag) {
-                window.gtag('event', 'InitiateCheckout', {
-                    event_category: 'engagement',
-                    event_label: 'Curso Checkout',
-                    value: 17.0,
-                    currency: 'BRL',
-                });
-            }
-
             let redirectUrl = 'https://pay.kiwify.com.br/UyOtZiG';
 
             Router.push(redirectUrl);
         }
     };
+    // @ts-ignore
     return (
         <>
             <main className={styles.container}>
                 <div className={styles.content}>
                     <div className={styles.top}>
+                        {/*@ts-ignore*/}
                         <ScrollAnimation
                             animateIn="fadeIn"
                             animateOut="fadeOut"
@@ -54,6 +35,7 @@ const SectionTwo = ({ title }: SectionTwoProps) => {
                         </ScrollAnimation>
                     </div>
                     <div className={styles.bottom}>
+                        {/*@ts-ignore*/}
                         <ScrollAnimation
                             animateIn="bounceInLeft"
                             animateOut="bounceOutRight"
@@ -88,6 +70,7 @@ const SectionTwo = ({ title }: SectionTwoProps) => {
                                 </div>
                             </div>
                         </ScrollAnimation>
+                        {/*@ts-ignore*/}
                         <ScrollAnimation
                             animateIn="bounceInRight"
                             animateOut="bounceOutLeft"
@@ -125,6 +108,7 @@ const SectionTwo = ({ title }: SectionTwoProps) => {
                             </div>
                         </ScrollAnimation>
                     </div>
+                    {/*@ts-ignore*/}
                     <ScrollAnimation
                         animateIn="bounceInUp"
                         animateOut="fadeOut"
