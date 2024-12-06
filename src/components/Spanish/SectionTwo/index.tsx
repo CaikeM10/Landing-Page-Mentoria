@@ -8,29 +8,7 @@ interface SectionTwoProps {
 const SectionTwo = ({ title }: SectionTwoProps) => {
   const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-
     if (typeof window !== "undefined") {
-      import("react-facebook-pixel")
-        .then((module) => {
-          const ReactPixel = module.default;
-          ReactPixel.track("InitiateCheckout", {
-            content_name: "Curso",
-            value: 17.0,
-            currency: "BRL",
-          });
-        })
-        .catch((err) =>
-          console.error("Failed to load React Facebook Pixel", err)
-        );
-      if (window.gtag) {
-        window.gtag("event", "InitiateCheckout", {
-          event_category: "engagement",
-          event_label: "Curso Checkout",
-          value: 17.0,
-          currency: "BRL",
-        });
-      }
-
       let redirectUrl = "https://pay.kiwify.com.br/UyOtZiG";
 
       Router.push(redirectUrl);
@@ -51,6 +29,7 @@ const SectionTwo = ({ title }: SectionTwoProps) => {
             </ScrollAnimation>
           </div>
           <div className={styles.bottom}>
+            {/*@ts-ignore*/}
             <ScrollAnimation
               animateIn="bounceInLeft"
               animateOut="bounceOutRight"
