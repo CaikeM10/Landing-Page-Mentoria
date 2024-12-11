@@ -3370,13 +3370,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-facebook-pixel@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "react-facebook-pixel@npm:1.0.4"
-  checksum: cfd6fa5d6f4191ea0508c0313b9e0206edf2117645ba38021030bfa22eb2d2d087c8159d974e037057def4e6c18bd6618a1308e19b0bfe2092ac4521e79669bd
-  languageName: node
-  linkType: hard
-
 "react-intersection-observer@npm:^9.8.2":
   version: 9.13.1
   resolution: "react-intersection-observer@npm:9.13.1"
