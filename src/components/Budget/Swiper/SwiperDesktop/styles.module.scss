@@ -1,134 +1,123 @@
+/* ================================================= */
+/* VARIÁVEIS DE CORES REUTILIZADAS */
+/* ================================================= */
+$gold-dark: #b58d48;
+$gold-light: #e8c17f;
+$blue-highlight: #67bccb; /* Cor ciano/azul de destaque */
+$background-dark: #030303; /* Fundo preto */
+
 .container {
-    background: #030303;
-    color: white;
-    font-family: 'Space Grotesk', sans-serif;
-    position: relative;
+  background: $background-dark;
+  color: white;
+  font-family: "Space Grotesk", sans-serif;
+  position: relative;
 }
 
 .content {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-    padding-block: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding-block: 30px;
 
-    @media only screen and (min-width: 768px) {
-        max-width: 1440px;
-        padding-inline: 100px;
-        margin-inline: auto;
+  @media only screen and (min-width: 768px) {
+    max-width: 1440px;
+    padding-inline: 100px;
+    margin-inline: auto;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 100px;
+
+    h2 {
+      color: #fff;
+      text-align: center;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: uppercase;
+      span {
+        /* 💥 DESTAQUE: Usando nosso CIANO/AZUL */
+        color: $blue-highlight;
+      }
     }
 
-    .title {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        margin-bottom: 100px;
-
-        h2 {
-            color: #fff;
-            text-align: center;
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 36px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            text-transform: uppercase;
-            span {
-                color: #034cff;
-            }
-        }
-
-        p {
-            color: rgba(215, 215, 215, 0.5);
-            text-align: center;
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 24px;
-        }
+    p {
+      /* 💥 CONTRASTE: Cor mais clara para melhor legibilidade */
+      color: #fff; /* Alterado de rgba(215, 215, 215, 0.5) para Branco Puro */
+      text-align: center;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
     }
+  }
 }
 
 .swiperContainer {
-    position: relative;
-    color: white;
-    background: #030303;
-    max-width: 1440px;
-    margin-inline: auto;
-    padding-inline: 100px;
-    img {
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  color: white;
+  background: $background-dark;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 100px;
 
-        @media only screen and (min-width: 768px) {
-            max-width: 370px;
-        }
-    }
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    /* Sombra leve para destacar do fundo preto */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 
-    .gradientLeft,
-    .gradientRight {
-        // position: absolute;
-        // top: 0;
-        // bottom: 0;
-        // width: 80px;
-        // z-index: 10;
-        // pointer-events: none;
+    @media only screen and (min-width: 768px) {
+      max-width: 370px;
     }
-
-    .gradientLeft {
-        // left: 0;
-        // background: linear-gradient(
-        //     to right,
-        //     rgba(3, 3, 3, 1),
-        //     rgba(3, 3, 3, 0)
-        // );
-    }
-
-    .gradientRight {
-        // right: 0;
-        // background: linear-gradient(
-        //     to left,
-        //     rgba(3, 3, 3, 1),
-        //     rgba(3, 3, 3, 0)
-        // );
-    }
+  }
 }
 
 .customSwiper {
-    overflow: visible;
+  overflow: visible;
 }
 
 .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
 }
 
 /* Pagination bullets */
 .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .paginationBullet {
-    width: 6px;
-    height: 6px;
-    background-color: #fff;
-    opacity: 0.8;
-    border-radius: 50%;
-    transition: all 0.3s ease;
+  width: 6px;
+  height: 6px;
+  /* 💥 HARMONIZAÇÃO: Cor base mais discreta */
+  background-color: #555;
+  opacity: 1;
+  border-radius: 50%;
+  transition: all 0.3s ease;
 }
 
 .paginationBulletActive {
-    background-color: #034cff;
-    width: 20px;
-    height: 6px;
-    border-radius: 4px;
-    opacity: 1;
+  /* 💥 DESTAQUE: Dourado para indicar o slide ativo */
+  background-color: $gold-light;
+  width: 20px;
+  height: 6px;
+  border-radius: 4px;
+  opacity: 1;
 }
+
+/* O restante do código (comentado) não precisa ser alterado */
+/* ... (gradientLeft, gradientRight, etc.) ... */

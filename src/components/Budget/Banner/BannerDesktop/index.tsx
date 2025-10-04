@@ -23,8 +23,13 @@ const BannerDesktop = () => {
                   • Veja mais abaixo! •
                 </button>
                 <h1>
-                  Consultório Sustentável ! Seu novo modelo de negócio para
-                  viver de clinicar.
+                  <span className={styles.destaque}>
+                    Consultório Sustentável !
+                  </span>
+                  <br></br>
+                  Seu novo modelo de negócio
+                  <br></br>
+                  para viver de clinicar.
                 </h1>
 
                 <img src="/line.svg" alt="line" />
@@ -32,7 +37,7 @@ const BannerDesktop = () => {
                   Um novo plano de voo para equilibrar sua agenda, aumentar a
                   lucratividade do consultório e fortalecer sua autoridade na
                   profissão, sem abrir mão do que mais importa: o seu tempo de
-                  qualidade.
+                  qualidade. O evento será Dia 20 de Outubro, às 20h.
                 </p>
                 <button className={styles.button} onClick={handleModalOpen}>
                   QUERO GARANTIR MINHA VAGA!

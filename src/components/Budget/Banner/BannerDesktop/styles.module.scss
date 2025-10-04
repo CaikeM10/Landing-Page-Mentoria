@@ -1,28 +1,50 @@
+/* ================================================= */
+/* VARIÁVEIS DE CORES REUTILIZADAS */
+/* ================================================= */
+$gold-dark: #b58d48;
+$gold-light: #e8c17f;
+$blue-highlight: #67bccb;
+$text-light: #fff;
+$background-marrom: #725542;
+
 .container {
-  padding-top: 100px; // ajusta de acordo com a altura do header
-  background: #030303;
-  height: 100vh;
-  color: white;
+  /* AJUSTE: Empurra o conteúdo para baixo */
+  padding-top: 150px;
+  background: $background-marrom;
+  /* CORREÇÃO: Usa min-height para garantir que o botão caiba */
+  min-height: 100vh;
+  color: $text-light;
+  /* Alinha no centro (vertical) */
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .content {
   display: flex;
-  margin-left: max(0px, (100% - 1440px)/2);
-  margin-top: 189px;
+  justify-content: space-between;
+  /* Retorna ao max-width anterior para centralizar o bloco */
+  margin-left: max(0px, (100% - 1400px)/2);
+  margin-top: 0px;
   font-family: "PowerGrotesk", sans-serif;
-  padding-inline: 120px;
+  /* Padding reduzido para dar mais espaço */
+  padding-inline: 40px;
+  width: 100%;
+  /* Alinha os blocos no centro */
+  align-items: center;
 }
 
 .flexTitle {
   display: flex;
   align-items: center;
   margin-top: 0px;
+  flex-shrink: 0;
 
-  .herbertLine {
-    height: 50%;
-  }
+  /* 💥 AJUSTE CRÍTICO: Adiciona espaço à direita do texto */
+  margin-right: 40px;
+
+  /* Reduz um pouco a largura para compensar o margin-right */
+  width: 55%;
 }
 
 .titleBanner {
@@ -30,12 +52,18 @@
   position: relative;
   text-align: left;
   margin-left: 10px;
+
   .orcamento {
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 7px;
-    background: #67bccb;
+    background: linear-gradient(
+      91deg,
+      $gold-dark -20%,
+      $gold-light 50%,
+      $gold-dark 120%
+    );
     padding-block: 6px;
     padding-inline: 10px;
     border: none;
@@ -47,14 +75,34 @@
     font-weight: 400;
     line-height: normal;
     margin-bottom: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: linear-gradient(
+        91deg,
+        #d4af37 -20%,
+        #ffd700 50%,
+        #d4af37 120%
+      );
+    }
+  }
+
+  .destaque {
+    color: $blue-highlight;
+    /* 💥 ESSENCIAL: Garante que "Consultório Sustentável!" fique na mesma linha */
+    white-space: nowrap;
+  }
+
+  .nowrap {
+    /* Garante que "Seu novo modelo de negócio" não quebre de forma estranha */
+    white-space: nowrap;
   }
 
   h1 {
-    color: #fff;
+    color: $text-light;
     font-size: 70px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 125%; /* 96px */
+    line-height: 125%;
     margin-bottom: 32px;
   }
 
@@ -69,11 +117,9 @@
   }
 
   p {
-    color: rgba(215, 215, 215, 0.5);
+    color: $text-light;
     font-family: "PowerGrotesk", sans-serif;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
+    font-size: 20px;
     line-height: normal;
     margin-bottom: 72px;
   }
@@ -82,7 +128,7 @@
 .gridBackground {
   background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
     linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
-    url("/grid.svg") no-repeat;
+    url("/grd.svg") no-repeat;
   background: url("/grid.svg") no-repeat;
   background-size: cover;
   background-position: top;
@@ -93,10 +139,15 @@
 
 .button {
   border: 1px solid #fff;
-  background: linear-gradient(91deg, #0025ff -20%, #00a1ff 50%, #0025ff 120%);
+  background: linear-gradient(
+    91deg,
+    $gold-dark -20%,
+    $gold-light 50%,
+    $gold-dark 120%
+  );
   background-size: 300% 300%;
   padding: 20px;
-  color: #fff;
+  color: $text-light;
   text-align: center;
   font-family: "PowerGrotesk", sans-serif;
   font-size: 16px;
@@ -112,20 +163,30 @@
   cursor: pointer;
 
   &:hover {
-    background: linear-gradient(91deg, #006400 -20%, #00ff7f 50%, #006400 120%);
+    background: linear-gradient(91deg, #d4af37 -20%, #ffd700 50%, #d4af37 120%);
     background-size: 300% 300%;
-    box-shadow: 0px 10px 50px 0px rgba(0, 128, 0, 0.56);
+    box-shadow: 0px 10px 50px 0px rgba(212, 175, 55, 0.56);
     transition: background 2.5s ease, box-shadow 2.5s ease-in-out;
   }
 }
 
 .rightSide {
+  /* Volta ao posicionamento Flexbox relativo */
   position: relative;
+  width: 35%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0;
+  z-index: 10;
+
   img {
-    // position: absolute;
-    width: 150%;
-    margin-left: -5%;
-    margin-top: -33%;
+    width: 100%;
+    max-width: 550px;
+    margin-left: 0;
+    margin-top: 0;
+    height: auto;
+    object-fit: contain;
   }
 }
 

@@ -1,12 +1,18 @@
+$gold-dark: #b58d48;
+$gold-light: #e8c17f;
+$blue-highlight: #ffffff;
+$text-light: #fff;
+
 .container {
-  background-image: url("/light3.svg");
+  background-image: url("/liht3.svg");
   background-size: 90%;
   background-repeat: no-repeat;
   background-position: calc(-80px) top;
   position: relative;
+  padding-top: 30px; // 👈 respiro entre seções no mobile
 
   @media only screen and (min-width: 768px) {
-    background-image: url("/123.svg");
+    background-image: url("/");
     background-size: auto, contain;
     background-position: calc(100% + 200px) center, 0 100%;
     background-repeat: no-repeat, no-repeat;
@@ -19,7 +25,7 @@
     left: -200px;
     width: 900px;
     height: 900px;
-    background-image: url("/ellipse.svg");
+    background-image: url("/ellise.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
@@ -50,12 +56,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   button {
+    /* 💥 HARMONIZAÇÃO: Botão superior com gradiente DOURADO */
     border-radius: 7px;
-    background: #67bccb;
+    background: linear-gradient(91deg, $gold-dark, $gold-light);
     padding-inline: 10px;
     padding-block: 5px;
-    color: #333;
+    color: #333; /* Texto escuro sobre o dourado */
     text-align: center;
     font-family: "PowerGrotesk", sans-serif;
     font-size: 14px;
@@ -65,6 +73,7 @@
     border: none;
     margin-bottom: 10px;
   }
+
   h2 {
     color: #fff;
     font-family: "PowerGrotesk", sans-serif;
@@ -75,11 +84,13 @@
     text-transform: uppercase;
     margin-bottom: 20px;
     span {
-      color: #67bccb;
+      color: $blue-highlight;
     }
   }
+
   p {
-    color: rgba(215, 215, 215, 0.5);
+    /* 💥 CONTRASTE: Texto secundário para branco puro */
+    color: $text-light; /* Alterado de rgba(215, 215, 215, 0.5) */
     text-align: center;
     font-family: "PowerGrotesk", sans-serif;
     font-size: 16px;
@@ -99,8 +110,10 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+
   p {
-    color: rgba(215, 215, 215, 0.5);
+    /* 💥 CONTRASTE: Descrição dos cards para branco puro */
+    color: $text-light; /* Alterado de rgba(215, 215, 215, 0.5) */
     font-family: "PowerGrotesk", sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -114,16 +127,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   h3 {
-    color: #fff;
+    /* 💥 HIERARQUIA: Títulos dos pilares em cor de destaque (CIANO) */
+    color: $blue-highlight; /* Alterado de #fff */
     font-family: "PowerGrotesk", sans-serif;
     font-size: 24px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700; /* Negrito para destaque */
     line-height: normal;
     text-transform: uppercase;
   }
+
   img {
+    /* 💥 HARMONIZAÇÃO: A imagem (seta) deve ser ciano ou dourada no arquivo SVG */
+    /* Aqui, mantemos o tamanho, mas o arquivo SVG deve ser colorido */
     width: 20px;
   }
 }

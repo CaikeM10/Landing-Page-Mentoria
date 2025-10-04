@@ -28,7 +28,7 @@ export default function Desafio() {
       <Services />
       <SwiperComponent />
       <Footer></Footer>
-      <StickFooter title={pageTitle} buttonText="ENTRAR EM CONTATO" />
+      <StickFooter title={pageTitle} buttonText="SAIBA MAIS AQUI" />
     </section>
   );
 }
