@@ -10,6 +10,7 @@ const HeaderFixed = () => {
     seconds: 0,
   });
 
+  // Efeito para mudar o estilo quando o usuário rolar a página
   useEffect(() => {
     const handleScroll = () => {
       const scrollThreshold = 50;
@@ -20,27 +21,26 @@ const HeaderFixed = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Efeito para a contagem regressiva
   useEffect(() => {
-    // Valores possíveis de dias
-    const possibleDays = [29, 14, 17, 11];
-    // Escolhe um valor aleatório do array
-    const randomDays =
-      possibleDays[Math.floor(Math.random() * possibleDays.length)];
-
-    // Determina a data alvo com base nos dias sorteados
-    const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + randomDays);
+    // ⭐️ DATA ALVO ATUALIZADA: 20 de Outubro de 2025, 20:00:00 (20h)
+    // new Date(ano, mês_zero_base, dia, hora, minuto, segundo)
+    // Mês 9 = Outubro (JavaScript: 0=Jan, 11=Dez)
+    const targetDate = new Date(2025, 9, 20, 20, 0, 0); // 👈 Hora alterada para 20
 
     const updateCountdown = () => {
+      // Pega o tempo atual em milissegundos
       const now = new Date().getTime();
+      // Calcula a distância (tempo restante)
       const distance = targetDate.getTime() - now;
 
       if (distance <= 0) {
-        // Caso a data já tenha passado, zera o contador.
+        // Zera o contador e para
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
         return;
       }
 
+      // Calcula dias, horas, minutos e segundos a partir da distância
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor(
         (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -51,13 +51,12 @@ const HeaderFixed = () => {
       setTimeLeft({ days, hours, minutes, seconds });
     };
 
-    // Atualiza imediatamente ao montar
-    updateCountdown();
+    updateCountdown(); // Atualiza imediatamente
 
-    // Atualiza a cada segundo
+    // Atualiza a cada 1 segundo
     const interval = setInterval(updateCountdown, 1000);
     return () => clearInterval(interval);
-  }, []);
+  }, []); // Array de dependências vazio garante que o useEffect rode apenas uma vez
 
   return (
     <section

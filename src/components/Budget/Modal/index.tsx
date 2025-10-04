@@ -8,7 +8,7 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
     email: "",
     phone: "",
     budget: "",
-    instagram: "",
+    instagram: "", // Já está no estado, ótimo!
     site: "",
     msg_send: "",
   });
@@ -21,6 +21,7 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    // 1. Incluindo 'instagram' e 'site' na desestruturação para o payload
     const { name, email, phone, budget, instagram, site } = formData;
 
     if (!name || !email || !phone) {
@@ -42,12 +43,16 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
       return acc;
     }, {} as Record<string, string>);
 
+    // 2. Adicionando 'instagram' e 'site' ao payload
     const payload = {
       name,
       email,
       phone: formattedPhone,
+      instagram, // Adicionado
+      site, // Adicionado
+      budget, // Adicionado
       msg_send,
-      cookies, // Inclui todos os cookies no payload
+      cookies,
     };
 
     try {
@@ -83,7 +88,7 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
 
         <div className={styles.text}>
           <h3>
-            Peça agora um <span>orçamento</span> grátis
+            Garanta agora mesmo <span>sua vaga!</span>
           </h3>
         </div>
         <form className={styles.form} onSubmit={handleSubmit}>
@@ -108,27 +113,15 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
             value={formData.phone}
             onChange={handleInputChange}
           />
-          {/* <input
-            type="text"
-            name="budget"
-            placeholder="Orçamento (opicional)"
-            value={formData.budget}
-            onChange={handleInputChange}
-          /> */}
-          {/* <input
+          {/* 3. NOVO INPUT DE INSTAGRAM (DESCOMENTADO) */}
+          <input
             type="text"
             name="instagram"
-            placeholder="Instagram (opicional)"
+            placeholder="Instagram (@seuusuario)"
             value={formData.instagram}
             onChange={handleInputChange}
-          /> */}
-          {/* <input
-            type="text"
-            name="site"
-            placeholder="Site (opicional)"
-            value={formData.site}
-            onChange={handleInputChange}
-          /> */}
+          />
+
           <button type="submit"> QUERO GARANTIR MINHA VAGA!</button>
         </form>
       </div>

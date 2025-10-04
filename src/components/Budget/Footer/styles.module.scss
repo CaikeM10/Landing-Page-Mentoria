@@ -1,136 +1,147 @@
+/* ================================================= */
+/* VARIÁVEIS DE CORES REUTILIZADAS */
+/* ================================================= */
+$gold-dark: #b58d48;
+$gold-light: #e8c17f;
+$blue-highlight: #67bccb;
+$text-light: #fff;
+
 .container {
-    background: #030303;
-    background-image: url('/footerBackground.svg');
-    background-size: cover;
-    height: 100%;
-    background-position: center -130px;
-    background-repeat: no-repeat;
-    color: white;
-    font-family: 'PowerGrotesk';
-    padding-inline: 20px;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
+  background: #030303;
+  background-image: url("/footerBackground.svg");
+  background-size: cover;
+  height: 100%;
+  background-position: center -130px;
+  background-repeat: no-repeat;
+  color: $text-light;
+  font-family: "PowerGrotesk";
+  padding-inline: 20px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 
-    .content {
-        max-width: 1440px;
-        margin-inline: auto;
+  .content {
+    max-width: 1440px;
+    margin-inline: auto;
 
-        @media only screen and (min-width: 768px) {
-            padding-inline: 100px;
-        }
+    @media only screen and (min-width: 768px) {
+      padding-inline: 100px;
     }
+  }
 
-    hr {
-        margin-top: 35px;
-        height: 1px;
-        background: #fff;
-        opacity: 0.25;
-    }
+  hr {
+    margin-top: 35px;
+    height: 1px;
+    background: #fff;
+    opacity: 0.25;
+  }
 
-    button {
-        border: 1px solid #fff;
-        background: linear-gradient(
-            91deg,
-            #0025ff -20%,
-            #00a1ff 50%,
-            #0025ff 120%
-        );
-        background-size: 300% 300%;
-        padding: 20px;
-        color: #fff;
-        text-align: center;
-        font-family: 'PowerGrotesk', sans-serif;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: 3.04px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        animation: gradientCircle 4s linear infinite;
-        transition: background 2.5s ease, box-shadow 2.5s ease-in-out;
-
-        &:hover {
-            background: linear-gradient(
-                91deg,
-                #006400 -20%,
-                #00ff7f 50%,
-                #006400 120%
-            );
-            background-size: 300% 300%;
-            box-shadow: 0px 10px 50px 0px rgba(0, 128, 0, 0.56);
-            transition: background 2.5s ease, box-shadow 2.5s ease-in-out;
-        }
-
-        @media only screen and (min-width: 768px) {
-            max-width: 384px;
-            margin-inline: auto;
-            cursor: pointer;
-        }
-    }
-}
-
-.content h5 {
-    color: var(--White, #fff);
+  button {
+    border: 1px solid #fff;
+    /* 💥 AJUSTE CRÍTICO: Mudar para o Gradiente Dourado (Consistência CTA) */
+    background: linear-gradient(
+      91deg,
+      $gold-dark -20%,
+      $gold-light 50%,
+      $gold-dark 120%
+    );
+    background-size: 300% 300%;
+    padding: 20px;
+    color: #fff;
     text-align: center;
-    font-family: 'PowerGrotesk';
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: uppercase;
-    padding-top: 150px;
-
-    span {
-        color: #034cff;
-    }
-}
-
-.content p {
-    margin-top: 16px;
-    color: rgba(215, 215, 215, 0.5);
-    text-align: center;
+    font-family: "PowerGrotesk", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px;
-    margin-bottom: 90px;
+    line-height: normal;
+    letter-spacing: 3.04px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    animation: gradientCircle 4s linear infinite;
+    /* Ajuste do hover para combinar com o Dourado */
+    transition: background 2.5s ease, box-shadow 2.5s ease-in-out;
+
+    &:hover {
+      background: linear-gradient(
+        91deg,
+        #d4af37 -20%,
+        #ffd700 50%,
+        #d4af37 120%
+      );
+      background-size: 300% 300%;
+      box-shadow: 0px 10px 50px 0px rgba(212, 175, 55, 0.56); /* Sombra Dourada */
+    }
 
     @media only screen and (min-width: 768px) {
-        max-width: 554px;
-        margin-inline: auto;
-        margin-bottom: 50px;
+      max-width: 384px;
+      margin-inline: auto;
+      cursor: pointer;
     }
+  }
+}
+
+.content h5 {
+  color: $text-light; /* Texto principal em branco */
+  text-align: center;
+  font-family: "PowerGrotesk";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  padding-top: 150px;
+
+  span {
+    /* 💥 DESTAQUE: Usando nosso CIANO/AZUL */
+    color: $blue-highlight;
+  }
+}
+
+.content p {
+  margin-top: 16px;
+  /* 💥 CONTRASTE: Texto secundário para branco puro (Melhor legibilidade) */
+  color: $text-light; /* Alterado de rgba(215, 215, 215, 0.5) */
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 90px;
+
+  @media only screen and (min-width: 768px) {
+    max-width: 554px;
+    margin-inline: auto;
+    margin-bottom: 50px;
+  }
 }
 
 .rights {
-    color: var(--White, #fff);
-    text-align: center;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 14px;
-    margin-inline: auto;
-    margin-top: 12px;
-    padding-bottom: 50px;
+  color: $text-light;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  margin-inline: auto;
+  margin-top: 12px;
+  padding-bottom: 50px;
 }
 
 @keyframes gradientCircle {
-    0% {
-        background-position: 0% 0%;
-    }
-    25% {
-        background-position: 100% 0%;
-    }
-    50% {
-        background-position: 100% 100%;
-    }
-    75% {
-        background-position: 0% 100%;
-    }
-    100% {
-        background-position: 0% 0%;
-    }
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }

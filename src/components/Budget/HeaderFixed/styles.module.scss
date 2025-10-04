@@ -1,3 +1,7 @@
+/* VARIÁVEIS PARA OS BLOCOS DE CONTAGEM */
+$gold-dark: #b58d48;
+$gold-light: #e8c17f;
+
 .container {
   background: black;
   padding-block: 14px;
@@ -18,12 +22,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    91deg,
-    hsl(23, 97%, 13%) -9.04%,
-    #563902 55%,
-    #402b01 104.41%
-  );
+  /* GRADIENTE DOURADO/MARROM */
+  background: linear-gradient(91deg, #583f2d 0%, #725542 50%, #9c7a5c 100%);
 
   transform: translateX(-100%); // começa fora do container, à esquerda
   transition: transform 0.5s ease-in-out; // animação suave ao entrar
@@ -82,10 +82,11 @@
 .block2,
 .block3 {
   border-radius: 4px;
-  background: rgba(255, 255, 255, 0.2);
+  /* NOVO BACKGROUND DOURADO */
+  background: linear-gradient(91deg, $gold-dark, $gold-light);
 
   p {
-    color: #fff;
+    color: #333; /* Cor escura para o texto ficar legível sobre o dourado */
     text-align: center;
     font-size: 24px;
     font-style: normal;

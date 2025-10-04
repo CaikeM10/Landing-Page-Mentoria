@@ -28,6 +28,9 @@ const Footer = () => {
           <div className={styles.rights}>
             <span>Íria Sabóia 2025. Todos os direitos reservados</span>
           </div>
+          <div className={styles.rights}>
+            <span>DESENVOLVIDO POR CODECRAT.</span>
+          </div>
         </div>
       </section>
       {isModalOpen && <ModalForm onClose={handleModalClose} />}

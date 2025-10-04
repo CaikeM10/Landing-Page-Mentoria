@@ -1,7 +1,11 @@
+$gold-dark: #b58d48;
+$gold-light: #e8c17f;
+$blue-highlight: #67bccb;
+
 .container {
-  background-image: url("/text.svg");
   background-repeat: no-repeat;
   background-position: calc(100% + 40px) center;
+  padding-top: 30px; //
 }
 
 .content {
@@ -89,10 +93,12 @@
     padding-bottom: 20px;
   }
   span {
-    color: var(--Blue, #67bccb);
+    /* Cor de destaque CIANO */
+    color: $blue-highlight;
   }
   p {
-    color: rgba(215, 215, 215, 0.5);
+    /* 💥 CORREÇÃO DE CONTRASTE: Branco puro para legibilidade */
+    color: #fff;
     font-family: "PowerGrotesk", sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -102,7 +108,13 @@
   }
   button {
     border: 1px solid #fff;
-    background: linear-gradient(91deg, #0025ff -20%, #00a1ff 50%, #0025ff 120%);
+    /* 💥 BOTÃO DOURADO: Consistência com o restante do projeto */
+    background: linear-gradient(
+      91deg,
+      $gold-dark -20%,
+      $gold-light 50%,
+      $gold-dark 120%
+    );
     background-size: 300% 300%;
     padding: 20px;
     color: #fff;
@@ -121,14 +133,15 @@
     cursor: pointer;
 
     &:hover {
+      /* HOVER DOURADO */
       background: linear-gradient(
         91deg,
-        #006400 -20%,
-        #00ff7f 50%,
-        #006400 120%
+        #d4af37 -20%,
+        #ffd700 50%,
+        #d4af37 120%
       );
       background-size: 300% 300%;
-      box-shadow: 0px 10px 50px 0px rgba(0, 128, 0, 0.56);
+      box-shadow: 0px 10px 50px 0px rgba(212, 175, 55, 0.56); /* Sombra Dourada */
       transition: background 2.5s ease, box-shadow 2.5s ease-in-out;
     }
   }
@@ -149,5 +162,50 @@
   }
   100% {
     background-position: 0% 0%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 40px;
+    padding-inline: 40px;
+  }
+
+  .images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .images img[alt="three"] {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 480px;
+    border-radius: 5px;
+  }
+
+  .images img[alt="one"] {
+    position: absolute;
+    bottom: -25px;
+    right: -10px;
+    z-index: 2;
+    width: 50%;
+    max-width: 280px;
+    border-radius: 5px;
+    box-shadow: -10px -6px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  .text {
+    margin-top: 80px;
+    max-width: 600px;
   }
 }
