@@ -30,19 +30,17 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
 
     const cleanedPhone = phone.replace(/\D/g, "");
     const formattedPhone = cleanedPhone.startsWith("55")
-        ? cleanedPhone
-        : `55${cleanedPhone}`;
+      ? cleanedPhone
+      : `55${cleanedPhone}`;
 
     const msg_send = `Olá ${name}! Você poderia explicar um pouco como seria o seu site?`;
 
     // Obtém os cookies
-    const cookies = document.cookie
-        .split("; ")
-        .reduce((acc, cookie) => {
-          const [key, value] = cookie.split("=");
-          acc[key] = value;
-          return acc;
-        }, {} as Record<string, string>);
+    const cookies = document.cookie.split("; ").reduce((acc, cookie) => {
+      const [key, value] = cookie.split("=");
+      acc[key] = value;
+      return acc;
+    }, {} as Record<string, string>);
 
     const payload = {
       name,
@@ -54,14 +52,14 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
 
     try {
       const response = await fetch(
-          "https://webhookn8n.maistickets.com.br/webhook/rd-n8n-evo-graph",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(payload),
-          }
+        "https://webhookn8n.maistickets.com.br/webhook/rd-n8n-evo-graph",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        }
       );
 
       if (response.ok) {
@@ -74,7 +72,6 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
       alert("Erro ao enviar o formulário. Tente novamente.");
     }
   };
-
 
   return (
     <div className={styles.conatiner}>
@@ -132,7 +129,7 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
             value={formData.site}
             onChange={handleInputChange}
           /> */}
-          <button type="submit">RECEBER ORÇAMENTO GRÁTIS</button>
+          <button type="submit"> QUERO GARANTIR MINHA VAGA!</button>
         </form>
       </div>
     </div>
