@@ -34,7 +34,7 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
       ? cleanedPhone
       : `55${cleanedPhone}`;
 
-    const msg_send = `Olá ${name}! Você poderia explicar um pouco como seria o seu site?`;
+    const msg_send = `Olá ${name} preenchi o formulário entre em contato comigo.`;
 
     // Obtém os cookies
     const cookies = document.cookie.split("; ").reduce((acc, cookie) => {

@@ -14,7 +14,7 @@ export default function Desafio() {
   return (
     <section className={styles.container}>
       <a
-        href="https://wa.me/5585996564518"
+        href="//chat.whatsapp.com/DcpKUyQw8L6FOpVLNcReO6?mode=ems_copy_t"
         className={styles.whatsappButton}
         target="_blank"
         rel="noopener noreferrer"

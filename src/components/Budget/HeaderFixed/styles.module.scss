@@ -3,8 +3,9 @@ $gold-dark: #b58d48;
 $gold-light: #e8c17f;
 
 .container {
-  background: black;
-  padding-block: 14px;
+  /* Fundo marrom escuro (base do gradiente) */
+  background: #583f2d;
+  padding-block: 18px;
   position: fixed;
   top: 0;
   right: 0;
@@ -14,6 +15,7 @@ $gold-light: #e8c17f;
   overflow: hidden;
 
   @media only screen and (max-width: 768px) {
+    /* 💥 CORREÇÃO CRÍTICA: ESCONDE A BARRA DE CONTAGEM NO MOBILE */
     display: none;
   }
 }
@@ -24,24 +26,35 @@ $gold-light: #e8c17f;
   inset: 0;
   /* GRADIENTE DOURADO/MARROM */
   background: linear-gradient(91deg, #583f2d 0%, #725542 50%, #9c7a5c 100%);
-
-  transform: translateX(-100%); // começa fora do container, à esquerda
-  transition: transform 0.5s ease-in-out; // animação suave ao entrar
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
 }
 
 .scrolled::before {
-  transform: translateX(
-    0
-  ); // desliza o pseudo-elemento para dentro, cobrindo o gradient
+  transform: translateX(0);
 }
 
 .content {
+  /* Mantém o bloco principal centralizado na tela */
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
   position: relative;
   z-index: 2;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 20px;
+}
+
+.centerGroup {
+  /* Faz o bloco ocupar 100% da largura, permitindo o justify-content: space-between */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
 }
 
 .countDown,
@@ -51,6 +64,9 @@ $gold-light: #e8c17f;
 }
 
 .countDown {
+  gap: 5px;
+  flex-shrink: 0;
+
   span {
     color: #fff;
     text-align: center;
@@ -58,7 +74,7 @@ $gold-light: #e8c17f;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-inline: 8px;
+    margin-inline: 4px;
   }
 }
 
@@ -70,10 +86,23 @@ $gold-light: #e8c17f;
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
+  flex-grow: 1;
+
+  /* Faz o <p> e o <span> ficarem um abaixo do outro (Desktop) */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
 
   span {
-    margin-left: 5px;
+    display: block;
+    margin: 0;
     color: #fff;
+    font-size: 20px;
   }
 }
 
@@ -82,16 +111,45 @@ $gold-light: #e8c17f;
 .block2,
 .block3 {
   border-radius: 4px;
-  /* NOVO BACKGROUND DOURADO */
+  padding: 12px 14px;
   background: linear-gradient(91deg, $gold-dark, $gold-light);
 
   p {
-    color: #333; /* Cor escura para o texto ficar legível sobre o dourado */
+    color: #333;
     text-align: center;
-    font-size: 24px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding: 8px;
+    padding: 0;
   }
+}
+
+/* ------------------ MOBILE CORREÇÕES ------------------ */
+@media only screen and (max-width: 768px) {
+  /* Esta regra agora está no .container, mas mantemos o bloco vazio caso regras futuras sejam adicionadas */
+  /* .container { display: none; } */
+
+  .content {
+    justify-content: center;
+    padding-inline: 10px;
+  }
+
+  .centerGroup {
+    /* Permite quebra no mobile */
+    flex-direction: column;
+    gap: 5px;
+    max-width: 100%;
+  }
+
+  .title {
+    /* Garante que o título se centralize no mobile */
+    align-items: center;
+    font-size: 12px;
+
+    span {
+      font-size: 10px;
+    }
+  }
+  /* ... (Regras de contagem mobile) ... */
 }

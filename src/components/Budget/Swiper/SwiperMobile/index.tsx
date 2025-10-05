@@ -16,13 +16,11 @@ export default function SwiperMobile() {
       <div className={styles.content}>
         <div className={styles.title}>
           <h2>
-            o que nossos <span>alunos</span> dizem
+            o que nossas <span>alunas</span> dizem
           </h2>
           <p>
-            Nossos alunos são a nossa maior fonte de motivação. Veja o que eles
-            têm a dizer sobre as nossas mentorias. Cada aluno é único, e a
-            satisfação dos nossos mentorados é o nosso maior objetivo, veja
-            abaixo!.
+            Conheça a experiência de quem já esteve comigo em treinamentos e
+            mentorias:
           </p>
         </div>
         <div className={styles.swiperContainer}>

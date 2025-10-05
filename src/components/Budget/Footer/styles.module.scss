@@ -1,3 +1,6 @@
+/* 💥 NOVA FONTE: Playfair Display (Estilo Serifado) */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+
 /* ================================================= */
 /* VARIÁVEIS DE CORES REUTILIZADAS */
 /* ================================================= */
@@ -5,16 +8,18 @@ $gold-dark: #b58d48;
 $gold-light: #e8c17f;
 $blue-highlight: #67bccb;
 $text-light: #fff;
+$background-marrom: #725542;
 
 .container {
-  background: #030303;
-  background-image: url("/footerBackground.svg");
+  background: $background-marrom;
+  background-image: url("/footerBacround.svg");
   background-size: cover;
   height: 100%;
   background-position: center -130px;
   background-repeat: no-repeat;
   color: $text-light;
-  font-family: "PowerGrotesk";
+  /* 💥 FONTE APLICADA AO CONTAINER PRINCIPAL (Afeta o .rights) */
+  font-family: "Playfair Display", Georgia, serif;
   padding-inline: 20px;
   position: relative;
   overflow: hidden;
@@ -38,7 +43,7 @@ $text-light: #fff;
 
   button {
     border: 1px solid #fff;
-    /* 💥 AJUSTE CRÍTICO: Mudar para o Gradiente Dourado (Consistência CTA) */
+    /* 💥 BOTÃO DOURADO: Consistência CTA */
     background: linear-gradient(
       91deg,
       $gold-dark -20%,
@@ -49,17 +54,19 @@ $text-light: #fff;
     padding: 20px;
     color: #fff;
     text-align: center;
-    font-family: "PowerGrotesk", sans-serif;
+    /* 💥 FONTE APLICADA AO BOTÃO */
+    font-family: "Playfair Display", Georgia, serif;
     font-size: 16px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700; /* Negrito para botão */
     line-height: normal;
-    letter-spacing: 3.04px;
+    letter-spacing: 0.05em; /* Ajuste o espaçamento de letras para serifado */
     width: 100%;
     display: flex;
     justify-content: center;
+    /* Remove a caixa alta se o botão não deve ser todo em maiúsculo */
+    text-transform: none;
     animation: gradientCircle 4s linear infinite;
-    /* Ajuste do hover para combinar com o Dourado */
     transition: background 2.5s ease, box-shadow 2.5s ease-in-out;
 
     &:hover {
@@ -70,7 +77,7 @@ $text-light: #fff;
         #d4af37 120%
       );
       background-size: 300% 300%;
-      box-shadow: 0px 10px 50px 0px rgba(212, 175, 55, 0.56); /* Sombra Dourada */
+      box-shadow: 0px 10px 50px 0px rgba(212, 175, 55, 0.56);
     }
 
     @media only screen and (min-width: 768px) {
@@ -82,27 +89,29 @@ $text-light: #fff;
 }
 
 .content h5 {
-  color: $text-light; /* Texto principal em branco */
+  color: $text-light;
   text-align: center;
-  font-family: "PowerGrotesk";
+  /* 💥 FONTE APLICADA AO H5 */
+  font-family: "Playfair Display", Georgia, serif;
   font-size: 36px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   line-height: normal;
-  text-transform: uppercase;
+  /* Remove a caixa alta */
+  text-transform: none;
   padding-top: 150px;
 
   span {
-    /* 💥 DESTAQUE: Usando nosso CIANO/AZUL */
     color: $blue-highlight;
   }
 }
 
 .content p {
   margin-top: 16px;
-  /* 💥 CONTRASTE: Texto secundário para branco puro (Melhor legibilidade) */
-  color: $text-light; /* Alterado de rgba(215, 215, 215, 0.5) */
+  color: $text-light;
   text-align: center;
+  /* 💥 FONTE APLICADA AO P */
+  font-family: "Playfair Display", Georgia, serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -117,6 +126,7 @@ $text-light: #fff;
 }
 
 .rights {
+  /* Este seletor herda a font-family do .container */
   color: $text-light;
   text-align: center;
   font-size: 14px;

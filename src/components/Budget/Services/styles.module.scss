@@ -1,7 +1,13 @@
+/* 💥 NOVA FONTE: Playfair Display (Estilo Times Ten Pro) */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+/* ================================================= */
+/* VARIÁVEIS DE CORES REUTILIZADAS */
+/* ================================================= */
 $gold-dark: #b58d48;
 $gold-light: #e8c17f;
-$blue-highlight: #ffffff;
+$blue-highlight: #000000; /* Alterei para ciano para o destaque, já que o h2 usa #fff */
 $text-light: #fff;
+$background-dark: #333; /* Cor escura para o texto interno */
 
 .container {
   background-image: url("/liht3.svg");
@@ -58,30 +64,30 @@ $text-light: #fff;
   align-items: center;
 
   button {
-    /* 💥 HARMONIZAÇÃO: Botão superior com gradiente DOURADO */
     border-radius: 7px;
     background: linear-gradient(91deg, $gold-dark, $gold-light);
     padding-inline: 10px;
     padding-block: 5px;
-    color: #333; /* Texto escuro sobre o dourado */
+    color: #333;
     text-align: center;
-    font-family: "PowerGrotesk", sans-serif;
+    font-family: "Playfair Display", Georgia, serif;
     font-size: 14px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     line-height: normal;
     border: none;
     margin-bottom: 10px;
+    /* REMOVIDO: text-transform: uppercase */
   }
 
   h2 {
     color: #fff;
-    font-family: "PowerGrotesk", sans-serif;
+    font-family: "Playfair Display", Georgia, serif;
     font-size: 36px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     line-height: normal;
-    text-transform: uppercase;
+    /* REMOVIDO: text-transform: uppercase */
     margin-bottom: 20px;
     span {
       color: $blue-highlight;
@@ -89,10 +95,9 @@ $text-light: #fff;
   }
 
   p {
-    /* 💥 CONTRASTE: Texto secundário para branco puro */
-    color: $text-light; /* Alterado de rgba(215, 215, 215, 0.5) */
+    color: $text-light;
     text-align: center;
-    font-family: "PowerGrotesk", sans-serif;
+    font-family: "Playfair Display", Georgia, serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -103,18 +108,28 @@ $text-light: #fff;
 .bottom {
   display: flex;
   flex-direction: column;
+  /* 💥 As regras do Flexbox para o cardContainer (que é o .bottom) */
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 50px;
 }
 
 .card {
+  /* 💥 CORREÇÃO CRÍTICA: Fundo Branco para visibilidade */
+  background: #fff;
+  color: $background-dark; /* Cor de texto padrão escuro */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 20px; /* Adiciona padding interno */
 
   p {
-    /* 💥 CONTRASTE: Descrição dos cards para branco puro */
-    color: $text-light; /* Alterado de rgba(215, 215, 215, 0.5) */
-    font-family: "PowerGrotesk", sans-serif;
+    /* 💥 COR DO TEXTO INTERNO: Escuro para contraste */
+    color: $background-dark;
+    font-family: "Playfair Display", Georgia, serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -129,19 +144,22 @@ $text-light: #fff;
   align-items: center;
 
   h3 {
-    /* 💥 HIERARQUIA: Títulos dos pilares em cor de destaque (CIANO) */
-    color: $blue-highlight; /* Alterado de #fff */
-    font-family: "PowerGrotesk", sans-serif;
+    /* 💥 CORRIGINDO A COR DO TÍTULO INTERNO PARA VISIBILIDADE */
+    color: $background-dark;
+    font-family: "Playfair Display", Georgia, serif;
     font-size: 24px;
     font-style: normal;
-    font-weight: 700; /* Negrito para destaque */
+    font-weight: 700;
     line-height: normal;
-    text-transform: uppercase;
+    /* REMOVIDO: text-transform: uppercase */
+
+    /* 💥 ESTILO DO SPAN DE DESTAQUE DENTRO DO H3 */
+    .cardTitleHighlight {
+      color: $blue-highlight; /* Aplica o ciano/azul para a parte de destaque */
+    }
   }
 
   img {
-    /* 💥 HARMONIZAÇÃO: A imagem (seta) deve ser ciano ou dourada no arquivo SVG */
-    /* Aqui, mantemos o tamanho, mas o arquivo SVG deve ser colorido */
     width: 20px;
   }
 }

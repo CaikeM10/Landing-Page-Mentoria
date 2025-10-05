@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+
 $gold-dark: #b58d48;
 $gold-light: #e8c17f;
 $blue-highlight: #67bccb;
@@ -6,7 +8,7 @@ $background-marrom: #725542;
 
 .container {
   background: $background-marrom;
-  background-image: url("/Captura\ de\ tela\ 2025-10-03\ 191935.png");
+  background-image: url("/iriabannermobile.png");
   background-size: cover;
   height: 100vh;
   background-position: center top;
@@ -15,6 +17,11 @@ $background-marrom: #725542;
   font-family: "PowerGrotesk";
   position: relative;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 50px;
 
   &::after {
     content: "";
@@ -50,11 +57,12 @@ $background-marrom: #725542;
 }
 
 .titleBanner {
-  padding-top: 40vh;
+  padding-top: 0;
   padding-inline: 20px;
   position: relative;
   text-align: left;
   z-index: 2;
+  margin: 0 auto;
 
   .orcamento {
     display: inline-flex;
@@ -82,62 +90,62 @@ $background-marrom: #725542;
 
   h1 {
     color: $text-light;
-    font-size: 36px;
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 26px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.2;
-    padding-bottom: 30px;
+    padding-bottom: 0;
     position: relative;
     display: block;
     text-align: left;
     max-width: 90%;
+    margin-bottom: 50px;
 
     .destaque {
       color: $blue-highlight;
       position: relative;
       display: inline-block;
-
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -8px; // distância entre texto e linha
-        width: 100%;
-        height: 4px;
-        background-color: $blue-highlight;
-        border-radius: 2px;
-      }
+      white-space: normal;
     }
 
     .nowrap {
-      white-space: normal;
+      white-space: nowrap;
+      display: inline-block;
     }
+  }
+
+  img {
+    position: relative;
+    left: 0;
+    margin-top: -30px;
+    width: 80%;
+    height: auto;
+    z-index: 2;
+    display: block;
   }
 
   p {
     color: $text-light;
-    font-family: "PowerGrotesk", sans-serif;
-    font-size: 16px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.4;
     padding-bottom: 45px;
+    margin-top: 5px;
   }
 }
 
 .gridBackground {
-  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
-    linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
-    url("/grid.svg") no-repeat;
-  background: url("/grid.svg") no-repeat;
-  background-size: cover;
-  background-position: top;
   padding: 20px 0;
   position: relative;
   z-index: 1;
 }
 
 .button {
+  border-radius: 8px;
   border: 1px solid #fff;
   background: linear-gradient(
     91deg,
@@ -159,7 +167,6 @@ $background-marrom: #725542;
   display: flex;
   justify-content: center;
   animation: gradientCircle 4s linear infinite;
-  border-radius: 8px;
   cursor: pointer;
 }
 
