@@ -49,14 +49,14 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <link rel="icon" href="/favion.ico" sizes="any" />
+        <link rel="icon" href="/" sizes="any" />
         <meta
           name="description"
-          content="Descubra o mundo da tecnologia e desenvolvimento web com o Rei dos Sites. Aprenda a criar sites do zero e transforme suas ideias em realidade."
+          content="Entre na minha mentoria especializada e veja como viver de clinicar"
         />
         <meta
           name="og:description"
-          content="Descubra o mundo da tecnologia e desenvolvimento web com o Rei dos Sites. Aprenda a criar sites do zero e transforme suas ideias em realidade."
+          content="Entre na minha mentoria especializada e veja como viver de clinicar"
         />
         <meta
           property="og:image"
