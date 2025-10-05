@@ -2,6 +2,15 @@ import { useState } from "react";
 import ModalForm from "../../Modal";
 import styles from "./styles.module.scss";
 
+// 💥 DEFINIÇÃO DOS COMPONENTES DE ÍCONE (PLACEHOLDERS)
+// Estes são placeholders simples. Use seus componentes/SVGs reais se existirem.
+const IconCalendar = ({ className }: { className: string }) => (
+  <i className={className}>🗓️</i>
+);
+const IconPlay = ({ className }: { className: string }) => (
+  <i className={className}>▶️</i>
+);
+
 const BannerMobile = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -17,33 +26,41 @@ const BannerMobile = () => {
     <>
       {/* Container principal para o banner mobile */}
       <section className={styles.container}>
-        {/* Bloco principal de conteúdo do banner */}
         <div className={styles.titleBanner}>
           <div className={styles.gridBackground}>
-            {/* Botão de destaque/navegação secundária */}
-            <button className={styles.orcamento}>• Veja mais abaixo! •</button>
-
-            {/* Título principal (H1) */}
             <h1>
-              <span className={styles.destaque}>Consultório Sustentável!</span>
+              <span className={styles.destaque}>Consultório Sustentável</span>
               <span className={styles.nowrap}>Seu novo modelo de negócio</span>
               <br />
               para viver de clinicar.
             </h1>
 
-            {/* Parágrafo de descrição */}
             <p>
               Um novo plano de voo para equilibrar sua agenda, aumentar a
               lucratividade do consultório e fortalecer sua autoridade na
               profissão, sem abrir mão do que mais importa: o seu tempo de
               qualidade.
             </p>
-            {/* O botão principal foi removido daqui e colocado abaixo da <section> */}
+
+            {/* 💥 NOVO BLOCO DE INFORMAÇÕES DO EVENTO */}
+            <div className={styles.eventInfo}>
+              <div className={styles.eventDetail}>
+                <IconCalendar className={styles.icon} />
+                <span> Dia 20 de Outubro, às 20h.</span>
+              </div>
+
+              <div className={styles.eventDetail}>
+                <IconPlay className={styles.icon} />
+                <span>
+                  Aulão inédito – ao vivo / gratuito apenas para inscritos.
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 👇 NOVO POSICIONAMENTO: Botão de Call to Action principal - FORA da section container */}
+      {/* Botão de Call to Action principal */}
       <button className={styles.button} onClick={handleModalOpen}>
         QUERO GARANTIR MINHA VAGA!
       </button>

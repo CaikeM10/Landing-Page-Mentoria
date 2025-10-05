@@ -4,9 +4,48 @@ export default function Document() {
   // Definindo o Pixel ID em uma variável para maior clareza e manutenção
   const metaPixelId = "744710918557341";
 
+  //
+  const themeColor = "#725542";
+
   return (
-    <Html lang="en">
+    <Html lang="pt-br">
+      {" "}
+      {/* Ajustei o idioma para português */}
       <Head>
+        {/* FAVICON PADRÃO (Para navegadores modernos) */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+
+        {/* ÍCONES PNG (Para diferentes resoluções) */}
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+
+        {/* APPLE TOUCH ICON (Para iPhones/iPads na tela inicial) */}
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+
+        {/* MANIFEST (Para Progressive Web Apps - PWA e Android) */}
+        <link rel="manifest" href="/site.webmanifest" />
+
+        {/* METATAG: Define a cor da barra de endereço em navegadores Android */}
+        <meta name="theme-color" content={themeColor} />
+
+        {/* ================================================= */}
+        {/* FIM DA INJEÇÃO DE FAVICONS */}
+        {/* ================================================= */}
+
         {/* Meta Pixel Script Principal (JS) */}
         <script
           dangerouslySetInnerHTML={{
@@ -40,8 +79,6 @@ export default function Document() {
             alt="Meta Pixel"
           />
         </noscript>
-
-        {/* NOTA: Seus links de Favicon (que discutimos) devem ser adicionados aqui também! */}
       </Head>
       <body>
         <Main />

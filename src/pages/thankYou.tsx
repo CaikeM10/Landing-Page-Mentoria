@@ -9,8 +9,14 @@ export default function ThankYou() {
       <div className={styles.content}>
         <h1>Obrigado!</h1>
         <p>Recebemos seu formulário com sucesso. Entraremos em contato!</p>
-        <button onClick={() => router.push("https://wa.me/5585996564518")}>
-          Falar no Whatsapp
+        <button
+          onClick={() =>
+            router.push(
+              "https://chat.whatsapp.com/DcpKUyQw8L6FOpVLNcReO6?mode=ems_copy_t"
+            )
+          }
+        >
+          Entre no grupo exclusivo.
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
             <rect width="256" height="256" fill="none" />
             <path

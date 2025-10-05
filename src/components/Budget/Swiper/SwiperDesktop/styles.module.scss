@@ -5,9 +5,10 @@ $gold-dark: #b58d48;
 $gold-light: #e8c17f;
 $blue-highlight: #67bccb; /* Cor ciano/azul de destaque */
 $background-dark: #030303; /* Fundo preto */
+$gold: #ffd700; /* Dourado padrão */
 
 .container {
-  background: $background-dark;
+  background: $gold-dark;
   color: white;
   font-family: "Space Grotesk", sans-serif;
   position: relative;
@@ -62,7 +63,7 @@ $background-dark: #030303; /* Fundo preto */
 .swiperContainer {
   position: relative;
   color: white;
-  background: $background-dark;
+  background: $gold-dark;
   max-width: 1440px;
   margin-inline: auto;
   padding-inline: 100px;

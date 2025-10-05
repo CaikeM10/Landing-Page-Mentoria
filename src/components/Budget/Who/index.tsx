@@ -26,29 +26,15 @@ export default function Who() {
               quem é <span>ÍRIA SABÓIA?</span>
             </h2>
             <p>
-              Psicóloga clínica há mais de 10 anos, dediquei minha carreira à
-              prática clínica e hoje vivo de clinicar com qualidade, liberdade e
-              equilíbrio entre minha vida pessoal e profissional. Assim como
-              você, comecei minha trajetória em um vínculo CLT, mas percebi
-              rapidamente que, para alcançar crescimento contínuo e exercer meu
-              trabalho com excelência, precisaria me dedicar integralmente à
-              prática clínica.
+              Sou psicóloga clínica há mais de 11 anos, especialista em Terapia
+              Comportamental e fundadora da Voares.
             </p>
             <p>
-              Sempre acreditei que a formação profissional é o principal
-              investimento para o sucesso. Por isso, desde o início da minha
-              carreira, priorizei os estudos e sigo buscando o máximo em
-              formação continuada para manter minha jornada em constante
-              transformação.
-            </p>
-            <p>
-              Depois de seis anos presa a múltiplos vínculos CLT, trabalhando
-              mais de 40 horas por semana, tomei a decisão corajosa de criar meu
-              Plano Viver de Clinicar. Em menos de seis meses, ao me dedicar
-              exclusivamente à prática clínica, alcancei mais resultados do que
-              em todos os anos anteriores. Meu próximo passo foi transformar meu
-              consultório em uma empresa. Assim nasceu a Voares, que não é
-              apenas um CNPJ, mas o símbolo de uma nova mentalidade e propósito.
+              Ao longo da minha trajetória, construí um consultório de sucesso
+              presencial e online, hoje com outras profissionais associadas.
+              Como mentora, ajudo profissionais da saúde a estruturarem
+              consultórios sustentáveis, com liberdade, propósito e
+              tempo de qualidade.
             </p>
 
             <button onClick={handleModalOpen}>

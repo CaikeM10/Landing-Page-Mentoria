@@ -1,5 +1,10 @@
 .container {
-  background: #030303;
+  background: linear-gradient(
+    180deg,
+    /* Direção do gradiente: De cima para baixo */ #e8c17f 0%,
+    /* Dourado Claro no topo (para um leve brilho) */ #b58d48 50%,
+    /* Dourado Escuro no meio */ #b58d48 100% /* Dourado Escuro na base */
+  );
   color: white;
   font-family: "Space Grotesk", sans-serif;
   position: relative;
@@ -32,7 +37,7 @@
     }
 
     p {
-      color: rgba(215, 215, 215, 0.5);
+      color: rgb(255, 255, 255);
       text-align: center;
       font-family: "Space Grotesk", sans-serif;
       font-size: 16px;
@@ -46,7 +51,12 @@
 .swiperContainer {
   position: relative;
   color: white;
-  background: #000000;
+  background: linear-gradient(
+    180deg,
+    /* Direção do gradiente: De cima para baixo */ #e8c17f 0%,
+    /* Dourado Claro no topo (para um leve brilho) */ #b58d48 50%,
+    /* Dourado Escuro no meio */ #b58d48 100% /* Dourado Escuro na base */
+  );
 
   img {
     width: 100%;
@@ -106,7 +116,12 @@
 }
 
 .paginationBulletActive {
-  background-color: #034cff;
+  background: linear-gradient(
+    180deg,
+    /* Direção do gradiente: De cima para baixo */ #e8c17f 0%,
+    /* Dourado Claro no topo (para um leve brilho) */ #b58d48 50%,
+    /* Dourado Escuro no meio */ #b58d48 100% /* Dourado Escuro na base */
+  );
   width: 20px;
   height: 6px;
   border-radius: 4px;
