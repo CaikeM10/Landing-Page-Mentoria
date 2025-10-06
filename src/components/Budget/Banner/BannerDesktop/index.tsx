@@ -54,7 +54,7 @@ const BannerDesktop = () => {
                 <div className={styles.eventInfo}>
                   <div className={styles.eventDetail}>
                     <IconCalendar className={styles.icon} />
-                    <span>Dia 20 de Outubro, às 20h.</span>
+                    <span>Dia 27 de Outubro, às 20h.</span>
                   </div>
                   <div className={styles.eventDetail}>
                     <IconPlay className={styles.icon} />

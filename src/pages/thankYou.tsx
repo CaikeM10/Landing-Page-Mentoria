@@ -10,7 +10,7 @@ export default function ThankYou() {
         <h1>Obrigada!</h1>
         <p>
           Clique no botão e entre no grupo exclusivo para receber novidades e
-          ter acesso ao link da aula no dia 20/10. Te vejo lá!
+          ter acesso ao link da aula no dia 27/10. Te vejo lá!
         </p>
         <button
           onClick={() =>
