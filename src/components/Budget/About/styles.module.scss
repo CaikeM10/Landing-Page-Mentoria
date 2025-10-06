@@ -1,11 +1,13 @@
 /* 💥 NOVA FONTE: Playfair Display (Estilo Serifado) */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+
 /* ================================================= */
 /* VARIÁVEIS */
 /* ================================================= */
 $blue-highlight: #67bccb;
-$gold-highlight: #e8c17f;
+$gold-highlight: #000000;
 $text-light: #fff;
+$background-dark: #333;
 
 /* ================================================= */
 /* CONTAINER GERAL */
@@ -13,33 +15,88 @@ $text-light: #fff;
 .container {
   background: #725541 url("/") top / cover no-repeat;
   color: $text-light;
-  /* 💥 FONTE APLICADA AO CONTAINER PRINCIPAL */
   font-family: "Playfair Display", Georgia, serif;
-  margin-top: 0;
-  padding: 80px 0;
-
-  @media (max-width: 768px) {
-    margin-top: 120px;
-  }
+  padding: 0;
 }
 
 /* ================================================= */
-/* WRAPPER - SEÇÕES */
+/* SECTION */
 /* ================================================= */
+.section {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 80px;
+
+  @media (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+/* Ajuste fino da primeira seção */
+.section:first-of-type {
+  padding-bottom: 40px;
+}
+
+/* ================================================= */
+/* WRAPPER */
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
   padding-inline: 20px;
   text-align: center;
-  padding-block: 80px;
+  font-family: "Playfair Display", Georgia, serif;
 
   @media (min-width: 768px) {
     padding-inline: 100px;
-    padding-block: 120px;
   }
+}
 
-  &:not(:last-child) {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+/* ================================================= */
+/* LINHAS ENTRE SEÇÕES */
+/* ================================================= */
+.sectionLine {
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(232, 193, 127, 0) 0%,
+    rgba(232, 193, 127, 0.8) 50%,
+    rgba(232, 193, 127, 0) 100%
+  );
+  margin: 50px auto 30px;
+  border-radius: 2px;
+  opacity: 0.9;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+}
+
+.sectionLine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
   }
 }
 
@@ -47,15 +104,14 @@ $text-light: #fff;
 /* TÍTULOS */
 /* ================================================= */
 .titleBlock {
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 
   h2 {
     color: #fff;
-    /* 💥 FONTE APLICADA AO H2 */
     font-family: "Playfair Display", Georgia, serif;
     font-size: 36px;
-    font-weight: 700; /* Usando 700 para títulos */
-    /* REMOVIDO: text-transform: uppercase */
+    font-weight: 700;
+    /* 💥 CORREÇÃO: Remove a caixa alta */
     text-transform: none;
     margin-bottom: 10px;
 
@@ -66,7 +122,6 @@ $text-light: #fff;
 
   .subTitle {
     color: $gold-highlight;
-    /* 💥 FONTE APLICADA AO SUBTÍTULO */
     font-family: "Playfair Display", Georgia, serif;
     font-size: 18px;
     line-height: 1.6;
@@ -81,11 +136,12 @@ $text-light: #fff;
   flex-direction: column;
   align-items: center;
   gap: 25px;
-  margin-top: 40px;
+  margin-top: 30px;
 
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: center;
+    align-items: flex-start;
   }
 }
 
@@ -101,12 +157,11 @@ $text-light: #fff;
   position: relative;
   overflow: hidden;
 
-  /* === ANIMAÇÃO DE ENTRADA === */
+  /* ANIMAÇÃO DE ENTRADA */
   opacity: 0;
   transform: translateY(30px);
   animation: fadeUp 0.8s ease forwards;
 
-  /* Atraso em cascata pros cards entrarem um de cada vez */
   &:nth-child(1) {
     animation-delay: 0.2s;
   }
@@ -123,13 +178,13 @@ $text-light: #fff;
   }
 
   h5 {
-    /* 💥 FONTE APLICADA AO H5 */
     font-family: "Playfair Display", Georgia, serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 1.4;
     margin-top: 15px;
-    text-transform: none; /* Garante que não tenha caixa alta */
+    /* 💥 CORREÇÃO: Remove a caixa alta */
+    text-transform: none;
   }
 
   @media (min-width: 768px) {
@@ -143,11 +198,26 @@ $text-light: #fff;
 /* EMOJIS */
 /* ================================================= */
 .emoji {
-  /* ... estilos existentes ... */
+  font-size: 2rem;
+  background: rgba(103, 188, 203, 0.15);
+  color: $blue-highlight;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.15);
+    background: rgba(103, 188, 203, 0.25);
+  }
 }
 
 /* ================================================= */
-/* ANIMAÇÃO DE ENTRADA */
+/* ANIMAÇÃO DE ENTRADA DOS CARDS */
 /* ================================================= */
 @keyframes fadeUp {
   from {
@@ -165,10 +235,26 @@ $text-light: #fff;
 /* ================================================= */
 .wrapper > p {
   color: $gold-highlight;
-  /* 💥 FONTE APLICADA AO P no wrapper */
   font-family: "Playfair Display", Georgia, serif;
   font-size: 18px;
   margin-top: 15px;
   margin-bottom: 30px;
   line-height: 1.5;
+}
+
+/* ================================================= */
+/* AJUSTES MOBILE ESPECÍFICOS */
+/* ================================================= */
+@media (max-width: 767px) {
+  .section:nth-of-type(2) {
+    padding-bottom: 40px;
+  }
+
+  .cardContainer {
+    gap: 20px;
+  }
+
+  .titleBlock {
+    margin-bottom: 20px;
+  }
 }

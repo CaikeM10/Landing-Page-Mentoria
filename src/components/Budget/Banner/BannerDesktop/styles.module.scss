@@ -83,6 +83,25 @@ $background-marrom: #725542;
     }
   }
 
+  .brownText {
+    color: $gold-light; // seu marrom de fundo, ajusta se quiser outro
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 50px; // tamanho menor que o H1 principal
+    font-weight: 700; // opcional, pode ser bold se quiser
+    display: inline-block;
+  }
+
+  .brownTextWrapper {
+    display: inline-flex; // ⚡ importante: mantém logo e texto na mesma linha
+    align-items: center; // ⚡ centraliza verticalmente
+    gap: 10px; // espaço entre texto e logo
+  }
+
+  .brownLogo {
+    width: 150px; // tamanho da logo, ajusta como quiser
+    height: auto;
+  }
+
   .destaque {
     color: $blue-highlight;
     white-space: nowrap;
@@ -98,7 +117,7 @@ $background-marrom: #725542;
     /* Aplicando Playfair Display ao H1 */
     font-family: "Playfair Display", Georgia, serif;
     /* 💥 AJUSTE SOLICITADO: Diminui a fonte do H1 */
-    font-size: 58px;
+    font-size: 40px;
     line-height: 125%;
     margin-bottom: 32px;
   }
@@ -210,7 +229,7 @@ $background-marrom: #725542;
 
   img {
     width: 110%;
-    max-width: 760px;
+    max-width: 790px;
     margin-left: -6;
     height: auto;
     object-fit: contain;

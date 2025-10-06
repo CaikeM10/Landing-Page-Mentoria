@@ -26,15 +26,30 @@ export default function Who() {
               quem é <span>ÍRIA SABÓIA?</span>
             </h2>
             <p>
-              Sou psicóloga clínica há mais de 11 anos, especialista em Terapia
-              Comportamental e fundadora da Voares.
+              Sou Íria Sabóia, psicóloga clínica há 11 anos, e mentora de
+              carreira de profissionais liberais e empresas. Durante anos, vivi
+              a sobrecarga que muitos profissionais da saúde conhecem bem, uma
+              rotina exaustiva entre o serviço público e a clínica.
             </p>
             <p>
-              Ao longo da minha trajetória, construí um consultório de sucesso
-              presencial e online, hoje com outras profissionais associadas.
-              Como mentora, ajudo profissionais da saúde a estruturarem
-              consultórios sustentáveis, com liberdade, propósito e
-              tempo de qualidade.
+              Foi nesse momento de desequilíbrio que tomei uma decisão que
+              mudaria completamente o rumo da minha trajetória: empreender com
+              propósito na prática clínica no presencial e no digital. Nasceu
+              assim a Voares, um movimento que une ciência, autoconhecimento e
+              estratégia para ajudar profissionais a construírem uma carreira
+              sustentável, com liberdade e sentido.
+            </p>
+            <p>
+              Em outubro de 2024, abrimos a primeira turma da Mentoria Voares, e
+              desde então vivemos um ano de crescimento, conquistas e
+              transformações reais na carreira de dezenas de profissionais.
+              Hoje, seguimos fortalecendo o nosso propósito para ajudar
+              profissionais a viverem suas realizações profissionais com
+              propósito, estabilidade e qualidade de vida.
+            </p>
+            <p>
+              Porque crescer não é sobre fazer mais, e sim sobre voar na direção
+              certa.
             </p>
 
             <button onClick={handleModalOpen}>

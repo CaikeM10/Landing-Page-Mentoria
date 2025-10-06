@@ -7,7 +7,7 @@ const About = () => {
       {/* SEÇÃO 1 — PARA QUEM É */}
       {/* ================================================= */}
       <div className={styles.section}>
-        <div className={styles.sectionLine}></div> {/* linha topo da seção */}
+        <div className={styles.sectionLine}></div>
         <div className={styles.wrapper}>
           <div className={styles.titleBlock}>
             <h2>
@@ -34,22 +34,21 @@ const About = () => {
               </h5>
             </div>
             <div className={styles.card}>
-              <div className={styles.emoji}>❤️</div>
+              <div className={styles.emoji}>🤯</div>
               <h5>
                 Trabalha demais, mas não vê o consultório crescer de forma
-                sustentável.
+                sustentável porque está sobrecarregada.
               </h5>
             </div>
           </div>
         </div>
-        <div className={styles.sectionLine}></div>{" "}
-        {/* linha inferior da seção */}
       </div>
 
       {/* ================================================= */}
       {/* SEÇÃO 2 — PERGUNTAS */}
       {/* ================================================= */}
       <div className={styles.section}>
+        <div className={styles.sectionLine}></div>
         <div className={styles.wrapper}>
           <div className={styles.titleBlock}>
             <h2>
@@ -74,12 +73,48 @@ const About = () => {
               <div className={styles.emoji}>✈️</div>
               <h5>
                 “Como vou tirar férias, ter recesso ou viver a maternidade, se
-                não posso parar de atender e perder minha renda?”
+                não posso parar de atender e suspender minha fonte de renda?”
               </h5>
             </div>
           </div>
         </div>
-        <div className={styles.sectionLine}></div> {/* linha final da seção */}
+      </div>
+
+      {/* ================================================= */}
+      {/* SEÇÃO 3 — NOVA SESSÃO */}
+      {/* ================================================= */}
+      <div className={styles.section}>
+        <div className={styles.sectionLine}></div>
+        <div className={styles.wrapper}>
+          <div className={styles.titleBlock}>
+            <h2>
+              <span>
+                Se essas questões fazem parte da sua realidade, este treinamento
+                foi feito especialmente para você.
+              </span>
+            </h2>
+          </div>
+
+          <div className={styles.cardContainer}>
+            <div className={styles.card}>
+              <div className={styles.emoji}>✨</div>
+              <h5>
+                O próximo Voo será meu treinamento online, inédito e gratuito
+                para profissionais da saúde que desejam construir um Consultório
+                Sustentável.
+              </h5>
+            </div>
+            <div className={styles.card}>
+              <div className={styles.emoji}>📈</div>
+              <h5>
+                Vou compartilhar os erros e acertos dos meus 11 anos de clínica
+                e como venho estruturando um modelo de negócio sustentável para
+                clinicar e crescer com qualidade, sem sobrecarga de
+                atendimentos.
+              </h5>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

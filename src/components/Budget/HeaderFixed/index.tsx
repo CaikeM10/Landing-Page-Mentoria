@@ -56,14 +56,14 @@ const HeaderFixed = () => {
       className={`${styles.container} ${scrolled ? styles.scrolled : ""}`}
     >
       <div className={styles.content}>
-        {/* 💥 CORREÇÃO 1: LOGO DA ÍRIA SABÓIA (Colocado na primeira coluna) */}
-
-        {/* CORREÇÃO 2: Bloco Central para o Horário/Contador */}
+        {/* BLOCO ANINHADO: Usa justify-content: space-between no CSS */}
         <div className={styles.centerGroup}>
+          {/* 💥 AJUSTE CRÍTICO: Textos em <p> e <span> separados para forçar a quebra no CSS */}
           <div className={styles.title}>
-            <p>O EVENTO </p>
-            <span>COMEÇA EM :</span>
+            <p>O EVENTO</p>
+            <span>COMEÇA EM:</span>
           </div>
+
           <div className={styles.countDown}>
             <div className={styles.block}>
               <p>{timeLeft.days} DIAS</p>
@@ -82,9 +82,6 @@ const HeaderFixed = () => {
             </div>
           </div>
         </div>
-
-        {/* CORREÇÃO 3: Elemento de preenchimento (Spacer) na última coluna */}
-        <div className={styles.spacer}></div>
       </div>
     </section>
   );
