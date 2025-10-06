@@ -9,7 +9,7 @@ $text-light: #fff;
 .container {
   background-repeat: no-repeat;
   background-position: calc(100% + 40px) center;
-  padding-top: 30px; //
+  padding-top: 0px; //
 }
 
 .content {
@@ -78,25 +78,21 @@ $text-light: #fff;
   flex-direction: column;
   h3 {
     color: #d7d7d7;
-    /* 💥 FONTE APLICADA */
     font-family: "Playfair Display", Georgia, serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    /* Remove a caixa alta se não for mais desejada */
     text-transform: none;
     padding-bottom: 10px;
   }
   h2 {
     color: #fff;
-    /* 💥 FONTE APLICADA */
     font-family: "Playfair Display", Georgia, serif;
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    /* Remove a caixa alta se não for mais desejada */
     text-transform: none;
     padding-bottom: 20px;
   }
@@ -105,13 +101,14 @@ $text-light: #fff;
   }
   p {
     color: #fff;
-    /* 💥 FONTE APLICADA */
     font-family: "Playfair Display", Georgia, serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.5; /* Ajuste para melhor leitura em serifado */
+    line-height: 1.5;
     padding-bottom: 20px;
+    /* 💥 CORREÇÃO CRÍTICA: Justifica o texto */
+    text-align: justify;
   }
   button {
     border: 1px solid #fff;
@@ -124,17 +121,15 @@ $text-light: #fff;
     background-size: 300% 300%;
     padding: 20px;
     color: #fff;
-    /* 💥 FONTE APLICADA */
     font-family: "Playfair Display", Georgia, serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    letter-spacing: 0.1em; /* Ajuste o espaçamento de letras para serifado */
+    letter-spacing: 0.1em;
     width: 100%;
     display: flex;
     justify-content: center;
-    /* Remove a caixa alta se não for mais desejada */
     text-transform: none;
     animation: gradientCircle 4s linear infinite;
     cursor: pointer;

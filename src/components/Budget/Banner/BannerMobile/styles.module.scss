@@ -8,7 +8,7 @@ $background-marrom: #725542;
 
 .container {
   background: $background-marrom;
-  background-image: url("/iriabannermobile.png");
+  background-image: url("/banneririanew.png");
   background-size: cover;
   height: 100vh;
   background-position: center top;
@@ -108,6 +108,7 @@ $background-marrom: #725542;
       position: relative;
       display: inline-block;
       white-space: normal;
+      font-weight: 750; // de 400 para 700, fica bem mais forte
     }
 
     .nowrap {

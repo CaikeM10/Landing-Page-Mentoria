@@ -24,8 +24,9 @@ export default function Desafio() {
       <HeaderFixed />
       <Banner></Banner>
       <About></About>
-      <Who />
+      {/* 🚀 NOVA ORDEM: SERVICES (O que vai aprender) aparece primeiro */}
       <Services />
+      <Who /> {/* <-- WHO/ABOUT (Sobre/Quem é) aparece depois */}
       <SwiperComponent />
       <Footer></Footer>
       <StickFooter title={pageTitle} buttonText="SAIBA MAIS AQUI" />

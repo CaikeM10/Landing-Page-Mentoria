@@ -8,7 +8,9 @@ export default function ThankYou() {
     <div className={styles.container}>
       <div className={styles.content}>
         <h1>Obrigado!</h1>
-        <p>Recebemos seu formulário com sucesso. Entraremos em contato!</p>
+        <p>
+          Clique no botão e entre no grupo exclusivo para receber novidades.
+        </p>
         <button
           onClick={() =>
             router.push(

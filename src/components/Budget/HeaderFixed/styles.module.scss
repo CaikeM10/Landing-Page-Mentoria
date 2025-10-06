@@ -15,7 +15,6 @@ $gold-light: #e8c17f;
   overflow: hidden;
 
   @media only screen and (max-width: 768px) {
-    /* 💥 CORREÇÃO CRÍTICA: ESCONDE A BARRA DE CONTAGEM NO MOBILE */
     display: none;
   }
 }
@@ -48,8 +47,9 @@ $gold-light: #e8c17f;
 }
 
 .centerGroup {
-  /* Faz o bloco ocupar 100% da largura, permitindo o justify-content: space-between */
+  /* 💥 ESSENCIAL: Garante que o bloco use 100% da sua área limitada */
   display: flex;
+  /* 💥 Empurra o título para a esquerda e o contador para a direita */
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -86,15 +86,16 @@ $gold-light: #e8c17f;
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
-  flex-grow: 1;
+  /* 💥 REMOVIDO: flex-grow: 1 para não ocupar espaço desnecessário */
 
-  /* Faz o <p> e o <span> ficarem um abaixo do outro (Desktop) */
+  /* Faz o <p> e o <span> ficarem em linhas separadas (QUEBRA VERTICAL) */
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start; /* Alinha o texto na esquerda */
 
   p {
-    margin: 0;
+    /* Ajusta a margem para separar do COMEÇA EM: */
+    margin: 0 0 4px 0;
     padding: 0;
   }
 
@@ -127,8 +128,10 @@ $gold-light: #e8c17f;
 
 /* ------------------ MOBILE CORREÇÕES ------------------ */
 @media only screen and (max-width: 768px) {
-  /* Esta regra agora está no .container, mas mantemos o bloco vazio caso regras futuras sejam adicionadas */
-  /* .container { display: none; } */
+  /* ... (Regras de Mobile) ... */
+  .container {
+    display: none;
+  }
 
   .content {
     justify-content: center;
@@ -136,14 +139,12 @@ $gold-light: #e8c17f;
   }
 
   .centerGroup {
-    /* Permite quebra no mobile */
     flex-direction: column;
     gap: 5px;
     max-width: 100%;
   }
 
   .title {
-    /* Garante que o título se centralize no mobile */
     align-items: center;
     font-size: 12px;
 
@@ -151,5 +152,21 @@ $gold-light: #e8c17f;
       font-size: 10px;
     }
   }
-  /* ... (Regras de contagem mobile) ... */
+
+  .countDown {
+    justify-content: center;
+    gap: 3px;
+    margin-top: 5px;
+  }
+
+  .block,
+  .block1,
+  .block2,
+  .block3 {
+    padding: 4px 6px;
+
+    p {
+      font-size: 14px;
+    }
+  }
 }

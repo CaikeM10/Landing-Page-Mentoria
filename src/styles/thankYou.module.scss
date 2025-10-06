@@ -1,8 +1,12 @@
+/* 💥 NOVA FONTE: Playfair Display (Estilo Serifado) */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+
 .container {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Mantendo o background, mas a cor do texto será Playfair Display */
   background: url("/Captura\ de\ tela\ 2025-10-03\ 191935.png") no-repeat center
     center;
   background-size: 300%;
@@ -15,18 +19,18 @@
 
     h1 {
       font-size: 3rem;
-      font-family: "PowerGrotesk", sans-serif;
+      /* 💥 APLICANDO PLAYFAIR DISPLAY */
+      font-family: "Playfair Display", Georgia, serif;
       color: #fff;
       margin-bottom: 1rem;
-      font-family: Syne, sans-serif;
       font-weight: 700;
     }
 
     p {
       font-size: 1.25rem;
-      font-family: "PowerGrotesk", sans-serif;
+      /* 💥 APLICANDO PLAYFAIR DISPLAY */
+      font-family: "Playfair Display", Georgia, serif;
       color: #fff;
-      font-family: Syne, sans-serif;
       margin-bottom: 1rem;
     }
 
@@ -35,7 +39,8 @@
       justify-content: center;
       color: #fff;
       text-align: center;
-      font-family: "PowerGrotesk", sans-serif;
+      /* 💥 APLICANDO PLAYFAIR DISPLAY (Mantendo PowerGrotesk como fallback visual, mas Playfair domina) */
+      font-family: "Playfair Display", "PowerGrotesk", sans-serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
@@ -77,7 +82,8 @@
 
       p {
         color: #fff;
-        font-family: Syne, sans-serif;
+        /* 💥 APLICANDO PLAYFAIR DISPLAY */
+        font-family: "Playfair Display", Georgia, serif;
         font-size: 28px;
         font-style: normal;
         font-weight: 600;

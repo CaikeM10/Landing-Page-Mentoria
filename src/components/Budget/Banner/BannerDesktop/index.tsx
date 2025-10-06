@@ -30,24 +30,24 @@ const BannerDesktop = () => {
                 <button className={styles.orcamento}>
                   • Veja mais abaixo! •
                 </button>
-                <h1>
-                  {/* LINHA 1: Consultório Sustentável! (com o "Seu" colado no final) */}
+                <h1 className={styles.titleLine}>
+                  <span className={styles.brownText}>O Próximo Voo</span>
+                </h1>
+
+                <h1 className={styles.subtitleLine}>
                   <span className={styles.destaque}>
                     Consultório Sustentável,
-                  </span>
-                  {/* 💥 O PONTO CHAVE: O texto "Seu" está AQUI, fora de um span, colado. */}
-                  <br /> novo modelo de negócio
-                  <br /> {/* ⬅️ QUEBRA DE LINHA CRÍTICA AQUI */}
-                  para viver de clinicar.
+                  </span>{" "}
+                  novo modelo de negócio para viver de clinicar, porque a
+                  sobrecarga não é sustentável.
                 </h1>
 
                 {/* ... (O restante do conteúdo) ... */}
-                <img src="/line.svg" alt="Linha decorativa ciano" />
+
                 <p className={styles.description}>
                   Um novo plano de voo para equilibrar sua agenda, aumentar a
-                  lucratividade do consultório e fortalecer sua autoridade na
-                  profissão, sem abrir mão do que mais importa: o seu tempo de
-                  qualidade.
+                  lucratividade do consultório e fortalecer seu posicionamento
+                  na profissão.
                 </p>
 
                 {/* BLOCO DE INFORMAÇÕES DO EVENTO */}
@@ -59,7 +59,7 @@ const BannerDesktop = () => {
                   <div className={styles.eventDetail}>
                     <IconPlay className={styles.icon} />
                     <span>
-                      Aulão inédito – ao vivo & gratuito apenas para inscritos.
+                      Aulão inédito – ao vivo / gratuito apenas para inscritos.
                     </span>
                   </div>
                 </div>
@@ -72,10 +72,7 @@ const BannerDesktop = () => {
           </div>
           <div className={styles.rightSide}>
             {/* caminho da imagem */}
-            <img
-              src="/imgBannersemfundo.png"
-              alt="Palestrante sorrindo ao lado de um notebook Apple"
-            />
+            <img src="/imgBannersemfundo.png" alt="Íria Sabóia" />
           </div>
         </div>
       </section>
