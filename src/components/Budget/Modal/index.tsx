@@ -122,7 +122,7 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
             onChange={handleInputChange}
           />
 
-          <button type="submit"> QUERO GARANTIR MINHA VAGA!</button>
+          <button type="submit"> QUERO GARANTIR AGORA MESMO!</button>
         </form>
       </div>
     </div>

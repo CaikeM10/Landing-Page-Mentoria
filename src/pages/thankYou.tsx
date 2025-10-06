@@ -7,9 +7,10 @@ export default function ThankYou() {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h1>Obrigado!</h1>
+        <h1>Obrigada!</h1>
         <p>
-          Clique no botão e entre no grupo exclusivo para receber novidades.
+          Clique no botão e entre no grupo exclusivo para receber novidades e
+          ter acesso ao link da aula no dia 20/10. Te vejo lá!
         </p>
         <button
           onClick={() =>
