@@ -3,9 +3,6 @@ import styles from "./styles.module.scss";
 const About = () => {
   return (
     <section className={styles.container}>
-      {/* ================================================= */}
-      {/* SEÇÃO 1 — PARA QUEM É */}
-      {/* ================================================= */}
       <div className={styles.section}>
         <div className={styles.sectionLine}></div>
         <div className={styles.wrapper}>

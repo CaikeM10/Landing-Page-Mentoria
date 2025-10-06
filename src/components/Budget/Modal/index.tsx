@@ -21,7 +21,7 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // 1. Incluindo 'instagram' e 'site' na desestruturação para o payload
+    // 1. Desestruturação dos dados brutos
     const { name, email, phone, budget, instagram, site } = formData;
 
     if (!name || !email || !phone) {
@@ -29,35 +29,23 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
       return;
     }
 
-    const cleanedPhone = phone.replace(/\D/g, "");
-    const formattedPhone = cleanedPhone.startsWith("55")
-      ? cleanedPhone
-      : `55${cleanedPhone}`;
-
-    const msg_send = `Olá ${name} preenchi o formulário entre em contato comigo.`;
-
-    // Obtém os cookies
-    const cookies = document.cookie.split("; ").reduce((acc, cookie) => {
-      const [key, value] = cookie.split("=");
-      acc[key] = value;
-      return acc;
-    }, {} as Record<string, string>);
-
-    // 2. Adicionando 'instagram' e 'site' ao payload
+    // 💥 CORREÇÃO CRÍTICA: SIMPLIFICAÇÃO DO PAYLOAD
+    // Removemos a lógica de cookies e formatação de telefone, pois o servidor (Next.js API)
+    // lidará com isso, ou os dados brutos são suficientes para o SendGrid.
     const payload = {
       name,
       email,
-      phone: formattedPhone,
-      instagram, // Adicionado
-      site, // Adicionado
-      budget, // Adicionado
-      msg_send,
-      cookies,
+      phone, // Enviado sem formatação internacional
+      instagram: instagram || "N/A",
+      site: site || "N/A",
+      budget: budget || "N/A",
+      msg_send: `Olá ${name} preenchi o formulário entre em contato comigo.`,
     };
 
     try {
+      // 💥 MUDANÇA CRÍTICA: Altera a URL de envio para o ENDPOINT DE API SEGURO LOCAL
       const response = await fetch(
-        "https://webhookn8n.maistickets.com.br/webhook/rd-n8n-evo-graph",
+        "/api/sendEmails", // ⬅️ Este endpoint deve ser o seu arquivo /pages/api/sendEmails.ts
         {
           method: "POST",
           headers: {
@@ -113,7 +101,6 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
             value={formData.phone}
             onChange={handleInputChange}
           />
-          {/* 3. NOVO INPUT DE INSTAGRAM (DESCOMENTADO) */}
           <input
             type="text"
             name="instagram"
@@ -122,7 +109,10 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
             onChange={handleInputChange}
           />
 
-          <button type="submit"> QUERO GARANTIR AGORA MESMO!</button>
+          {/* O botão agora usa a classe styles.button para o estilo dourado */}
+          <button type="submit" className={styles.button}>
+            QUERO GARANTIR AGORA MESMO!
+          </button>
         </form>
       </div>
     </div>
