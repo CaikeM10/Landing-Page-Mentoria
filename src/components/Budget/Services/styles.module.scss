@@ -2,10 +2,10 @@
 
 $gold-dark: #b58d48;
 $gold-light: #e8c17f;
-$blue-highlight: #000000;
+$blue-highlight: #e8c17f;
 $brown-highlight: #8b5e3c;
 $text-light: #fff;
-$background-dark: #333;
+$background-dark: #e8c17f;
 
 .container {
   background-image: url("/liht3.svg");
@@ -122,22 +122,22 @@ $background-dark: #333;
 
   .balaoDestaque {
     background-color: #fff;
-    color: #333;
+    color: #e8c17f;
     padding: 8px 15px;
     border-radius: 20px;
     display: inline-block;
     font-family: "Playfair Display", Georgia, serif;
     font-weight: 700;
-    font-size: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(255, 203, 31, 0.2);
+    margin-bottom: 12px;
   }
 
   p {
     color: $text-light;
     text-align: center;
     font-family: "Playfair Display", Georgia, serif;
-    font-size: 16px;
+    font-size: 25px;
     font-weight: 400;
     line-height: 24px;
   }
@@ -258,7 +258,12 @@ $background-dark: #333;
 }
 
 .simpleCard {
-  background: #fff;
+  background: linear-gradient(
+    91deg,
+    $gold-dark -20%,
+    $gold-light 50%,
+    $gold-dark 120%
+  );
   border-radius: 8px;
   padding: 15px 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -266,10 +271,10 @@ $background-dark: #333;
 
   p {
     font-family: "Playfair Display", Georgia, serif;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 19px;
+    font-weight: 707;
     line-height: 1.5;
-    color: $background-dark;
+    color: #fff !important;
     margin: 0;
     padding: 0;
   }
