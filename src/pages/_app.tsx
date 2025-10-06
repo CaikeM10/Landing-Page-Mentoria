@@ -60,7 +60,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <meta
           property="og:image"
-          content="https://firebasestorage.googleapis.com/v0/b/nextgain-37481.appspot.com/o/Screenshot%202024-04-01%20at%2022.58.47.png?alt=media&token=c87429da-d568-4acc-9b39-e4cb579bb9ac"
+          content="/Captura de tela 2025-10-03 191935.png"
         />
         <title>Consultório Sustentável | íria Sabóia. </title>
       </Head>
