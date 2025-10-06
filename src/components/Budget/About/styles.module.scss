@@ -5,7 +5,7 @@
 /* VARIÁVEIS */
 /* ================================================= */
 $blue-highlight: #67bccb;
-$gold-highlight: #000000;
+$gold-highlight: #e8c17f;
 $text-light: #fff;
 $background-dark: #333;
 
@@ -60,7 +60,7 @@ $background-dark: #333;
   height: 2px;
   background: linear-gradient(
     90deg,
-    rgba(232, 193, 127, 0) 0%,
+    rgba(104, 66, 0, 0) 0%,
     rgba(232, 193, 127, 0.8) 50%,
     rgba(232, 193, 127, 0) 100%
   );
@@ -147,7 +147,7 @@ $background-dark: #333;
 
 .card {
   background: #fff;
-  color: #333;
+  color: #e8c17f;
   border-radius: 16px;
   padding: 30px 25px;
   max-width: 340px;
@@ -236,8 +236,9 @@ $background-dark: #333;
 .wrapper > p {
   color: $gold-highlight;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: 18px;
+  font-size: 21px;
   margin-top: 15px;
+  font-weight: 700;
   margin-bottom: 30px;
   line-height: 1.5;
 }
