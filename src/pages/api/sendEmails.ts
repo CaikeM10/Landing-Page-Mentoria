@@ -3,13 +3,14 @@
 import sgMail from "@sendgrid/mail";
 import { NextApiRequest, NextApiResponse } from "next";
 
-// 1. 🚨 ATRIBUIÇÃO SEGURA DA CHAVE DE API
+// 🚨 CORREÇÃO CRÍTICA: Lendo a chave de forma segura do ambiente
 const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
-sgMail.setApiKey(SENDGRID_API_KEY || ""); // O || '' é um fallback, mas a chave deve existir
-
-// 2. Define o email de destino (Fixo)
-const DESTINATARIO_EMAIL = "triasaboiapsicologa@gmail.com";
 const REMETENTE_EMAIL = process.env.EMAIL_FROM;
+
+// Configura a chave de API do SendGrid
+sgMail.setApiKey(SENDGRID_API_KEY || "");
+
+const DESTINATARIO_EMAIL = "Iriasaboiapsicologa@gmail.com";
 
 export default async function handler(
   req: NextApiRequest,
@@ -19,17 +20,15 @@ export default async function handler(
     return res.status(405).json({ message: "Method Not Allowed" });
   }
 
-  // 💥 VERIFICAÇÃO CRÍTICA DE VARIÁVEIS (Retorna 500 com mensagem útil se a chave for inválida)
+  // 1. VERIFICAÇÃO DE CHAVES (PARA EVITAR ERRO 500 GENÉRICO)
   if (!SENDGRID_API_KEY || !REMETENTE_EMAIL) {
-    console.error(
-      "ERRO CRÍTICO: Chaves de API/FROM não configuradas no ambiente."
-    );
-    return res
-      .status(500)
-      .json({
-        success: false,
-        message: "Falha na configuração do servidor. (Chaves ausentes)",
-      });
+    console.error("ERRO CRÍTICO: Variáveis de ambiente do SendGrid ausentes.");
+    // ⚠️ Retornamos um erro 500 para indicar falha na configuração do servidor
+    return res.status(500).json({
+      success: false,
+      message:
+        "Falha na configuração do servidor. As chaves de API não foram carregadas.",
+    });
   }
 
   // Recebe os dados brutos
@@ -45,24 +44,21 @@ export default async function handler(
       <p><strong>Email:</strong> ${email}</p>
       <p><strong>Telefone:</strong> ${phone}</p>
       <p><strong>Instagram:</strong> ${instagram || "N/A"}</p>
-      <p><strong>Orçamento:</strong> ${budget || "Não especificado"}</p>
+     
     `,
   };
 
   try {
     await sgMail.send(msg);
-    // 3. Retorno de sucesso (200)
     return res
       .status(200)
       .json({ success: true, message: "E-mail enviado com sucesso!" });
   } catch (error) {
     console.error("ERRO NO ENVIO DO SENDGRID:", error);
-    // 4. Retorno de falha (500)
-    return res
-      .status(500)
-      .json({
-        success: false,
-        message: "Falha ao enviar e-mail. Verifique a API Key.",
-      });
+    // ⚠️ Retorna 500 se houver falha de autenticação (403)
+    return res.status(500).json({
+      success: false,
+      message: "Falha ao enviar e-mail. Verifique a API Key.",
+    });
   }
 }
