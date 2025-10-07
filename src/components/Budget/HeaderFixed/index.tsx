@@ -23,8 +23,9 @@ const HeaderFixed = () => {
 
   // Efeito para a contagem regressiva
   useEffect(() => {
-    // ⭐️ DATA ALVO: 20 de Outubro de 2025, 20:00:00 (20h)
-    const targetDate = new Date(2025, 9, 20, 20, 0, 0);
+    // ⭐️ AJUSTE CRÍTICO: DATA ALVO MUDADA PARA 27 DE OUTUBRO DE 2025 (20h)
+    // new Date(ano, mês_zero_base, dia, hora, minuto, segundo)
+    const targetDate = new Date(2025, 9, 27, 20, 0, 0);
 
     const updateCountdown = () => {
       const now = new Date().getTime();
