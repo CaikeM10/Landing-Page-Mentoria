@@ -6,7 +6,8 @@ $gold-light: #e8c17f;
   /* Fundo marrom escuro (base do gradiente) */
   background: #583f2d;
   padding-block: 18px;
-  position: fixed;
+  /* 💥 REMOVIDO: position: fixed para desktop (se não for fixo globalmente) */
+  position: relative; /* Coloca o container no fluxo normal do documento */
   top: 0;
   right: 0;
   left: 0;
@@ -14,8 +15,12 @@ $gold-light: #e8c17f;
   font-family: "PowerGrotesk", sans-serif;
   overflow: hidden;
 
+  /* 💥 CORREÇÃO CRÍTICA: REATIVA A BARRA NO MOBILE E REMOVE POSICIONAMENTO FIXO */
   @media only screen and (max-width: 768px) {
-    display: none;
+    display: flex; /* Garante que o container seja visível */
+    position: relative; /* Sobrescreve o fixed se necessário */
+    padding-block: 10px;
+    z-index: 1; /* Reduz z-index para não cobrir o WhatsApp ou outros elementos */
   }
 }
 
@@ -47,9 +52,7 @@ $gold-light: #e8c17f;
 }
 
 .centerGroup {
-  /* 💥 ESSENCIAL: Garante que o bloco use 100% da sua área limitada */
   display: flex;
-  /* 💥 Empurra o título para a esquerda e o contador para a direita */
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -86,15 +89,12 @@ $gold-light: #e8c17f;
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
-  /* 💥 REMOVIDO: flex-grow: 1 para não ocupar espaço desnecessário */
 
-  /* Faz o <p> e o <span> ficarem em linhas separadas (QUEBRA VERTICAL) */
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alinha o texto na esquerda */
+  align-items: flex-start;
 
   p {
-    /* Ajusta a margem para separar do COMEÇA EM: */
     margin: 0 0 4px 0;
     padding: 0;
   }
@@ -128,10 +128,7 @@ $gold-light: #e8c17f;
 
 /* ------------------ MOBILE CORREÇÕES ------------------ */
 @media only screen and (max-width: 768px) {
-  /* ... (Regras de Mobile) ... */
-  .container {
-    display: none;
-  }
+  /* 💥 REMOVEMOS O display: none; daqui */
 
   .content {
     justify-content: center;
