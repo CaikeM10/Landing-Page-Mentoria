@@ -36,10 +36,9 @@ const BannerMobile = () => {
             </h1>
 
             <p>
-              Um novo plano de voo para equilibrar sua agenda, aumentar a
-              lucratividade do consultório e fortalecer sua autoridade na
-              profissão, sem abrir mão do que mais importa: o seu tempo de
-              qualidade.
+              Profissional da saúde, transforme sua agenda cheia em um modelo de
+              negócio mais leve e lucrativo, diversificando seus
+              serviços no digital.
             </p>
 
             {/* 💥 NOVO BLOCO DE INFORMAÇÕES DO EVENTO */}
