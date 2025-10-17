@@ -20,7 +20,7 @@ const About = () => {
             <div className={styles.card}>
               <div className={styles.emoji}>📈</div>
               <h5>
-                Tem a agenda cheia, mas sente que o faturamento não acompanha.
+                Tem a agenda cheia, mas sente que o faturamento está estagnado.
               </h5>
             </div>
             <div className={styles.card}>

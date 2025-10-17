@@ -45,9 +45,9 @@ const BannerDesktop = () => {
                 {/* ... (O restante do conteúdo) ... */}
 
                 <p className={styles.description}>
-                  Um novo plano de voo para equilibrar sua agenda, aumentar a
-                  lucratividade do consultório e fortalecer seu posicionamento
-                  na profissão.
+                  Profissional da saúde, transforme sua agenda cheia em um
+                  modelo de negócio mais leve e lucrativo, diversificando seus
+                  serviços no digital.
                 </p>
 
                 {/* BLOCO DE INFORMAÇÕES DO EVENTO */}
