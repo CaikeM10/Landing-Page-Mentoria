@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 
 const VideoSection = () => {
   const impactPhrase =
-    "Descubra mais sobre um dos objetivos do evento no video abaixo.";
+    "Descubra mais sobre um dos objetivos do evento no vídeo abaixo.";
 
   // 🔴 IMPORTANTE: SUBSTITUA ESTE VALOR PELO SEU LINK DE INCORPORAÇÃO REAL DO YOUTUBE
   const youtubeEmbedUrl = "https://www.youtube-nocookie.com/embed/7xAsiw_oOaw";
