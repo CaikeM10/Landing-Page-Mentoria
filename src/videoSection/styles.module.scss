@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
 
 .container {
-  background: #725541; /* Fundo escuro para contrastar com a seção marrom */
+  background: #725541;
   padding: 40px 0;
 }
 
@@ -27,7 +27,7 @@
   }
 }
 
-/* 💥 Contêiner Responsivo para Vídeo 16:9 */
+/* 💥 Contêiner Responsivo para Vídeo 16:9 (Funciona perfeitamente com IFRAME ou <video>) */
 .videoWrapper {
   position: relative;
   /* Calcula o Aspect Ratio 16:9: (9 / 16) * 100 = 56.25% */
@@ -41,11 +41,11 @@
 }
 
 .video {
-  /* Faz o vídeo preencher todo o espaço do wrapper */
+  /* Faz o IFRAME (ou <video>) preencher todo o espaço do wrapper */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: 0;
+  border: 0; /* Remove a borda padrão que iframes costumam ter */
 }

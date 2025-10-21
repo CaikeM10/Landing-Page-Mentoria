@@ -2,10 +2,14 @@ import styles from "./styles.module.scss";
 
 const VideoSection = () => {
   const impactPhrase =
-    "Descubra mais sobre um  dos objetivos do evento no video abaixo.";
+    "Descubra mais sobre um dos objetivos do evento no video abaixo.";
 
-  // O Next.js acessa a pasta 'public' diretamente pelo caminho raiz /
-  const videoSource = "videoIria.mp4";
+  // 🔴 IMPORTANTE: SUBSTITUA ESTE VALOR PELO SEU LINK DE INCORPORAÇÃO REAL DO YOUTUBE
+  const youtubeEmbedUrl = "https://www.youtube-nocookie.com/embed/7xAsiw_oOaw";
+
+  // O link geralmente precisa dos parâmetros ?controls=0&modestbranding=1, etc.
+  // Você pode adicionar parâmetros, se necessário, como este exemplo:
+  // const youtubeEmbedUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ?controls=1&autoplay=0&rel=0";
 
   return (
     <section className={styles.container}>
@@ -13,19 +17,23 @@ const VideoSection = () => {
         {/* Frase de impacto */}
         <h3 className={styles.phrase}>{impactPhrase}</h3>
 
-        {/* Contêiner responsivo para o VÍDEO MP4 */}
+        {/* Contêiner responsivo para o VÍDEO DO YOUTUBE */}
         <div className={styles.videoWrapper}>
-          <video
-            className={styles.video}
-            src={videoSource}
-            poster="/telainicialvideo.png/" // Imagem exibida antes do vídeo carregar
-            controls // Mostra os controles do player
-            loop // Opcional: faz o vídeo reiniciar
-            playsInline // Ajuda a reproduzir em linha no iOS
-            preload="metadata"
+          {/* ---------------------------------------------------- */}
+          {/* O NOVO CÓDIGO DO YOUTUBE (IFRAME) VAI AQUI */}
+          {/* ---------------------------------------------------- */}
+          <iframe
+            className={styles.video} // Reutilizamos a classe CSS para o dimensionamento
+            src={youtubeEmbedUrl}
+            title="Vídeo Iria - Objetivo do Evento" // Título para acessibilidade
+            frameBorder="0"
+            // Atributos de permissão para autoplay, tela cheia, etc.
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen // Permite o modo de tela cheia
           >
-            Seu navegador não suporta a tag de vídeo.
-          </video>
+            Seu navegador não suporta iframes (o que é raro, mas serve como
+            fallback).
+          </iframe>
         </div>
       </div>
     </section>
