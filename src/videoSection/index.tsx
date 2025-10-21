@@ -5,7 +5,7 @@ const VideoSection = () => {
     "Descubra mais sobre um  dos objetivos do evento no video abaixo.";
 
   // O Next.js acessa a pasta 'public' diretamente pelo caminho raiz /
-  const videoSource = "/videoIria.mp4";
+  const videoSource = "videoIria.mp4";
 
   return (
     <section className={styles.container}>
