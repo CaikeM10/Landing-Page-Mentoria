@@ -1,0 +1,51 @@
+/* SCSS para VideoSection.module.scss */
+
+/* 💥 Importa a fonte Playfair Display para o texto */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+
+.container {
+  background: #725541; /* Fundo escuro para contrastar com a seção marrom */
+  padding: 40px 0;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.phrase {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #67bccb;
+  margin-bottom: 30px;
+
+  @media (max-width: 768px) {
+    font-size: 20px; /* Menor para mobile */
+  }
+}
+
+/* 💥 Contêiner Responsivo para Vídeo 16:9 */
+.videoWrapper {
+  position: relative;
+  /* Calcula o Aspect Ratio 16:9: (9 / 16) * 100 = 56.25% */
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.video {
+  /* Faz o vídeo preencher todo o espaço do wrapper */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}

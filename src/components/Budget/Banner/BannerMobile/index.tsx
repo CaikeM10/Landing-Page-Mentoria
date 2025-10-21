@@ -28,12 +28,18 @@ const BannerMobile = () => {
       <section className={styles.container}>
         <div className={styles.titleBanner}>
           <div className={styles.gridBackground}>
-            <h1>
-              <span className={styles.destaque}>Consultório Sustentável:</span>
-              <span className={styles.nowrap}>Seu novo modelo de negócio</span>
-              <br />
-              para viver de clinicar.
-            </h1>
+            <div className={styles.titleBox}>
+              <h1>
+                <span className={styles.destaque}>
+                  Consultório Sustentável:
+                </span>
+                <span className={styles.nowrap}>
+                  Seu novo modelo de negócio
+                </span>
+                <br />
+                para viver de clinicar.
+              </h1>
+            </div>
 
             <p>
               Profissional da saúde, transforme sua agenda cheia em um modelo de
