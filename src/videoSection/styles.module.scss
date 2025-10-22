@@ -1,6 +1,5 @@
 /* SCSS para VideoSection.module.scss */
 
-/* 💥 Importa a fonte Playfair Display para o texto */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
 
 .container {
@@ -48,4 +47,50 @@
   width: 100%;
   height: 100%;
   border: 0; /* Remove a borda padrão que iframes costumam ter */
+}
+
+/* ---------------------------------------------------- */
+/* 🔴 NOVOS ESTILOS PARA O BOTÃO DE AÇÃO (CTA) */
+/* ---------------------------------------------------- */
+
+.ctaButtonWrapper {
+  /* Espaço entre o vídeo e o botão */
+  margin-top: 70px;
+  /* Espaço para a próxima seção */
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.ctaButton {
+  /* Estilos Visuais COPIADOS DO SEU BOTÃO DE FORMULÁRIO */
+  display: inline-block;
+  padding: 20px 40px;
+
+  /* Cor e Fundo do Botão Dourado */
+  background: linear-gradient(180deg, #e8c17f 0%, #e8c17f 100%);
+  color: #ffffff;
+
+  /* Tipografia */
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  /* Efeitos */
+  border: 2px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.7), 0 4px 10px rgba(0, 0, 0, 0.4);
+
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(255, 255, 0, 1), 0 6px 15px rgba(0, 0, 0, 0.6);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    padding: 12px 25px;
+  }
 }
