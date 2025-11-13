@@ -1,43 +1,60 @@
+import React, { useState } from "react"; //
 import styles from "./styles.module.scss";
+import ModalForm from "@/components/Budget/Modal";
 
-const VideoSection = () => {
+// 🔴 IMPORTAÇÃO CORRIGIDA BASEADA EM OUTRAS PARTES DO SEU CÓDIGO
+// Seu ModalForm está sendo exportado como 'default' da pasta 'Modal'
+
+function VideoSection() {
+  // 🔴 ESTADO PARA CONTROLAR A ABERTURA E FECHAMENTO DO MODAL
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const impactPhrase =
     "Descubra mais sobre um dos objetivos do evento no vídeo abaixo.";
 
-  // 🔴 IMPORTANTE: SUBSTITUA ESTE VALOR PELO SEU LINK DE INCORPORAÇÃO REAL DO YOUTUBE
+  // URL corrigida do YouTube (youtube-nocookie)
   const youtubeEmbedUrl = "https://www.youtube-nocookie.com/embed/7xAsiw_oOaw";
 
-  // O link geralmente precisa dos parâmetros ?controls=0&modestbranding=1, etc.
-  // Você pode adicionar parâmetros, se necessário, como este exemplo:
-  // const youtubeEmbedUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ?controls=1&autoplay=0&rel=0";
-
   return (
-    <section className={styles.container}>
-      <div className={styles.wrapper}>
-        {/* Frase de impacto */}
-        <h3 className={styles.phrase}>{impactPhrase}</h3>
+    // Fragmento (<>...</>) para permitir renderizar o Modal fora da <section>
+    <>
+      <section className={styles.container}>
+        <div className={styles.wrapper}>
+          {/* Frase de impacto */}
+          <h3 className={styles.phrase}>{impactPhrase}</h3>
 
-        {/* Contêiner responsivo para o VÍDEO DO YOUTUBE */}
-        <div className={styles.videoWrapper}>
-          {/* ---------------------------------------------------- */}
-          {/* O NOVO CÓDIGO DO YOUTUBE (IFRAME) VAI AQUI */}
-          {/* ---------------------------------------------------- */}
-          <iframe
-            className={styles.video} // Reutilizamos a classe CSS para o dimensionamento
-            src={youtubeEmbedUrl}
-            title="Vídeo Iria - Objetivo do Evento" // Título para acessibilidade
-            frameBorder="0"
-            // Atributos de permissão para autoplay, tela cheia, etc.
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen // Permite o modo de tela cheia
-          >
-            Seu navegador não suporta iframes (o que é raro, mas serve como
-            fallback).
-          </iframe>
+          {/* Contêiner responsivo para o VÍDEO DO YOUTUBE */}
+          <div className={styles.videoWrapper}>
+            <iframe
+              className={styles.video}
+              src={youtubeEmbedUrl}
+              title="Vídeo Iria - Objetivo do Evento"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            >
+              Seu navegador não suporta iframes.
+            </iframe>
+          </div>
+
+          {/* 🔴 NOVO: BOTÃO QUE ABRE O MODAL */}
+          <div className={styles.ctaButtonWrapper}>
+            <button
+              type="button"
+              className={styles.ctaButton}
+              onClick={() => setIsModalOpen(true)} // 💥 AÇÃO: Abre o Modal
+            >
+              EU QUERO O PRóXIMO VOO
+            </button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* 🔴 RENDERIZAÇÃO CONDICIONAL DO MODAL */}
+      {/* O ModalForm recebe a função onClose para fechar a si mesmo */}
+      {isModalOpen && <ModalForm onClose={() => setIsModalOpen(false)} />}
+    </>
   );
-};
+}
 
 export default VideoSection;
