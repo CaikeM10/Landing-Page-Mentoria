@@ -17,16 +17,15 @@ const Footer = () => {
       <section className={styles.container}>
         <div className={styles.content}>
           <h5>
-            Preencha seus dados{" "}
-            <span>e receba o link da sala e os materiais de apoio. </span>{" "}
+            Preencha o formulário <span>e acesse a aula agora mesmo!</span>{" "}
           </h5>
           <p></p>
           <button className={styles.button} onClick={handleModalOpen}>
-            QUERO GARANTIR MINHA VAGA!
+            ASSISTA A AULA AGORA MESMO!
           </button>
           <hr />
           <div className={styles.rights}>
-            <span>Íria Sabóia 2025. Todos os direitos reservados</span>
+            <span>Íria Sabóia 2025. Todos os direitos reservados.</span>
           </div>
           <div className={styles.rights}>
             <span>DESENVOLVIDO POR CODECRAT.</span>

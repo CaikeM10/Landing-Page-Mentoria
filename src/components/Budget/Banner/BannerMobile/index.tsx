@@ -5,7 +5,7 @@ import styles from "./styles.module.scss";
 // 💥 DEFINIÇÃO DOS COMPONENTES DE ÍCONE (PLACEHOLDERS)
 // Estes são placeholders simples. Use seus componentes/SVGs reais se existirem.
 const IconCalendar = ({ className }: { className: string }) => (
-  <i className={className}>🗓️</i>
+  <i className={className}></i>
 );
 const IconPlay = ({ className }: { className: string }) => (
   <i className={className}>▶️</i>
@@ -51,13 +51,13 @@ const BannerMobile = () => {
             <div className={styles.eventInfo}>
               <div className={styles.eventDetail}>
                 <IconCalendar className={styles.icon} />
-                <span> Dia 27 de Outubro, às 20h.</span>
+                <span></span>
               </div>
 
               <div className={styles.eventDetail}>
                 <IconPlay className={styles.icon} />
                 <span>
-                  Aulão inédito – ao vivo / gratuito apenas para inscritos.
+                  Aulão apenas para inscritos / Inscreva-se no botão abaixo!
                 </span>
               </div>
             </div>
@@ -67,7 +67,7 @@ const BannerMobile = () => {
 
       {/* Botão de Call to Action principal */}
       <button className={styles.button} onClick={handleModalOpen}>
-        QUERO GARANTIR MINHA VAGA!
+        QUERO ASSISTIR A AULA AGORA MESMO!
       </button>
 
       {/* Modal é renderizado condicionalmente */}

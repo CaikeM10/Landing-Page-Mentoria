@@ -52,6 +52,15 @@ export default function SwiperMobile() {
             <SwiperSlide>
               <img src="/aluno4.jpg" alt="Aluno Feedback 4" />
             </SwiperSlide>
+            <SwiperSlide>
+              <img src="/depoimentos1.jpg" alt="Aluno Feedback 5" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/depoimentos2.jpg" alt="Aluno Feedback 6" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/depoimentos3.jpg" alt="Aluno Feedback 7" />
+            </SwiperSlide>
           </Swiper>
           <div className={styles.gradientRight}></div>
 

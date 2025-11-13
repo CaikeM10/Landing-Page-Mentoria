@@ -2,12 +2,11 @@ import About from "@/components/Budget/About";
 import Banner from "@/components/Budget/Banner";
 import Footer from "@/components/Budget/Footer";
 import HeaderFixed from "@/components/Budget/HeaderFixed";
-import Services from "@/components/Budget/Services";
 import SwiperComponent from "@/components/Budget/Swiper";
 import Who from "@/components/Budget/Who";
 import StickFooter from "@/components/Portuguese/StickFooter";
 import styles from "@/styles/orcamento.module.scss";
-import VideoSection from "@/videoSection";
+//import VideoSection from "@/videoSection";
 
 export default function Desafio() {
   const pageTitle = "curso";
@@ -24,10 +23,9 @@ export default function Desafio() {
       </a>
       <HeaderFixed />
       <Banner></Banner>
-      <VideoSection />
+      {/*<VideoSection />*/}
       <About></About>
       {/* 🚀 NOVA ORDEM: SERVICES (O que vai aprender) aparece primeiro */}
-      <Services />
       <Who /> {/* <-- WHO/ABOUT (Sobre/Quem é) aparece depois */}
       <SwiperComponent />
       <Footer></Footer>

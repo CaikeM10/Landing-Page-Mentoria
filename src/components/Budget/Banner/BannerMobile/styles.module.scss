@@ -8,7 +8,7 @@ $background-marrom: #725542;
 
 .container {
   background: $background-marrom;
-  background-image: url("/oproximovoo.png");
+  background-image: url("/iriamobile.png");
   background-size: cover;
   height: 100vh;
   background-position: center top;
@@ -118,7 +118,7 @@ $background-marrom: #725542;
   }
 
   .titleBox {
-    background-color: #a52828;
+    background-color: #67bccb; // COR DO CARALHO DA BOX AZUL - CONSULTORIO SUSTENTAVEL
     padding: 16px 20px;
     border-radius: 10px;
     display: inline-block;
@@ -137,7 +137,7 @@ $background-marrom: #725542;
     }
 
     .destaque {
-      color: #67bccb; // opcional: contraste bonito com o fundo vermelho
+      color: #e8c17f; // CONSULTORIO SUSTENTAVEL COR NAO ESQUECER
       font-weight: 700;
     }
   }

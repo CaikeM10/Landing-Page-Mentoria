@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 
 // Placeholder para os Ícones (Necessário para o código compilar)
 const IconCalendar = ({ className }: { className: string }) => (
-  <i className={className}>🗓️</i>
+  <i className={className}></i>
 );
 const IconPlay = ({ className }: { className: string }) => (
   <i className={className}>▶️</i>
@@ -28,10 +28,10 @@ const BannerDesktop = () => {
             <div className={styles.titleBanner}>
               <div className={styles.gridBackground}>
                 <button className={styles.orcamento}>
-                  • Veja mais abaixo! •
+                  • Saiba mais abaixo! •
                 </button>
                 <h1 className={styles.titleLine}>
-                  <span className={styles.brownText}>O Próximo Voo</span>
+                  <span className={styles.brownText}></span>
                 </h1>
 
                 <h1 className={styles.subtitleLine}>
@@ -54,18 +54,19 @@ const BannerDesktop = () => {
                 <div className={styles.eventInfo}>
                   <div className={styles.eventDetail}>
                     <IconCalendar className={styles.icon} />
-                    <span>Dia 27 de Outubro, às 20h.</span>
+                    <span></span>
                   </div>
                   <div className={styles.eventDetail}>
                     <IconPlay className={styles.icon} />
                     <span>
-                      Aulão inédito – ao vivo / gratuito apenas para inscritos.
+                      Aulão apenas para inscritos / Inscreva-se no botão
+                      abaixo!.
                     </span>
                   </div>
                 </div>
 
                 <button className={styles.button} onClick={handleModalOpen}>
-                  QUERO GARANTIR MINHA VAGA!
+                  ASSISTA A AULA AGORA MESMO!
                 </button>
               </div>
             </div>

@@ -21,9 +21,9 @@ export default function Who() {
             <img src="/Captura de tela 2025-10-03 191813.png" alt="one" />
           </div>
           <div className={styles.text}>
-            <h3>sobre</h3>
+            <h1>SOBRE:</h1>
             <h2>
-              quem é <span>ÍRIA SABÓIA?</span>
+              Quem é <span>ÍRIA SABÓIA?</span>
             </h2>
             <p>
               Sou Íria Sabóia, psicóloga clínica há 11 anos, e mentora de
@@ -53,7 +53,7 @@ export default function Who() {
             </p>
 
             <button onClick={handleModalOpen}>
-              QUERO GARANTIR MINHA VAGA!
+              ASSISTA A AULA AGORA MESMO!
             </button>
           </div>
         </div>

@@ -61,26 +61,26 @@ const HeaderFixed = () => {
         <div className={styles.centerGroup}>
           {/* 💥 AJUSTE CRÍTICO: Textos em <p> e <span> separados para forçar a quebra no CSS */}
           <div className={styles.title}>
-            <p>O EVENTO</p>
-            <span>COMEÇA EM:</span>
+            <p></p>
+            <span></span>
           </div>
 
           <div className={styles.countDown}>
-            <div className={styles.block}>
-              <p>{timeLeft.days} DIAS</p>
-            </div>
-            <span>:</span>
-            <div className={styles.block1}>
-              <p>{timeLeft.hours}H</p>
-            </div>
-            <span>:</span>
-            <div className={styles.block2}>
-              <p>{timeLeft.minutes} MIN</p>
-            </div>
-            <span>:</span>
-            <div className={styles.block3}>
-              <p>{timeLeft.seconds} SEG</p>
-            </div>
+            <>
+              <p></p>
+            </>
+            <span></span>
+            <>
+              <p></p>
+            </>
+            <span></span>
+            <>
+              <p></p>
+            </>
+            <span></span>
+            <>
+              <p> </p>
+            </>
           </div>
         </div>
       </div>

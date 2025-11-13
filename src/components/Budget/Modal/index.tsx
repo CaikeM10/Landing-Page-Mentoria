@@ -2,15 +2,21 @@ import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import router from "next/router";
 
+// 🚨 LINKS DE ACESSO IMEDIATO (SUBSTITUA ESTES VALORES!)
+const YOUTUBE_ACCESS_LINK = "https://youtu.be/QtEv5KXpvHU";
+const WHATSAPP_GROUP_LINK =
+  "https://chat.whatsapp.com/DcpKUyQw8L6FOpVLNcReO6?mode=wwt";
+
 const ModalForm = ({ onClose }: { onClose: () => void }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     budget: "",
-    instagram: "", // Já está no estado, ótimo!
+    instagram: "",
     site: "",
     msg_send: "",
+    profissao: "", // Novo campo
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -21,42 +27,43 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // 1. Desestruturação dos dados brutos
-    const { name, email, phone, budget, instagram, site } = formData;
+    // 1. Desestruturação dos dados brutos (Incluindo profissao)
+    const { name, email, phone, budget, instagram, site, profissao } = formData;
 
     if (!name || !email || !phone) {
       alert("Por favor, preencha todos os campos antes de enviar!");
       return;
     }
 
-    // 💥 CORREÇÃO CRÍTICA: SIMPLIFICAÇÃO DO PAYLOAD
-    // Removemos a lógica de cookies e formatação de telefone, pois o servidor (Next.js API)
-    // lidará com isso, ou os dados brutos são suficientes para o SendGrid.
+    // Criação do PAYLOAD (JSON limpo)
     const payload = {
       name,
       email,
-      phone, // Enviado sem formatação internacional
+      phone,
       instagram: instagram || "N/A",
       site: site || "N/A",
       budget: budget || "N/A",
+      profissao: profissao || "N/A", // 💥 NOVO: Adiciona profissão ao payload
       msg_send: `Olá ${name} preenchi o formulário entre em contato comigo.`,
     };
 
     try {
-      // 💥 MUDANÇA CRÍTICA: Altera a URL de envio para o ENDPOINT DE API SEGURO LOCAL
-      const response = await fetch(
-        "/api/sendEmails", // ⬅️ Este endpoint deve ser o seu arquivo /pages/api/sendEmails.ts
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(payload),
-        }
-      );
+      // Chamada fetch para o endpoint seguro /api/sendEmails
+      const response = await fetch("/api/sendEmails", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
 
       if (response.ok) {
-        router.push("/thankYou");
+        // 💥 IMPLEMENTAÇÃO DA LÓGICA DE REDIRECIONAMENTO DUPLO
+        // 1. Abre o link do WhatsApp em uma nova aba
+        window.open(WHATSAPP_GROUP_LINK, "_blank");
+
+        // 2. Redireciona a aba atual para o YouTube
+        window.location.href = YOUTUBE_ACCESS_LINK;
       } else {
         alert("Erro ao enviar o formulário. Tente novamente.");
       }
@@ -76,10 +83,11 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
 
         <div className={styles.text}>
           <h3>
-            Garanta agora mesmo <span>sua vaga!</span>
+            Libere agora mesmo <span>sua aula!</span>
           </h3>
         </div>
         <form className={styles.form} onSubmit={handleSubmit}>
+          {/* Campos existentes */}
           <input
             type="text"
             name="name"
@@ -109,9 +117,18 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
             onChange={handleInputChange}
           />
 
-          {/* O botão agora usa a classe styles.button para o estilo dourado */}
+          {/* 💥 NOVO CAMPO: PROFISSÃO */}
+          <input
+            type="text"
+            name="profissao"
+            placeholder="Digite Sua Profissão"
+            value={formData.profissao} // ⬅️ CORREÇÃO: Usa o estado 'profissao'
+            onChange={handleInputChange}
+          />
+
+          {/* Botão de Submissão */}
           <button type="submit" className={styles.button}>
-            QUERO GARANTIR AGORA MESMO!
+            ASSISTA AGORA MESMO A AULA!
           </button>
         </form>
       </div>

@@ -2,9 +2,6 @@
 import styles from "./styles.module.scss";
 
 export default function Services() {
-  const celebrationText =
-    "Esse treinamento faz parte da celebração de 1 ano da Mentoria Voares. É um presente que não se repetirá este ano. Durante o evento, você ainda vai receber benefícios especiais por estar presente neste momento de comemoração.";
-
   return (
     <section className={styles.container}>
       <div className={styles.content}>
@@ -17,14 +14,12 @@ export default function Services() {
         {/* TOPO */}
         {/* ================================================= */}
         <div className={styles.top}>
-          <button>Veja Mais Abaixo!</button>
+          <button></button>
           <h2>
-            O que você vai <span>aprender</span>
+            <span></span>
           </h2>
           <p>
-            <span className={styles.balaoDestaque}>
-              Os 5 pilares do Consultório Sustentável!
-            </span>
+            <span className={styles.balaoDestaque}></span>
           </p>
         </div>
 
@@ -36,11 +31,7 @@ export default function Services() {
           <div className={styles.card}>
             <div className={styles.cardTop}>
               <h3>
-                <span className={styles.cardTitleHighlight}>
-                  Posicionamento marcante
-                </span>{" "}
-                – Como construir uma marca memorável para valorizar seu
-                trabalho.
+                <span className={styles.cardTitleHighlight}></span>{" "}
               </h3>
               <img src="/arrow3.svg" alt="arrow" />
             </div>
@@ -50,10 +41,7 @@ export default function Services() {
           <div className={styles.card}>
             <div className={styles.cardTop}>
               <h3>
-                <span className={styles.cardTitleHighlight}>
-                  Oferta inteligente
-                </span>{" "}
-                – Apresentar serviços de forma estratégica e valorizada.
+                <span className={styles.cardTitleHighlight}></span>{" "}
               </h3>
               <img src="/arrow3.svg" alt="arrow" />
             </div>
@@ -63,10 +51,7 @@ export default function Services() {
           <div className={styles.card}>
             <div className={styles.cardTop}>
               <h3>
-                <span className={styles.cardTitleHighlight}>
-                  Agenda próspera
-                </span>{" "}
-                – Estruturar uma rotina semanal organizada e sustentável.
+                <span className={styles.cardTitleHighlight}></span>{" "}
               </h3>
               <img src="/arrow3.svg" alt="arrow" />
             </div>
@@ -76,10 +61,7 @@ export default function Services() {
           <div className={styles.card}>
             <div className={styles.cardTop}>
               <h3>
-                <span className={styles.cardTitleHighlight}>
-                  Precificação e metas
-                </span>{" "}
-                – Calcular preços, projetar faturamento e crescer com clareza.
+                <span className={styles.cardTitleHighlight}></span>{" "}
               </h3>
               <img src="/arrow3.svg" alt="arrow" />
             </div>
@@ -89,61 +71,40 @@ export default function Services() {
           <div className={styles.card}>
             <div className={styles.cardTop}>
               <h3>
-                <span className={styles.cardTitleHighlight}>
-                  Comunicação que converte
-                </span>{" "}
-                – Criar conteúdos que atraem, educam e vendem com ética.
+                <span className={styles.cardTitleHighlight}></span>{" "}
               </h3>
               <img src="/arrow3.svg" alt="arrow" />
             </div>
           </div>
         </div>
 
-        {/* ================================================= */}
-        {/* LINHA DOURADA ABAIXO DOS CARDS */}
-        {/* ================================================= */}
         <div className={styles.sectionLine}></div>
 
-        {/* ================================================= */}
-        {/* BLOCO DE CELEBRAÇÃO */}
-        {/* ================================================= */}
         <div className={styles.celebrationBox}>
-          <p>{celebrationText}</p>
+          <p></p>
         </div>
 
-        {/* ================================================= */}
-        {/* BLOCO DE BENEFÍCIOS E BÔNUS */}
-        {/* ================================================= */}
         <div className={styles.benefitsSection}>
-          <h4 className={styles.listHeader}>Resultados esperados:</h4>
+          <h4 className={styles.listHeader}></h4>
           <div className={styles.resultsContainer}>
             <div className={styles.simpleCard}>
-              <p>
-                Clareza do plano de carreira para o próximo voo de crescimento.
-              </p>
+              <p></p>
             </div>
             <div className={styles.simpleCard}>
-              <p>Primeiros ajustes de agenda e aumento de ticket médio.</p>
+              <p></p>
             </div>
             <div className={styles.simpleCard}>
-              <p>
-                Ritual simples para criar conteúdos consistentes no digital.
-              </p>
+              <p></p>
             </div>
           </div>
 
-          <h4 className={styles.listHeader}>
-            Bônus exclusivos para inscritos:
-          </h4>
+          <h4 className={styles.listHeader}></h4>
           <div className={styles.resultsContainer}>
             <div className={styles.simpleCard}>
-              <p>
-                Oferta especial de aniversário da Mentoria Voares (condições
-                únicas para quem estiver ao vivo).
-              </p>
+              <p></p>
             </div>
             <div className={styles.simpleCard}>
-              <p>Checklist + Desafio 7 dias de Comunicação no Digital.</p>
+              <p></p>
             </div>
           </div>
         </div>
