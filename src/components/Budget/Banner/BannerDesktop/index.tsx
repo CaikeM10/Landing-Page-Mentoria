@@ -59,8 +59,8 @@ const BannerDesktop = () => {
                   <div className={styles.eventDetail}>
                     <IconPlay className={styles.icon} />
                     <span>
-                      Aulão apenas para inscritos / Inscreva-se no botão
-                      abaixo!.
+                      Aula gravada gratuita! Increva-se para ganhar essa aula de
+                      presente agora!
                     </span>
                   </div>
                 </div>

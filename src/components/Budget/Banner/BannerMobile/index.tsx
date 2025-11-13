@@ -57,7 +57,8 @@ const BannerMobile = () => {
               <div className={styles.eventDetail}>
                 <IconPlay className={styles.icon} />
                 <span>
-                  Aulão apenas para inscritos / Inscreva-se no botão abaixo!
+                  Aula gravada gratuita! / Inscreva-se para ganhar essa aula de
+                  presente agora!
                 </span>
               </div>
             </div>

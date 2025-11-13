@@ -2,11 +2,6 @@ import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import router from "next/router";
 
-// 🚨 LINKS DE ACESSO IMEDIATO (SUBSTITUA ESTES VALORES!)
-const YOUTUBE_ACCESS_LINK = "https://youtu.be/QtEv5KXpvHU";
-const WHATSAPP_GROUP_LINK =
-  "https://chat.whatsapp.com/DcpKUyQw8L6FOpVLNcReO6?mode=wwt";
-
 const ModalForm = ({ onClose }: { onClose: () => void }) => {
   const [formData, setFormData] = useState({
     name: "",
@@ -27,7 +22,6 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // 1. Desestruturação dos dados brutos (Incluindo profissao)
     const { name, email, phone, budget, instagram, site, profissao } = formData;
 
     if (!name || !email || !phone) {
@@ -35,7 +29,6 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
       return;
     }
 
-    // Criação do PAYLOAD (JSON limpo)
     const payload = {
       name,
       email,
@@ -43,7 +36,7 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
       instagram: instagram || "N/A",
       site: site || "N/A",
       budget: budget || "N/A",
-      profissao: profissao || "N/A", // 💥 NOVO: Adiciona profissão ao payload
+      profissao: profissao || "N/A",
       msg_send: `Olá ${name} preenchi o formulário entre em contato comigo.`,
     };
 
@@ -58,12 +51,8 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
       });
 
       if (response.ok) {
-        // 💥 IMPLEMENTAÇÃO DA LÓGICA DE REDIRECIONAMENTO DUPLO
-        // 1. Abre o link do WhatsApp em uma nova aba
-        window.open(WHATSAPP_GROUP_LINK, "_blank");
-
-        // 2. Redireciona a aba atual para o YouTube
-        window.location.href = YOUTUBE_ACCESS_LINK;
+        // 💥 CORREÇÃO: Redireciona a aba atual para a página de escolha (thankYou)
+        router.push("/thankYou");
       } else {
         alert("Erro ao enviar o formulário. Tente novamente.");
       }
@@ -87,7 +76,6 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
           </h3>
         </div>
         <form className={styles.form} onSubmit={handleSubmit}>
-          {/* Campos existentes */}
           <input
             type="text"
             name="name"
@@ -116,17 +104,13 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
             value={formData.instagram}
             onChange={handleInputChange}
           />
-
-          {/* 💥 NOVO CAMPO: PROFISSÃO */}
           <input
             type="text"
             name="profissao"
             placeholder="Digite Sua Profissão"
-            value={formData.profissao} // ⬅️ CORREÇÃO: Usa o estado 'profissao'
+            value={formData.profissao}
             onChange={handleInputChange}
           />
-
-          {/* Botão de Submissão */}
           <button type="submit" className={styles.button}>
             ASSISTA AGORA MESMO A AULA!
           </button>

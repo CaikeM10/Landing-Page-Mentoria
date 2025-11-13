@@ -1,45 +1,54 @@
 import { useRouter } from "next/router";
-import styles from "../styles/thankYou.module.scss";
+import styles from "../styles/thankYou.module.scss"; // Assumindo este SCSS
+
+// 🚨 DEFINIÇÃO DOS LINKS (SUBSTITUA ESTES VALORES!)
+const YOUTUBE_ACCESS_LINK = "https://youtu.be/QtEv5KXpvHU";
+const WHATSAPP_GROUP_LINK =
+  "https://chat.whatsapp.com/DcpKUyQw8L6FOpVLNcReO6?mode=ems_copy_t";
 
 export default function ThankYou() {
-  const router = useRouter();
+  // Função para abrir o WhatsApp em nova aba
+  const handleJoinGroup = () => {
+    window.open(WHATSAPP_GROUP_LINK, "_blank");
+  };
+
+  // Função para redirecionar a página atual para o YouTube
+  const handleWatchVideo = () => {
+    window.location.href = YOUTUBE_ACCESS_LINK;
+  };
 
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h1>Obrigada!</h1>
-        <p>
-          Clique no botão e entre no grupo exclusivo para receber novidades e
-          ter acesso ao link da aula no dia 27/10. Te vejo lá!
+        <h1 className={styles.title}>Presença Confirmada!</h1>
+        <p className={styles.subtitle}>
+          Parabéns, sua inscrição foi confirmada. Agora, escolha o próximo
+          passo:
         </p>
-        <button
-          onClick={() =>
-            router.push(
-              "https://chat.whatsapp.com/DcpKUyQw8L6FOpVLNcReO6?mode=ems_copy_t"
-            )
-          }
-        >
-          Entre no grupo exclusivo.
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-            <rect width="256" height="256" fill="none" />
-            <path
-              d="M72,104a32,32,0,0,1,32-32l16,32-12.32,18.47a48.19,48.19,0,0,0,25.85,25.85L152,136l32,16a32,32,0,0,1-32,32A80,80,0,0,1,72,104Z"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"
-            />
-            <path
-              d="M79.93,211.11a96,96,0,1,0-35-35h0L32.42,213.46a8,8,0,0,0,10.12,10.12l37.39-12.47Z"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"
-            />
-          </svg>
-        </button>
+
+        {/* 💥 BLOCO DE BOTÕES DE ESCOLHA */}
+        <div className={styles.buttonGroup}>
+          {/* 1. BOTÃO WHATSAPP (PRIORIDADE: COMUNIDADE) */}
+          <button
+            className={`${styles.ctaButton} ${styles.primaryCta}`}
+            onClick={handleJoinGroup}
+          >
+            1. ENTRAR NO GRUPO VIP (WhatsApp)
+          </button>
+
+          {/* 2. BOTÃO VÍDEO (PRIORIDADE: CONTEÚDO) */}
+          <button
+            className={`${styles.ctaButton} ${styles.secondaryCta}`}
+            onClick={handleWatchVideo}
+          >
+            2. ASSISTIR À AULA EXCLUSIVA
+          </button>
+        </div>
+
+        <p className={styles.note}>
+          Assista agora mesmo à aula exclusiva no YouTube e junte-se ao nosso
+          grupo!
+        </p>
       </div>
     </div>
   );

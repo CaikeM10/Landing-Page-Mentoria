@@ -56,9 +56,10 @@ $background-marrom: #725542;
   z-index: 2;
 }
 
+//RESPONSIVIDADE MOBILE
 .titleBanner {
   padding-top: 0;
-  padding-inline: 20px;
+  padding-inline: 04px;
   position: relative;
   text-align: left;
   z-index: 2;
@@ -119,7 +120,7 @@ $background-marrom: #725542;
 
   .titleBox {
     background-color: #67bccb; // COR DO CARALHO DA BOX AZUL - CONSULTORIO SUSTENTAVEL
-    padding: 16px 20px;
+    padding: 11px 10px;
     border-radius: 10px;
     display: inline-block;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
