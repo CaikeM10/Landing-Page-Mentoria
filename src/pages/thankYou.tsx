@@ -3,8 +3,7 @@ import styles from "../styles/thankYou.module.scss"; // Assumindo este SCSS
 
 // 🚨 DEFINIÇÃO DOS LINKS (SUBSTITUA ESTES VALORES!)
 const YOUTUBE_ACCESS_LINK = "https://youtu.be/QtEv5KXpvHU";
-const WHATSAPP_GROUP_LINK =
-  "https://chat.whatsapp.com/DcpKUyQw8L6FOpVLNcReO6?mode=ems_copy_t";
+const WHATSAPP_GROUP_LINK = "https://chat.whatsapp.com/FyXUnWPrZ5g3nif7Wx7DL1";
 
 export default function ThankYou() {
   // Função para abrir o WhatsApp em nova aba
