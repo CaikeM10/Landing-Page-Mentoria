@@ -4,10 +4,13 @@ import styles from "./styles.module.scss";
 
 // 💥 DEFINIÇÃO DOS COMPONENTES DE ÍCONE (PLACEHOLDERS)
 // Estes são placeholders simples. Use seus componentes/SVGs reais se existirem.
-const IconCalendar = ({ className }: { className: string }) => (
-  <i className={className}></i>
-);
 const IconPlay = ({ className }: { className: string }) => (
+  <i className={className}>▶️</i>
+);
+const IconPlay1 = ({ className }: { className: string }) => (
+  <i className={className}>📅</i>
+);
+const IconCalendar = ({ className }: { className: string }) => (
   <i className={className}>▶️</i>
 );
 
@@ -47,19 +50,32 @@ const BannerMobile = () => {
               serviços no digital.
             </p>
 
-            {/* 💥 NOVO BLOCO DE INFORMAÇÕES DO EVENTO */}
+            {/* 💥 BLOCO DE INFORMAÇÕES DO EVENTO (Atualizado) */}
             <div className={styles.eventInfo}>
+              {/* 🚀 NOVA SEÇÃO 1: Data do Evento (Placeholder) */}
               <div className={styles.eventDetail}>
                 <IconCalendar className={styles.icon} />
-                <span></span>
+                <span>
+                  {" "}
+                  Aula 01 - gravada gratuita! Inscreva-se para ganhar essa aula
+                  de presente agora!
+                </span>
               </div>
 
+              {/* SEÇÃO ORIGINAL: Aula Gravada */}
               <div className={styles.eventDetail}>
                 <IconPlay className={styles.icon} />
                 <span>
-                  Aula gravada gratuita! / Inscreva-se para ganhar essa aula de
-                  presente agora!
+                  Aula 02 - sobre diversificação de serviços no consultório
+                  sustentável.
                 </span>
+              </div>
+
+              {/* 🚀 NOVA SEÇÃO 2: Instrução de CTA */}
+              <div className={styles.eventDetail}>
+                <IconPlay1 className={styles.icon} />{" "}
+                {/* Mantenho o IconPlay como placeholder, você pode trocar. */}
+                <span>Data: 01 de dezembro às 20horas.</span>
               </div>
             </div>
           </div>

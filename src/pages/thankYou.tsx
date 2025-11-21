@@ -1,8 +1,5 @@
-import { useRouter } from "next/router";
 import styles from "../styles/thankYou.module.scss"; // Assumindo este SCSS
 
-// 🚨 DEFINIÇÃO DOS LINKS (SUBSTITUA ESTES VALORES!)
-const YOUTUBE_ACCESS_LINK = "https://youtu.be/QtEv5KXpvHU";
 const WHATSAPP_GROUP_LINK = "https://chat.whatsapp.com/FyXUnWPrZ5g3nif7Wx7DL1";
 
 export default function ThankYou() {
@@ -11,43 +8,26 @@ export default function ThankYou() {
     window.open(WHATSAPP_GROUP_LINK, "_blank");
   };
 
-  // Função para redirecionar a página atual para o YouTube
-  const handleWatchVideo = () => {
-    window.location.href = YOUTUBE_ACCESS_LINK;
-  };
-
   return (
     <div className={styles.container}>
       <div className={styles.content}>
         <h1 className={styles.title}>Presença Confirmada!</h1>
         <p className={styles.subtitle}>
-          Parabéns, sua inscrição foi confirmada. Agora, escolha o próximo
-          passo:
+          Parabéns, sua inscrição foi confirmada. Para ter acesso a aula 02,
+          junte-se ao nosso grupo VIP no WhatsApp:
         </p>
 
-        {/* 💥 BLOCO DE BOTÕES DE ESCOLHA */}
+        {/* BLOCO DE BOTÃO DO WHATSAPP */}
         <div className={styles.buttonGroup}>
-          {/* 1. BOTÃO WHATSAPP (PRIORIDADE: COMUNIDADE) */}
           <button
             className={`${styles.ctaButton} ${styles.primaryCta}`}
             onClick={handleJoinGroup}
           >
-            1. ENTRAR NO GRUPO VIP (WhatsApp)
-          </button>
-
-          {/* 2. BOTÃO VÍDEO (PRIORIDADE: CONTEÚDO) */}
-          <button
-            className={`${styles.ctaButton} ${styles.secondaryCta}`}
-            onClick={handleWatchVideo}
-          >
-            2. ASSISTIR À AULA EXCLUSIVA
+            ENTRAR NO GRUPO VIP (WhatsApp)
           </button>
         </div>
 
-        <p className={styles.note}>
-          Assista agora mesmo à aula exclusiva no YouTube e junte-se ao nosso
-          grupo!
-        </p>
+        <p className={styles.note}>Te esperamos no grupo!</p>
       </div>
     </div>
   );

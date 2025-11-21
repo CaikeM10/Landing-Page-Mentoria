@@ -23,9 +23,10 @@ const HeaderFixed = () => {
 
   // Efeito para a contagem regressiva
   useEffect(() => {
-    // ⭐️ AJUSTE CRÍTICO: DATA ALVO MUDADA PARA 27 DE OUTUBRO DE 2025 (20h)
+    // ⭐️ AJUSTE CRÍTICO: DATA ALVO MUDADA PARA 01 DE DEZEMBRO DE 2025 (20h)
     // new Date(ano, mês_zero_base, dia, hora, minuto, segundo)
-    const targetDate = new Date(2025, 9, 27, 20, 0, 0);
+    // Dezembro é o mês 11
+    const targetDate = new Date(2025, 11, 1, 20, 0, 0);
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -57,30 +58,32 @@ const HeaderFixed = () => {
       className={`${styles.container} ${scrolled ? styles.scrolled : ""}`}
     >
       <div className={styles.content}>
-        {/* BLOCO ANINHADO: Usa justify-content: space-between no CSS */}
         <div className={styles.centerGroup}>
-          {/* 💥 AJUSTE CRÍTICO: Textos em <p> e <span> separados para forçar a quebra no CSS */}
+          {/* Textos para a quebra de linha */}
           <div className={styles.title}>
-            <p></p>
-            <span></span>
+            <p>O EVENTO</p>
+            <span>COMEÇA EM:</span>
           </div>
 
           <div className={styles.countDown}>
-            <>
-              <p></p>
-            </>
-            <span></span>
-            <>
-              <p></p>
-            </>
-            <span></span>
-            <>
-              <p></p>
-            </>
-            <span></span>
-            <>
-              <p> </p>
-            </>
+            <div className={styles.block}>
+              <p>{timeLeft.days} DIAS</p>
+            </div>
+            <span>:</span>
+
+            <div className={styles.block1}>
+              <p>{timeLeft.hours}H</p>
+            </div>
+            <span>:</span>
+
+            <div className={styles.block2}>
+              <p>{timeLeft.minutes} MIN</p>
+            </div>
+            <span>:</span>
+
+            <div className={styles.block3}>
+              <p>{timeLeft.seconds} SEG</p>
+            </div>
           </div>
         </div>
       </div>

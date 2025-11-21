@@ -4,10 +4,13 @@ import styles from "./styles.module.scss";
 
 // Placeholder para os Ícones (Necessário para o código compilar)
 const IconCalendar = ({ className }: { className: string }) => (
-  <i className={className}></i>
+  <i className={className}>▶️</i>
 );
 const IconPlay = ({ className }: { className: string }) => (
   <i className={className}>▶️</i>
+);
+const IconPlay2 = ({ className }: { className: string }) => (
+  <i className={className}>📅</i>
 );
 
 const BannerDesktop = () => {
@@ -42,26 +45,38 @@ const BannerDesktop = () => {
                   sobrecarga não é sustentável.
                 </h1>
 
-                {/* ... (O restante do conteúdo) ... */}
+                {/* ... (Restante do conteúdo) ... */}
 
                 <p className={styles.description}>
                   Profissional da saúde, transforme sua agenda cheia em um
                   modelo de negócio mais leve e lucrativo, diversificando seus
-                  serviços no digital.
+                  serviços no digital.
                 </p>
 
                 {/* BLOCO DE INFORMAÇÕES DO EVENTO */}
                 <div className={styles.eventInfo}>
                   <div className={styles.eventDetail}>
                     <IconCalendar className={styles.icon} />
-                    <span></span>
+                    <span>
+                      {" "}
+                      Aula 01 - gravada gratuita! Increva-se para ganhar essa
+                      aula de presente agora!
+                    </span>{" "}
+                    {/* ⬅️ Adicionei a data aqui */}
                   </div>
                   <div className={styles.eventDetail}>
                     <IconPlay className={styles.icon} />
                     <span>
-                      Aula gravada gratuita! Increva-se para ganhar essa aula de
-                      presente agora!
+                      Aula 02 - sobre diversificação de serviços no consultório
+                      sustentável.
                     </span>
+                  </div>
+
+                  {/* 🚀 NOVO BLOCO SOLICITADO */}
+                  <div className={styles.eventDetail}>
+                    <IconPlay2 className={styles.icon} />{" "}
+                    {/* Placeholder de ícone, se desejar */}
+                    <span>Data: 01 de dezembro às 20horas.</span>
                   </div>
                 </div>
 
