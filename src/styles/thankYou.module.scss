@@ -1,12 +1,8 @@
-/* 💥 NOVA FONTE: Playfair Display (Estilo Serifado) */
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
-
 .container {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Mantendo o background, mas a cor do texto será Playfair Display */
   background: url("/Captura\ de\ tela\ 2025-10-03\ 191935.png") no-repeat center
     center;
   background-size: 300%;
@@ -19,7 +15,6 @@
 
     h1 {
       font-size: 3rem;
-      /* 💥 APLICANDO PLAYFAIR DISPLAY */
       font-family: "Playfair Display", Georgia, serif;
       color: #fff;
       margin-bottom: 1rem;
@@ -28,10 +23,13 @@
 
     p {
       font-size: 1.25rem;
-      /* 💥 APLICANDO PLAYFAIR DISPLAY */
       font-family: "Playfair Display", Georgia, serif;
       color: #fff;
       margin-bottom: 1rem;
+      border: 2px solid #ff0000;
+      padding: 15px;
+      border-radius: 5px;
+      background: rgba(255, 0, 0, 0.1);
     }
 
     button {
@@ -39,7 +37,6 @@
       justify-content: center;
       color: #fff;
       text-align: center;
-      /* 💥 APLICANDO PLAYFAIR DISPLAY (Mantendo PowerGrotesk como fallback visual, mas Playfair domina) */
       font-family: "Playfair Display", "PowerGrotesk", sans-serif;
       font-size: 16px;
       font-style: normal;
@@ -53,9 +50,7 @@
       background: linear-gradient(
         91deg,
         #006400 -20%,
-        // Verde escuro
         #00ff7f 50%,
-        // Verde claro
         #006400 120%
       );
       background-size: 300% 300%;
@@ -77,12 +72,11 @@
 
       &:hover {
         box-shadow: 0 0 50px #006400;
-        background-color: #32cd32; // Verde limão
+        background-color: #32cd32;
       }
 
       p {
         color: #fff;
-        /* 💥 APLICANDO PLAYFAIR DISPLAY */
         font-family: "Playfair Display", Georgia, serif;
         font-size: 28px;
         font-style: normal;
@@ -104,23 +98,5 @@
   svg {
     width: 25px;
     height: 25px;
-  }
-}
-
-@keyframes gradientCircle {
-  0% {
-    background-position: 0% 0%;
-  }
-  25% {
-    background-position: 100% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  75% {
-    background-position: 0% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
   }
 }
