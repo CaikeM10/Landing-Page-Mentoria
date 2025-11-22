@@ -21,7 +21,7 @@ const Footer = () => {
           </h5>
           <p></p>
           <button className={styles.button} onClick={handleModalOpen}>
-            ASSISTA A AULA AGORA MESMO!
+            CLIQUE AQUI PARA GANHAR ESSE ACESSO!
           </button>
           <hr />
           <div className={styles.rights}>

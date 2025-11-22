@@ -53,7 +53,7 @@ export default function Who() {
             </p>
 
             <button onClick={handleModalOpen}>
-              ASSISTA A AULA AGORA MESMO!
+              CLIQUE AQUI PARA GANHAR ESSE ACESSO!
             </button>
           </div>
         </div>

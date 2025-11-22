@@ -112,7 +112,7 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
             onChange={handleInputChange}
           />
           <button type="submit" className={styles.button}>
-            ASSISTA AGORA MESMO A AULA!
+            CLIQUE AQUI PARA GANHAR ESSE ACESSO!
           </button>
         </form>
       </div>

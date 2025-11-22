@@ -75,7 +75,12 @@ const BannerMobile = () => {
               <div className={styles.eventDetail}>
                 <IconPlay1 className={styles.icon} />{" "}
                 {/* Mantenho o IconPlay como placeholder, você pode trocar. */}
-                <span>Data: 01 de dezembro às 20horas.</span>
+                <span>
+                  {" "}
+                  Data: 01 de dezembro às 20horas teremos a aula 02 do
+                  consultório sustentável, como implementar as diversificações
+                  de serviços na sua prática clinicar.
+                </span>
               </div>
             </div>
           </div>
@@ -84,7 +89,7 @@ const BannerMobile = () => {
 
       {/* Botão de Call to Action principal */}
       <button className={styles.button} onClick={handleModalOpen}>
-        QUERO ASSISTIR A AULA AGORA MESMO!
+        CLIQUE AQUI PARA GANHAR ESSE ACESSO!
       </button>
 
       {/* Modal é renderizado condicionalmente */}

@@ -76,12 +76,16 @@ const BannerDesktop = () => {
                   <div className={styles.eventDetail}>
                     <IconPlay2 className={styles.icon} />{" "}
                     {/* Placeholder de ícone, se desejar */}
-                    <span>Data: 01 de dezembro às 20horas.</span>
+                    <span>
+                      Data: 01 de dezembro às 20horas teremos a aula 02 do
+                      consultório sustentável, como implementar as
+                      diversificações de serviços na sua prática clinicar.
+                    </span>
                   </div>
                 </div>
 
                 <button className={styles.button} onClick={handleModalOpen}>
-                  ASSISTA A AULA AGORA MESMO!
+                  CLIQUE AQUI PARA GANHAR ESSE ACESSO!
                 </button>
               </div>
             </div>
