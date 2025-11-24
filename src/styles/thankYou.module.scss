@@ -1,24 +1,30 @@
 .container {
   height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   background: url("/Captura\ de\ tela\ 2025-10-03\ 191935.png") no-repeat center
     center;
-  background-size: 300%;
+  background-size: cover;
+  padding-bottom: 5vh;
+  position: relative;
 
   .content {
     z-index: 1001;
     color: #fff;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     padding-left: 20px;
+    max-width: 400px;
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
 
     h1 {
-      font-size: 3rem;
+      font-size: 2rem;
       font-family: "Playfair Display", Georgia, serif;
       color: #fff;
       margin-bottom: 1rem;
-      font-weight: 700;
+      font-weight: 600;
     }
 
     p {

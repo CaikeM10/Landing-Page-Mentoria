@@ -57,7 +57,7 @@ const BannerMobile = () => {
                 <IconCalendar className={styles.icon} />
                 <span>
                   {" "}
-                  Aula 01 - gravada gratuita! Inscreva-se para ganhar essa aula
+                  Aula 01 - Gravada gratuita! Inscreva-se para ganhar essa aula
                   de presente agora!
                 </span>
               </div>
@@ -66,8 +66,8 @@ const BannerMobile = () => {
               <div className={styles.eventDetail}>
                 <IconPlay className={styles.icon} />
                 <span>
-                  Aula 02 - sobre diversificação de serviços no consultório
-                  sustentável.
+                  Aula 02 - Como implementar a diversificação de serviços no
+                  Consultório Sustentável.
                 </span>
               </div>
 
@@ -77,9 +77,8 @@ const BannerMobile = () => {
                 {/* Mantenho o IconPlay como placeholder, você pode trocar. */}
                 <span>
                   {" "}
-                  Data: 01 de dezembro às 20horas teremos a aula 02 do
-                  consultório sustentável, como implementar as diversificações
-                  de serviços na sua prática clinicar.
+                  Data: Dia 01 de dezembro às 20:00h, ao vivo, online e
+                  gratuito, apenas para inscritos.
                 </span>
               </div>
             </div>
