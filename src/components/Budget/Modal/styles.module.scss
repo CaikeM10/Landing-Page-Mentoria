@@ -60,17 +60,17 @@ $white: #ffffff;
 
 .text {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   text-align: center; // Centralizado fica melhor sem o formulário
-  margin-top: 40px;
+  margin-top: 198px;
 
   h3 {
     color: #fff;
     font-family: "PowerGrotesk", sans-serif;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 17px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 
     span {
@@ -82,7 +82,7 @@ $white: #ffffff;
   .description {
     color: #f0f0f0;
     font-family: "PowerGrotesk", sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.4;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
   }

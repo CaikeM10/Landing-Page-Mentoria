@@ -37,10 +37,10 @@ const BannerMobile = () => {
                   Consultório Sustentável:
                 </span>
                 <span className={styles.nowrap}>
-                  10 Modelos de diversificação de
+                  10 Modelos de diversificação
                 </span>
                 <br />
-                serviços para profissionais da saúde.
+                de serviços para profissionais da saúde.
               </h1>
             </div>
 
@@ -56,20 +56,22 @@ const BannerMobile = () => {
                 <IconCalendar className={styles.icon} />
                 <span>
                   {" "}
-                  Treinamento Online para fortalecer seu posicionamento e
-                  organizar seu modelo de negócio para ser um consultório
-                  sustentável, com diversificação de serviços.
+                  Primeira etapa: Treinamento Online e Gravado para fortalecer
+                  seu posicionamento e organizar seu modelo de negócio para ser
+                  um consultório sustentável, com diversificação de serviços.
                 </span>
               </div>
+              <br></br>
 
               {/* SEÇÃO ORIGINAL: Aula Gravada */}
               <div className={styles.eventDetail}>
                 <IconPlay className={styles.icon} />
                 <span>
-                  Treinamento Online e ao vivo para organizar os próximos passos
-                  de crescimento em 2026
+                  Segunda etapa: Treinamento Online e ao vivo para organizar os
+                  próximos passos de crescimento em 2026
                 </span>
               </div>
+              <br></br>
 
               {/* 🚀 NOVA SEÇÃO 2: Instrução de CTA */}
               <div className={styles.eventDetail}>
@@ -77,7 +79,7 @@ const BannerMobile = () => {
                 {/* Mantenho o IconPlay como placeholder, você pode trocar. */}
                 <span>
                   {" "}
-                  Data da aula ao vivo será 17/01/ 26 <br></br>Horário das
+                  Data da aula ao vivo será 24/01/ 26 <br></br>Horário das
                   09:00h às 12:00h
                 </span>
               </div>
@@ -88,7 +90,7 @@ const BannerMobile = () => {
 
       {/* Botão de Call to Action principal */}
       <button className={styles.button} onClick={handleModalOpen}>
-        CLIQUE AQUI PARA GARANTIR O SEU ACESSO EXCLUSIVO!
+        CLIQUE AQUI PARA GANHAR ESSE ACESSO!
       </button>
 
       {/* Modal é renderizado condicionalmente */}

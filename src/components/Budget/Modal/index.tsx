@@ -28,11 +28,12 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
 
         <div className={styles.text}>
           <h3>
-            Presença <span>Confirmada!</span>
+            Clique no <br></br>
+            <span>botão abaixo !</span>
           </h3>
           <p className={styles.description}>
-            Clique abaixo para acessar a oferta exclusiva e garantir sua vaga
-            agora mesmo.
+            Acesse a oferta exclusiva e inicie agora mesmo o Treinamento
+            Consultório Sustentável.
           </p>
         </div>
 
@@ -42,7 +43,7 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
             className={styles.button}
             onClick={handleAction}
           >
-            QUERO ACESSAR A OFERTA AGORA!
+            QUERO ACESSAR A OFERTA ESPECIAL AGORA!
           </button>
         </div>
       </div>

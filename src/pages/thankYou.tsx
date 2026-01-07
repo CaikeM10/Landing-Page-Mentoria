@@ -11,11 +11,14 @@ export default function ThankYou() {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h1 className={styles.title}>Presença Confirmada!</h1>
+        <h1 className={styles.title}>Parabéns pela sua decisão!</h1>
         <p className={styles.subtitle}>
-          Parabéns! Sua inscrição para participar da aula 02 está confirmada.
-          Agora para receber a gravação da aula 01 gratuitamente, entre no nosso
-          grupo vip do consultório sustentável.
+          Obrigada por escolher viver a experiência do Treinamento Consultório
+          Sustentável.
+          <br></br>
+          👉 Clique agora e entre no grupo vip do TCS. Falta pouco para concluir
+          o acesso e viver essa experiência de forma completa. É por lá que você
+          receberá o acesso à Parte 2 do nosso treinamento prático. Te vejo lá!
         </p>
 
         {/* BLOCO DE BOTÃO DO WHATSAPP */}
@@ -24,7 +27,7 @@ export default function ThankYou() {
             className={`${styles.ctaButton} ${styles.primaryCta}`}
             onClick={handleJoinGroup}
           >
-            Quero entrar no grupo vip CS
+            Quero entrar no grupo vip TCS
           </button>
         </div>
 

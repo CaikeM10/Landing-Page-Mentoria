@@ -22,7 +22,7 @@ const Footer = () => {
           </h5>
           <p></p>
           <button className={styles.button} onClick={handleModalOpen}>
-            QUERO ACESSAR A OFERTA AGORA!
+            QUERO ACESSAR A OFERTA ESPECIAL AGORA!
           </button>
           <hr />
           <div className={styles.rights}>

@@ -59,17 +59,18 @@ const BannerDesktop = () => {
                     <IconCalendar className={styles.icon} />
                     <span>
                       {" "}
-                      Treinamento Online para fortalecer seu posicionamento e
-                      organizar seu modelo de negócio para ser um consultório
-                      sustentável, com diversificação de serviços
+                      Primeira etapa: Treinamento Online e Gravado para
+                      fortalecer seu posicionamento e organizar seu modelo de
+                      negócio para ser um consultório sustentável, com
+                      diversificação de serviços
                     </span>{" "}
                     {/* ⬅️ Adicionei a data aqui */}
                   </div>
                   <div className={styles.eventDetail}>
                     <IconPlay className={styles.icon} />
                     <span>
-                      Treinamento Online e ao vivo para organizar os próximos
-                      passos de crescimento em 2026
+                      Segunda etapa: Treinamento Online e ao vivo para organizar
+                      os próximos passos de crescimento em 2026
                     </span>
                   </div>
 
@@ -78,7 +79,7 @@ const BannerDesktop = () => {
                     <IconPlay2 className={styles.icon} />{" "}
                     {/* Placeholder de ícone, se desejar */}
                     <span>
-                      Data da aula ao vivo será 17/01/ 26 <br></br>Horário das
+                      Data da aula ao vivo será 24/01/ 26 <br></br>Horário das
                       09:00h às 12:00h
                     </span>
                   </div>
