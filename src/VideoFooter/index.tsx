@@ -21,9 +21,9 @@ const VideoFooter = () => {
         <iframe
           width="100%"
           height="100%"
-          // 🚀 O segredo está no /embed/ antes do ID
-          src="https://www.youtube.com/embed/29iqZatChMk"
-          title="Vídeo de Apresentação"
+          /* 🚀 LINK ATUALIZADO COM O NOVO ID: 5vbk0BEOZxk */
+          src="https://www.youtube.com/embed/5vbk0BEOZxk"
+          title="Vídeo de Apresentação Voares"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
@@ -36,7 +36,7 @@ const VideoFooter = () => {
           className={styles.ctaButton}
           onClick={handleRedirect}
         >
-          CLIQUE AQUI PARA GARANTIR O SEU ACESSO EXCLUSIVO!
+          CLIQUE AQUI PARA GANHAR ESSE ACESSO!
         </button>
       </div>
     </section>
