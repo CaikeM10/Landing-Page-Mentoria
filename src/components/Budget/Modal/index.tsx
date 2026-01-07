@@ -1,65 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./styles.module.scss";
-import router from "next/router";
 
 const ModalForm = ({ onClose }: { onClose: () => void }) => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    budget: "",
-    instagram: "",
-    site: "",
-    msg_send: "",
-    profissao: "", // Novo campo
-  });
+  // 🔗 LINKS DAS PÁGINAS
+  const SALES_PAGE_LINK = "https://pay.hub.la/52qai6fJYxYKj0s17HZd";
+  //const THANK_YOU_PAGE_LINK = "/thankYou";
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+  const handleAction = () => {
+    // 1. Primeiro, tentamos abrir o Thank You em uma nova aba (ficará em segundo plano)
+    //window.open(THANK_YOU_PAGE_LINK, "_blank");
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    // 2. IMEDIATAMENTE redirecionamos a aba principal para a Venda
+    // Isso garante que a página que o usuário está olhando mude para a oferta
+    window.location.href = SALES_PAGE_LINK;
 
-    const { name, email, phone, budget, instagram, site, profissao } = formData;
-
-    if (!name || !email || !phone) {
-      alert("Por favor, preencha todos os campos antes de enviar!");
-      return;
-    }
-
-    const payload = {
-      name,
-      email,
-      phone,
-      instagram: instagram || "N/A",
-      site: site || "N/A",
-      budget: budget || "N/A",
-      profissao: profissao || "N/A",
-      msg_send: `Olá ${name} preenchi o formulário entre em contato comigo.`,
-    };
-
-    try {
-      // Chamada fetch para o endpoint seguro /api/sendEmails
-      const response = await fetch("/api/sendEmails", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
-
-      if (response.ok) {
-        // 💥 CORREÇÃO: Redireciona a aba atual para a página de escolha (thankYou)
-        router.push("/thankYou");
-      } else {
-        alert("Erro ao enviar o formulário. Tente novamente.");
-      }
-    } catch (error) {
-      console.error("Erro ao enviar o formulário:", error);
-      alert("Erro ao enviar o formulário. Tente novamente.");
-    }
+    onClose();
   };
 
   return (
@@ -68,53 +23,28 @@ const ModalForm = ({ onClose }: { onClose: () => void }) => {
         <div className={styles.close}>
           <img src="/XSquare.svg" alt="x" onClick={onClose} />
         </div>
+
         <div className={styles.backgroundImage}></div>
 
         <div className={styles.text}>
           <h3>
-            Libere agora mesmo <span>sua aula!</span>
+            Presença <span>Confirmada!</span>
           </h3>
+          <p className={styles.description}>
+            Clique abaixo para acessar a oferta exclusiva e garantir sua vaga
+            agora mesmo.
+          </p>
         </div>
-        <form className={styles.form} onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Nome completo"
-            value={formData.name}
-            onChange={handleInputChange}
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
-            onChange={handleInputChange}
-          />
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Telefone"
-            value={formData.phone}
-            onChange={handleInputChange}
-          />
-          <input
-            type="text"
-            name="instagram"
-            placeholder="Instagram (@seuusuario)"
-            value={formData.instagram}
-            onChange={handleInputChange}
-          />
-          <input
-            type="text"
-            name="profissao"
-            placeholder="Digite Sua Profissão"
-            value={formData.profissao}
-            onChange={handleInputChange}
-          />
-          <button type="submit" className={styles.button}>
-            CLIQUE AQUI PARA FINALIZAR SUA INSCRIÇÃO!
+
+        <div className={styles.form}>
+          <button
+            type="button"
+            className={styles.button}
+            onClick={handleAction}
+          >
+            QUERO ACESSAR A OFERTA AGORA!
           </button>
-        </form>
+        </div>
       </div>
     </div>
   );

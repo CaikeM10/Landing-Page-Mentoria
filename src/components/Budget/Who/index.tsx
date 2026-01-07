@@ -21,7 +21,6 @@ export default function Who() {
             <img src="/Captura de tela 2025-10-03 191813.png" alt="one" />
           </div>
           <div className={styles.text}>
-            <h1>SOBRE:</h1>
             <h2>
               Quem é <span>ÍRIA SABÓIA?</span>
             </h2>
@@ -53,7 +52,7 @@ export default function Who() {
             </p>
 
             <button onClick={handleModalOpen}>
-              CLIQUE AQUI PARA GANHAR ESSE ACESSO!
+              CLIQUE AQUI PARA GARANTIR O SEU ACESSO EXCLUSIVO!
             </button>
           </div>
         </div>

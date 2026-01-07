@@ -41,16 +41,16 @@ const BannerDesktop = () => {
                   <span className={styles.destaque}>
                     Consultório Sustentável,
                   </span>{" "}
-                  novo modelo de negócio para viver de clinicar, porque a
-                  sobrecarga não é sustentável.
+                  <br></br>
+                  10 Modelos de diversificação de serviços para profissionais da
+                  saúde.
                 </h1>
 
                 {/* ... (Restante do conteúdo) ... */}
 
                 <p className={styles.description}>
-                  Profissional da saúde, transforme sua agenda cheia em um
-                  modelo de negócio mais leve e lucrativo, diversificando seus
-                  serviços no digital.
+                  Você já vive de clinicar e quer seguir crescendo com
+                  organização e tempo de qualidade na agenda.
                 </p>
 
                 {/* BLOCO DE INFORMAÇÕES DO EVENTO */}
@@ -59,16 +59,17 @@ const BannerDesktop = () => {
                     <IconCalendar className={styles.icon} />
                     <span>
                       {" "}
-                      Aula 01 - Gravada gratuita! Increva-se para ganhar essa
-                      aula de presente agora!
+                      Treinamento Online para fortalecer seu posicionamento e
+                      organizar seu modelo de negócio para ser um consultório
+                      sustentável, com diversificação de serviços
                     </span>{" "}
                     {/* ⬅️ Adicionei a data aqui */}
                   </div>
                   <div className={styles.eventDetail}>
                     <IconPlay className={styles.icon} />
                     <span>
-                      Aula 02 - Como implementar a diversificação de serviços no
-                      Consultório Sustentável.
+                      Treinamento Online e ao vivo para organizar os próximos
+                      passos de crescimento em 2026
                     </span>
                   </div>
 
@@ -77,21 +78,21 @@ const BannerDesktop = () => {
                     <IconPlay2 className={styles.icon} />{" "}
                     {/* Placeholder de ícone, se desejar */}
                     <span>
-                      Data: Dia 01 de dezembro às 20:00h, ao vivo, online e
-                      gratuito, apenas para inscritos.
+                      Data da aula ao vivo será 17/01/ 26 <br></br>Horário das
+                      09:00h às 12:00h
                     </span>
                   </div>
                 </div>
 
                 <button className={styles.button} onClick={handleModalOpen}>
-                  CLIQUE AQUI PARA GANHAR ESSE ACESSO!
+                  CLIQUE AQUI PARA GARANTIR O SEU ACESSO EXCLUSIVO!
                 </button>
               </div>
             </div>
           </div>
           <div className={styles.rightSide}>
             {/* caminho da imagem */}
-            <img src="/imgBannersemfundo.png" alt="Íria Sabóia" />
+            <img src="/Iria_DesktopMarrom.png" alt="Íria Sabóia" />
           </div>
         </div>
       </section>

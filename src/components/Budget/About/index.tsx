@@ -28,21 +28,19 @@ const About = () => {
             <div className={styles.card}>
               <div className={styles.emoji}>⏰</div>
               <h5>
-                Vive sobrecarregada e sem tempo de qualidade para si ou para a
-                família.Nessa aula meu treinamento online, inédito e gratuito é
-                para profissionais da saúde que desejam construir um Consultório
-                Sustentável.
+                Um treinamento prático que une conteúdo gravado + aula ao vivo,
+                para quem já tem um consultório ativo e precisa organizar os
+                próximos passos de crescimento com qualidade.
               </h5>
             </div>
             <div className={styles.card}>
               <div className={styles.emoji}>🤯</div>
               <h5>
-                Trabalha demais, mas não vê o consultório crescer de forma
-                sustentável porque está sobrecarregada. Nessa aula eu Vou
-                compartilhar os erros e acertos dos meus 11 anos de clínica e
-                como venho estruturando um modelo de negócio sustentável para
-                clinicar e crescer com qualidade, sem sobrecarga de
-                atendimentos.
+                Esse treinamento é para você que quer desenvolver seu plano de
+                diversificação de serviços, crescer com organização, tempo de
+                qualidade e fazer escolhas alinhadas ao seu posicionamento e
+                valores para desenvolver uma estratégica de crescimento
+                sustentável.
               </h5>
             </div>
           </div>

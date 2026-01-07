@@ -19,17 +19,55 @@
 
 .whatsappButton {
   position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 1000;
+  z-index: 9999; // Aumentado para garantir que fique sobre o conteúdo
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; // Alinha o balão com o ícone à direita
+  text-decoration: none;
 
-  padding: 10px;
+  // 🚀 ALTERAÇÃO: Posicionado no canto inferior direito para não cobrir o topo
+  bottom: 20px;
+  right: 20px;
+  padding: 11px;
   transition: transform 0.3s ease;
 
+  .tooltip {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 8px 16px; // Ajustado para melhor leitura
+    border-radius: 28px;
+    font-family: "Galderglynn Titling Rg", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+
+    // 🚀 Ajustes para evitar que o balão suma da tela em celulares pequenos
+    white-space: normal;
+    max-width: 220px;
+    text-align: center;
+
+    position: relative;
+    border: 1px solid #25d366;
+    animation: float 3s ease-in-out infinite;
+    text-transform: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      right: 15px; // Posicionado à direita acompanhando o ícone
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid #ffffff;
+    }
+  }
+
   img {
-    width: 40px;
-    height: 40px;
+    width: 50px; // Um pouco maior para facilitar o clique no mobile
+    height: 50px;
     animation: shakeRotate 5s infinite;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3));
   }
 
   &:hover {
@@ -38,13 +76,28 @@
 
   @media only screen and (min-width: 768px) {
     bottom: 30px;
-    right: 60px;
-    top: auto;
-    left: auto;
-    img {
-      width: 60px;
-      height: 60px;
+    right: 40px; // Levemente mais afastado no desktop
+
+    .tooltip {
+      font-size: 14px;
+      max-width: none;
+      white-space: nowrap; // No desktop pode ser em linha única
     }
+
+    img {
+      width: 65px;
+      height: 65px;
+    }
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
   }
 }
 

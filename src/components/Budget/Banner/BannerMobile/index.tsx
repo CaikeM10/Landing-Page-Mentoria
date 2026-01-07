@@ -37,17 +37,16 @@ const BannerMobile = () => {
                   Consultório Sustentável:
                 </span>
                 <span className={styles.nowrap}>
-                  Seu novo modelo de negócio
+                  10 Modelos de diversificação de
                 </span>
                 <br />
-                para viver de clinicar.
+                serviços para profissionais da saúde.
               </h1>
             </div>
 
             <p>
-              Profissional da saúde, transforme sua agenda cheia em um modelo de
-              negócio mais leve e lucrativo, diversificando seus
-              serviços no digital.
+              Você já vive de clinicar e quer seguir crescendo com organização e
+              tempo de qualidade na agenda.
             </p>
 
             {/* 💥 BLOCO DE INFORMAÇÕES DO EVENTO (Atualizado) */}
@@ -57,8 +56,9 @@ const BannerMobile = () => {
                 <IconCalendar className={styles.icon} />
                 <span>
                   {" "}
-                  Aula 01 - Gravada gratuita! Inscreva-se para ganhar essa aula
-                  de presente agora!
+                  Treinamento Online para fortalecer seu posicionamento e
+                  organizar seu modelo de negócio para ser um consultório
+                  sustentável, com diversificação de serviços.
                 </span>
               </div>
 
@@ -66,8 +66,8 @@ const BannerMobile = () => {
               <div className={styles.eventDetail}>
                 <IconPlay className={styles.icon} />
                 <span>
-                  Aula 02 - Como implementar a diversificação de serviços no
-                  Consultório Sustentável.
+                  Treinamento Online e ao vivo para organizar os próximos passos
+                  de crescimento em 2026
                 </span>
               </div>
 
@@ -77,8 +77,8 @@ const BannerMobile = () => {
                 {/* Mantenho o IconPlay como placeholder, você pode trocar. */}
                 <span>
                   {" "}
-                  Data: Dia 01 de dezembro às 20:00h, ao vivo, online e
-                  gratuito, apenas para inscritos.
+                  Data da aula ao vivo será 17/01/ 26 <br></br>Horário das
+                  09:00h às 12:00h
                 </span>
               </div>
             </div>
@@ -88,7 +88,7 @@ const BannerMobile = () => {
 
       {/* Botão de Call to Action principal */}
       <button className={styles.button} onClick={handleModalOpen}>
-        CLIQUE AQUI PARA GANHAR ESSE ACESSO!
+        CLIQUE AQUI PARA GARANTIR O SEU ACESSO EXCLUSIVO!
       </button>
 
       {/* Modal é renderizado condicionalmente */}

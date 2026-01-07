@@ -5,6 +5,7 @@
 .container {
   background: #725541;
   padding: 40px 0;
+  width: 100%;
 }
 
 .wrapper {
@@ -12,6 +13,9 @@
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .phrase {
@@ -22,31 +26,41 @@
   margin-bottom: 30px;
 
   @media (max-width: 768px) {
-    font-size: 20px; /* Menor para mobile */
+    font-size: 20px;
   }
 }
 
-/* 💥 Contêiner Responsivo para Vídeo 16:9 (Funciona perfeitamente com IFRAME ou <video>) */
+/* 📱 Ajuste para Vídeo Vertical (Shorts) sem bordas laterais */
 .videoWrapper {
   position: relative;
-  /* Calcula o Aspect Ratio 16:9: (9 / 16) * 100 = 56.25% */
-  padding-bottom: 56.25%;
+  width: 100%;
+  margin: 0 auto;
+
+  /* 🚀 PADRÃO MOBILE: Proporção 9:16 (Vertical) */
+  max-width: 320px;
+  padding-bottom: 177.77%;
+
   height: 0;
   overflow: hidden;
-  max-width: 100%;
-  margin: 0 auto;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+
+  /* 💻 AJUSTE DESKTOP: Limita a altura para o vídeo não ficar gigante */
+  @media only screen and (min-width: 1024px) {
+    max-width: 280px;
+    padding-bottom: 500px;
+    height: 500px;
+  }
 }
 
 .video {
-  /* Faz o IFRAME (ou <video>) preencher todo o espaço do wrapper */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: 0; /* Remove a borda padrão que iframes costumam ter */
+  border: 0;
+  background: #000;
 }
 
 /* ---------------------------------------------------- */
@@ -54,34 +68,25 @@
 /* ---------------------------------------------------- */
 
 .ctaButtonWrapper {
-  /* Espaço entre o vídeo e o botão */
-  margin-top: 70px;
-  /* Espaço para a próxima seção */
+  margin-top: 50px; // Reduzi levemente para o Shorts vertical
   margin-bottom: 40px;
   text-align: center;
+  width: 100%;
 }
 
 .ctaButton {
-  /* Estilos Visuais COPIADOS DO SEU BOTÃO DE FORMULÁRIO */
   display: inline-block;
   padding: 20px 40px;
-
-  /* Cor e Fundo do Botão Dourado */
   background: linear-gradient(180deg, #e8c17f 0%, #e8c17f 100%);
   color: #ffffff;
-
-  /* Tipografia */
   font-family: "Playfair Display", Georgia, serif;
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
   cursor: pointer;
-
-  /* Efeitos */
   border: 2px solid #fff;
   border-radius: 5px;
   box-shadow: 0 0 20px rgba(255, 255, 0, 0.7), 0 4px 10px rgba(0, 0, 0, 0.4);
-
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
   &:hover {
@@ -92,5 +97,6 @@
   @media (max-width: 768px) {
     font-size: 20px;
     padding: 12px 25px;
+    width: 90%;
   }
 }
