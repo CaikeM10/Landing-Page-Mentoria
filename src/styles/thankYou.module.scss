@@ -1,110 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+
 .container {
   height: 100vh;
+  width: 100%;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  /* 🚀 NO DESKTOP: Empurra tudo para a base para livrar o rosto no centro/topo */
+  justify-content: flex-end;
+  gap: 20px;
+
+  /* Imagem de fundo */
   background: url("/Captura\ de\ tela\ 2025-10-03\ 191935.png") no-repeat center
     center;
   background-size: cover;
-  padding-bottom: 5vh;
+
   position: relative;
+  overflow: hidden;
+  /* 🚀 Padding inferior para o botão não sumir e o conteúdo subir um pouco */
+  padding-bottom: 8vh;
+  padding-inline: 20px;
 
-  .content {
-    z-index: 1001;
+  /* 🚀 AJUSTE PARA MOBILE (Android e iOS) */
+  @media screen and (max-width: 768px) {
+    /* No celular, o rosto geralmente ocupa o meio. 
+       Mantemos o título no topo extremo e a caixa na base extrema. */
+    justify-content: space-between;
+    padding-top: 58px;
+    padding-bottom: 5vh;
+    gap: 0;
+  }
+
+  // Camada de contraste para o fundo
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1) 0%,
+      transparent 30%,
+      transparent 60%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+    z-index: 1;
+  }
+}
+
+.title {
+  z-index: 1001;
+  color: #fff;
+  font-family: "Playfair Display", Georgia, serif;
+
+  /* 🚀 Tamanho grande e imponente */
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.9);
+  margin: 0;
+  max-width: 850px; // Evita que o título ocupe a tela toda lateralmente
+
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+    max-width: 95%;
+  }
+}
+
+.content {
+  z-index: 1001;
+  color: #fff;
+  max-width: 550px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .subtitle {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+
+    /* 🚀 Seu quadrado vermelho discreto */
+    border: 2px solid #ff0000;
+    background: rgba(255, 0, 0, 0.12);
+
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(4px);
+
     color: #fff;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    padding-left: 20px;
-    max-width: 400px;
-    width: 100%;
-    padding-left: 0;
-    text-align: center;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 
-    h1 {
-      font-size: 2rem;
-      font-family: "Playfair Display", Georgia, serif;
-      color: #fff;
+    @media screen and (max-width: 768px) {
+      font-size: 1.1rem;
+      padding: 21px;
       margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
-    p {
-      font-size: 1.25rem;
-      font-family: "Playfair Display", Georgia, serif;
-      color: #fff;
-      margin-bottom: 1rem;
-      border: 2px solid #ff0000;
-      padding: 15px;
-      border-radius: 5px;
-      background: rgba(255, 0, 0, 0.1);
-    }
-
-    button {
-      display: flex;
-      justify-content: center;
-      color: #fff;
-      text-align: center;
-      font-family: "Playfair Display", "PowerGrotesk", sans-serif;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      letter-spacing: 1px;
-      border-radius: 3px;
-      z-index: 1001;
-      width: 100%;
-      max-width: 300px;
-      margin: 0 auto;
-      background: linear-gradient(
-        91deg,
-        #006400 -20%,
-        #00ff7f 50%,
-        #006400 120%
-      );
-      background-size: 300% 300%;
-      box-shadow: 0px 10px 50px 0px rgba(0, 128, 0, 0.56);
-      border: none;
-      padding-block: 20px;
-      padding-inline: 20px;
-      align-items: center;
-      gap: 9px;
-      cursor: pointer;
-      animation: gradientCircle 4s linear infinite;
-      transition: box-shadow 0.5s ease-in-out;
-
-      @media screen and (max-width: 768px) {
-        padding-block: 13px;
-        padding-inline: 20px;
-        width: 100%;
-        margin: 0 auto;
-      }
-
-      &:hover {
-        box-shadow: 0 0 50px #006400;
-        background-color: #32cd32;
-      }
-
-      p {
-        color: #fff;
-        font-family: "Playfair Display", Georgia, serif;
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 600;
-        text-transform: uppercase;
-        line-height: 26px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-
-        @media screen and (max-width: 768px) {
-          font-size: 18px;
-          line-height: 20px;
-        }
-      }
     }
   }
-  svg {
-    width: 25px;
-    height: 25px;
+
+  .buttonGroup {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .ctaButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+
+    background: linear-gradient(91deg, #006400 -20%, #00ff7f 50%, #006400 120%);
+    background-size: 300% 300%;
+    box-shadow: 0px 10px 40px rgba(0, 128, 0, 0.4);
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    animation: gradientCircle 4s linear infinite;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+      padding: 16px;
+    }
+  }
+}
+
+@keyframes gradientCircle {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

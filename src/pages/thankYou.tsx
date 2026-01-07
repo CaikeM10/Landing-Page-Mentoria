@@ -1,4 +1,4 @@
-import styles from "../styles/thankYou.module.scss"; // Assumindo este SCSS
+import styles from "../styles/thankYou.module.scss";
 
 const WHATSAPP_GROUP_LINK = "https://chat.whatsapp.com/FyXUnWPrZ5g3nif7Wx7DL1";
 
@@ -10,15 +10,16 @@ export default function ThankYou() {
 
   return (
     <div className={styles.container}>
+      {/* 🚀 Título isolado para ser fixado no topo via SCSS */}
+      <h1 className={styles.title}>Parabéns pela sua decisão!</h1>
+
       <div className={styles.content}>
-        <h1 className={styles.title}>Parabéns pela sua decisão!</h1>
         <p className={styles.subtitle}>
           Obrigada por escolher viver a experiência do Treinamento Consultório
           Sustentável.
-          <br></br>
-          👉 Clique agora e entre no grupo vip do TCS. Falta pouco para concluir
-          o acesso e viver essa experiência de forma completa. É por lá que você
-          receberá o acesso à Parte 2 do nosso treinamento prático. Te vejo lá!
+          <br />
+          Clique no link abaixo para entrar no nosso grupo vip. Por lá, você vai
+          ter acesso ao encontro ao vivo do nosso treinamento CS. Te vejo lá!
         </p>
 
         {/* BLOCO DE BOTÃO DO WHATSAPP */}
@@ -27,11 +28,9 @@ export default function ThankYou() {
             className={`${styles.ctaButton} ${styles.primaryCta}`}
             onClick={handleJoinGroup}
           >
-            Quero entrar no grupo vip TCS
+            Quero entrar no grupo vip TCS
           </button>
         </div>
-
-        {/*<p className={styles.note}>Te esperamos no grupo!</p>*/}
       </div>
     </div>
   );
