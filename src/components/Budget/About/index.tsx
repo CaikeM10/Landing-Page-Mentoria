@@ -11,13 +11,14 @@ const About = () => {
               <span>Para quem é:</span>
             </h2>
             <p className={styles.subTitle}>
-              Essa aula é para você, profissional da saúde competente que:
+              Esse treinamento é para você, profissional da saúde competente
+              que:
             </p>
           </div>
 
           <div className={styles.cardContainer}>
             <div className={styles.card}>
-              <div className={styles.emoji}>📈</div>
+              <div className={styles.emoji}>🤯</div>
               <h5>
                 Tem a agenda cheia, mas sente que o faturamento está estagnado.
                 <p>Talvez você já tenha se perguntado: </p>
@@ -26,7 +27,7 @@ const About = () => {
               </h5>
             </div>
             <div className={styles.card}>
-              <div className={styles.emoji}>⏰</div>
+              <div className={styles.emoji}>📈</div>
               <h5>
                 Um treinamento prático que une conteúdo gravado + aula ao vivo,
                 para quem já tem um consultório ativo e precisa organizar os
@@ -34,7 +35,7 @@ const About = () => {
               </h5>
             </div>
             <div className={styles.card}>
-              <div className={styles.emoji}>🤯</div>
+              <div className={styles.emoji}>⏰</div>
               <h5>
                 Esse treinamento é para você que quer desenvolver seu plano de
                 diversificação de serviços, crescer com organização, tempo de

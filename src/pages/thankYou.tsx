@@ -19,7 +19,8 @@ export default function ThankYou() {
           Sustentável.
           <br />
           Clique no link abaixo para entrar no nosso grupo vip. Por lá, você vai
-          ter acesso ao encontro ao vivo do nosso treinamento CS. Te vejo lá!
+          ter acesso ao encontro ao vivo do nosso treinamento CS. <br></br>Te
+          vejo lá!
         </p>
 
         {/* BLOCO DE BOTÃO DO WHATSAPP */}

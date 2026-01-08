@@ -4,11 +4,11 @@ import styles from "./styles.module.scss";
 const ModalForm = ({ onClose }: { onClose: () => void }) => {
   // 🔗 LINKS DAS PÁGINAS
   const SALES_PAGE_LINK = "https://pay.hub.la/52qai6fJYxYKj0s17HZd";
-  const THANK_YOU_PAGE_LINK = "/thankYou";
+  //const THANK_YOU_PAGE_LINK = "/thankYou";
 
   const handleAction = () => {
     // 1. Primeiro, tentamos abrir o Thank You em uma nova aba (ficará em segundo plano)
-    window.open(THANK_YOU_PAGE_LINK, "_blank");
+    //window.open(THANK_YOU_PAGE_LINK, "_blank");
 
     // 2. IMEDIATAMENTE redirecionamos a aba principal para a Venda
     // Isso garante que a página que o usuário está olhando mude para a oferta

@@ -36,7 +36,7 @@ const VideoFooter = () => {
           className={styles.ctaButton}
           onClick={handleRedirect}
         >
-          CLIQUE AQUI PARA GANHAR ESSE ACESSO EXCLUSIVO!
+          CLIQUE AQUI PARA GARANTIR ESSE ACESSO EXCLUSIVO!
         </button>
       </div>
     </section>

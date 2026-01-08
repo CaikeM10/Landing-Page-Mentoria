@@ -90,7 +90,7 @@ const BannerMobile = () => {
 
       {/* Botão de Call to Action principal */}
       <button className={styles.button} onClick={handleModalOpen}>
-        CLIQUE AQUI PARA GANHAR ESSE ACESSO!
+        CLIQUE AQUI PARA GARANTIR ESSE ACESSO EXCLUSIVO!
       </button>
 
       {/* Modal é renderizado condicionalmente */}
