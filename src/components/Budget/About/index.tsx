@@ -174,7 +174,7 @@ const About = () => {
                   de clinicar
                 </li>
                 <li className={styles.conviteEspecial}>
-                  🎁 É um convite especial para quem assistir até o final.
+                  É um convite especial para quem assistir até o final.
                 </li>
               </ul>
             </div>
