@@ -6,6 +6,8 @@
 /* ================================================= */
 $blue-highlight: #67bccb;
 $gold-highlight: #e8c17f;
+$gold-vibrant: #ffd700; // Tom aumentado para destaque
+$danger-red: #ff4d4d; // Vermelho para o preço riscado
 $text-light: #fff;
 $background-marrom: #725541;
 
@@ -78,7 +80,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 }
 
 /* ================================================= */
-/* TÍTULOS */
+/* TÍTULOS E SUBTÍTULO CENTRALIZADO */
 /* ================================================= */
 .titleBlock {
   margin-bottom: 30px;
@@ -87,12 +89,28 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
     color: #fff;
     font-size: 36px;
     font-weight: 700;
-    text-transform: none;
     margin-bottom: 10px;
 
     span {
       color: $blue-highlight;
     }
+  }
+
+  /* Subtítulo centralizado e com tom vibrante */
+  .subTitleWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .subTitleHighlight {
+    color: $gold-vibrant;
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 500;
+    max-width: 800px;
+    text-align: center;
   }
 
   .subTitle {
@@ -103,7 +121,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 }
 
 /* ================================================= */
-/* CARDS ORIGINAIS (AZUIS) */
+/* CARDS ORIGINAIS (AZUIS) - PRESERVADOS */
 /* ================================================= */
 .cardContainer {
   display: flex;
@@ -186,11 +204,17 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   }
 }
 
-/* Variação específica do Check para Aprendizado */
+/* Variações de marcadores */
 .cardAprendizado ul li::before {
   content: "✓";
   color: $gold-highlight;
   font-size: 1.2rem;
+}
+
+.cardExperiencia ul li::before {
+  content: "»";
+  color: $gold-highlight;
+  font-size: 1.5rem;
 }
 
 .emoji {
@@ -200,7 +224,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 }
 
 /* ================================================= */
-/* 🚀 SEÇÃO: EXPERIÊNCIA TCS (LAYOUT SOBREPOSTO) */
+/* 🚀 SEÇÃO: EXPERIÊNCIA TCS (FOTOS SOBREPOSTAS) */
 /* ================================================= */
 .experienceLayout {
   display: flex;
@@ -246,17 +270,6 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   z-index: 2;
 }
 
-.cardExperiencia {
-  flex: 1.2;
-  max-width: 600px;
-
-  ul li::before {
-    content: "»";
-    color: $gold-highlight;
-    font-size: 1.5rem;
-  }
-}
-
 .conviteEspecial {
   color: $gold-highlight !important;
   font-weight: 700;
@@ -268,23 +281,46 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 }
 
 /* ================================================= */
-/* 🚀 NOVA SEÇÃO: INVESTIMENTO */
+/* 🚀 NOVA SEÇÃO: INVESTIMENTO REVISADA */
 /* ================================================= */
 .investmentCard {
   text-align: center;
 
   .priceContainer {
     margin-bottom: 30px;
+
     .oldPrice {
-      text-decoration: line-through;
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 1.2rem;
+      display: block;
+      color: $danger-red; // Vermelho solicitado
+      text-decoration: line-through; // Traço cortando
+      font-size: 1.3rem;
+      margin-bottom: 5px;
     }
+
+    .installmentCall {
+      color: #fff;
+      font-size: 1.1rem;
+      margin: 10px 0 0;
+    }
+
     .newPrice {
-      font-size: 3.5rem;
-      color: $gold-highlight;
+      font-size: 2.5rem; // Tamanho base para "12x R$"
+      color: $gold-vibrant;
       font-weight: 700;
-      margin: 10px 0;
+      margin: 5px 0;
+
+      .priceHighlight {
+        font-size: 4.5rem; // Valor 25,10 aumentado
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    .atVista {
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 400;
+      opacity: 0.9;
     }
   }
 
@@ -294,7 +330,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
     li::before {
       content: "";
       padding-left: 0;
-    } // Remove bullet do padrão
+    }
   }
 }
 
@@ -360,7 +396,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 }
 
 /* ================================================= */
-/* 🚀 BOTÕES DE CHAMADA (CTA) */
+/* 🚀 BOTÕES DE CHAMADA (CTA VERDE ORIGINAL) */
 /* ================================================= */
 .buttonWrapper {
   margin-top: 50px;
@@ -375,7 +411,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   background-size: 200% auto;
   color: #fff;
   font-family: "Playfair Display", serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   text-transform: uppercase;
   padding: 22px 50px;
@@ -386,22 +422,18 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   transition: 0.3s ease;
   animation: pulseGradient 3s infinite;
   margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
 
   &:hover {
     transform: scale(1.05);
   }
 
   @media (max-width: 768px) {
-    font-size: 16px;
+    font-size: 18px;
     padding: 18px 30px;
     width: 90%;
   }
-}
-
-.ctaButtonFinal {
-  max-width: 750px;
-  width: 100%;
-  text-transform: none; // Para manter o texto longo legível
 }
 
 @keyframes pulseGradient {
@@ -423,8 +455,13 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   .titleBlock h2 {
     font-size: 26px;
   }
-  .experienceLayout {
-    gap: 80px;
+  .investmentCard {
+    .newPrice {
+      font-size: 1.8rem;
+      .priceHighlight {
+        font-size: 3rem;
+      }
+    }
   }
   .mainPhoto {
     width: 280px;

@@ -36,7 +36,9 @@ const About = () => {
                 Você já vive de clinicar e sente que estagnou no modelo atual.
                 <br />
                 <br />
-                Tem a agenda instável e não sabe como captar pacientes.
+                Tem a agenda instável e não sabe como captar pacientes. <br />
+                <br /> Tem agenda cheia, mas percebe que tempo virou um recurso
+                escasso.
               </h5>
             </div>
             <div className={styles.card}>
@@ -129,9 +131,11 @@ const About = () => {
             <h2>
               Conheça como será sua <span>Experiência com o TCS:</span>
             </h2>
-            <p className={styles.subTitle}>
-              Acesso imediato ao material gravado com os seguintes módulos:
-            </p>
+            <div className={styles.subTitleWrapper}>
+              <p className={styles.subTitleHighlight}>
+                Acesso imediato ao material gravado com os seguintes módulos:
+              </p>
+            </div>
           </div>
 
           <div className={styles.experienceLayout}>
@@ -170,7 +174,7 @@ const About = () => {
                   de clinicar
                 </li>
                 <li className={styles.conviteEspecial}>
-                  É um convite especial para quem assistir até o final.
+                  🎁 É um convite especial para quem assistir até o final.
                 </li>
               </ul>
             </div>
@@ -178,15 +182,19 @@ const About = () => {
 
           <div className={styles.divider}></div>
 
-          {/* SEÇÃO: INVESTIMENTO */}
+          {/* SEÇÃO: INVESTIMENTO REVISADA */}
           <div className={styles.titleBlock}>
             <h2>Investimento</h2>
           </div>
 
           <div className={styles.investmentCard}>
             <div className={styles.priceContainer}>
-              <span className={styles.oldPrice}>De R$ 297,00 por</span>
-              <h3 className={styles.newPrice}>R$ 247,00</h3>
+              <span className={styles.oldPrice}>De: R$ 345,00</span>
+              <p className={styles.installmentCall}>Por apenas:</p>
+              <h3 className={styles.newPrice}>
+                12x R$ <span className={styles.priceHighlight}>25,10</span>
+              </h3>
+              <p className={styles.atVista}>Ou R$ 247,00 à vista</p>
             </div>
 
             <ul className={styles.benefitsList}>
@@ -200,10 +208,9 @@ const About = () => {
               <p>O investimento pode ser recuperado com:</p>
               <ul>
                 <li>Um novo serviço implementado</li>
-                <li>Uma nova forma de proposta de atuação</li>
+                <li>Uma nova proposta de atuação estratégica</li>
                 <li>
-                  Uma reorganização estratégica do seu modelo de negócio para
-                  viver de clinicar
+                  Reorganização do seu modelo de negócio para viver de clinicar
                 </li>
               </ul>
             </div>
@@ -214,7 +221,7 @@ const About = () => {
             </p>
 
             <button className={styles.ctaButton} onClick={handleOpenModal}>
-              Quero diversificar meu consultório
+              QUERO ACESSAR
             </button>
           </div>
 
