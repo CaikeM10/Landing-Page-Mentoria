@@ -41,16 +41,16 @@ const BannerDesktop = () => {
                   <span className={styles.destaque}>
                     Consultório Sustentável,
                   </span>{" "}
-                  <br></br>
-                  10 Modelos de diversificação de serviços para profissionais da
-                  saúde.
+                  <br></br>O passo a passo para estruturar seu posicionamento e
+                  criar novas fontes de renda no consultório.
                 </h1>
 
                 {/* ... (Restante do conteúdo) ... */}
 
                 <p className={styles.description}>
-                  Você já vive de clinicar e quer seguir crescendo com
-                  organização e tempo de qualidade na agenda.
+                  Um treinamento para profissionais da saúde que ja vivem de
+                  clinicar, que desejam crescer com mais organização, clareza e
+                  qualidade de vida.
                 </p>
 
                 {/* BLOCO DE INFORMAÇÕES DO EVENTO */}
@@ -59,10 +59,8 @@ const BannerDesktop = () => {
                     <IconCalendar className={styles.icon} />
                     <span>
                       {" "}
-                      Primeira etapa: Treinamento Online e Gravado para
-                      fortalecer seu posicionamento e organizar seu modelo de
-                      negócio para ser um consultório sustentável, com
-                      diversificação de serviços
+                      Primeira etapa: Treinamento Online, Gravado e acesso
+                      imediato.
                     </span>{" "}
                     {/* ⬅️ Adicionei a data aqui */}
                   </div>

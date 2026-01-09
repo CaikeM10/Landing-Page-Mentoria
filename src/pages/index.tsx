@@ -22,10 +22,10 @@ export default function Desafio() {
       <VideoSection />
 
       <About />
+      <SwiperComponent />
       <Who />
 
       {/* Seção de depoimentos/carrossel */}
-      <SwiperComponent />
 
       {/* O vídeo de 1 minuto e CTA de vendas posicionado aqui */}
       <VideoFooter />

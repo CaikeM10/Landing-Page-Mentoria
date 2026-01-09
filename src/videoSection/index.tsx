@@ -35,7 +35,8 @@ function VideoSection() {
               className={styles.ctaButton}
               onClick={() => setIsModalOpen(true)}
             >
-              CLIQUE AQUI PARA GARANTIR ESSE ACESSO EXCLUSIVO!
+              QUERO ESTRUTURAR MEU POSICIONAMENTO E DIVERSIFICAR MEU
+              CONSULTÓRIO!
             </button>
           </div>
         </div>

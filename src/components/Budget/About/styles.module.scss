@@ -1,4 +1,4 @@
-/* 💥 NOVA FONTE: Playfair Display (Estilo Serifado) */
+/* 💥 FONTE: Playfair Display (Estilo Serifado) */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
 
 /* ================================================= */
@@ -7,55 +7,38 @@
 $blue-highlight: #67bccb;
 $gold-highlight: #e8c17f;
 $text-light: #fff;
-$background-dark: #333;
+$background-marrom: #725541;
+
+/* Fundo azul translúcido padronizado */
+$card-bg-transparente: rgba(103, 188, 203, 0.2);
 
 /* ================================================= */
 /* CONTAINER GERAL */
 /* ================================================= */
 .container {
-  background: #725541 url("/") top / cover no-repeat;
+  background: $background-marrom url("/") top / cover no-repeat;
   color: $text-light;
   font-family: "Playfair Display", Georgia, serif;
   padding: 0;
 }
 
-/* ================================================= */
-/* SECTION */
-/* ================================================= */
 .section {
   position: relative;
-  padding-top: 40px;
-  padding-bottom: 80px;
-
-  @media (min-width: 768px) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+  padding: 60px 0;
 }
 
-/* Ajuste fino da primeira seção */
-.section:first-of-type {
-  padding-bottom: 40px;
-}
-
-/* ================================================= */
-/* WRAPPER */
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
   padding-inline: 20px;
   text-align: center;
-  font-family: "Playfair Display", Georgia, serif;
-
-  @media (min-width: 768px) {
-    padding-inline: 100px;
-  }
 }
 
 /* ================================================= */
-/* LINHAS ENTRE SEÇÕES */
+/* LINHAS DIVISÓRIAS (ESTILO SHINE) */
 /* ================================================= */
-.sectionLine {
+.sectionLine,
+.divider {
   width: 80%;
   height: 2px;
   background: linear-gradient(
@@ -64,31 +47,25 @@ $background-dark: #333;
     rgba(232, 193, 127, 0.8) 50%,
     rgba(232, 193, 127, 0) 100%
   );
-  margin: 50px auto 30px;
-  border-radius: 2px;
-  opacity: 0.9;
+  margin: 60px auto;
   position: relative;
   overflow: hidden;
 
-  @media (max-width: 767px) {
-    margin-bottom: 20px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.25),
+      transparent
+    );
+    animation: shine 2s linear infinite;
   }
-}
-
-.sectionLine::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.25),
-    transparent
-  );
-  animation: shine 2s linear infinite;
 }
 
 @keyframes shine {
@@ -104,14 +81,12 @@ $background-dark: #333;
 /* TÍTULOS */
 /* ================================================= */
 .titleBlock {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 
   h2 {
     color: #fff;
-    font-family: "Playfair Display", Georgia, serif;
     font-size: 36px;
     font-weight: 700;
-    /* 💥 CORREÇÃO: Remove a caixa alta */
     text-transform: none;
     margin-bottom: 10px;
 
@@ -122,142 +97,351 @@ $background-dark: #333;
 
   .subTitle {
     color: $gold-highlight;
-    font-family: "Playfair Display", Georgia, serif;
     font-size: 18px;
     line-height: 1.6;
   }
 }
 
 /* ================================================= */
-/* CARDS */
+/* CARDS ORIGINAIS (AZUIS) */
 /* ================================================= */
 .cardContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 25px;
   margin-top: 30px;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-  }
 }
 
 .card {
-  background: #67bccb;
-  color: #fff;
+  background: $blue-highlight;
+  color: $background-marrom;
   border-radius: 16px;
-  padding: 80px 17px;
-  max-width: 400px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+  padding: 40px 20px;
+  max-width: 380px;
+  flex: 1 1 300px;
   border: 2px solid rgba(232, 193, 127, 0.6);
-
-  /* ANIMAÇÃO DE ENTRADA */
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 0.8s ease forwards;
-
-  &:nth-child(1) {
-    animation-delay: 0.2s;
-  }
-  &:nth-child(2) {
-    animation-delay: 0.4s;
-  }
-  &:nth-child(3) {
-    animation-delay: 0.6s;
-  }
-
-  &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-    border-color: rgba(232, 193, 127, 0.9);
-  }
+  text-align: center;
 
   h5 {
-    font-family: "Playfair Display", Georgia, serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 1.4;
-    margin-top: 15px;
-    /* 💥 CORREÇÃO: Remove a caixa alta */
-    text-transform: none;
+  }
+}
+
+/* ================================================= */
+/* 🚀 SEÇÕES PADRONIZADAS (FUNDO AZUL + BARRA LATERAL) */
+/* ================================================= */
+.containerSingleCard,
+.containerAprendizado {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.cardBege,
+.cardAprendizado,
+.cardExperiencia,
+.investmentCard {
+  background: $card-bg-transparente;
+  border-left: 4px solid $blue-highlight;
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 850px;
+  text-align: left;
+  backdrop-filter: blur(5px);
+  margin-inline: auto;
+
+  h3 {
+    color: #fff !important;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
   }
 
-  @media (min-width: 768px) {
-    h5 {
-      font-size: 18px;
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      color: #fff !important;
+      margin-bottom: 15px;
+      font-size: 1.15rem;
+      font-weight: 500;
+      line-height: 1.5;
+      position: relative;
+      padding-left: 30px;
+
+      &::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: $blue-highlight;
+        font-weight: bold;
+        font-size: 1.4rem;
+      }
     }
   }
 }
 
-/* ================================================= */
-/* EMOJIS */
-/* ================================================= */
+/* Variação específica do Check para Aprendizado */
+.cardAprendizado ul li::before {
+  content: "✓";
+  color: $gold-highlight;
+  font-size: 1.2rem;
+}
+
 .emoji {
-  font-size: 2rem;
-  background: rgba(103, 188, 203, 0.15);
-  color: $blue-highlight;
-  width: 60px;
-  height: 60px;
-  margin: 0 auto;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* ================================================= */
+/* 🚀 SEÇÃO: EXPERIÊNCIA TCS (LAYOUT SOBREPOSTO) */
+/* ================================================= */
+.experienceLayout {
   display: flex;
+  flex-direction: column;
+  gap: 50px;
   align-items: center;
+  margin-top: 50px;
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 80px;
+  }
+}
+
+.photoContainer {
+  flex: 1;
+  display: flex;
   justify-content: center;
-  border-radius: 50%;
-  transition: all 0.3s ease;
+}
+
+.mainPhotoWrapper {
+  position: relative;
+  width: fit-content;
+}
+
+.mainPhoto {
+  width: 380px;
+  border-radius: 12px;
+  border: 2px solid $gold-highlight;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.overlapPhoto {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 200px;
+  border-radius: 12px;
+  border: 4px solid $background-marrom;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.cardExperiencia {
+  flex: 1.2;
+  max-width: 600px;
+
+  ul li::before {
+    content: "»";
+    color: $gold-highlight;
+    font-size: 1.5rem;
+  }
+}
+
+.conviteEspecial {
+  color: $gold-highlight !important;
+  font-weight: 700;
+  margin-top: 25px;
+  &::before {
+    content: "🎁" !important;
+    font-size: 1.2rem;
+  }
+}
+
+/* ================================================= */
+/* 🚀 NOVA SEÇÃO: INVESTIMENTO */
+/* ================================================= */
+.investmentCard {
+  text-align: center;
+
+  .priceContainer {
+    margin-bottom: 30px;
+    .oldPrice {
+      text-decoration: line-through;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1.2rem;
+    }
+    .newPrice {
+      font-size: 3.5rem;
+      color: $gold-highlight;
+      font-weight: 700;
+      margin: 10px 0;
+    }
+  }
+
+  .benefitsList {
+    text-align: left;
+    display: inline-block;
+    li::before {
+      content: "";
+      padding-left: 0;
+    } // Remove bullet do padrão
+  }
+}
+
+.recuperacaoInfo {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: left;
+  margin: 30px auto;
+  max-width: 600px;
+
+  p {
+    font-weight: 700;
+    color: $blue-highlight;
+    margin-bottom: 10px;
+  }
+  ul li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+}
+
+.emotionalReturn {
+  font-style: italic;
+  color: $gold-highlight;
+  margin-bottom: 40px;
+}
+
+/* ================================================= */
+/* 🚀 GARANTIA E FECHAMENTO */
+/* ================================================= */
+.garantiaContainer {
+  margin: 60px auto;
+  max-width: 700px;
+  .garantiaIcon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    display: block;
+  }
+  h4 {
+    color: $gold-highlight;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  p {
+    line-height: 1.6;
+    opacity: 0.9;
+  }
+}
+
+.fechamentoText {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  max-width: 850px;
+  margin: 0 auto;
+  .highlightText {
+    color: $blue-highlight;
+    font-weight: 700;
+    margin: 20px 0;
+    display: block;
+  }
+}
+
+/* ================================================= */
+/* 🚀 BOTÕES DE CHAMADA (CTA) */
+/* ================================================= */
+.buttonWrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.ctaButton,
+.ctaButtonFinal {
+  background: linear-gradient(91deg, #006400 -20%, #00ff7f 50%, #006400 120%);
+  background-size: 200% auto;
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 22px 50px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 40px rgba(0, 128, 0, 0.4);
+  transition: 0.3s ease;
+  animation: pulseGradient 3s infinite;
+  margin-top: 20px;
 
   &:hover {
-    transform: scale(1.15);
-    background: rgba(103, 188, 203, 0.25);
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    padding: 18px 30px;
+    width: 90%;
+  }
+}
+
+.ctaButtonFinal {
+  max-width: 750px;
+  width: 100%;
+  text-transform: none; // Para manter o texto longo legível
+}
+
+@keyframes pulseGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
 /* ================================================= */
-/* ANIMAÇÃO DE ENTRADA DOS CARDS */
+/* AJUSTES MOBILE */
 /* ================================================= */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+@media (max-width: 768px) {
+  .titleBlock h2 {
+    font-size: 26px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .experienceLayout {
+    gap: 80px;
   }
-}
-
-/* ================================================= */
-/* TEXTO DAS PERGUNTAS */
-/* ================================================= */
-.wrapper > p {
-  color: $gold-highlight;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 21px;
-  margin-top: 15px;
-  font-weight: 700;
-  margin-bottom: 30px;
-  line-height: 1.5;
-}
-
-/* ================================================= */
-/* AJUSTES MOBILE ESPECÍFICOS */
-/* ================================================= */
-@media (max-width: 767px) {
-  .section:nth-of-type(2) {
-    padding-bottom: 40px;
+  .mainPhoto {
+    width: 280px;
   }
-
-  .cardContainer {
-    gap: 20px;
+  .overlapPhoto {
+    width: 140px;
+    right: -15px;
+    bottom: -25px;
   }
-
-  .titleBlock {
-    margin-bottom: 20px;
+  .cardBege,
+  .cardAprendizado,
+  .cardExperiencia,
+  .investmentCard {
+    padding: 25px;
+    margin-inline: 10px;
+  }
+  .fechamentoText {
+    font-size: 1.1rem;
   }
 }
