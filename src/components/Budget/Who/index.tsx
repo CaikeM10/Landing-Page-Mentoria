@@ -1,24 +1,18 @@
-import { useState } from "react";
-import ModalForm from "../Modal";
 import styles from "./styles.module.scss";
 
 export default function Who() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleModalOpen = () => {
-    setIsModalOpen(true);
+  // 🚀 Lógica de redirecionamento direto para o Checkout da Hubla
+  const handlePurchaseRedirect = () => {
+    window.location.href = "https://pay.hub.la/52qai6fJYxYKj0s17HZd";
   };
 
-  const handleModalClose = () => {
-    setIsModalOpen(false);
-  };
   return (
     <>
       <section className={styles.container}>
         <div className={styles.content}>
           <div className={styles.images}>
-            <img src="/Captura de tela 2025-10-03 191715.png" alt="three" />
-            <img src="/Captura de tela 2025-10-03 191813.png" alt="one" />
+            <img src="/Captura de tela 2025-10-03 191715.WebP" alt="three" />
+            <img src="/Captura de tela 2025-10-03 191813.WebP" alt="one" />
           </div>
           <div className={styles.text}>
             <h2>
@@ -51,13 +45,13 @@ export default function Who() {
               certa.
             </p>
 
-            <button onClick={handleModalOpen}>
-              CLIQUE AQUI PARA GARANTIR O SEU ACESSO EXCLUSIVO!
+            {/* 💥 Botão agora redireciona diretamente */}
+            <button onClick={handlePurchaseRedirect}>
+              Quero diversificar meu consultório
             </button>
           </div>
         </div>
       </section>
-      {isModalOpen && <ModalForm onClose={handleModalClose} />}
     </>
   );
 }

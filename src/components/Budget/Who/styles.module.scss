@@ -9,7 +9,7 @@ $text-light: #fff;
 .container {
   background-repeat: no-repeat;
   background-position: calc(100% + 40px) center;
-  padding-top: 0px; //
+  padding-top: 0px;
 }
 
 .content {
@@ -63,7 +63,6 @@ $text-light: #fff;
       position: absolute;
       max-width: 363px;
       bottom: 0px;
-      right: auto;
       right: 0px;
     }
   }
@@ -72,141 +71,120 @@ $text-light: #fff;
 .text {
   margin-top: 60px;
   max-width: 488px;
-}
-.text {
   display: flex;
   flex-direction: column;
+
   h3 {
     color: #d7d7d7;
     font-family: "Playfair Display", Georgia, serif;
     font-size: 14px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
-    text-transform: none;
     padding-bottom: 10px;
   }
+
   h2 {
     color: #fff;
     font-family: "Playfair Display", Georgia, serif;
     font-size: 36px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
-    text-transform: none;
     padding-bottom: 20px;
   }
+
   span {
     color: $blue-highlight;
   }
+
   p {
     color: #fff;
     font-family: "Playfair Display", Georgia, serif;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
     line-height: 1.5;
     padding-bottom: 20px;
-    /* 💥 CORREÇÃO CRÍTICA: Justifica o texto */
     text-align: justify;
   }
+
+  /* 🚀 BOTÃO ATUALIZADO (PADRÃO ALTA CONVERSÃO) */
   button {
-    border: 1px solid #fff;
+    border: 2px solid #fff; // Borda branca sólida como na foto
     background: linear-gradient(
       91deg,
       $gold-dark -20%,
       $gold-light 50%,
       $gold-dark 120%
     );
-    background-size: 300% 300%;
-    padding: 20px;
+    background-size: 200% 200%;
+
+    // Dimensões recomendadas para mobile (iPhone/Xiaomi)
+    padding: 14px 20px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+
     color: #fff;
     font-family: "Playfair Display", Georgia, serif;
-    font-size: 16px;
-    font-style: normal;
+    font-size: 18px;
     font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.1em;
-    width: 100%;
+    letter-spacing: 0.05em;
     display: flex;
     justify-content: center;
-    text-transform: none;
-    animation: gradientCircle 4s linear infinite;
+    align-items: center;
+    text-transform: uppercase;
     cursor: pointer;
+    border-radius: 8px;
+
+    /* 💥 EFEITO GLOW AMARELADO */
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7), 0 4px 15px rgba(0, 0, 0, 0.4);
+
+    animation: gradientAnimation 4s ease infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
-      background: linear-gradient(
-        91deg,
-        #d4af37 -20%,
-        #ffd700 50%,
-        #d4af37 120%
-      );
-      background-size: 300% 300%;
-      box-shadow: 0px 10px 50px 0px rgba(212, 175, 55, 0.56);
-      transition: background 2.5s ease, box-shadow 2.5s ease-in-out;
+      transform: scale(1.02);
+      box-shadow: 0 0 30px rgba(255, 215, 0, 1), 0 6px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    @media only screen and (max-width: 768px) {
+      width: 92%; // Garante que não cole nas bordas da tela
+      font-size: 16px;
+      padding: 12px 10px;
     }
   }
 }
 
-@keyframes gradientCircle {
+@keyframes gradientAnimation {
   0% {
-    background-position: 0% 0%;
-  }
-  25% {
-    background-position: 100% 0%;
+    background-position: 0% 50%;
   }
   50% {
-    background-position: 100% 100%;
-  }
-  75% {
-    background-position: 0% 100%;
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 0%;
+    background-position: 0% 50%;
   }
 }
 
+/* AJUSTES DE MEDIA QUERY PRESERVADOS */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .content {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
     gap: 40px;
     padding-inline: 40px;
   }
-
   .images {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
-
-  .images img[alt="three"] {
-    position: relative;
-    z-index: 1;
-    width: 90%;
-    max-width: 480px;
-    border-radius: 5px;
-  }
-
-  .images img[alt="one"] {
-    position: absolute;
-    bottom: -25px;
-    right: -10px;
-    z-index: 2;
-    width: 50%;
-    max-width: 280px;
-    border-radius: 5px;
-    box-shadow: -10px -6px 15px rgba(0, 0, 0, 0.4);
-  }
-
   .text {
     margin-top: 80px;
     max-width: 600px;
+    button {
+      width: 100%;
+    }
   }
 }

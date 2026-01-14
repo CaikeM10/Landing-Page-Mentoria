@@ -1,52 +1,17 @@
 import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Document() {
-  // Definindo o Pixel ID em uma variável para maior clareza e manutenção
-  const metaPixelId = "744710918557341";
-
-  //
+  const metaPixelId = "744710918557341"; // Pixel do Instagram existente
   const themeColor = "#725542";
 
   return (
     <Html lang="pt-br">
-      {" "}
-      {/* Ajustei o idioma para português */}
       <Head>
-        {/* FAVICON PADRÃO (Para navegadores modernos) */}
+        {/* FAVICONS E METAS */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
-
-        {/* ÍCONES PNG (Para diferentes resoluções) */}
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-
-        {/* APPLE TOUCH ICON (Para iPhones/iPads na tela inicial) */}
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-
-        {/* MANIFEST (Para Progressive Web Apps - PWA e Android) */}
-        <link rel="manifest" href="/site.webmanifest" />
-
-        {/* METATAG: Define a cor da barra de endereço em navegadores Android */}
         <meta name="theme-color" content={themeColor} />
 
-        {/* ================================================= */}
-        {/* FIM DA INJEÇÃO DE FAVICONS */}
-        {/* ================================================= */}
-
-        {/* Meta Pixel Script Principal (JS) */}
+        {/* 1. SCRIPT DO FACEBOOK/INSTAGRAM (Já estava lá) */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -69,7 +34,19 @@ export default function Document() {
           }}
         />
 
-        {/* Bloco noscript (Imagem de fallback para usuários sem JS) */}
+        {/* 2. SCRIPT DO MICROSOFT CLARITY (O que ele mandou agora) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "v0s1t5mgtw");
+            `,
+          }}
+        />
+
         <noscript>
           <img
             height="1"

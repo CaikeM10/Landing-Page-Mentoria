@@ -1,5 +1,3 @@
-import { useState } from "react";
-import ModalForm from "../../Modal";
 import styles from "./styles.module.scss";
 
 // 💥 DEFINIÇÃO DOS COMPONENTES DE ÍCONE (PLACEHOLDERS)
@@ -14,14 +12,9 @@ const IconLive = ({ className }: { className: string }) => (
 );
 
 const BannerMobile = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleModalOpen = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleModalClose = () => {
-    setIsModalOpen(false);
+  // 🚀 Lógica atualizada: Redirecionamento direto para o novo link da Hubla
+  const handlePurchaseRedirect = () => {
+    window.location.href = "https://pay.hub.la/52qai6fJYxYKj0s17HZd";
   };
 
   return (
@@ -32,19 +25,15 @@ const BannerMobile = () => {
             {/* Título com caixa azul de fundo */}
             <div className={styles.titleBox}>
               <h1>
-                <span className={styles.destaque}>
-                  Consultório Sustentável:
-                </span>
-                <br />O passo a passo para estruturar seu posicionamento e criar
-                novas fontes de renda no consultório.
+                O passo a passo para estruturar seu posicionamento e criar novas
+                fontes de renda no consultório.
               </h1>
             </div>
 
             <p className={styles.mainDescription}>
               Um treinamento para profissionais da saúde que já vivem de
-              clinicar, têm agenda cheia e desejam crescer com mais organização,
-              clareza e qualidade de vida — sem aumentar a carga de
-              atendimentos.
+              clinicar e desejam crescer com mais organização, clareza sobre os
+              seus serviços e qualidade de vida.
             </p>
 
             {/* 💥 BLOCO DE INFORMAÇÕES DO EVENTO */}
@@ -78,14 +67,12 @@ const BannerMobile = () => {
         </div>
       </section>
 
-      {/* Botão posicionado fora do container para evitar conflitos de padding no mobile */}
+      {/* Botão posicionado fora do container - Agora aponta para o Checkout Direto */}
       <div className={styles.buttonWrapper}>
-        <button className={styles.button} onClick={handleModalOpen}>
-          CLIQUE AQUI PARA GARANTIR ESSE ACESSO EXCLUSIVO!
+        <button className={styles.button} onClick={handlePurchaseRedirect}>
+          Quero um consultório sustentável
         </button>
       </div>
-
-      {isModalOpen && <ModalForm onClose={handleModalClose} />}
     </>
   );
 };

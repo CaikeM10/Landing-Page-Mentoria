@@ -1,11 +1,9 @@
-import Router from "next/router";
 import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
-import ModalForm from "@/components/Budget/Modal";
 
 interface StickFooterProps {
   title: string;
-  buttonText: string; // Nova prop para o texto do botão
+  buttonText: string;
 }
 
 const StickFooter = ({ title, buttonText }: StickFooterProps) => {
@@ -17,60 +15,45 @@ const StickFooter = ({ title, buttonText }: StickFooterProps) => {
       const windowHeight = window.innerHeight;
       const fullHeight = document.documentElement.scrollHeight;
 
+      // Lógica de visibilidade mantida: surge após 400px e some no rodapé
       if (scrollTop > 400 && scrollTop + windowHeight < fullHeight - 50) {
-        // Mostra o botão se o scroll passar de 400 e não estiver no final
         setIsVisible(true);
       } else {
-        // Esconde o botão ao voltar ou chegar ao final da página
         setIsVisible(false);
       }
     };
 
     window.addEventListener("scroll", toggleVisibility);
-
     return () => {
       window.removeEventListener("scroll", toggleVisibility);
     };
   }, []);
 
-  const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-      let redirectUrl = "https://pay.kiwify.com.br/UyOtZiG";
-
-      Router.push(redirectUrl);
-    }
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleModalOpen = () => {
-    setIsModalOpen(true);
+  // 🚀 Lógica de redirecionamento direto para a Hubla (Substituindo Kiwify e Modal)
+  const handlePurchaseRedirect = () => {
+    window.location.href = "https://pay.hub.la/52qai6fJYxYKj0s17HZd";
   };
 
-  const handleModalClose = () => {
-    setIsModalOpen(false);
-  };
   return (
-    <>
-      <div
-        className={styles.container}
-        style={{
-          opacity: isVisible ? 1 : 0,
-          visibility: isVisible ? "visible" : "hidden",
-          transition: "opacity 0.3s ease, visibility 0.3s ease",
-        }}
-      >
-        <div className={styles.content}>
-          <div className={styles.button}>
-            <button onClick={handleModalOpen} id="iniciar-checkout">
-              <p>
-                {buttonText} <img src="buttonArrow.svg" />
-              </p>
-            </button>
-          </div>
+    <div
+      className={styles.container}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        visibility: isVisible ? "visible" : "hidden",
+        transition: "opacity 0.3s ease, visibility 0.3s ease",
+      }}
+    >
+      <div className={styles.content}>
+        <div className={styles.button}>
+          {/* 💥 Botão agora chama o redirecionamento direto */}
+          <button onClick={handlePurchaseRedirect} id="iniciar-checkout">
+            <p>
+              {buttonText} <img src="buttonArrow.svg" alt="Seta" />
+            </p>
+          </button>
         </div>
       </div>
-      {isModalOpen && <ModalForm onClose={handleModalClose} />}
-    </>
+    </div>
   );
 };
 

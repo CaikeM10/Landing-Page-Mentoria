@@ -1,10 +1,9 @@
 .container {
   position: fixed;
-  bottom: 50px;
+  bottom: 30px; // Ajustado para não ficar colado no fim da tela
   width: 100%;
-  z-index: 999; // Garantir que o container esteja em um nível adequado
+  z-index: 999;
   visibility: hidden;
-
   transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 
   @media screen and (min-width: 768px) {
@@ -17,11 +16,11 @@
     height: 137px;
     position: fixed;
     bottom: -1px;
-    z-index: 998; // Certifique-se de que está abaixo do botão
+    z-index: 998;
     background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.7) 72.61%,
+      rgba(0, 0, 0, 0.8) 72.61%,
       #000 130%
     );
   }
@@ -30,97 +29,83 @@
 .content {
   gap: 20px;
   align-items: center;
-  position: relative; // Garante que os filhos sigam o contexto correto
-  z-index: 1000; // Prioridade maior que o ::after
+  position: relative;
+  z-index: 1000;
+
   @media screen and (max-width: 768px) {
     gap: 45px;
     padding-inline: 20px;
   }
 
   .button {
-    position: relative; // Evita criar novo stacking context
+    position: relative;
     z-index: 1001;
-    margin-inline: 20%;
+    margin-inline: 0px; // Removido margem excessiva para mobile
 
-    @media only screen and (max-width: 768px) {
-      margin-inline: 0px;
-    }
     button {
-      border-radius: 3px;
+      border-radius: 8px; // Padrão dos outros botões
       z-index: 1001;
       width: 100%;
-      margin-left: auto;
       background: linear-gradient(
         91deg,
         #b58d48 -20%,
-        /* Substitui o #ffffff */ #e8c17f 50%,
-        /* Substitui o #00a1ff */ #b58d48 120% /* Substitui o #ffffff */
+        #e8c17f 50%,
+        #b58d48 120%
       );
+      background-size: 200% 200%;
 
-      background-size: 300% 300%;
+      /* 💥 ESTILO ALTA CONVERSÃO: Borda Branca + Glow Dourado */
+      border: 2px solid #ffffff;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.7), 0 4px 15px rgba(0, 0, 0, 0.4);
 
-      box-shadow: 0px 10px 50px 0px rgba(75, 60, 255, 0.56);
-      border: none;
-      padding-block: 20px;
+      padding-block: 14px; // Reduzido de 20px para ficar mais fino e elegante
       padding-inline: 20px;
+      display: flex;
       align-items: center;
+      justify-content: center;
       gap: 9px;
       cursor: pointer;
-      animation: gradientCircle 4s linear infinite;
-
-      transition: box-shadow 0.5s ease-in-out;
-
-      @media screen and (max-width: 768px) {
-        padding-block: 13px;
-        padding-inline: 20px;
-        width: 100%;
-      }
+      animation: gradientAnimation 4s ease infinite;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
 
       &:hover {
-        box-shadow: 0 0 50px #1a04ae;
-        background-color: #4b3cff;
+        transform: scale(1.02);
+        box-shadow: 0 0 30px rgba(255, 215, 0, 1);
       }
 
       p {
         color: #fff;
-        font-family: Syne;
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 600;
+        font-family: "Playfair Display", serif; // Consistência com o site
+        font-size: 18px; // Ajustado para legibilidade
+        font-weight: 700;
         text-transform: uppercase;
-        line-height: 26px;
+        line-height: normal;
+        margin: 0;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
 
         img {
-          width: 25px;
+          width: 18px; // Seta ajustada
         }
 
         @media screen and (max-width: 768px) {
-          font-size: 18px;
-          line-height: 20px;
+          font-size: 16px;
         }
       }
     }
   }
 }
 
-@keyframes gradientCircle {
+@keyframes gradientAnimation {
   0% {
-    background-position: 0% 0%;
-  }
-  25% {
-    background-position: 100% 0%;
+    background-position: 0% 50%;
   }
   50% {
-    background-position: 100% 100%;
-  }
-  75% {
-    background-position: 0% 100%;
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 0%;
+    background-position: 0% 50%;
   }
 }

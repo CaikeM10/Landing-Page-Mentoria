@@ -1,30 +1,33 @@
+/* 💥 FONTE: Playfair Display (Estilo Serifado) */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
 
+/* ================================================= */
+/* VARIÁVEIS */
+/* ================================================= */
 $gold-dark: #b58d48;
 $gold-light: #e8c17f;
 $blue-highlight: #67bccb;
 $text-light: #fff;
 $background-marrom: #725542;
 
+/* ================================================= */
+/* CONTAINER GERAL */
+/* ================================================= */
 .container {
   background: $background-marrom;
-  background-image: url("/iriaMobile.png");
+  background-image: url("/iriaMobile.Webp");
   background-size: cover;
-  // Alterado para min-height para garantir que o conteúdo caiba em qualquer tela
   min-height: 100vh;
   background-position: center top;
   background-repeat: no-repeat;
   color: $text-light;
-  font-family: "PowerGrotesk";
+  font-family: "PowerGrotesk", sans-serif;
   position: relative;
-  // Impede o scroll lateral em todos os dispositivos
   overflow-x: hidden;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding-bottom: 30px;
-  // Garante que o padding não aumente o tamanho do container
   box-sizing: border-box;
 
   &::after {
@@ -44,25 +47,27 @@ $background-marrom: #725542;
   }
 }
 
+/* ================================================= */
+/* BLOCOS DE TEXTO */
+/* ================================================= */
 .containerText {
-  // Removido o absolute problemático para evitar transbordamento lateral
   position: relative;
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: 20px;
   text-align: right;
-  color: #fff; // Ajustado para branco para melhor leitura no mobile
+  color: #fff;
   font-family: "PowerGrotesk", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1;
   text-transform: uppercase;
-  max-width: 80%; // Aumentado para não espremer o texto em telas finas
+  max-width: 80%;
   z-index: 2;
 }
 
 .titleBanner {
-  padding-inline: 15px; // Padding padrão para segurança lateral
+  padding-inline: 15px;
   position: relative;
   text-align: center;
   z-index: 2;
@@ -93,10 +98,10 @@ $background-marrom: #725542;
     background-color: $blue-highlight;
     padding: 15px;
     border-radius: 11px;
-    display: block; // Garante que ocupe a largura disponível
+    display: block;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     position: relative;
-    max-width: 100%; // Segurança para Xiaomi
+    max-width: 100%;
     box-sizing: border-box;
     margin-bottom: 20px;
 
@@ -104,8 +109,8 @@ $background-marrom: #725542;
       margin: 0;
       color: #fff;
       font-family: "Playfair Display", Georgia, serif;
-      font-size: 22px; // Reduzido levemente para telas pequenas
-      font-weight: 700;
+      font-size: 22px;
+      font-weight: 900;
       line-height: 1.2;
       text-align: left;
     }
@@ -119,19 +124,23 @@ $background-marrom: #725542;
   p {
     color: $text-light;
     font-family: "Playfair Display", Georgia, serif;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.3;
     text-align: left;
     margin-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 24px;
     max-width: 100%;
   }
 }
 
+/* ================================================= */
+/* 🚀 BOTÃO DOURADO PADRONIZADO (ALTA CONVERSÃO) */
+/* ================================================= */
 .button {
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* 💥 Alterado para borda branca sólida de 2px */
+  border: 2px solid #ffffff;
   background: linear-gradient(
     91deg,
     $gold-dark -20%,
@@ -139,21 +148,34 @@ $background-marrom: #725542;
     $gold-dark 120%
   );
   background-size: 200% 200%;
-  padding: 18px;
-  color: #ffffff; // Melhor contraste com o dourado
+
+  /* 💥 Ajustes de espessura (padding reduzido) */
+  padding: 14px 12px;
+  /* 💥 Largura de segurança para Xiaomi/iPhone */
+  width: 90%;
+  margin: 0 auto;
+
+  color: #ffffff;
   text-align: center;
   font-family: "PowerGrotesk", sans-serif;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 1px;
-  width: 100%;
-  max-width: 100%;
   box-sizing: border-box;
   display: flex;
+  align-items: center;
   justify-content: center;
-  animation: gradientAnimation 4s ease infinite;
-  cursor: pointer;
   text-transform: uppercase;
+
+  animation: gradientAnimation 4s ease infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  z-index: 5;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 1), 0 6px 20px rgba(0, 0, 0, 0.6);
+  }
 }
 
 @keyframes gradientAnimation {
@@ -168,7 +190,9 @@ $background-marrom: #725542;
   }
 }
 
-// Media query para dispositivos extra pequenos (iPhone SE, etc)
+/* ================================================= */
+/* AJUSTES PARA TELAS PEQUENAS (IPHONE SE / XIAOMI) */
+/* ================================================= */
 @media (max-width: 360px) {
   .titleBanner {
     .titleBox h1 {
@@ -177,5 +201,10 @@ $background-marrom: #725542;
     p {
       font-size: 14px;
     }
+  }
+  .button {
+    font-size: 14px;
+    padding: 12px 10px; // Mantendo a proporção fina
+    width: 92%;
   }
 }

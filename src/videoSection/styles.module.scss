@@ -4,7 +4,7 @@
 
 .container {
   background: #725541;
-  padding: 40px 0;
+  padding: 30px 0 0;
   width: 100%;
 }
 
@@ -23,29 +23,25 @@
   font-size: 28px;
   font-weight: 700;
   color: #67bccb;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 
   @media (max-width: 768px) {
     font-size: 20px;
   }
 }
 
-/* 📱 Ajuste para Vídeo Vertical (Shorts) sem bordas laterais */
+/* 📱 Ajuste para Vídeo Vertical (Shorts) */
 .videoWrapper {
   position: relative;
   width: 100%;
   margin: 0 auto;
-
-  /* 🚀 PADRÃO MOBILE: Proporção 9:16 (Vertical) */
   max-width: 320px;
   padding-bottom: 177.77%;
-
   height: 0;
   overflow: hidden;
   border-radius: 15px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
 
-  /* 💻 AJUSTE DESKTOP: Limita a altura para o vídeo não ficar gigante */
   @media only screen and (min-width: 1024px) {
     max-width: 280px;
     padding-bottom: 500px;
@@ -64,39 +60,80 @@
 }
 
 /* ---------------------------------------------------- */
-/* 🔴 NOVOS ESTILOS PARA O BOTÃO DE AÇÃO (CTA) */
+/* 🔴 BOTÃO CTA - AJUSTADO PARA ELIMINAR O VAZIO */
 /* ---------------------------------------------------- */
 
 .ctaButtonWrapper {
-  margin-top: 50px; // Reduzi levemente para o Shorts vertical
-  margin-bottom: 40px;
+  margin-top: 25px;
+  margin-bottom: 20px;
   text-align: center;
   width: 100%;
 }
 
 .ctaButton {
   display: inline-block;
-  padding: 20px 40px;
-  background: linear-gradient(180deg, #e8c17f 0%, #e8c17f 100%);
+  padding: 16px 40px;
+  background: #e8c17f;
   color: #ffffff;
   font-family: "Playfair Display", Georgia, serif;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 24px;
   text-transform: uppercase;
   cursor: pointer;
   border: 2px solid #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 20px rgba(255, 255, 0, 0.7), 0 4px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+
+  /* 💥 Efeito de Brilho Amarelo (Glow) solicitado pelo gestor */
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.7), 0 4px 10px rgba(0, 0, 0, 0.4);
+
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 30px rgba(255, 255, 0, 1), 0 6px 15px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 1), 0 6px 15px rgba(0, 0, 0, 0.6);
   }
 
   @media (max-width: 768px) {
-    font-size: 20px;
-    padding: 12px 25px;
+    font-size: 18px;
+    padding: 12px 10px;
+    width: 92%;
+    margin: 0 auto;
+  }
+}
+
+.feedbackContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  padding-bottom: 40px;
+  width: 100%;
+  max-width: 450px;
+}
+
+/* 🚀 Título do Feedback com fonte aumentada */
+.feedbackTitle {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.8rem; // Aumentado conforme solicitado
+  font-weight: 700;
+  color: #67bccb;
+  margin-bottom: 27px;
+  text-align: center;
+  line-height: 1.3;
+
+  @media (max-width: 768px) {
+    font-size: 1.4rem; // Ajuste proporcional para mobile
+    padding-inline: 15px;
+  }
+}
+
+.feedbackImage {
+  width: 90%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 768px) {
     width: 90%;
   }
 }

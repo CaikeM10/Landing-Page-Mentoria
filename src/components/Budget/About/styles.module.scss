@@ -96,7 +96,6 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
     }
   }
 
-  /* Subtítulo centralizado e com tom vibrante */
   .subTitleWrapper {
     width: 100%;
     display: flex;
@@ -149,6 +148,48 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 }
 
 /* ================================================= */
+/* 🚀 BOTÕES DOURADOS (GLOW) - ABAIXO DOS BLOCOS */
+/* ================================================= */
+.ctaWrapperCards,
+.ctaWrapperAprendizado {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.ctaButtonGold {
+  display: inline-block;
+  padding: 14px 35px; // Espessura conforme recomendado
+  background: #e8c17f; // Dourado sólido
+  color: #ffffff;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid #fff; // Borda branca fina
+  border-radius: 8px;
+
+  /* 💥 Efeito Glow Amarelado solicitado pelo gestor */
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 4px 10px rgba(0, 0, 0, 0.3);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.9);
+  }
+
+  @media (max-width: 768px) {
+    width: 92%; // Respiro nas bordas do mobile
+    font-size: 18px;
+    padding: 12px 10px;
+  }
+}
+
+/* ================================================= */
 /* 🚀 SEÇÕES PADRONIZADAS (FUNDO AZUL + BARRA LATERAL) */
 /* ================================================= */
 .containerSingleCard,
@@ -173,7 +214,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   margin-inline: auto;
 
   h3 {
-    color: #fff !important;
+    color: #e8c17f !important;
     font-size: 1.5rem;
     margin-bottom: 20px;
     font-weight: 700;
@@ -204,13 +245,11 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   }
 }
 
-/* Variações de marcadores */
 .cardAprendizado ul li::before {
   content: "✓";
   color: $gold-highlight;
   font-size: 1.2rem;
 }
-
 .cardExperiencia ul li::before {
   content: "»";
   color: $gold-highlight;
@@ -291,8 +330,8 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 
     .oldPrice {
       display: block;
-      color: $danger-red; // Vermelho solicitado
-      text-decoration: line-through; // Traço cortando
+      color: $danger-red;
+      text-decoration: line-through;
       font-size: 1.3rem;
       margin-bottom: 5px;
     }
@@ -304,13 +343,13 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
     }
 
     .newPrice {
-      font-size: 2.5rem; // Tamanho base para "12x R$"
+      font-size: 2.5rem;
       color: $gold-vibrant;
       font-weight: 700;
       margin: 5px 0;
 
       .priceHighlight {
-        font-size: 4.5rem; // Valor 25,10 aumentado
+        font-size: 4.7rem;
         display: inline-block;
         vertical-align: middle;
       }
@@ -455,12 +494,10 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   .titleBlock h2 {
     font-size: 26px;
   }
-  .investmentCard {
-    .newPrice {
-      font-size: 1.8rem;
-      .priceHighlight {
-        font-size: 3rem;
-      }
+  .investmentCard .newPrice {
+    font-size: 1.8rem;
+    .priceHighlight {
+      font-size: 3rem;
     }
   }
   .mainPhoto {

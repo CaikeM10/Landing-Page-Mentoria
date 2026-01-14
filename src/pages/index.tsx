@@ -1,6 +1,6 @@
 import About from "@/components/Budget/About";
 import Banner from "@/components/Budget/Banner";
-import Footer from "@/components/Budget/Footer";
+//import Footer from "@/components/Budget/Footer";
 import HeaderFixed from "@/components/Budget/HeaderFixed";
 import SwiperComponent from "@/components/Budget/Swiper";
 import Who from "@/components/Budget/Who";
@@ -30,8 +30,8 @@ export default function Desafio() {
       {/* O vídeo de 1 minuto e CTA de vendas posicionado aqui */}
       <VideoFooter />
 
-      <Footer />
-      <StickFooter title={pageTitle} buttonText="SAIBA MAIS AQUI" />
+      {/*<Footer />*/}
+      <StickFooter title={pageTitle} buttonText="Garantir o Treinamento" />
     </section>
   );
 }

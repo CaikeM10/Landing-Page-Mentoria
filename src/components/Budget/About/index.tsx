@@ -1,16 +1,10 @@
 import { useState } from "react";
 import styles from "./styles.module.scss";
-import ModalForm from "@/components/Budget/Modal";
 
 const About = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleOpenModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
+  // 🚀 Lógica atualizada: Redirecionamento direto para o Checkout
+  const handleRedirectToCheckout = () => {
+    window.location.href = "https://pay.hub.la/52qai6fJYxYKj0s17HZd";
   };
 
   return (
@@ -36,8 +30,10 @@ const About = () => {
                 Você já vive de clinicar e sente que estagnou no modelo atual.
                 <br />
                 <br />
-                Tem a agenda instável e não sabe como captar pacientes. <br />
-                <br /> Tem agenda cheia, mas percebe que tempo virou um recurso
+                Tem a agenda instável e não sabe como captar pacientes.
+                <br />
+                <br />
+                Tem agenda cheia, mas percebe que tempo virou um recurso
                 escasso.
               </h5>
             </div>
@@ -58,6 +54,16 @@ const About = () => {
                 crescer com organização e tempo de qualidade.
               </h5>
             </div>
+          </div>
+
+          {/* 🚀 BOTÃO CTA ABAIXO DOS CARDS - DIRETO PARA CHECKOUT */}
+          <div className={styles.ctaWrapperCards}>
+            <button
+              className={styles.ctaButtonGold}
+              onClick={handleRedirectToCheckout}
+            >
+              EU QUERO CRESCER
+            </button>
           </div>
 
           <div className={styles.divider}></div>
@@ -124,6 +130,16 @@ const About = () => {
             </div>
           </div>
 
+          {/* 🚀 BOTÃO CTA ABAIXO DO APRENDIZADO - DIRETO PARA CHECKOUT */}
+          <div className={styles.ctaWrapperAprendizado}>
+            <button
+              className={styles.ctaButtonGold}
+              onClick={handleRedirectToCheckout}
+            >
+              GARANTA O SEU ACESSO
+            </button>
+          </div>
+
           <div className={styles.divider}></div>
 
           {/* SEÇÃO: EXPERIÊNCIA TCS */}
@@ -142,13 +158,13 @@ const About = () => {
             <div className={styles.photoContainer}>
               <div className={styles.mainPhotoWrapper}>
                 <img
-                  src="/foto1iria.jpeg"
-                  alt="Experiência Principal"
+                  src="/foto1iria.WebP"
+                  alt="Experiência"
                   className={styles.mainPhoto}
                 />
                 <img
-                  src="/foto2iria.jpeg"
-                  alt="Detalhe Experiência"
+                  src="/foto2iria.WebP"
+                  alt="Detalhe"
                   className={styles.overlapPhoto}
                 />
               </div>
@@ -162,19 +178,16 @@ const About = () => {
                   negócio
                 </li>
                 <li>
-                  <strong>Módulo 02:</strong> Estruturação de Posicionamento com
-                  qualidade
+                  <strong>Módulo 02:</strong> Estruturação de Posicionamento
                 </li>
                 <li>
-                  <strong>Módulo 03:</strong> 10 Planos de Voo com modelos de
-                  diversificação
+                  <strong>Módulo 03:</strong> 10 Planos de Voo
                 </li>
                 <li>
-                  <strong>Fechamento</strong> sobre Empreendedorismo para viver
-                  de clinicar
+                  <strong>Fechamento</strong> sobre Empreendedorismo
                 </li>
                 <li className={styles.conviteEspecial}>
-                  É um convite especial para quem assistir até o final.
+                  Convite especial para quem assistir até o final.
                 </li>
               </ul>
             </div>
@@ -182,7 +195,7 @@ const About = () => {
 
           <div className={styles.divider}></div>
 
-          {/* SEÇÃO: INVESTIMENTO REVISADA */}
+          {/* SEÇÃO: INVESTIMENTO */}
           <div className={styles.titleBlock}>
             <h2>Investimento</h2>
           </div>
@@ -196,70 +209,67 @@ const About = () => {
               </h3>
               <p className={styles.atVista}>Ou R$ 247,00 à vista</p>
             </div>
-
             <ul className={styles.benefitsList}>
-              <li>✔️ Acesso imediato ao conteúdo gravado</li>
+              <li>✔️ Acesso imediato ao conteúdo</li>
               <li>✔️ PDFs estratégicos de apoio</li>
-              <li>✔️ Acesso à aula prática complementar (Parte 2 – ao vivo)</li>
-              <li>✔️ Acesso exclusivo ao nosso grupo VIP</li>
+              <li>✔️ Acesso à aula prática</li>
+              <li>✔️ Grupo VIP exclusivo</li>
             </ul>
 
             <div className={styles.recuperacaoInfo}>
               <p>O investimento pode ser recuperado com:</p>
               <ul>
                 <li>Um novo serviço implementado</li>
-                <li>Uma nova proposta de atuação estratégica</li>
-                <li>
-                  Reorganização do seu modelo de negócio para viver de clinicar
-                </li>
+                <li>Uma nova proposta de atuação</li>
+                <li>Reorganização do seu modelo de negócio</li>
               </ul>
             </div>
 
             <p className={styles.emotionalReturn}>
-              👉 O retorno não está só no financeiro, mas na qualidade da agenda
-              e da vida.
+              👉 O retorno está na qualidade da agenda e da vida.
             </p>
 
-            <button className={styles.ctaButton} onClick={handleOpenModal}>
+            {/* 🚀 BOTÃO DE INVESTIMENTO - DIRETO PARA CHECKOUT */}
+            <button
+              className={styles.ctaButton}
+              onClick={handleRedirectToCheckout}
+            >
               QUERO ACESSAR
             </button>
           </div>
 
-          {/* SEÇÃO: GARANTIA */}
+          {/* GARANTIA */}
           <div className={styles.garantiaContainer}>
             <div className={styles.garantiaIcon}>🛡️</div>
             <h4>Garantia incondicional de 7 dias</h4>
             <p>
-              Você pode acessar o treinamento com tranquilidade. Se dentro de 7
-              dias sentir que não faz sentido para o seu momento, é só solicitar
-              o reembolso. Sem burocracia.
+              Se em 7 dias não fizer sentido, solicitamos o reembolso sem
+              burocracia.
             </p>
           </div>
 
           <div className={styles.divider}></div>
 
-          {/* SEÇÃO: FECHAMENTO EMOCIONAL */}
+          {/* FECHAMENTO */}
           <div className={styles.fechamentoText}>
             <p>
-              Se você sente que já chegou longe, mas percebe que do jeito que
-              está não sustenta o próximo nível, essa é a hora de estruturar seu
-              crescimento.
+              Se você percebe que o modelo atual não sustenta o próximo nível,
+              essa é a hora.
             </p>
             <p className={styles.highlightText}>
-              Com posicionamento, estratégia e clareza, é possível crescer sem
-              perder o que mais importa.
+              Cresça sem perder o que mais importa.
             </p>
 
-            <button className={styles.ctaButtonFinal} onClick={handleOpenModal}>
-              QUERO ESTRUTURAR MEU POSICIONAMENTO E CRIAR NOVAS FONTES DE RENDA
-              NO MEU CONSULTÓRIO!
+            {/* 🚀 BOTÃO FINAL - DIRETO PARA CHECKOUT */}
+            <button
+              className={styles.ctaButtonFinal}
+              onClick={handleRedirectToCheckout}
+            >
+              Quero estruturar meu consultório
             </button>
           </div>
         </div>
       </div>
-
-      {/* MODAL */}
-      {isModalOpen && <ModalForm onClose={handleCloseModal} />}
     </section>
   );
 };
