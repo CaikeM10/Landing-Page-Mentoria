@@ -45,7 +45,7 @@ function VideoSection() {
             Feedback de quem já fez o Treinamento Consultório Sustentável
           </p>
           <img
-            src="/feedbackTCS.WebP"
+            src="/feedbackTCS.webp"
             alt="Feedback de Aluna"
             className={styles.feedbackImage}
           />
