@@ -11,8 +11,8 @@ export default function Who() {
       <section className={styles.container}>
         <div className={styles.content}>
           <div className={styles.images}>
-            <img src="/Captura de tela 2025-10-03 191715.WebP" alt="three" />
-            <img src="/Captura de tela 2025-10-03 191813.WebP" alt="one" />
+            <img src="/Captura de tela 2025-10-03 191715.webp" alt="three" />
+            <img src="/Captura de tela 2025-10-03 191813.webp" alt="one" />
           </div>
           <div className={styles.text}>
             <h2>

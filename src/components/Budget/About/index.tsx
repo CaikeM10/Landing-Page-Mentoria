@@ -158,12 +158,12 @@ const About = () => {
             <div className={styles.photoContainer}>
               <div className={styles.mainPhotoWrapper}>
                 <img
-                  src="/foto1iria.WebP"
+                  src="/foto1iria.webp"
                   alt="Experiência"
                   className={styles.mainPhoto}
                 />
                 <img
-                  src="/foto2iria.WebP"
+                  src="/foto2iria.webp"
                   alt="Detalhe"
                   className={styles.overlapPhoto}
                 />

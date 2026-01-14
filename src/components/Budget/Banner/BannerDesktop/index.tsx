@@ -78,7 +78,7 @@ const BannerDesktop = () => {
           </div>
         </div>
         <div className={styles.rightSide}>
-          <img src="/Iria_DesktopMarrom.Webp" alt="Íria Sabóia" />
+          <img src="/Iria_DesktopMarrom.webp" alt="Íria Sabóia" />
         </div>
       </div>
     </section>
