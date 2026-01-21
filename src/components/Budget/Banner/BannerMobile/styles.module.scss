@@ -55,8 +55,8 @@ $gold-light: #e8c17f;
 
 .description {
   color: #fff;
-  font-size: 17px; // Subtítulo mais robusto
-  line-height: 1.3;
+  font-size: 16px; // Subtítulo mais robusto
+  line-height: 1.2;
   margin-bottom: 25px;
   font-weight: 600; // Letra cheia no subtítulo
   opacity: 1; // Máxima nitidez
@@ -66,9 +66,9 @@ $gold-light: #e8c17f;
   margin-bottom: 40px;
   p {
     color: #fff;
-    font-size: 17px;
-    margin: 6px 0;
-    font-weight: 750; // Letra cheia na data também
+    font-size: 15px;
+    margin: 5px 0;
+    font-weight: 650; // Letra cheia na data também
     strong {
       color: $gold-light;
     }
