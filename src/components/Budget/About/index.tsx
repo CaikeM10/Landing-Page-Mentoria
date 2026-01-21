@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./styles.module.scss";
 
 const About = () => {
-  // 🚀 Lógica atualizada: Redirecionamento direto para o Checkout
+  // 🚀 Lógica de Redirecionamento Direto para o Checkout da Hubla
   const handleRedirectToCheckout = () => {
     window.location.href = "https://pay.hub.la/52qai6fJYxYKj0s17HZd";
   };
@@ -27,42 +27,34 @@ const About = () => {
             <div className={styles.card}>
               <div className={styles.emoji}>🤯</div>
               <h5>
-                Você já vive de clinicar e sente que estagnou no modelo atual.
+                • Você já vive de clinicar e sente que estagnou no modelo atual.
                 <br />
                 <br />
-                Tem a agenda instável e não sabe como captar pacientes.
-                <br />
-                <br />
-                Tem agenda cheia, mas percebe que tempo virou um recurso
+                • Tem agenda cheia, mas percebe que tempo virou um recurso
                 escasso.
+                <br />
+                <br />• Ou tem a agenda instável e não sabe como captar
+                pacientes.
               </h5>
             </div>
-            <div className={styles.card}>
-              <div className={styles.emoji}>📈</div>
-              <h5>
-                Crescer aumentando apenas a quantidade de atendimentos
-                individuais não é sustentável.
-                <br />
-                <br />
-                Quer criar novos serviços, mas não sabe por onde começar.
-              </h5>
-            </div>
+
             <div className={styles.card}>
               <div className={styles.emoji}>⏰</div>
               <h5>
-                Para você que quer desenvolver seu plano de diversificação e
-                crescer com organização e tempo de qualidade.
+                • Para você que quer fortalecer seu posicionamento profissional,
+                implementar novos serviços e aumentar seu faturamento no
+                consultório.
               </h5>
             </div>
           </div>
 
-          {/* 🚀 BOTÃO CTA ABAIXO DOS CARDS - DIRETO PARA CHECKOUT */}
+          {/* 🚀 BOTÃO CTA ABAIXO DOS CARDS */}
           <div className={styles.ctaWrapperCards}>
             <button
               className={styles.ctaButtonGold}
               onClick={handleRedirectToCheckout}
             >
-              EU QUERO CRESCER
+              QUERO FAZER O TREINAMENTO
             </button>
           </div>
 
@@ -97,52 +89,63 @@ const About = () => {
 
           <div className={styles.divider}></div>
 
-          {/* SEÇÃO: O QUE VOCÊ VAI APRENDER */}
+          {/* 🚀 DOBRA 04: QUEM VAI DIRECIONAR VOCÊ (ADICIONADO) */}
           <div className={styles.titleBlock}>
-            <h2>
-              O que você vai <span>aprender:</span>
-            </h2>
-            <p className={styles.subTitle}>
-              No Treinamento Consultório Sustentável, você vai aprender:
-            </p>
+            <h3 className={styles.introTextWho}>
+              Quem vai direcionar você nesse treinamento:
+            </h3>
           </div>
 
-          <div className={styles.containerAprendizado}>
-            <div className={styles.cardAprendizado}>
-              <ul>
-                <li>
-                  Fazer um diagnóstico do seu atual modelo de negócio para viver
-                  de clinicar
-                </li>
-                <li>
-                  Como estruturar seu posicionamento profissional para sustentar
-                  crescimento com qualidade
-                </li>
-                <li>
-                  10 planos de voo - modelos possíveis de diversificação de
-                  serviços
-                </li>
-                <li>
-                  Como transformar seu conhecimento e experiência para ampliar
-                  seu faturamento
-                </li>
-              </ul>
+          <div className={styles.whoSectionLayout}>
+            <div className={styles.whoImages}>
+              <img
+                src="/Captura de tela 2025-10-03 191715.webp"
+                alt="Íria Sabóia Principal"
+                className={styles.imgMain}
+                loading="lazy"
+              />
+              <img
+                src="/Captura de tela 2025-10-03 191813.webp"
+                alt="Íria Sabóia Detalhe"
+                className={styles.imgOverlap}
+                loading="lazy"
+              />
             </div>
-          </div>
-
-          {/* 🚀 BOTÃO CTA ABAIXO DO APRENDIZADO - DIRETO PARA CHECKOUT */}
-          <div className={styles.ctaWrapperAprendizado}>
-            <button
-              className={styles.ctaButtonGold}
-              onClick={handleRedirectToCheckout}
-            >
-              GARANTA O SEU ACESSO
-            </button>
+            <div className={styles.whoBioText}>
+              <h2>
+                Quem é <span>ÍRIA SABÓIA?</span>
+              </h2>
+              <p>
+                Sou Íria Sabóia, psicóloga clínica há 11 anos, e mentora de
+                carreira de profissionais liberais e empresas. Durante anos,
+                vivi a sobrecarga que muitos profissionais da saúde conhecem
+                bem, uma rotina exaustiva entre o serviço público e a clínica.
+              </p>
+              <p>
+                Foi nesse momento de desequilíbrio que tomei uma decision que
+                mudaria completamente o rumo da minha trajetória: empreender com
+                propósito na prática clínica no presencial e no digital. Nasceu
+                assim a Voares, um movimento que une ciência, autoconhecimento e
+                estratégia para ajudar profissionais a construírem uma carreira
+                sustentável, com liberdade e sentido.
+              </p>
+              <p>
+                Em outubro de 2024, abrimos a primeira turma da Mentoria Voares,
+                e desde então vivemos um ano de crescimento, conquistas e
+                transformações reais na carreira de dezenas de profissionais.
+              </p>
+              <button
+                className={styles.ctaButtonGoldSmall}
+                onClick={handleRedirectToCheckout}
+              >
+                QUERO DIVERSIFICAR MEU CONSULTÓRIO
+              </button>
+            </div>
           </div>
 
           <div className={styles.divider}></div>
 
-          {/* SEÇÃO: EXPERIÊNCIA TCS */}
+          {/* 🚀 SEÇÃO: EXPERIÊNCIA TCS (INVERTIDO - AGORA PRIMEIRO) */}
           <div className={styles.titleBlock}>
             <h2>
               Conheça como será sua <span>Experiência com o TCS:</span>
@@ -161,11 +164,13 @@ const About = () => {
                   src="/foto1iria.webp"
                   alt="Experiência"
                   className={styles.mainPhoto}
+                  loading="lazy"
                 />
                 <img
                   src="/foto2iria.webp"
                   alt="Detalhe"
                   className={styles.overlapPhoto}
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -175,22 +180,88 @@ const About = () => {
                 <li>Boas vindas</li>
                 <li>
                   <strong>Módulo 01:</strong> Diagnóstico do seu modelo de
-                  negócio
+                  negócio.
                 </li>
                 <li>
-                  <strong>Módulo 02:</strong> Estruturação de Posicionamento
+                  <strong>Módulo 02:</strong> Estruturação de Posicionamento.
                 </li>
                 <li>
-                  <strong>Módulo 03:</strong> 10 Planos de Voo
+                  <strong>Módulo 03:</strong> 10 Modelos de diversificações de
+                  serviços.
                 </li>
                 <li>
-                  <strong>Fechamento</strong> sobre Empreendedorismo
+                  <strong>Fechamento</strong> sobre Empreendedorismo.
                 </li>
                 <li className={styles.conviteEspecial}>
                   Convite especial para quem assistir até o final.
                 </li>
               </ul>
             </div>
+          </div>
+
+          {/* 🚀 DOBRA 05: DEPOIMENTOS (ADICIONADO ABAIXO DA EXPERIÊNCIA) */}
+          <div className={styles.titleBlock} style={{ marginTop: "50px" }}>
+            <h2>
+              Veja o depoimento de quem acessou o{" "}
+              <span>Treinamento Consultório Sustentável</span>
+            </h2>
+          </div>
+
+          <div className={styles.depoimentoContainer}>
+            <img
+              src="/ALUNATCS.jpeg"
+              alt="Depoimento Aluno"
+              className={styles.feedbackImage}
+              loading="lazy"
+            />
+            <div className={styles.ctaWrapperCards}>
+              <button
+                className={styles.ctaButtonGold}
+                onClick={handleRedirectToCheckout}
+              >
+                QUERO FAZER O TREINAMENTO
+              </button>
+            </div>
+          </div>
+
+          <div className={styles.divider}></div>
+
+          {/* 🚀 SEÇÃO: O QUE VOCÊ VAI APRENDER (INVERTIDO - AGORA DEPOIS) */}
+          <div className={styles.titleBlock}>
+            <h2>
+              Veja tudo que você vai receber no{" "}
+              <span>Treinamento Consultório Sustentável: </span>
+            </h2>
+          </div>
+
+          <div className={styles.containerAprendizado}>
+            <div className={styles.cardAprendizado}>
+              <ul>
+                <li>
+                  Aulas práticas para gerar clareza e direcionar seu novo modelo
+                  de negócio para viver de clinicar com organização, mais
+                  faturamento e tempo de qualidade
+                </li>
+                <li>
+                  Material de apoio para estruturar com segurança seu novo plano
+                  de diversificação de serviços.
+                </li>
+                <li>
+                  E aulão com Íria Sabóia, online e ao vivo, para tirar todas
+                  suas dúvidas sobre a implementação.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* 🚀 BOTÃO CTA ABAIXO DO APRENDIZADO */}
+          <div className={styles.ctaWrapperAprendizado}>
+            <button
+              className={styles.ctaButtonGold}
+              onClick={handleRedirectToCheckout}
+            >
+              GARANTA O SEU ACESSO
+            </button>
           </div>
 
           <div className={styles.divider}></div>
@@ -202,12 +273,12 @@ const About = () => {
 
           <div className={styles.investmentCard}>
             <div className={styles.priceContainer}>
-              <span className={styles.oldPrice}>De: R$ 345,00</span>
+              <span className={styles.oldPrice}>De: R$ 747,00</span>
               <p className={styles.installmentCall}>Por apenas:</p>
               <h3 className={styles.newPrice}>
-                12x R$ <span className={styles.priceHighlight}>25,10</span>
+                12x R$ <span className={styles.priceHighlight}>8,84</span>
               </h3>
-              <p className={styles.atVista}>Ou R$ 247,00 à vista</p>
+              <p className={styles.atVista}>Ou R$ 87,00 à vista</p>
             </div>
             <ul className={styles.benefitsList}>
               <li>✔️ Acesso imediato ao conteúdo</li>
@@ -229,7 +300,6 @@ const About = () => {
               👉 O retorno está na qualidade da agenda e da vida.
             </p>
 
-            {/* 🚀 BOTÃO DE INVESTIMENTO - DIRETO PARA CHECKOUT */}
             <button
               className={styles.ctaButton}
               onClick={handleRedirectToCheckout}
@@ -260,7 +330,6 @@ const About = () => {
               Cresça sem perder o que mais importa.
             </p>
 
-            {/* 🚀 BOTÃO FINAL - DIRETO PARA CHECKOUT */}
             <button
               className={styles.ctaButtonFinal}
               onClick={handleRedirectToCheckout}

@@ -26,7 +26,7 @@ const HeaderFixed = () => {
     // ⭐️ AJUSTE CRÍTICO: DATA ALVO MUDADA PARA 01 DE DEZEMBRO DE 2025 (20h)
     // new Date(ano, mês_zero_base, dia, hora, minuto, segundo)
     // Dezembro é o mês 11
-    const targetDate = new Date(2026, 0, 24, 9, 0, 0);
+    const targetDate = new Date(2026, 0, 31, 9, 0, 0);
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -39,7 +39,7 @@ const HeaderFixed = () => {
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
       );
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);

@@ -1,15 +1,19 @@
 /* 💥 FONTE: Playfair Display (Estilo Serifado) */
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap");
 
 /* ================================================= */
 /* VARIÁVEIS */
 /* ================================================= */
 $blue-highlight: #67bccb;
 $gold-highlight: #e8c17f;
+$gold-dark: #b58d48;
 $gold-vibrant: #ffd700; // Tom aumentado para destaque
 $danger-red: #ff4d4d; // Vermelho para o preço riscado
 $text-light: #fff;
 $background-marrom: #725541;
+
+/* 🎨 NOVA COR PARA A DOBRA DA ÍRIA (SUAVE) */
+$background-bio-suave: #5d4535;
 
 /* Fundo azul translúcido padronizado */
 $card-bg-transparente: rgba(103, 188, 203, 0.2);
@@ -22,11 +26,13 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   color: $text-light;
   font-family: "Playfair Display", Georgia, serif;
   padding: 0;
+  overflow-x: hidden; // 🚀 ESSENCIAL para o fundo total funcionar sem erro lateral
 }
 
 .section {
   position: relative;
-  padding: 60px 0;
+  /* 🚀 AJUSTADO: Reduzido para preencher o espaço vazio no topo */
+  padding: 10px 0;
 }
 
 .wrapper {
@@ -49,7 +55,8 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
     rgba(232, 193, 127, 0.8) 50%,
     rgba(232, 193, 127, 0) 100%
   );
-  margin: 60px auto;
+  /* 🚀 AJUSTADO: Margem reduzida para aproximar as dobras */
+  margin: 30px auto;
   position: relative;
   overflow: hidden;
 
@@ -83,17 +90,30 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 /* TÍTULOS E SUBTÍTULO CENTRALIZADO */
 /* ================================================= */
 .titleBlock {
-  margin-bottom: 30px;
+  /* 🚀 AJUSTADO: Espaço reduzido */
+  margin-bottom: 25px;
 
   h2 {
     color: #fff;
     font-size: 36px;
-    font-weight: 700;
+    /* 🚀 Peso aumentado para harmonia (Letra Cheia) */
+    font-weight: 900;
     margin-bottom: 10px;
 
     span {
       color: $blue-highlight;
     }
+  }
+
+  /* 🚀 NOVO: Estilo para a frase da Dobra 04 */
+  .introTextWho {
+    color: $gold-highlight;
+    font-size: clamp(20px, 4vw, 24px);
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    display: block;
   }
 
   .subTitleWrapper {
@@ -107,7 +127,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
     color: $gold-vibrant;
     font-size: 20px;
     line-height: 1.6;
-    font-weight: 500;
+    font-weight: 700;
     max-width: 800px;
     text-align: center;
   }
@@ -116,6 +136,119 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
     color: $gold-highlight;
     font-size: 18px;
     line-height: 1.6;
+    font-weight: 600;
+  }
+}
+
+/* ================================================= */
+/* 🚀 NOVO: LAYOUT DOBRA 04 (QUEM VAI DIRECIONAR VOCÊ) */
+/* ================================================= */
+.whoSectionLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  margin-top: 20px;
+
+  /* 🚀 TÉCNICA PARA FUNDO 100% DA LARGURA DA TELA */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  /* 🎨 AJUSTE: Cor suave ao fundo da dobra */
+  background-color: $background-bio-suave;
+  padding: 40px 20px;
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
+    gap: 80px;
+    padding: 60px 100px;
+  }
+}
+
+.whoImages {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+
+  .imgMain {
+    width: 85%;
+    border-radius: 12px;
+    border: 2px solid $gold-highlight;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  .imgOverlap {
+    position: absolute;
+    width: 55%;
+    bottom: -30px;
+    right: -10px;
+    border-radius: 12px;
+    border: 4px solid $background-bio-suave; // Fusão com a nova cor de fundo
+    box-shadow: -10px 10px 25px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+
+    @media (max-width: 768px) {
+      bottom: -20px;
+      right: 0px;
+    }
+  }
+}
+
+.whoBioText {
+  max-width: 500px;
+  text-align: left;
+
+  h2 {
+    font-weight: 900;
+    font-size: 32px;
+    margin-bottom: 15px;
+    span {
+      color: $gold-highlight;
+    }
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #fff;
+    text-align: justify;
+  }
+}
+
+/* ================================================= */
+/* 🚀 NOVO: SEÇÃO DE DEPOIMENTO (DOBRA 05) */
+/* ================================================= */
+.depoimentoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 20px auto 40px;
+  width: 100%;
+}
+
+.feedbackImage {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid $gold-highlight;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
+  display: block;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    max-width: 90%;
   }
 }
 
@@ -138,7 +271,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   max-width: 380px;
   flex: 1 1 300px;
   border: 2px solid rgba(232, 193, 127, 0.6);
-  text-align: center;
+  text-align: left;
 
   h5 {
     font-size: 18px;
@@ -159,23 +292,27 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   width: 100%;
 }
 
-.ctaButtonGold {
+.ctaButtonGold,
+.ctaButtonGoldSmall {
   display: inline-block;
-  padding: 14px 35px; // Espessura conforme recomendado
-  background: #e8c17f; // Dourado sólido
+  padding: 14px 35px;
+  background: #e8c17f;
   color: #ffffff;
   font-family: "Playfair Display", serif;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 20px;
   text-transform: uppercase;
   cursor: pointer;
-  border: 2px solid #fff; // Borda branca fina
+  border: 2px solid #fff;
   border-radius: 8px;
 
-  /* 💥 Efeito Glow Amarelado solicitado pelo gestor */
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 0 20px rgba(255, 215, 0, 0.6),
+    0 4px 10px rgba(0, 0, 0, 0.3);
 
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
     transform: scale(1.03);
@@ -183,7 +320,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   }
 
   @media (max-width: 768px) {
-    width: 92%; // Respiro nas bordas do mobile
+    width: 92%;
     font-size: 18px;
     padding: 12px 10px;
   }
@@ -201,8 +338,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 
 .cardBege,
 .cardAprendizado,
-.cardExperiencia,
-.investmentCard {
+.cardExperiencia {
   background: $card-bg-transparente;
   border-left: 4px solid $blue-highlight;
   padding: 40px;
@@ -228,7 +364,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
       color: #fff !important;
       margin-bottom: 15px;
       font-size: 1.15rem;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 1.5;
       position: relative;
       padding-left: 30px;
@@ -256,10 +392,13 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   font-size: 1.5rem;
 }
 
+/* 🚀 EMOJI CENTRALIZADO ATUALIZADO */
 .emoji {
   font-size: 2.2rem;
   margin-bottom: 15px;
   display: block;
+  text-align: center;
+  width: 100%;
 }
 
 /* ================================================= */
@@ -320,20 +459,37 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 }
 
 /* ================================================= */
-/* 🚀 NOVA SEÇÃO: INVESTIMENTO REVISADA */
+/* 🚀 NOVA SEÇÃO: INVESTIMENTO REVISADA (FUNDO TOTAL) */
 /* ================================================= */
 .investmentCard {
   text-align: center;
+
+  /* 🚀 TÉCNICA PARA FUNDO 100% DA LARGURA DA TELA */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  background-color: $card-bg-transparente;
+  border-left: 4px solid $blue-highlight;
+  padding: 60px 40px;
+  backdrop-filter: blur(5px);
 
   .priceContainer {
     margin-bottom: 30px;
 
     .oldPrice {
-      display: block;
+      display: inline-block;
       color: $danger-red;
       text-decoration: line-through;
       font-size: 1.3rem;
       margin-bottom: 5px;
+      background: rgba(232, 193, 127, 0.1);
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid $gold-highlight;
     }
 
     .installmentCall {
@@ -344,8 +500,8 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 
     .newPrice {
       font-size: 2.5rem;
-      color: $gold-vibrant;
-      font-weight: 700;
+      color: $gold-vibrant; // 🚀 REVERTIDO: Mantido seu dourado original
+      font-weight: 900;
       margin: 5px 0;
 
       .priceHighlight {
@@ -451,7 +607,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   color: #fff;
   font-family: "Playfair Display", serif;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 900;
   text-transform: uppercase;
   padding: 22px 50px;
   border-radius: 8px;
@@ -494,6 +650,9 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   .titleBlock h2 {
     font-size: 26px;
   }
+  .investmentCard {
+    padding: 40px 15px;
+  }
   .investmentCard .newPrice {
     font-size: 1.8rem;
     .priceHighlight {
@@ -510,8 +669,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   }
   .cardBege,
   .cardAprendizado,
-  .cardExperiencia,
-  .investmentCard {
+  .cardExperiencia {
     padding: 25px;
     margin-inline: 10px;
   }

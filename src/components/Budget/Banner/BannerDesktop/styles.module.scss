@@ -1,255 +1,198 @@
 /* Seu código SCSS completo e corrigido */
 
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap");
 
 $gold-dark: #b58d48;
 $gold-light: #e8c17f;
+$gold-vibrant: #ffd700;
 $blue-highlight: #67bccb;
 $text-light: #fff;
 $background-marrom: #725542;
 
 .container {
-  /* AJUSTE: Empurra o conteúdo para baixo */
-  padding-top: 150px;
+  /* AJUSTE: Empurra o conteúdo para baixo do Header */
+  padding-top: 100px;
   background: $background-marrom;
-  /* CORREÇÃO: Usa min-height para garantir que o botão caiba */
   min-height: 100vh;
   color: $text-light;
   display: flex;
-  /* Alinhamento no topo, para compensar o padding-top */
-  align-items: flex-start;
+  align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 .content {
   display: flex;
   justify-content: space-between;
-  margin-left: max(0px, (100% - 1400px)/2);
-  margin-top: 0px;
-  /* O font-family do .content não afeta os seletores específicos (h1, p) */
-  font-family: "PowerGrotesk", sans-serif;
-  padding-inline: 40px;
-  width: 100%;
-  align-items: flex-start;
-}
-
-.flexTitle {
-  display: flex;
   align-items: center;
-  margin-top: 0px;
-  flex-shrink: 0;
-  width: 55%;
-  margin-right: 40px;
-}
-
-.titleBanner {
-  padding-inline: 20px;
-  position: relative;
-  text-align: left;
-  margin-left: 10px;
-
-  .orcamento {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 7px;
-    background: linear-gradient(
-      91deg,
-      $gold-dark -20%,
-      $gold-light 50%,
-      $gold-dark 120%
-    );
-    padding-block: 6px;
-    padding-inline: 10px;
-    border: none;
-    color: #333;
-    text-align: center;
-    font-family: "PowerGrotesk", sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-bottom: 10px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-
-    &:hover {
-      background: linear-gradient(
-        91deg,
-        #d4af37 -20%,
-        #ffd700 50%,
-        #d4af37 120%
-      );
-    }
-  }
-
-  .brownText {
-    color: $gold-light; // seu marrom de fundo, ajusta se quiser outro
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 50px; // tamanho menor que o H1 principal
-    font-weight: 700; // opcional, pode ser bold se quiser
-    display: inline-block;
-  }
-
-  .brownTextWrapper {
-    display: inline-flex; // ⚡ importante: mantém logo e texto na mesma linha
-    align-items: center; // ⚡ centraliza verticalmente
-    gap: 10px; // espaço entre texto e logo
-  }
-
-  .brownLogo {
-    width: 150px; // tamanho da logo, ajusta como quiser
-    height: auto;
-  }
-
-  .destaque {
-    color: $blue-highlight;
-    white-space: nowrap;
-  }
-
-  .nowrap {
-    /* Garante que o texto não quebre de linha */
-    //white-space: nowrap;
-  }
-
-  h1 {
-    color: $text-light;
-    /* Aplicando Playfair Display ao H1 */
-    font-family: "Playfair Display", Georgia, serif;
-    /* 💥 AJUSTE SOLICITADO: Diminui a fonte do H1 */
-    font-size: 40px;
-    line-height: 125%;
-    margin-bottom: 28px;
-  }
-
-  img {
-    /* Linha decorativa (line.svg) */
-    position: absolute;
-    top: 133px;
-    left: 48%;
-    transform: translateX(-50%);
-    width: 95%;
-    height: auto;
-    z-index: -1;
-  }
-
-  p {
-    color: $text-light;
-    /* Aplicando Playfair Display ao Parágrafo */
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 20px;
-    line-height: 1.5;
-    margin-bottom: 72px;
-  }
-}
-
-.gridBackground {
-  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
-    linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
-    url("/grid.svg") no-repeat;
-  background: url("/grid.svg") no-repeat;
-  background-size: cover;
-  background-position: top;
-  padding: 20px 0;
-  position: relative;
-  z-index: 1;
-}
-
-.button {
-  border: 1px solid #fff;
-  background: linear-gradient(
-    91deg,
-    $gold-dark -20%,
-    $gold-light 50%,
-    $gold-dark 120%
-  );
-  background-size: 300% 300%;
-  padding: 20px;
-  color: $text-light;
-  font-family: "PowerGrotesk", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 3.04px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 60px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  animation: gradientCircle 4s linear infinite;
-  max-width: 384px;
-  cursor: pointer;
+}
 
-  &:hover {
-    background: linear-gradient(91deg, #d4af37 -20%, #ffd700 50%, #d4af37 120%);
-    box-shadow: 0px 10px 50px 0px rgba(212, 175, 55, 0.56);
-    transition: background 2.5s ease, box-shadow 2.5s ease-in-out;
+.leftSide {
+  width: 50%;
+  z-index: 5;
+  text-align: left;
+}
+
+.titleLine {
+  color: $text-light;
+  font-family: "Playfair Display", serif;
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 24px;
+
+  span {
+    color: $blue-highlight; // Cor correspondente ao mobile
   }
+}
+
+.description {
+  color: $text-light;
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 700px;
+}
+
+.orcamento {
+  display: inline-block;
+  border-radius: 7px;
+  background: linear-gradient(91deg, $gold-dark, $gold-light, $gold-dark);
+  padding: 8px 15px;
+  border: none;
+  color: #333;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .eventInfo {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-top: 30px;
-  /* Mantido o espaçamento generoso antes do botão */
-  margin-bottom: 80px;
+  gap: 20px;
+  margin-bottom: 50px;
 }
 
 .eventDetail {
   display: flex;
-  align-items: center;
-  font-family: "Playfair Display", Georgia, serif;
+  align-items: flex-start;
+  font-family: "Playfair Display", serif;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   color: #fff;
+  gap: 15px;
 
   .icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 15px;
-    color: #e8c17f;
+    font-style: normal;
+    font-size: 20px;
+  }
+
+  .dateBlock {
+    display: flex;
+    flex-direction: column;
+
+    strong {
+      color: $gold-light;
+      font-size: 21px;
+    }
+
+    small {
+      opacity: 0.8;
+      font-size: 17px;
+    }
   }
 
   span {
     line-height: 1.4;
   }
 }
+
+/* 🚀 BOTÃO CTA COM GLOW DO MOBILE */
+.button {
+  border: 2px solid #fff;
+  background: linear-gradient(91deg, $gold-dark, $gold-light, $gold-dark);
+  background-size: 200% auto;
+  padding: 22px 30px;
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.7);
+    background-position: right center;
+  }
+}
+
 .rightSide {
-  position: relative;
-  width: 51%;
-  flex-shrink: 0;
+  width: 45%;
   display: flex;
   justify-content: flex-end;
-  /* Margin negativa para puxar a imagem para a direita */
-  margin-right: -150px;
-  z-index: 10;
+  position: relative;
+}
 
-  /* AJUSTE PARA SUBIR A IMAGEM */
-  margin-top: -50px;
+.imageWrapper {
+  position: relative;
 
-  img {
+  &::before {
+    content: "";
+    position: absolute;
     width: 110%;
-    max-width: 790px;
-    margin-left: -6;
-    height: auto;
-    object-fit: contain;
+    height: 110%;
+    background: radial-gradient(
+      circle,
+      rgba(103, 188, 203, 0.15) 0%,
+      transparent 70%
+    );
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
   }
+}
+
+.mentoraImg {
+  width: 100%;
+  max-width: 850px;
+  height: auto;
+  object-fit: contain;
+  /* Ajuste para alinhar com a base se necessário */
+  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
+}
+
+.gridBackground {
+  position: relative;
+  z-index: 1;
+  /* Removemos o grid fixo aqui para não poluir o fundo marrom principal */
 }
 
 @keyframes gradientCircle {
   0% {
-    background-position: 0% 0%;
-  }
-  25% {
-    background-position: 100% 0%;
+    background-position: 0% 50%;
   }
   50% {
-    background-position: 100% 100%;
-  }
-  75% {
-    background-position: 0% 100%;
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 0%;
+    background-position: 0% 50%;
   }
 }

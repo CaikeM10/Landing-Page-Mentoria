@@ -134,14 +134,20 @@ $text-light: #fff;
     border-radius: 8px;
 
     /* 💥 EFEITO GLOW AMARELADO */
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7), 0 4px 15px rgba(0, 0, 0, 0.4);
+    box-shadow:
+      0 0 20px rgba(255, 215, 0, 0.7),
+      0 4px 15px rgba(0, 0, 0, 0.4);
 
     animation: gradientAnimation 4s ease infinite;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
 
     &:hover {
       transform: scale(1.02);
-      box-shadow: 0 0 30px rgba(255, 215, 0, 1), 0 6px 20px rgba(0, 0, 0, 0.6);
+      box-shadow:
+        0 0 30px rgba(255, 215, 0, 1),
+        0 6px 20px rgba(0, 0, 0, 0.6);
     }
 
     @media only screen and (max-width: 768px) {

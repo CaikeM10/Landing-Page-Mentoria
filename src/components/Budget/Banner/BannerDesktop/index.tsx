@@ -1,18 +1,18 @@
 import styles from "./styles.module.scss";
 
-// Placeholder para os Ícones (Mantidos para o código compilar)
+// Placeholder para os Ícones alinhados ao estilo visual
+const IconVideo = ({ className }: { className: string }) => (
+  <i className={className}>▶️</i>
+);
+const IconCheck = ({ className }: { className: string }) => (
+  <i className={className}></i>
+);
 const IconCalendar = ({ className }: { className: string }) => (
-  <i className={className}>▶️</i>
-);
-const IconPlay = ({ className }: { className: string }) => (
-  <i className={className}>▶️</i>
-);
-const IconPlay2 = ({ className }: { className: string }) => (
   <i className={className}>📅</i>
 );
 
 const BannerDesktop = () => {
-  // 🚀 Lógica atualizada: Redirecionamento direto para o Checkout da Hubla
+  // 🚀 Redirecionamento direto para o Checkout da Hubla
   const handlePurchaseRedirect = () => {
     window.location.href = "https://pay.hub.la/52qai6fJYxYKj0s17HZd";
   };
@@ -20,65 +20,53 @@ const BannerDesktop = () => {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
-        <div className={styles.flexTitle}>
-          <div className={styles.titleBanner}>
-            <div className={styles.gridBackground}>
-              <button className={styles.orcamento}>
-                • Saiba mais abaixo! •
-              </button>
-              <h1 className={styles.titleLine}>
-                <span className={styles.brownText}></span>
-              </h1>
+        <div className={styles.leftSide}>
+          <div className={styles.gridBackground}>
+            {/* Badge de Destaque */}
+            <button className={styles.orcamento}>• Saiba mais abaixo! •</button>
 
-              <h1 className={styles.subtitleLine}>
-                <br></br>O passo a passo para estruturar seu posicionamento e
-                criar novas fontes de renda no consultório.
-              </h1>
+            <h1 className={styles.titleLine}>
+              Treinamento <br />
+              <span>Consultório Sustentável</span>
+            </h1>
 
-              <p className={styles.description}>
-                Um treinamento para profissionais da saúde que já vivem de
-                clinicar e desejam crescer com mais organização, clareza sobre
-                os seus serviços e qualidade de vida.
-              </p>
+            <p className={styles.description}>
+              O passo a passo para estruturar um plano de crescimento
+              sustentável com diversificação de serviços no seu consultório.
+            </p>
 
-              {/* BLOCO DE INFORMAÇÕES DO EVENTO */}
-              <div className={styles.eventInfo}>
-                <div className={styles.eventDetail}>
-                  <IconCalendar className={styles.icon} />
-                  <span>
-                    Primeira etapa: Treinamento Online, Gravado e acesso
-                    imediato.
-                  </span>
-                </div>
-                <div className={styles.eventDetail}>
-                  <IconPlay className={styles.icon} />
-                  <span>
-                    Segunda etapa: Treinamento Online e ao vivo para organizar
-                    os próximos passos de crescimento em 2026
-                  </span>
-                </div>
-
-                <div className={styles.eventDetail}>
-                  <IconPlay2 className={styles.icon} />
-                  <span>
-                    Data da aula ao vivo será 24/01/26 <br></br>Horário das
-                    09:00h às 12:00h
-                  </span>
-                </div>
+            {/* BLOCO DE INFORMAÇÕES - Estilo Checklist */}
+            <div className={styles.eventInfo}>
+              <div className={styles.eventDetail}>
+                <IconVideo className={styles.icon} />
+                <span>Acesso imediato ao material gravado</span>
               </div>
 
-              {/* 🚀 BOTÃO AGORA REDIRECIONA DIRETAMENTE */}
-              <button
-                className={styles.button}
-                onClick={handlePurchaseRedirect}
-              >
-                QUERO UM CONSULTÓRIO SUSTENTÁVEL!
-              </button>
+              <div className={styles.eventDetail}>
+                <IconCalendar className={styles.icon} />
+                <div className={styles.dateBlock}>
+                  <strong>Aula prática ao vivo: 31/01/26</strong>
+                  <small>Horário: 09:00h às 12:00h</small>
+                </div>
+              </div>
             </div>
+
+            {/* 🚀 BOTÃO CTA COM ESTILO GOLD */}
+            <button className={styles.button} onClick={handlePurchaseRedirect}>
+              QUERO UM CONSULTÓRIO SUSTENTÁVEL!
+            </button>
           </div>
         </div>
+
         <div className={styles.rightSide}>
-          <img src="/Iria_DesktopMarrom.webp" alt="Íria Sabóia" />
+          {/* Imagem da Mentora - Estilo sobreposto conforme o layout Desktop */}
+          <div className={styles.imageWrapper}>
+            <img
+              src="/Iria_DesktopMarrom.webp"
+              alt="Íria Sabóia"
+              className={styles.mentoraImg}
+            />
+          </div>
         </div>
       </div>
     </section>
