@@ -34,22 +34,11 @@ const BannerDesktop = () => {
               O passo a passo para estruturar um plano de crescimento
               sustentável com diversificação de serviços no seu consultório.
             </p>
-
-            {/* BLOCO DE INFORMAÇÕES - Estilo Checklist */}
-            <div className={styles.eventInfo}>
-              <div className={styles.eventDetail}>
-                <IconVideo className={styles.icon} />
-                <span>Acesso imediato ao material gravado</span>
-              </div>
-
-              <div className={styles.eventDetail}>
-                <IconCalendar className={styles.icon} />
-                <div className={styles.dateBlock}>
-                  <strong>Aula prática ao vivo: 31/01/26</strong>
-                  <small>Horário: 09:00h às 12:00h</small>
-                </div>
-              </div>
-            </div>
+            <p className={styles.description}>
+              Um treinamento prático para profissionais da saúde que já vivem de
+              clinicar e querem fortalecer o posicionamento e crescer com mais
+              liberdade e tempo de qualidade na agenda.
+            </p>
 
             {/* 🚀 BOTÃO CTA COM ESTILO GOLD */}
             <button className={styles.button} onClick={handlePurchaseRedirect}>

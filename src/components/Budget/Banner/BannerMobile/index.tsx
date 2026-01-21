@@ -21,9 +21,10 @@ const BannerMobile = () => {
 
         <div className={styles.eventInfo}>
           <p>
-            📅 <strong>Aula prática ao vivo:</strong> 31/01/26
+            Um treinamento prático para profissionais da saúde que já vivem de
+            clinicar e querem fortalecer o posicionamento e crescer com mais
+            liberdade e tempo de qualidade na agenda.
           </p>
-          <p>Horário: 09:00h às 12:00h</p>
         </div>
 
         <div className={styles.buttonContainer}>
