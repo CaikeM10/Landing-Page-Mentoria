@@ -30,8 +30,10 @@ const About = () => {
                 • Você já vive de clinicar e sente que estagnou no modelo atual.
                 <br />
                 <br />
+                <br />
                 • Tem agenda cheia, mas percebe que tempo virou um recurso
                 escasso.
+                <br />
                 <br />
                 <br />• Ou tem a agenda instável e não sabe como captar
                 pacientes.
@@ -48,7 +50,6 @@ const About = () => {
             </div>
           </div>
 
-          {/* 🚀 BOTÃO CTA ABAIXO DOS CARDS */}
           <div className={styles.ctaWrapperCards}>
             <button
               className={styles.ctaButtonGold}
@@ -89,7 +90,7 @@ const About = () => {
 
           <div className={styles.divider}></div>
 
-          {/* 🚀 DOBRA 04: QUEM VAI DIRECIONAR VOCÊ (ADICIONADO) */}
+          {/* 🚀 DOBRA 04: QUEM VAI DIRECIONAR VOCÊ */}
           <div className={styles.titleBlock}>
             <h3 className={styles.introTextWho}>
               Quem vai direcionar você nesse treinamento:
@@ -145,7 +146,102 @@ const About = () => {
 
           <div className={styles.divider}></div>
 
-          {/* 🚀 SEÇÃO: EXPERIÊNCIA TCS (INVERTIDO - AGORA PRIMEIRO) */}
+          {/* 🚀 DOBRA: POR QUE DECIDI CRIAR O TREINAMENTO */}
+          <div className={styles.titleBlock}>
+            <h2>
+              Por que decidi criar o{" "}
+              <span>Treinamento Consultório Sustentável?</span>
+            </h2>
+            <p className={styles.subTitle}>
+              Ao longo de mais de 11 anos de prática clínica, percebi um padrão
+              claro:
+            </p>
+          </div>
+
+          <div className={styles.cardContainer}>
+            <div className={styles.card}>
+              <div className={styles.emoji}>📉</div>
+              <h5>
+                • Profissionais excelentes, com agenda cheia, mas sem um plano
+                estruturado para crescer com qualidade.
+                <br />
+                <br />• Profissionais da saúde sobrecarregados, inseguros sobre
+                os próximos passos e limitados ao modelo de atendimentos
+                individuais.
+              </h5>
+            </div>
+
+            <div className={styles.card}>
+              <div className={styles.emoji}>💡</div>
+              <h5>
+                <strong>
+                  • O Treinamento nasceu para responder a esse cenário.
+                </strong>
+                <br />
+                <br /> • É um método prático para quem deseja organizar seu
+                crescimento e estruturar um modelo de negócio que sustente novos
+                voos, sem sacrificar tempo ou qualidade de vida.
+              </h5>
+            </div>
+
+            <div className={styles.card}>
+              <div className={styles.emoji}>🚀</div>
+              <h5>
+                <strong> • Neste treinamento, você terá:</strong>
+                <br />
+                <br />
+                • Acesso imediato a 3 horas de aulas gravadas para iniciar agora
+                sua organização.
+                <br />
+                <br />• Encontro prático ao vivo para implementação, tirar
+                dúvidas e receber direção real.
+              </h5>
+            </div>
+          </div>
+
+          {/* 🚀 CAIXINHA COM TEXTO MARROM E BOTÃO ABAIXO */}
+          <div
+            className={styles.containerSingleCard}
+            style={{ marginTop: "35px" }}
+          >
+            <div
+              className={styles.card}
+              style={{ maxWidth: "850px", textAlign: "center" }}
+            >
+              <h5 style={{ color: "#725541", margin: 0 }}>
+                • Nada aqui é teórico ou genérico. <br></br>É aplicação real,
+                baseada em decisões validadas na prática clínica.
+              </h5>
+            </div>
+          </div>
+          <div
+            className={styles.titleBlock}
+            style={{ marginTop: "40px", textAlign: "center", width: "100%" }}
+          >
+            <p
+              className={styles.subTitleHighlight}
+              style={{ margin: "0 auto", textAlign: "center" }}
+            >
+              Faz sentido para você dar esse próximo passo com mais organização
+              e menos sobrecarga?
+            </p>
+            <div
+              className={styles.ctaWrapperCards}
+              style={{ marginTop: "30px" }}
+            >
+              <button
+                className={styles.ctaButtonGold}
+                onClick={handleRedirectToCheckout}
+                style={{ fontSize: "18px" }}
+              >
+                Quero acessar o Treinamento Consultório Sustentável
+              </button>
+            </div>
+          </div>
+
+          <div className={styles.divider}></div>
+
+          {/* SEÇÃO: EXPERIÊNCIA TCS */}
           <div className={styles.titleBlock}>
             <h2>
               Conheça como será sua <span>Experiência com o TCS:</span>
@@ -199,7 +295,7 @@ const About = () => {
             </div>
           </div>
 
-          {/* 🚀 DOBRA 05: DEPOIMENTOS (ADICIONADO ABAIXO DA EXPERIÊNCIA) */}
+          {/* SEÇÃO DEPOIMENTOS */}
           <div className={styles.titleBlock} style={{ marginTop: "50px" }}>
             <h2>
               Veja o depoimento de quem acessou o{" "}
@@ -226,7 +322,7 @@ const About = () => {
 
           <div className={styles.divider}></div>
 
-          {/* 🚀 SEÇÃO: O QUE VOCÊ VAI APRENDER (INVERTIDO - AGORA DEPOIS) */}
+          {/* O QUE VOCÊ VAI RECEBER */}
           <div className={styles.titleBlock}>
             <h2>
               Veja tudo que você vai receber no{" "}
@@ -254,7 +350,6 @@ const About = () => {
             </div>
           </div>
 
-          {/* 🚀 BOTÃO CTA ABAIXO DO APRENDIZADO */}
           <div className={styles.ctaWrapperAprendizado}>
             <button
               className={styles.ctaButtonGold}
@@ -268,7 +363,10 @@ const About = () => {
 
           {/* SEÇÃO: INVESTIMENTO */}
           <div className={styles.titleBlock}>
-            <h2>Investimento</h2>
+            <h2>
+              Condição especial de investimento: Lote O (Disponível por tempo
+              limitado)
+            </h2>
           </div>
 
           <div className={styles.investmentCard}>
@@ -290,14 +388,15 @@ const About = () => {
             <div className={styles.recuperacaoInfo}>
               <p>O investimento pode ser recuperado com:</p>
               <ul>
-                <li>Um novo serviço implementado</li>
+                <li>Construção de uma nova proposta de atuação</li>
                 <li>Uma nova proposta de atuação</li>
                 <li>Reorganização do seu modelo de negócio</li>
               </ul>
             </div>
 
             <p className={styles.emotionalReturn}>
-              👉 O retorno está na qualidade da agenda e da vida.
+              O verdadeiro retorno está na qualidade da sua agenda, e da sua
+              vida.
             </p>
 
             <button
@@ -308,7 +407,6 @@ const About = () => {
             </button>
           </div>
 
-          {/* GARANTIA */}
           <div className={styles.garantiaContainer}>
             <div className={styles.garantiaIcon}>🛡️</div>
             <h4>Garantia incondicional de 7 dias</h4>

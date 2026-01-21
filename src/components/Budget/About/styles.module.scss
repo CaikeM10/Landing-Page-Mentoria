@@ -277,6 +277,12 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
     font-size: 18px;
     font-weight: 700;
     line-height: 1.4;
+
+    strong {
+      display: block;
+      margin-bottom: 8px;
+      color: inherit;
+    }
   }
 }
 

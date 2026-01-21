@@ -2,7 +2,7 @@ import About from "@/components/Budget/About";
 //import Who from "@/components/Budget/Who";
 import Banner from "@/components/Budget/Banner";
 //import Footer from "@/components/Budget/Footer";
-import HeaderFixed from "@/components/Budget/HeaderFixed";
+//import HeaderFixed from "@/components/Budget/HeaderFixed";
 import SwiperComponent from "@/components/Budget/Swiper";
 //import Who from "@/components/Budget/Who";
 import StickFooter from "@/components/Portuguese/StickFooter";
@@ -16,7 +16,7 @@ export default function Desafio() {
 
   return (
     <section className={styles.container}>
-      <HeaderFixed />
+      {/*<HeaderFixed />*/}
       <Banner />
 
       {/* Vídeo principal de introdução */}

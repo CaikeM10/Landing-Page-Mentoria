@@ -8,22 +8,23 @@ const BannerMobile = () => {
   return (
     <section className={styles.container}>
       <div className={styles.contentWrapper}>
-        {/* Adicionado <br /> para controlar a quebra em telas menores como Xiaomi */}
         <h1 className={styles.mainTitle}>
           Treinamento <br />
           Consultório <span className={styles.goldText}>Sustentável</span>
         </h1>
 
+        {/* PRIMEIRA FRASE - FONTE ESTILIZADA (PLAYFAIR) */}
         <p className={styles.description}>
-          O passo a passo para estruturar um plano de crescimento sustentável
-          com diversificação de serviços no seu consultório.
+          Crie um plano de crescimento com diversificação de serviços para
+          aumentar seu faturamento sem sobrecarregar a agenda de atendimentos.
         </p>
 
+        {/* SEGUNDA FRASE - LETRA NORMAL */}
         <div className={styles.eventInfo}>
-          <p>
-            Um treinamento prático para profissionais da saúde que já vivem de
-            clinicar e querem fortalecer o posicionamento e crescer com mais
-            liberdade e tempo de qualidade na agenda.
+          <p className={styles.normalText}>
+            Um treinamento prático para profissionais da saúde, baseado em
+            experiência real de clínica, posicionamento e construção de modelos
+            de negócio sustentáveis.
           </p>
         </div>
 

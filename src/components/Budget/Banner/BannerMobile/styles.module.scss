@@ -34,15 +34,18 @@ $gold-light: #e8c17f;
   z-index: 2;
   padding-inline: 25px; // Mais respiro lateral
   text-align: left;
+
+  /* 🚀 AJUSTE ADICIONAL: Aumentado para 45vh para descer o conteúdo e liberar o rosto */
+  margin-top: 45vh;
 }
 
 .mainTitle {
   color: #fff;
   font-family: "Playfair Display", serif;
-  /* 🚀 clamp ajusta o tamanho entre 26px e 34px dependendo da largura do dispositivo */
+  /* 🚀 clamp ajusta o tamanho entre 24px e 32px dependendo da largura do dispositivo */
   font-size: clamp(24px, 7vw, 32px);
   font-weight: 900; // Letra cheia (Black)
-  line-height: 1; // Reduzido para aproximar as linhas e ficar mais elegante
+  line-height: 1.1;
   margin-bottom: 18px;
   letter-spacing: -0.02em;
 
@@ -53,26 +56,30 @@ $gold-light: #e8c17f;
   }
 }
 
+/* 🚀 PRIMEIRA FRASE: FONTE ESTILIZADA (PLAYFAIR) */
 .description {
   color: #fff;
-  font-size: 16px; // Subtítulo mais robusto
-  line-height: 1.2;
-  margin-bottom: 25px;
-  font-weight: 600; // Letra cheia no subtítulo
-  opacity: 1; // Máxima nitidez
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  font-weight: 700; // Letra cheia
+  opacity: 1;
+}
+
+/* 🚀 SEGUNDA FRASE: LETRA NORMAL (SANS-SERIF) */
+.normalText {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif; // Fonte normal
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 500; // Peso normal
+  opacity: 0.9;
+  margin-bottom: 35px;
 }
 
 .eventInfo {
-  margin-bottom: 40px;
-  p {
-    color: #fff;
-    font-size: 15px;
-    margin: 5px 0;
-    font-weight: 650; // Letra cheia na data também
-    strong {
-      color: $gold-light;
-    }
-  }
+  margin-bottom: 10px;
 }
 
 .buttonContainer {
@@ -88,6 +95,7 @@ $gold-light: #e8c17f;
   border: 2px solid #fff;
   background: linear-gradient(91deg, $gold-dark, $gold-light, $gold-dark);
   color: #fff;
+  font-family: "Playfair Display", serif;
   font-weight: 800;
   font-size: 16px;
   text-transform: uppercase;

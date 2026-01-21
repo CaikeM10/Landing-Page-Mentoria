@@ -31,13 +31,14 @@ const BannerDesktop = () => {
             </h1>
 
             <p className={styles.description}>
-              O passo a passo para estruturar um plano de crescimento
-              sustentável com diversificação de serviços no seu consultório.
+              Crie um plano de crescimento com diversificação de serviços para
+              aumentar seu faturamento sem sobrecarregar a agenda de
+              atendimentos.
             </p>
             <p className={styles.description}>
-              Um treinamento prático para profissionais da saúde que já vivem de
-              clinicar e querem fortalecer o posicionamento e crescer com mais
-              liberdade e tempo de qualidade na agenda.
+              Um treinamento prático para profissionais da saúde, baseado em
+              experiência real de clínica, posicionamento e construção de
+              modelos de negócio sustentáveis.
             </p>
 
             {/* 🚀 BOTÃO CTA COM ESTILO GOLD */}
