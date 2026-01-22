@@ -9,7 +9,7 @@ $gold-light: #e8c17f;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 50px; // Aumentado levemente para harmonia
+  padding-bottom: 50px;
   position: relative;
 
   &::after {
@@ -18,7 +18,7 @@ $gold-light: #e8c17f;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 75%; // Aumentado para garantir contraste com as letras maiores
+    height: 75%;
     background: linear-gradient(
       to top,
       rgba(0, 0, 0, 0.95) 0%,
@@ -32,22 +32,26 @@ $gold-light: #e8c17f;
 .contentWrapper {
   position: relative;
   z-index: 2;
-  padding-inline: 25px; // Mais respiro lateral
+  padding-inline: 25px;
   text-align: left;
 
-  /* 🚀 AJUSTE ADICIONAL: Aumentado para 45vh para descer o conteúdo e liberar o rosto */
-  margin-top: 45vh;
+  /* 🚀 AJUSTE XIAOMI: Aumentado para 50vh para garantir que o título 
+     comece na metade da tela, liberando totalmente o rosto. */
+  margin-top: 50vh;
 }
 
 .mainTitle {
   color: #fff;
   font-family: "Playfair Display", serif;
-  /* 🚀 clamp ajusta o tamanho entre 24px e 32px dependendo da largura do dispositivo */
   font-size: clamp(24px, 7vw, 32px);
-  font-weight: 900; // Letra cheia (Black)
+  font-weight: 900;
   line-height: 1.1;
   margin-bottom: 18px;
   letter-spacing: -0.02em;
+
+  /* 🎯 TÍTULO CENTRALIZADO */
+  text-align: center;
+  width: 100%;
 
   .goldText {
     color: $gold-light;
@@ -56,26 +60,34 @@ $gold-light: #e8c17f;
   }
 }
 
-/* 🚀 PRIMEIRA FRASE: FONTE ESTILIZADA (PLAYFAIR) */
 .description {
   color: #fff;
   font-family: "Playfair Display", serif;
   font-size: 18px;
   line-height: 1.1;
   margin-bottom: 20px;
-  font-weight: 700; // Letra cheia
+  font-weight: 700;
   opacity: 1;
 }
 
-/* 🚀 SEGUNDA FRASE: LETRA NORMAL (SANS-SERIF) */
 .normalText {
   color: #fff;
-  font-family: Arial, Helvetica, sans-serif; // Fonte normal
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   line-height: 1.5;
-  font-weight: 500; // Peso normal
+  font-weight: 500;
   opacity: 0.9;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
+}
+
+.lightInfo {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-bottom: 30px;
+  display: block;
 }
 
 .eventInfo {
@@ -90,7 +102,7 @@ $gold-light: #e8c17f;
 
 .ctaButton {
   width: 100%;
-  padding: 16px; // Botão mais encorpado
+  padding: 16px;
   border-radius: 8px;
   border: 2px solid #fff;
   background: linear-gradient(91deg, $gold-dark, $gold-light, $gold-dark);

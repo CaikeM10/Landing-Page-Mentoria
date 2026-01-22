@@ -15,8 +15,8 @@ const BannerMobile = () => {
 
         {/* PRIMEIRA FRASE - FONTE ESTILIZADA (PLAYFAIR) */}
         <p className={styles.description}>
-          Crie um plano de crescimento com diversificação de serviços para
-          aumentar seu faturamento sem sobrecarregar a agenda de atendimentos.
+          O passo a passo para implementar um novo projeto profissional com
+          segurança.
         </p>
 
         {/* SEGUNDA FRASE - LETRA NORMAL */}
@@ -28,9 +28,14 @@ const BannerMobile = () => {
           </p>
         </div>
 
+        {/* TERCEIRA FRASE - LEVE E ANTES DO BOTÃO */}
+        <p className={styles.lightInfo}>
+          • Aulas gravadas + Mentoria Voares online e ao vivo
+        </p>
+
         <div className={styles.buttonContainer}>
           <button className={styles.ctaButton} onClick={handlePurchaseRedirect}>
-            Quero um consultório sustentável
+            Quero meu consultório sustentável
           </button>
         </div>
       </div>

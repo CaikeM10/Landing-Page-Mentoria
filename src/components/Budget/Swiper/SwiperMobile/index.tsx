@@ -11,6 +11,10 @@ export default function SwiperMobile() {
     setActiveIndex(swiper.realIndex);
   };
 
+  const handlePurchaseRedirect = () => {
+    window.location.href = "https://pay.hub.la/52qai6fJYxYKj0s17HZd";
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -65,7 +69,7 @@ export default function SwiperMobile() {
           <div className={styles.gradientRight}></div>
 
           <div className={styles.pagination}>
-            {[0, 1, 2, 3].map((index) => (
+            {[0, 1, 2, 3, 4, 5, 6].map((index) => (
               <div
                 key={index}
                 className={`${styles.paginationBullet} ${
@@ -73,6 +77,16 @@ export default function SwiperMobile() {
                 }`}
               />
             ))}
+          </div>
+
+          {/* 🚀 BOTÃO ADICIONADO PARA VERSÃO MOBILE */}
+          <div className={styles.buttonWrapper}>
+            <button
+              className={styles.ctaButton}
+              onClick={handlePurchaseRedirect}
+            >
+              FAÇA SUA INSCRIÇÃO AQUI
+            </button>
           </div>
         </div>
       </div>

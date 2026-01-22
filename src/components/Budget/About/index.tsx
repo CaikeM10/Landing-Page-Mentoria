@@ -25,27 +25,20 @@ const About = () => {
 
           <div className={styles.cardContainer}>
             <div className={styles.card}>
-              <div className={styles.emoji}>🤯</div>
               <h5>
-                • Você já vive de clinicar e sente que estagnou no modelo atual.
-                <br />
-                <br />
-                <br />
-                • Tem agenda cheia, mas percebe que tempo virou um recurso
-                escasso.
-                <br />
-                <br />
-                <br />• Ou tem a agenda instável e não sabe como captar
-                pacientes.
+                • Para você que quer fortalecer seu posicionamento profissional,
+                implementar novos serviços e aumentar seu faturamento no
+                consultório, sem sobrecarregar a agenda de atendimentos
               </h5>
             </div>
 
             <div className={styles.card}>
-              <div className={styles.emoji}>⏰</div>
               <h5>
-                • Para você que quer fortalecer seu posicionamento profissional,
-                implementar novos serviços e aumentar seu faturamento no
-                consultório.
+                • Para você que tem agenda cheia, mas sente que a sobrecarga não
+                é sustentável. <br />
+                <br />• Para quem já investiu muito em conhecimento, já tem
+                muito tempo de experiência, mas falta clareza e direcionamento
+                para organizar novos projetos profissionais.
               </h5>
             </div>
           </div>
@@ -88,16 +81,29 @@ const About = () => {
             </div>
           </div>
 
-          <div className={styles.divider}></div>
-
-          {/* 🚀 DOBRA 04: QUEM VAI DIRECIONAR VOCÊ */}
-          <div className={styles.titleBlock}>
-            <h3 className={styles.introTextWho}>
-              Quem vai direcionar você nesse treinamento:
-            </h3>
+          <div className={styles.ctaWrapperCards}>
+            <button
+              className={styles.ctaButtonGold}
+              onClick={handleRedirectToCheckout}
+            >
+              QUERO MUDAR
+            </button>
           </div>
 
+          <div className={styles.divider}></div>
+
+          {/* 🚀 DOBRA 04: QUEM VAI DIRECIONAR VOCÊ (TÍTULO AGORA DENTRO DO FUNDO COLORIDO) */}
           <div className={styles.whoSectionLayout}>
+            {/* Título movido para dentro para herdar o background diferenciado */}
+            <div
+              className={styles.titleBlock}
+              style={{ width: "100%", marginBottom: "40px" }}
+            >
+              <h3 className={styles.introTextWho}>
+                Quem vai direcionar você nesse treinamento:
+              </h3>
+            </div>
+
             <div className={styles.whoImages}>
               <img
                 src="/Captura de tela 2025-10-03 191715.webp"
@@ -160,7 +166,6 @@ const About = () => {
 
           <div className={styles.cardContainer}>
             <div className={styles.card}>
-              <div className={styles.emoji}>📉</div>
               <h5>
                 • Profissionais excelentes, com agenda cheia, mas sem um plano
                 estruturado para crescer com qualidade.
@@ -172,20 +177,18 @@ const About = () => {
             </div>
 
             <div className={styles.card}>
-              <div className={styles.emoji}>💡</div>
               <h5>
                 <strong>
                   • O Treinamento nasceu para responder a esse cenário.
                 </strong>
                 <br />
-                <br /> • É um método prático para quem deseja organizar seu
+                <br />• É um método prático para quem deseja organizar seu
                 crescimento e estruturar um modelo de negócio que sustente novos
                 voos, sem sacrificar tempo ou qualidade de vida.
               </h5>
             </div>
 
             <div className={styles.card}>
-              <div className={styles.emoji}>🚀</div>
               <h5>
                 <strong> • Neste treinamento, você terá:</strong>
                 <br />
@@ -209,7 +212,7 @@ const About = () => {
               style={{ maxWidth: "850px", textAlign: "center" }}
             >
               <h5 style={{ color: "#725541", margin: 0 }}>
-                • Nada aqui é teórico ou genérico. <br></br>É aplicação real,
+                • Nada aqui é teórico ou genérico. <br />É aplicação real,
                 baseada em decisões validadas na prática clínica.
               </h5>
             </div>
@@ -432,7 +435,7 @@ const About = () => {
               className={styles.ctaButtonFinal}
               onClick={handleRedirectToCheckout}
             >
-              Quero estruturar meu consultório
+              Quero garantir o treinamento
             </button>
           </div>
         </div>

@@ -49,7 +49,7 @@ $gold: #ffd700; /* Dourado padrão */
 
     p {
       /* 💥 CONTRASTE: Cor mais clara para melhor legibilidade */
-      color: #fff; /* Alterado de rgba(215, 215, 215, 0.5) para Branco Puro */
+      color: #fff;
       text-align: center;
       font-family: "Space Grotesk", sans-serif;
       font-size: 16px;
@@ -120,5 +120,43 @@ $gold: #ffd700; /* Dourado padrão */
   opacity: 1;
 }
 
-/* O restante do código (comentado) não precisa ser alterado */
-/* ... (gradientLeft, gradientRight, etc.) ... */
+/* 🚀 ESTILO DO BOTÃO ADICIONADO */
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px; // Espaçamento abaixo do carrossel
+  margin-bottom: 20px;
+}
+
+.ctaButton {
+  background: linear-gradient(91deg, $gold-dark, $gold-light, $gold-dark);
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif; // Mantendo a fonte da seção
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 18px 45px;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    font-size: 16px;
+    padding: 15px 20px;
+  }
+}

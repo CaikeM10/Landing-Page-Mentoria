@@ -11,6 +11,10 @@ export default function SwiperDesktop() {
     setActiveIndex(swiper.activeIndex);
   };
 
+  const handlePurchaseRedirect = () => {
+    window.location.href = "https://pay.hub.la/52qai6fJYxYKj0s17HZd";
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -37,8 +41,8 @@ export default function SwiperDesktop() {
               1024: { slidesPerView: 3, spaceBetween: 20 },
             }}
             autoplay={{
-              delay: 3000, // Tempo entre os slides em milissegundos
-              disableOnInteraction: false, // Continua autoplay mesmo após interação
+              delay: 3000,
+              disableOnInteraction: false,
             }}
             modules={[Autoplay]}
             className={styles.customSwiper}
@@ -68,7 +72,7 @@ export default function SwiperDesktop() {
           <div className={styles.gradientRight}></div>
 
           <div className={styles.pagination}>
-            {[0, 1, 2, 3].map((index) => (
+            {[0, 1, 2, 3, 4, 5, 6].map((index) => (
               <div
                 key={index}
                 className={`${styles.paginationBullet} ${
@@ -76,6 +80,16 @@ export default function SwiperDesktop() {
                 }`}
               />
             ))}
+          </div>
+
+          {/* 🚀 BOTÃO ADICIONADO ABAIXO DO CARROSSEL */}
+          <div className={styles.buttonWrapper}>
+            <button
+              className={styles.ctaButton}
+              onClick={handlePurchaseRedirect}
+            >
+              FAÇA SUA INSCRIÇÃO AQUI
+            </button>
           </div>
         </div>
       </div>

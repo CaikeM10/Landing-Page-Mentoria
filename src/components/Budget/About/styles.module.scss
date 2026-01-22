@@ -146,9 +146,10 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 .whoSectionLayout {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 15px; // 🚀 Reduzido de 40px para subir as fotos
   align-items: center;
   margin-top: 20px;
+  flex-wrap: wrap;
 
   /* 🚀 TÉCNICA PARA FUNDO 100% DA LARGURA DA TELA */
   width: 100vw;
@@ -157,6 +158,13 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+
+  .titleBlock {
+    width: 100%;
+    text-align: center;
+    flex-basis: 100%;
+    margin-bottom: 5px; // 🚀 Reduzido para aproximar as fotos do título
+  }
 
   /* 🎨 AJUSTE: Cor suave ao fundo da dobra */
   background-color: $background-bio-suave;
@@ -178,6 +186,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   height: auto;
   display: flex;
   justify-content: center;
+  margin-top: -10px; // 🚀 Margem negativa para "subir" as fotos em direção ao título
 
   .imgMain {
     width: 85%;
@@ -192,7 +201,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
     bottom: -30px;
     right: -10px;
     border-radius: 12px;
-    border: 4px solid $background-bio-suave; // Fusão com a nova cor de fundo
+    border: 4px solid $background-bio-suave;
     box-shadow: -10px 10px 25px rgba(0, 0, 0, 0.5);
     z-index: 2;
 
@@ -206,6 +215,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 .whoBioText {
   max-width: 500px;
   text-align: left;
+  margin-top: 20px; // Dá um respiro entre a foto e o texto na versão mobile
 
   h2 {
     font-weight: 900;
@@ -224,7 +234,6 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
     text-align: justify;
   }
 }
-
 /* ================================================= */
 /* 🚀 NOVO: SEÇÃO DE DEPOIMENTO (DOBRA 05) */
 /* ================================================= */
@@ -264,7 +273,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 }
 
 .card {
-  background: $blue-highlight;
+  background: #ffff;
   color: $background-marrom;
   border-radius: 16px;
   padding: 40px 20px;

@@ -31,14 +31,16 @@ const BannerDesktop = () => {
             </h1>
 
             <p className={styles.description}>
-              Crie um plano de crescimento com diversificação de serviços para
-              aumentar seu faturamento sem sobrecarregar a agenda de
-              atendimentos.
+              O passo a passo para implementar um novo projeto profissional com
+              segurança.
             </p>
             <p className={styles.description}>
               Um treinamento prático para profissionais da saúde, baseado em
               experiência real de clínica, posicionamento e construção de
               modelos de negócio sustentáveis.
+            </p>
+            <p className={styles.description}>
+              • Aulas gravadas + Mentoria Voares online e ao vivo
             </p>
 
             {/* 🚀 BOTÃO CTA COM ESTILO GOLD */}
