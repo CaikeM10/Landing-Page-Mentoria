@@ -1,40 +1,41 @@
-import { useState } from "react";
-import ModalForm from "../Modal";
 import styles from "./styles.module.scss";
 
 const Footer = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleModalOpen = () => {
-    setIsModalOpen(true);
+  const handlePurchaseRedirect = () => {
+    window.location.href = "https://pay.hub.la/52qai6fJYxYKj0s17HZd";
   };
 
-  const handleModalClose = () => {
-    setIsModalOpen(false);
-  };
   return (
-    <>
-      <section className={styles.container}>
-        <div className={styles.content}>
-          <h5>
-            Sua jornada para um{" "}
-            <span>Consultório Sustentável começa com este clique!</span>{" "}
-          </h5>
-          <p></p>
-          <button className={styles.button} onClick={handleModalOpen}>
+    <footer className={styles.container}>
+      <div className={styles.content}>
+        {/* TEXTO FINAL */}
+        <h5 className={styles.finalTitle}>
+          Sua jornada para um <span>Consultório Sustentável</span> começa com
+          este clique!
+        </h5>
+
+        {/* DIVISOR */}
+        <div className={styles.divider}></div>
+
+        {/* INFORMAÇÕES LEGAIS */}
+        <div className={styles.legal}>
+          <p>© 2026 Íria Sabóia – Todos os direitos reservados.</p>
+          <p>CNPJ: 52.265.822/0001-06</p>
+        </div>
+
+        {/* DESENVOLVIDO POR */}
+        <div className={styles.dev}>
+          Desenvolvido por <strong>CODECRAT</strong>.
+        </div>
+
+        {/* CTA FINAL – ÚLTIMO ELEMENTO */}
+        <div className={styles.ctaWrapperBottom}>
+          <button className={styles.ctaButton} onClick={handlePurchaseRedirect}>
             QUERO ACESSAR A OFERTA ESPECIAL AGORA!
           </button>
-          <hr />
-          <div className={styles.rights}>
-            <span>Íria Sabóia 2026. Todos os direitos reservados.</span>
-          </div>
-          <div className={styles.rights}>
-            <span>DESENVOLVIDO POR CODECRAT.</span>
-          </div>
         </div>
-      </section>
-      {isModalOpen && <ModalForm onClose={handleModalClose} />}
-    </>
+      </div>
+    </footer>
   );
 };
 

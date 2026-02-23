@@ -19,30 +19,26 @@ export default function Who() {
               Quem é <span>ÍRIA SABÓIA?</span>
             </h2>
             <p>
-              Sou Íria Sabóia, psicóloga clínica há 11 anos, e mentora de
-              carreira de profissionais liberais e empresas. Durante anos, vivi
-              a sobrecarga que muitos profissionais da saúde conhecem bem, uma
-              rotina exaustiva entre o serviço público e a clínica.
+              Sou psicóloga clínica há mais de 11 anos, com consultório
+              presencial e online, fundadora da Voares, empresa dedicada ao
+              desenvolvimento de profissionais e empresas para gerar crescimento
+              com propósito e qualidade.
             </p>
             <p>
-              Foi nesse momento de desequilíbrio que tomei uma decisão que
-              mudaria completamente o rumo da minha trajetória: empreender com
-              propósito na prática clínica no presencial e no digital. Nasceu
-              assim a Voares, um movimento que une ciência, autoconhecimento e
-              estratégia para ajudar profissionais a construírem uma carreira
-              sustentável, com liberdade e sentido.
+              Ao longo da minha trajetória, vivi na prática os desafios de
+              crescer na clínica e foi justamente essa experiência que me levou
+              a desenvolver um método de organização estratégica para viver de
+              clinicar.
             </p>
             <p>
-              Em outubro de 2024, abrimos a primeira turma da Mentoria Voares, e
-              desde então vivemos um ano de crescimento, conquistas e
-              transformações reais na carreira de dezenas de profissionais.
-              Hoje, seguimos fortalecendo o nosso propósito para ajudar
-              profissionais a viverem suas realizações profissionais com
-              propósito, estabilidade e qualidade de vida.
+              Desde 2024, já acompanhei dezenas de profissionais na construção
+              de um modelo de carreira com posicionamento estruturado, com
+              direção, consistência e crescimento sustentável.
             </p>
             <p>
-              Porque crescer não é sobre fazer mais, e sim sobre voar na direção
-              certa.
+              Hoje, ajudo profissionais da saúde a organizarem seu
+              posicionamento para viver de clinicar com segurança, liberdade e
+              qualidade.
             </p>
 
             {/* 💥 Botão agora redireciona diretamente */}

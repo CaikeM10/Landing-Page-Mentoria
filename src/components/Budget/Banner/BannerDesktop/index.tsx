@@ -26,26 +26,29 @@ const BannerDesktop = () => {
             <button className={styles.orcamento}>• Saiba mais abaixo! •</button>
 
             <h1 className={styles.titleLine}>
-              Treinamento <br />
+              Treinamento
+              <br />
               <span>Consultório Sustentável</span>
             </h1>
 
             <p className={styles.description}>
-              O passo a passo para implementar um novo projeto profissional com
-              segurança.
+              Treinamento estratégico para profissionais da saúde que querem
+              crescer com organização, clareza de posicionamento e qualidade.
             </p>
             <p className={styles.description}>
-              Um treinamento prático para profissionais da saúde, baseado em
-              experiência real de clínica, posicionamento e construção de
-              modelos de negócio sustentáveis.
+              Profissional da Saúde, você já está crescendo na clínica. Agora
+              precisa estruturar esse crescimento para seguir crescendo com
+              qualidade.
             </p>
             <p className={styles.description}>
-              • Aulas gravadas + Mentoria Voares online e ao vivo
+              Se sua agenda está cheia, mas sua clínica ainda funciona no
+              improviso, o problema não é falta de demanda. É falta de estrutura
+              estratégica.
             </p>
 
             {/* 🚀 BOTÃO CTA COM ESTILO GOLD */}
             <button className={styles.button} onClick={handlePurchaseRedirect}>
-              QUERO UM CONSULTÓRIO SUSTENTÁVEL!
+              Quero garantir meu acesso agora
             </button>
           </div>
         </div>

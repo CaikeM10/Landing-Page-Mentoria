@@ -2,441 +2,295 @@ import { useState } from "react";
 import styles from "./styles.module.scss";
 
 const About = () => {
-  // 🚀 Lógica de Redirecionamento Direto para o Checkout da Hubla
   const handleRedirectToCheckout = () => {
     window.location.href = "https://pay.hub.la/52qai6fJYxYKj0s17HZd";
   };
 
   return (
-    <section className={styles.container}>
-      <div className={styles.section}>
-        <div className={styles.sectionLine}></div>
-        <div className={styles.wrapper}>
-          {/* SEÇÃO: PARA QUEM É */}
-          <div className={styles.titleBlock}>
-            <h2>
-              Para quem é o <span>treinamento:</span>
-            </h2>
-            <p className={styles.subTitle}>
-              Esse treinamento é para você, profissional da saúde competente
-              que:
-            </p>
-          </div>
-
-          <div className={styles.cardContainer}>
-            <div className={styles.card}>
-              <h5>
-                • Para você que quer fortalecer seu posicionamento profissional,
-                implementar novos serviços e aumentar seu faturamento no
-                consultório, sem sobrecarregar a agenda de atendimentos
-              </h5>
-            </div>
-
-            <div className={styles.card}>
-              <h5>
-                • Para você que tem agenda cheia, mas sente que a sobrecarga não
-                é sustentável. <br />
-                <br />• Para quem já investiu muito em conhecimento, já tem
-                muito tempo de experiência, mas falta clareza e direcionamento
-                para organizar novos projetos profissionais.
-              </h5>
-            </div>
-          </div>
-
-          <div className={styles.ctaWrapperCards}>
-            <button
-              className={styles.ctaButtonGold}
-              onClick={handleRedirectToCheckout}
-            >
-              QUERO FAZER O TREINAMENTO
-            </button>
-          </div>
-
-          <div className={styles.divider}></div>
-
-          {/* SEÇÃO: PARA QUEM NÃO É */}
-          <div className={styles.titleBlock}>
-            <h2>
-              Para quem <span>não é:</span>
-            </h2>
-            <p className={styles.subTitle}>Este treinamento não é para quem:</p>
-          </div>
-
-          <div className={styles.containerSingleCard}>
-            <div className={styles.cardBege}>
-              <ul>
-                <li>
-                  Está buscando fórmulas prontas ou promessas rápidas de
-                  faturamento
-                </li>
-                <li>
-                  Acredita que crescer significa apenas atender mais pacientes e
-                  normaliza a exaustão
-                </li>
-                <li>
-                  Não está disposta(o) a repensar o próprio posicionamento
-                  profissional
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className={styles.ctaWrapperCards}>
-            <button
-              className={styles.ctaButtonGold}
-              onClick={handleRedirectToCheckout}
-            >
-              QUERO MUDAR
-            </button>
-          </div>
-
-          <div className={styles.divider}></div>
-
-          {/* 🚀 DOBRA 04: QUEM VAI DIRECIONAR VOCÊ (TÍTULO AGORA DENTRO DO FUNDO COLORIDO) */}
-          <div className={styles.whoSectionLayout}>
-            {/* Título movido para dentro para herdar o background diferenciado */}
-            <div
-              className={styles.titleBlock}
-              style={{ width: "100%", marginBottom: "40px" }}
-            >
-              <h3 className={styles.introTextWho}>
-                Quem vai direcionar você nesse treinamento:
-              </h3>
-            </div>
-
-            <div className={styles.whoImages}>
-              <img
-                src="/Captura de tela 2025-10-03 191715.webp"
-                alt="Íria Sabóia Principal"
-                className={styles.imgMain}
-                loading="lazy"
-              />
-              <img
-                src="/Captura de tela 2025-10-03 191813.webp"
-                alt="Íria Sabóia Detalhe"
-                className={styles.imgOverlap}
-                loading="lazy"
-              />
-            </div>
-            <div className={styles.whoBioText}>
+    <section className={`sectionWhite ${styles.container}`}>
+      {/* ===================== BLOCO 1 – FUNDO CLARO ===================== */}
+      <div className={styles.aboutLight}>
+        <div className={styles.section}>
+          <div className={styles.sectionLine}></div>
+          <div className={styles.wrapper}>
+            <div className={styles.titleBlock}>
               <h2>
-                Quem é <span>ÍRIA SABÓIA?</span>
+                E se eu te dizer o que <span> realmente está acontecendo?</span>
               </h2>
-              <p>
-                Sou Íria Sabóia, psicóloga clínica há 11 anos, e mentora de
-                carreira de profissionais liberais e empresas. Durante anos,
-                vivi a sobrecarga que muitos profissionais da saúde conhecem
-                bem, uma rotina exaustiva entre o serviço público e a clínica.
-              </p>
-              <p>
-                Foi nesse momento de desequilíbrio que tomei uma decision que
-                mudaria completamente o rumo da minha trajetória: empreender com
-                propósito na prática clínica no presencial e no digital. Nasceu
-                assim a Voares, um movimento que une ciência, autoconhecimento e
-                estratégia para ajudar profissionais a construírem uma carreira
-                sustentável, com liberdade e sentido.
-              </p>
-              <p>
-                Em outubro de 2024, abrimos a primeira turma da Mentoria Voares,
-                e desde então vivemos um ano de crescimento, conquistas e
-                transformações reais na carreira de dezenas de profissionais.
-              </p>
-              <button
-                className={styles.ctaButtonGoldSmall}
-                onClick={handleRedirectToCheckout}
-              >
-                QUERO DIVERSIFICAR MEU CONSULTÓRIO
-              </button>
-            </div>
-          </div>
-
-          <div className={styles.divider}></div>
-
-          {/* 🚀 DOBRA: POR QUE DECIDI CRIAR O TREINAMENTO */}
-          <div className={styles.titleBlock}>
-            <h2>
-              Por que decidi criar o{" "}
-              <span>Treinamento Consultório Sustentável?</span>
-            </h2>
-            <p className={styles.subTitle}>
-              Ao longo de mais de 11 anos de prática clínica, percebi um padrão
-              claro:
-            </p>
-          </div>
-
-          <div className={styles.cardContainer}>
-            <div className={styles.card}>
-              <h5>
-                • Profissionais excelentes, com agenda cheia, mas sem um plano
-                estruturado para crescer com qualidade.
-                <br />
-                <br />• Profissionais da saúde sobrecarregados, inseguros sobre
-                os próximos passos e limitados ao modelo de atendimentos
-                individuais.
-              </h5>
-            </div>
-
-            <div className={styles.card}>
-              <h5>
-                <strong>
-                  • O Treinamento nasceu para responder a esse cenário.
-                </strong>
-                <br />
-                <br />• É um método prático para quem deseja organizar seu
-                crescimento e estruturar um modelo de negócio que sustente novos
-                voos, sem sacrificar tempo ou qualidade de vida.
-              </h5>
-            </div>
-
-            <div className={styles.card}>
-              <h5>
-                <strong> • Neste treinamento, você terá:</strong>
-                <br />
-                <br />
-                • Acesso imediato a 3 horas de aulas gravadas para iniciar agora
-                sua organização.
-                <br />
-                <br />• Encontro prático ao vivo para implementação, tirar
-                dúvidas e receber direção real.
-              </h5>
-            </div>
-          </div>
-
-          {/* 🚀 CAIXINHA COM TEXTO MARROM E BOTÃO ABAIXO */}
-          <div
-            className={styles.containerSingleCard}
-            style={{ marginTop: "35px" }}
-          >
-            <div
-              className={styles.card}
-              style={{ maxWidth: "850px", textAlign: "center" }}
-            >
-              <h5 style={{ color: "#725541", margin: 0 }}>
-                • Nada aqui é teórico ou genérico. <br />É aplicação real,
-                baseada em decisões validadas na prática clínica.
-              </h5>
-            </div>
-          </div>
-          <div
-            className={styles.titleBlock}
-            style={{ marginTop: "40px", textAlign: "center", width: "100%" }}
-          >
-            <p
-              className={styles.subTitleHighlight}
-              style={{ margin: "0 auto", textAlign: "center" }}
-            >
-              Faz sentido para você dar esse próximo passo com mais organização
-              e menos sobrecarga?
-            </p>
-            <div
-              className={styles.ctaWrapperCards}
-              style={{ marginTop: "30px" }}
-            >
-              <button
-                className={styles.ctaButtonGold}
-                onClick={handleRedirectToCheckout}
-                style={{ fontSize: "18px" }}
-              >
-                Quero acessar o Treinamento Consultório Sustentável
-              </button>
-            </div>
-          </div>
-
-          <div className={styles.divider}></div>
-
-          {/* SEÇÃO: EXPERIÊNCIA TCS */}
-          <div className={styles.titleBlock}>
-            <h2>
-              Conheça como será sua <span>Experiência com o TCS:</span>
-            </h2>
-            <div className={styles.subTitleWrapper}>
-              <p className={styles.subTitleHighlight}>
-                Acesso imediato ao material gravado com os seguintes módulos:
+              <p className={styles.subTitle}>
+                Você atende. Tem pacientes. Tem responsabilidade. Investe em
+                formação. É uma profissional ética e competente. Tem entrega com
+                qualidade. Você cresceu.
               </p>
             </div>
-          </div>
 
-          <div className={styles.experienceLayout}>
-            <div className={styles.photoContainer}>
-              <div className={styles.mainPhotoWrapper}>
-                <img
-                  src="/foto1iria.webp"
-                  alt="Experiência"
-                  className={styles.mainPhoto}
-                  loading="lazy"
-                />
-                <img
-                  src="/foto2iria.webp"
-                  alt="Detalhe"
-                  className={styles.overlapPhoto}
-                  loading="lazy"
-                />
+            <div className={styles.cardContainer}>
+              <div className={styles.card}>
+                <h4 className={styles.cardTitle}>Mas percebe que:</h4>
+                <h5 className={styles.cardText}>
+                  • Vive sobrecarregada.
+                  <br />• Aceita demandas fora do seu foco.
+                  <br />• Cresce, mas sem organização estratégica.
+                  <br />• Trabalha muito para sustentar o ritmo.
+                  <br />• Não tem estrutura clara para expandir.
+                </h5>
+              </div>
+
+              <div className={styles.card}>
+                <h5 className={styles.cardText}>
+                  <span className={styles.cardMiniTitle}>
+                    Sua clínica está ativa. <br></br>Está crescendo.<br></br>{" "}
+                    Mas você está sobrecarregada.
+                  </span>
+                  <br />
+                  <strong>E isso não é falta de capacidade.</strong>
+                  <br />É porque sua base ainda não está estruturada para
+                  sustentar esse crescimento com qualidade.
+                </h5>
+              </div>
+
+              <div className={styles.card}>
+                <h5 className={styles.cardText}>
+                  <span className={styles.cardHighlight}>
+                    E crescer sem estrutura cobra um preço:
+                  </span>
+                  <br />• Não é imediato. É silencioso.
+                  <br />• Custa sua energia.
+                  <br />• Cobra sua clareza.
+                  <br />• Muitas vezes você se sente sem direção.
+                  <br />• E acaba perdendo sua qualidade de vida.
+                </h5>
               </div>
             </div>
 
-            <div className={styles.cardExperiencia}>
-              <ul>
-                <li>Boas vindas</li>
-                <li>
-                  <strong>Módulo 01:</strong> Diagnóstico do seu modelo de
-                  negócio.
-                </li>
-                <li>
-                  <strong>Módulo 02:</strong> Estruturação de Posicionamento.
-                </li>
-                <li>
-                  <strong>Módulo 03:</strong> 10 Modelos de diversificações de
-                  serviços.
-                </li>
-                <li>
-                  <strong>Fechamento</strong> sobre Empreendedorismo.
-                </li>
-                <li className={styles.conviteEspecial}>
-                  Convite especial para quem assistir até o final.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* SEÇÃO DEPOIMENTOS */}
-          <div className={styles.titleBlock} style={{ marginTop: "50px" }}>
-            <h2>
-              Veja o depoimento de quem acessou o{" "}
-              <span>Treinamento Consultório Sustentável</span>
-            </h2>
-          </div>
-
-          <div className={styles.depoimentoContainer}>
-            <img
-              src="/ALUNATCS.jpeg"
-              alt="Depoimento Aluno"
-              className={styles.feedbackImage}
-              loading="lazy"
-            />
             <div className={styles.ctaWrapperCards}>
               <button
                 className={styles.ctaButtonGold}
                 onClick={handleRedirectToCheckout}
               >
-                QUERO FAZER O TREINAMENTO
+                Quero mudar essa condição agora!
               </button>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div className={styles.divider}></div>
+      {/* ===================== BLOCO 2 – FUNDO MARROM ===================== */}
+      <div className={styles.aboutDark}>
+        <div className={styles.section}>
+          <div className={styles.wrapper}>
+            <div className={styles.titleBlock}>
+              <h2>
+                O que você vai fazer no <span>Consultório Sustentável</span>
+              </h2>
+              <p className={styles.subTitle}>
+                Em 3 horas práticas, você vai organizar a base estratégica da
+                sua clínica para crescer com qualidade
+                <br />
+                <strong> sem depender apenas de esforço excessivo.</strong>
+              </p>
+            </div>
 
-          {/* O QUE VOCÊ VAI RECEBER */}
-          <div className={styles.titleBlock}>
-            <h2>
-              Veja tudo que você vai receber no{" "}
-              <span>Treinamento Consultório Sustentável: </span>
-            </h2>
+            <div className={styles.containerSingleCard}>
+              <div className={styles.cardBege}>
+                <h3 className={styles.cardBegeTitle}>Você vai estruturar:</h3>
+                <ul className={styles.cardBegeList}>
+                  <li>
+                    <span className={styles.itemTitle}>
+                      Seu posicionamento profissional
+                    </span>
+                    <span className={styles.itemDescription}>
+                      Definir com clareza como quer ser reconhecida.
+                    </span>
+                  </li>
+                  <li>
+                    <span className={styles.itemTitle}>Seu público ideal</span>
+                    <span className={styles.itemDescription}>
+                      Organizar sua agenda com intenção.
+                    </span>
+                  </li>
+                  <li>
+                    <span className={styles.itemTitle}>
+                      Seus serviços de expansão
+                    </span>
+                    <span className={styles.itemDescription}>
+                      Alinhar oferta e precificação.
+                    </span>
+                  </li>
+                  <li>
+                    <span className={styles.itemTitle}>
+                      Sua direção estratégica
+                    </span>
+                    <span className={styles.itemDescription}>
+                      Crescer com clareza, não no impulso.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className={styles.ctaWrapperCards}>
+              <button
+                className={styles.ctaButtonGold}
+                onClick={handleRedirectToCheckout}
+              >
+                Quero estruturar minha clínica
+              </button>
+            </div>
           </div>
+        </div>
+      </div>
 
-          <div className={styles.containerAprendizado}>
-            <div className={styles.cardAprendizado}>
-              <ul>
+      {/* ===================== BLOCO 3 – FUNDO CLARO ===================== */}
+      <div className={styles.aboutLight}>
+        <div className={styles.section}>
+          <div className={styles.wrapper}>
+            <div className={styles.paraQuemWrapper}>
+              <div className={styles.card}>
+                <h3 className={styles.paraQuemTitle}>Para quem é</h3>
+
+                <ul className={styles.paraQuemList}>
+                  <li>Profissionais da saúde que já atendem</li>
+                  <li>Estão com agenda ativa</li>
+                  <li>Sentem sobrecarga ou crescimento desorganizado</li>
+                  <li>Querem crescer com qualidade e não apenas volume</li>
+                  <li>Desejam estruturar autoridade e sustentabilidade</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* ===================== BLOCO 4 – EXPERIÊNCIA TCS ===================== */}
+      <div className={styles.aboutDark}>
+        <div className={styles.section}>
+          <div className={styles.wrapper}>
+            <div className={styles.titleBlock}>
+              <h2>
+                veja como será o <br></br>
+                <span>Treinamento Consultório Sustentável</span>
+              </h2>
+            </div>
+
+            <div className={styles.experienceLayout}>
+              {/* IMAGENS */}
+              <div className={styles.experienceImages}>
+                <img
+                  src="/foto1iria.webp"
+                  alt="Experiência TCS"
+                  className={styles.imageMain}
+                />
+                <img
+                  src="/foto2iria.webp"
+                  alt="Aula prática"
+                  className={styles.imageOverlay}
+                />
+              </div>
+
+              {/* CARD */}
+              <div className={styles.experienceCard}>
+                <ul>
+                  <li>Boas-vindas</li>
+                  <li> 3 horas de aulas práticas</li>
+                  <li>Exercícios estruturados</li>
+                  <li>Material de apoio em PDF</li>
+                  <li>1 ano de acesso</li>
+                  <li className={styles.bonus}>
+                    🎁 Bônus: Desafio 10 dias de aplicação estratégica (por
+                    tempo limitado)
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* ===================== BLOCO 4 – INVESTIMENTO ===================== */}
+      <div className={styles.aboutLight}>
+        <div className={styles.section}>
+          <div className={styles.wrapper}>
+            <div className={styles.titleBlock}>
+              <h2>
+                E qual é o <span>investimento</span> para viver essa
+                transformação?
+              </h2>
+            </div>
+
+            <div className={styles.investmentCardPremium}>
+              <p className={styles.investmentIntro}>
+                Se você fosse contratar uma consultoria individual para
+                estruturar posicionamento, público e crescimento estratégico, o
+                investimento seria facilmente acima de{" "}
+                <strong>R$ 1.000,00</strong>.
+              </p>
+
+              <p className={styles.investmentIntro}>
+                Mas aqui você tem acesso ao método completo do
+                <strong> Consultório Sustentável</strong>.
+              </p>
+
+              <ul className={styles.investmentBenefits}>
                 <li>
-                  Aulas práticas para gerar clareza e direcionar seu novo modelo
-                  de negócio para viver de clinicar com organização, mais
-                  faturamento e tempo de qualidade
+                  ✔ 3 horas de implementação estratégica em aulas práticas
                 </li>
-                <li>
-                  Material de apoio para estruturar com segurança seu novo plano
-                  de diversificação de serviços.
-                </li>
-                <li>
-                  E aulão com Íria Sabóia, online e ao vivo, para tirar todas
-                  suas dúvidas sobre a implementação.
-                </li>
+                <li>✔ Material de apoio em PDF</li>
+                <li>✔ Desafio de aplicação</li>
+                <li>✔ 1 ano de acesso</li>
               </ul>
+
+              <div className={styles.priceBox}>
+                <span className={styles.oldPrice}>De R$ 197,00</span>
+
+                <div className={styles.mainPrice}>
+                  <span className={styles.installments}>12x</span>
+                  <span className={styles.priceValue}>R$ 9,86</span>
+                </div>
+
+                <p className={styles.cashPrice}>ou R$ 97,00 à vista</p>
+              </div>
+
+              <p className={styles.investmentNote}>
+                Bem menos que o valor de um atendimento.
+                <br />
+                <strong>
+                  Mas com impacto direto na forma como você organiza todos os
+                  seus próximos voos de crescimento.
+                </strong>
+              </p>
+
+              <button
+                className={styles.ctaInvestment}
+                onClick={handleRedirectToCheckout}
+              >
+                Quero minha transformação agora!
+              </button>
             </div>
           </div>
+        </div>
+      </div>
+      {/* ===================== BLOCO – GARANTIA ===================== */}
+      <div className={styles.aboutLight}>
+        <div className={styles.section}>
+          <div className={styles.wrapper}>
+            <div className={styles.garantiaContainer}>
+              <img
+                src="/7dias.png"
+                alt="Garantia incondicional de 7 dias"
+                className={styles.garantiaImage}
+              />
 
-          <div className={styles.ctaWrapperAprendizado}>
-            <button
-              className={styles.ctaButtonGold}
-              onClick={handleRedirectToCheckout}
-            >
-              GARANTA O SEU ACESSO
-            </button>
-          </div>
+              <h3>E se eu me arrepender depois?</h3>
 
-          <div className={styles.divider}></div>
+              <p>
+                Você tem <strong>7 dias</strong> para assistir e aplicar.
+                <br />
+                Se não fizer sentido para você, pode solicitar reembolso.
+              </p>
 
-          {/* SEÇÃO: INVESTIMENTO */}
-          <div className={styles.titleBlock}>
-            <h2>
-              Condição especial de investimento: Lote O (Disponível por tempo
-              limitado)
-            </h2>
-          </div>
-
-          <div className={styles.investmentCard}>
-            <div className={styles.priceContainer}>
-              <span className={styles.oldPrice}>De: R$ 747,00</span>
-              <p className={styles.installmentCall}>Por apenas:</p>
-              <h3 className={styles.newPrice}>
-                12x R$ <span className={styles.priceHighlight}>8,84</span>
-              </h3>
-              <p className={styles.atVista}>Ou R$ 87,00 à vista</p>
+              <span className={styles.garantiaHighlight}>
+                Sem risco. Sem burocracia.
+              </span>
             </div>
-            <ul className={styles.benefitsList}>
-              <li>✔️ Acesso imediato ao conteúdo</li>
-              <li>✔️ PDFs estratégicos de apoio</li>
-              <li>✔️ Acesso à aula prática</li>
-              <li>✔️ Grupo VIP exclusivo</li>
-            </ul>
-
-            <div className={styles.recuperacaoInfo}>
-              <p>O investimento pode ser recuperado com:</p>
-              <ul>
-                <li>Construção de uma nova proposta de atuação</li>
-                <li>Uma nova proposta de atuação</li>
-                <li>Reorganização do seu modelo de negócio</li>
-              </ul>
-            </div>
-
-            <p className={styles.emotionalReturn}>
-              O verdadeiro retorno está na qualidade da sua agenda, e da sua
-              vida.
-            </p>
-
-            <button
-              className={styles.ctaButton}
-              onClick={handleRedirectToCheckout}
-            >
-              QUERO ACESSAR
-            </button>
-          </div>
-
-          <div className={styles.garantiaContainer}>
-            <div className={styles.garantiaIcon}>🛡️</div>
-            <h4>Garantia incondicional de 7 dias</h4>
-            <p>
-              Se em 7 dias não fizer sentido, solicitamos o reembolso sem
-              burocracia.
-            </p>
-          </div>
-
-          <div className={styles.divider}></div>
-
-          {/* FECHAMENTO */}
-          <div className={styles.fechamentoText}>
-            <p>
-              Se você percebe que o modelo atual não sustenta o próximo nível,
-              essa é a hora.
-            </p>
-            <p className={styles.highlightText}>
-              Cresça sem perder o que mais importa.
-            </p>
-
-            <button
-              className={styles.ctaButtonFinal}
-              onClick={handleRedirectToCheckout}
-            >
-              Quero garantir o treinamento
-            </button>
           </div>
         </div>
       </div>

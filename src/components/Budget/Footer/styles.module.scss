@@ -1,157 +1,104 @@
-/* 💥 NOVA FONTE: Playfair Display (Estilo Serifado) */
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
-
-/* ================================================= */
-/* VARIÁVEIS DE CORES REUTILIZADAS */
-/* ================================================= */
 $gold-dark: #b58d48;
 $gold-light: #e8c17f;
 $blue-highlight: #67bccb;
-$text-light: #fff;
-$background-marrom: #725542;
+$text-light: #ffffff;
 
 .container {
-  background: $background-marrom;
-  background-image: url("/footerBacround.svg");
-  background-size: cover;
-  height: 100%;
-  background-position: center -130px;
-  background-repeat: no-repeat;
-  color: $text-light;
-  /* 💥 FONTE APLICADA AO CONTAINER PRINCIPAL (Afeta o .rights) */
-  font-family: "Playfair Display", Georgia, serif;
-  padding-inline: 20px;
-  position: relative;
-  overflow: hidden;
+  background-color: #503b2e;
+  padding: 80px 20px 60px;
   width: 100%;
-
-  .content {
-    max-width: 1440px;
-    margin-inline: auto;
-
-    @media only screen and (min-width: 768px) {
-      padding-inline: 100px;
-    }
-  }
-
-  hr {
-    margin-top: 35px;
-    height: 1px;
-    background: #fff;
-    opacity: 0.25;
-  }
-
-  button {
-    border: 1px solid #fff;
-    /* 💥 BOTÃO DOURADO: Consistência CTA */
-    background: linear-gradient(
-      91deg,
-      $gold-dark -20%,
-      $gold-light 50%,
-      $gold-dark 120%
-    );
-    background-size: 300% 300%;
-    padding: 20px;
-    color: #fff;
-    text-align: center;
-    /* 💥 FONTE APLICADA AO BOTÃO */
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700; /* Negrito para botão */
-    line-height: normal;
-    letter-spacing: 0.05em; /* Ajuste o espaçamento de letras para serifado */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    /* Remove a caixa alta se o botão não deve ser todo em maiúsculo */
-    text-transform: none;
-    animation: gradientCircle 4s linear infinite;
-    transition: background 2.5s ease, box-shadow 2.5s ease-in-out;
-
-    &:hover {
-      background: linear-gradient(
-        91deg,
-        #d4af37 -20%,
-        #ffd700 50%,
-        #d4af37 120%
-      );
-      background-size: 300% 300%;
-      box-shadow: 0px 10px 50px 0px rgba(212, 175, 55, 0.56);
-    }
-
-    @media only screen and (min-width: 768px) {
-      max-width: 384px;
-      margin-inline: auto;
-      cursor: pointer;
-    }
-  }
 }
 
-.content h5 {
-  color: $text-light;
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
-  /* 💥 FONTE APLICADA AO H5 */
   font-family: "Playfair Display", Georgia, serif;
-  font-size: 36px;
-  font-style: normal;
+  color: $text-light;
+}
+
+/* TEXTO FINAL */
+.finalTitle {
+  font-size: 34px;
   font-weight: 700;
-  line-height: normal;
-  /* Remove a caixa alta */
-  text-transform: none;
-  padding-top: 150px;
+  line-height: 1.3;
+  margin-bottom: 40px;
 
   span {
     color: $blue-highlight;
   }
 }
 
-.content p {
-  margin-top: 16px;
-  color: $text-light;
-  text-align: center;
-  /* 💥 FONTE APLICADA AO P */
+/* DIVISOR */
+.divider {
+  width: 100%;
+  max-width: 600px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+  margin: 0 auto 30px;
+}
+
+/* LEGAL */
+.legal {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 20px;
+
+  p {
+    margin: 4px 0;
+  }
+}
+
+/* DEV */
+.dev {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  opacity: 0.85;
+  max-width: 420px;
+  margin: 0 auto 40px;
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+/* CTA FINAL (BOTTOM) */
+.ctaWrapperBottom {
+  display: flex;
+  justify-content: center;
+}
+
+.ctaButton {
+  width: 100%;
+  max-width: 420px;
+  padding: 18px 22px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  background: linear-gradient(
+    91deg,
+    $gold-dark -20%,
+    $gold-light 50%,
+    $gold-dark 120%
+  );
+  background-size: 300% 300%;
+  color: #fff;
   font-family: "Playfair Display", Georgia, serif;
   font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  margin-bottom: 90px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
-  @media only screen and (min-width: 768px) {
-    max-width: 554px;
-    margin-inline: auto;
-    margin-bottom: 50px;
+  &:hover {
+    box-shadow: 0 10px 40px rgba(232, 193, 127, 0.5);
   }
-}
 
-.rights {
-  /* Este seletor herda a font-family do .container */
-  color: $text-light;
-  text-align: center;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 14px;
-  margin-inline: auto;
-  margin-top: 12px;
-  padding-bottom: 50px;
-}
-
-@keyframes gradientCircle {
-  0% {
-    background-position: 0% 0%;
-  }
-  25% {
-    background-position: 100% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  75% {
-    background-position: 0% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
+  &:active {
+    transform: scale(0.97);
   }
 }

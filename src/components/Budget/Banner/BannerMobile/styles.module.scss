@@ -2,7 +2,7 @@ $gold-dark: #b58d48;
 $gold-light: #e8c17f;
 
 .container {
-  background-image: url("/iriaMobile.webp");
+  background-image: url("/imagemnovainicio.jpeg");
   background-size: cover;
   background-position: center top;
   min-height: 100vh;
@@ -18,11 +18,12 @@ $gold-light: #e8c17f;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 75%;
+    height: 65%;
     background: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.95) 0%,
-      rgba(0, 0, 0, 0.5) 60%,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.45) 50%,
+      rgba(0, 0, 0, 0.15) 75%,
       transparent 100%
     );
     z-index: 1;
@@ -33,11 +34,12 @@ $gold-light: #e8c17f;
   position: relative;
   z-index: 2;
   padding-inline: 25px;
-  text-align: left;
 
-  /* 🚀 AJUSTE XIAOMI: Aumentado para 50vh para garantir que o título 
-     comece na metade da tela, liberando totalmente o rosto. */
-  margin-top: 50vh;
+  /* Centralização e largura ideal de leitura */
+  max-width: 480px;
+  margin: 50vh auto 0 auto;
+
+  text-align: center;
 }
 
 .mainTitle {
@@ -49,10 +51,6 @@ $gold-light: #e8c17f;
   margin-bottom: 18px;
   letter-spacing: -0.02em;
 
-  /* 🎯 TÍTULO CENTRALIZADO */
-  text-align: center;
-  width: 100%;
-
   .goldText {
     color: $gold-light;
     display: inline-block;
@@ -63,35 +61,33 @@ $gold-light: #e8c17f;
 .description {
   color: #fff;
   font-family: "Playfair Display", serif;
-  font-size: 18px;
-  line-height: 1.1;
+  font-size: 17px;
+  line-height: 1.4; /* leitura mais leve */
   margin-bottom: 20px;
   font-weight: 700;
-  opacity: 1;
 }
 
 .normalText {
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  line-height: 1.5;
+  font-size: 14px; /* levemente menor para hierarquia */
+  line-height: 1.6;
   font-weight: 500;
-  opacity: 0.9;
-  margin-bottom: 15px;
+  opacity: 0.85;
+  margin-bottom: 12px;
 }
 
 .lightInfo {
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 400;
-  opacity: 0.8;
-  margin-bottom: 30px;
-  display: block;
+  opacity: 0.75;
+  margin-bottom: 32px; /* mais respiro antes do CTA */
 }
 
 .eventInfo {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .buttonContainer {
@@ -102,14 +98,15 @@ $gold-light: #e8c17f;
 
 .ctaButton {
   width: 100%;
-  padding: 16px;
+  padding: 18px;
   border-radius: 8px;
   border: 2px solid #fff;
   background: linear-gradient(91deg, $gold-dark, $gold-light, $gold-dark);
   color: #fff;
   font-family: "Playfair Display", serif;
   font-weight: 800;
-  font-size: 16px;
+  font-size: 17px;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
   cursor: pointer;

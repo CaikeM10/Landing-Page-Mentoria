@@ -13,29 +13,27 @@ const BannerMobile = () => {
           Consultório <span className={styles.goldText}>Sustentável</span>
         </h1>
 
-        {/* PRIMEIRA FRASE - FONTE ESTILIZADA (PLAYFAIR) */}
         <p className={styles.description}>
-          O passo a passo para implementar um novo projeto profissional com
-          segurança.
+          Treinamento estratégico para profissionais da saúde que querem crescer
+          com organização, clareza de posicionamento e qualidade.
         </p>
 
-        {/* SEGUNDA FRASE - LETRA NORMAL */}
         <div className={styles.eventInfo}>
           <p className={styles.normalText}>
-            Um treinamento prático para profissionais da saúde, baseado em
-            experiência real de clínica, posicionamento e construção de modelos
-            de negócio sustentáveis.
+            Profissional da Saúde, você já está crescendo na clínica. Agora
+            precisa estruturar esse crescimento para seguir crescendo com
+            qualidade.
           </p>
         </div>
 
-        {/* TERCEIRA FRASE - LEVE E ANTES DO BOTÃO */}
         <p className={styles.lightInfo}>
-          • Aulas gravadas + Mentoria Voares online e ao vivo
+          Se sua agenda está cheia, mas sua clínica ainda funciona no improviso,
+          o problema não é falta de demanda. É falta de estrutura estratégica.
         </p>
 
         <div className={styles.buttonContainer}>
           <button className={styles.ctaButton} onClick={handlePurchaseRedirect}>
-            Quero meu consultório sustentável
+            Quero garantir meu acesso agora
           </button>
         </div>
       </div>

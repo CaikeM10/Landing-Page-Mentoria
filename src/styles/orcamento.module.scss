@@ -12,20 +12,37 @@
   font-style: normal;
 }
 
+/* ================================================= */
+/* CONTAINER PRINCIPAL DA PÁGINA */
+/* ❌ NÃO DEFINE MAIS COR DE FUNDO */
+/* ================================================= */
 .container {
-  background: #725542;
+  width: 100%;
   position: relative;
 }
 
+/* ================================================= */
+/* VARIAÇÕES DE FUNDO (CONTROLE REAL DAS SEÇÕES) */
+/* ================================================= */
+.sectionBrown {
+  background-color: #725542;
+}
+
+.sectionWhite {
+  background-color: #ffffff;
+}
+
+/* ================================================= */
+/* BOTÃO WHATSAPP FLUTUANTE */
+/* ================================================= */
 .whatsappButton {
   position: fixed;
-  z-index: 9999; // Aumentado para garantir que fique sobre o conteúdo
+  z-index: 9999;
   display: flex;
   flex-direction: column;
-  align-items: flex-end; // Alinha o balão com o ícone à direita
+  align-items: flex-end;
   text-decoration: none;
 
-  // 🚀 ALTERAÇÃO: Posicionado no canto inferior direito para não cobrir o topo
   bottom: 20px;
   right: 20px;
   padding: 11px;
@@ -34,7 +51,7 @@
   .tooltip {
     background-color: #ffffff;
     color: #333333;
-    padding: 8px 16px; // Ajustado para melhor leitura
+    padding: 8px 16px;
     border-radius: 28px;
     font-family: "Galderglynn Titling Rg", sans-serif;
     font-size: 12px;
@@ -42,7 +59,6 @@
     margin-bottom: 8px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 
-    // 🚀 Ajustes para evitar que o balão suma da tela em celulares pequenos
     white-space: normal;
     max-width: 220px;
     text-align: center;
@@ -56,7 +72,7 @@
       content: "";
       position: absolute;
       bottom: -8px;
-      right: 15px; // Posicionado à direita acompanhando o ícone
+      right: 15px;
       border-left: 8px solid transparent;
       border-right: 8px solid transparent;
       border-top: 8px solid #ffffff;
@@ -64,7 +80,7 @@
   }
 
   img {
-    width: 50px; // Um pouco maior para facilitar o clique no mobile
+    width: 50px;
     height: 50px;
     animation: shakeRotate 5s infinite;
     filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3));
@@ -76,12 +92,12 @@
 
   @media only screen and (min-width: 768px) {
     bottom: 30px;
-    right: 40px; // Levemente mais afastado no desktop
+    right: 40px;
 
     .tooltip {
       font-size: 14px;
       max-width: none;
-      white-space: nowrap; // No desktop pode ser em linha única
+      white-space: nowrap;
     }
 
     img {
@@ -91,6 +107,9 @@
   }
 }
 
+/* ================================================= */
+/* ANIMAÇÕES */
+/* ================================================= */
 @keyframes float {
   0%,
   100% {

@@ -54,6 +54,12 @@ export default function SwiperMobile() {
               <img src="/aluno3.jpg" alt="Aluno Feedback 3" />
             </SwiperSlide>
             <SwiperSlide>
+              <img src="/feedbacknew.jpeg" alt="Aluno Feedbacknew" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/ALUNATCS.jpeg" alt="Aluno Feedback" />
+            </SwiperSlide>
+            <SwiperSlide>
               <img src="/aluno4.jpg" alt="Aluno Feedback 4" />
             </SwiperSlide>
             <SwiperSlide>

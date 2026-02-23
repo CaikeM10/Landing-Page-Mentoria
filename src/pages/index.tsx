@@ -1,35 +1,50 @@
 import About from "@/components/Budget/About";
-//import Who from "@/components/Budget/Who";
 import Banner from "@/components/Budget/Banner";
-//import Footer from "@/components/Budget/Footer";
-//import HeaderFixed from "@/components/Budget/HeaderFixed";
+import Footer from "@/components/Budget/Footer";
 import SwiperComponent from "@/components/Budget/Swiper";
-//import Who from "@/components/Budget/Who";
+import Who from "@/components/Budget/Who";
+import FAQ from "@/components/Budget/FAQ/faq";
+import Support from "@/components/Budget/Support/support";
 import StickFooter from "@/components/Portuguese/StickFooter";
 import styles from "@/styles/orcamento.module.scss";
-//import VideoSection from "@/videoSection";
-// Importação do componente que contém o vídeo e o botão de vendas
-//import VideoFooter from "@/VideoFooter";
 
 export default function Desafio() {
   const pageTitle = "curso";
 
   return (
     <section className={styles.container}>
-      {/*<HeaderFixed />*/}
-      <Banner />
+      {/* HERO / TOPO */}
+      <section className={styles.sectionBrown}>
+        <Banner />
+      </section>
 
-      {/* Vídeo principal de introdução */}
+      {/* ABOUT – FUNDO BRANCO */}
+      <section className={styles.sectionWhite}>
+        <About />
+      </section>
 
-      <About />
+      {/* WHO – FUNDO MARROM */}
+      <section className={styles.sectionBrown}>
+        <Who />
+      </section>
 
-      <SwiperComponent />
+      {/* DEPOIMENTOS / SWIPER – FUNDO BRANCO */}
+      <section className={styles.sectionWhite}>
+        <SwiperComponent />
+      </section>
 
-      {/* Seção de depoimentos/carrossel */}
+      {/* FAQ + SUPORTE – FUNDO MARROM */}
+      <section className={styles.sectionBrown}>
+        <FAQ />
+        <Support />
+      </section>
 
-      {/* O vídeo de 1 minuto e CTA de vendas posicionado aqui */}
+      {/* FOOTER – FUNDO MARROM */}
+      <section className={styles.sectionBrown}>
+        <Footer />
+      </section>
 
-      {/*<Footer />*/}
+      {/* STICKY FOOTER (FIXO) */}
       <StickFooter title={pageTitle} buttonText="Garantir o Treinamento" />
     </section>
   );
