@@ -167,7 +167,7 @@ const About = () => {
           <div className={styles.wrapper}>
             <div className={styles.titleBlock}>
               <h2>
-                veja como será o <br></br>
+                Veja Como Será o <br></br>
                 <span>Treinamento Consultório Sustentável</span>
               </h2>
             </div>
@@ -274,7 +274,7 @@ const About = () => {
           <div className={styles.wrapper}>
             <div className={styles.garantiaContainer}>
               <img
-                src="/7dias.png"
+                src="/7dias.webp"
                 alt="Garantia incondicional de 7 dias"
                 className={styles.garantiaImage}
               />

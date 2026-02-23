@@ -1,49 +1,93 @@
+/* =============================== */
+/* SEÇÃO: SUPORTE / AINDA EM DÚVIDA */
+/* =============================== */
 .supportSection {
-  margin: 60px auto 0;
-  padding: 40px 20px;
-  max-width: 900px;
+  margin: 90px auto 0; // 🔥 mais respiro do bloco anterior
+  padding: 55px 30px;
+  max-width: 760px;
+
   text-align: center;
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 16px;
+
+  background-color: #f6efeb; // off-white elegante (menos vidro)
+  border-radius: 28px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
 }
 
+/* TÍTULO */
 .supportTitle {
   font-family: "Playfair Display", serif;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 900;
   color: #67bccb;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
+/* TEXTO */
 .supportText {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
   line-height: 1.6;
-  color: #ffffff;
+  font-weight: 500;
+  color: #725541;
   opacity: 0.9;
-  max-width: 620px;
-  margin: 0 auto 28px;
+
+  max-width: 560px;
+  margin: 0 auto 36px;
 }
 
+/* BOTÃO */
 .supportButtonWrapper {
   display: flex;
   justify-content: center;
 }
 
+/* CTA WHATSAPP */
 .whatsappButton {
-  background: linear-gradient(135deg, #25d366, #1ebe5d);
-  color: #fff;
-  font-size: 16px;
-  font-weight: 800;
-  padding: 14px 28px;
-  border-radius: 999px;
+  background: linear-gradient(91deg, #006400, #00ff7f);
+  color: #ffffff;
+
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  padding: 18px 34px;
+  border-radius: 12px;
   text-decoration: none;
-  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+
+  box-shadow: 0 10px 30px rgba(0, 128, 0, 0.4);
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 24px rgba(37, 211, 102, 0.45);
+    transform: scale(1.05);
+    box-shadow: 0 14px 40px rgba(0, 128, 0, 0.6);
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .supportSection {
+    margin: 70px 16px 0;
+    padding: 45px 22px;
+  }
+
+  .supportTitle {
+    font-size: 26px;
+  }
+
+  .supportText {
+    font-size: 16px;
+  }
+
+  .whatsappButton {
+    width: 100%;
+    font-size: 17px;
   }
 }

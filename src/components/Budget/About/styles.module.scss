@@ -405,30 +405,36 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 /* LISTA DE BENEFÍCIOS (CHECK DOURADO) */
 /* =============================== */
 .benefitsList {
-  margin: 25px 0;
+  list-style: none !important; // remove marker nativo (crítico)
   padding: 0;
-  list-style: none;
+  margin: 25px 0;
 
   li {
-    display: grid;
-    grid-template-columns: 22px 1fr; // ✔ coluna fixa + texto
-    align-items: flex-start;
-    column-gap: 12px;
-
+    list-style: none !important; // redundância necessária para iOS
+    position: relative;
+    padding-left: 34px; // espaço para o check
     margin-bottom: 16px;
+
     font-size: 15px;
     font-weight: 500;
     color: #ffffff;
-    line-height: 1.6;
 
+    /* REMOVE qualquer marker do Safari */
+    &::marker {
+      content: none;
+    }
+
+    /* CHECK CONTROLADO */
     &::before {
-      content: "✔";
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 2px;
 
-      color: #e8c17f;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 1.2;
-      margin-top: 2px;
+      color: #67bccb; // 🔥 azul correto
+      font-weight: 900;
+      font-size: 18px;
+      line-height: 1;
     }
   }
 }
@@ -445,9 +451,20 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   border: 1px solid rgba(232, 193, 127, 0.6);
   border-radius: 20px;
   font-size: 14px;
-  color: rgba(232, 193, 127, 0.9);
+  color: #ff4d4d;
   text-decoration: line-through;
   margin-bottom: 12px;
+}
+
+.oldprice {
+  content: "";
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  height: 3px;
+  background-color: #ff4d4d;
+  transform: translateY(-50%);
+  border-radius: 2px;
 }
 
 .mainPrice {
