@@ -96,7 +96,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 /* TÍTULOS */
 /* ================================================= */
 .titleBlock {
-  margin-bottom: 25px;
+  margin-bottom: 26px;
 
   h2 {
     font-size: 36px;
@@ -111,7 +111,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   .subTitle {
     font-size: 18px;
     line-height: 1.6;
-    font-weight: 600;
+    font-weight: 580;
   }
 }
 
@@ -122,7 +122,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 21px;
   margin-top: 30px;
 }
 
@@ -221,7 +221,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
     font-weight: 800;
     margin-bottom: 28px; /* 🔥 Mais espaço abaixo do título */
     margin-top: 10px; /* 🔥 Respiro acima */
-    text-align: left;
+    text-align: center;
   }
 
   ul {
@@ -230,20 +230,36 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
     margin: 0;
 
     li {
-      margin-bottom: 22px; /* 🔥 Respiro entre os pontos */
+      margin-bottom: 23px; /* 🔥 Respiro entre os pontos */
       line-height: 1.6;
       font-size: 1rem;
       font-weight: 500;
       position: relative;
       padding-left: 28px;
 
+      /* CÍRCULO */
       &::before {
-        content: "✔";
+        content: "";
         position: absolute;
         left: 0;
-        top: 2px;
-        color: $blue-highlight;
-        font-weight: bold;
+        top: 4px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid $blue-highlight;
+      }
+
+      /* CHECK DESENHADO */
+      &::after {
+        content: "";
+        position: absolute;
+        left: 7px;
+        top: 9px;
+        width: 5px;
+        height: 9px;
+        border-right: 2px solid $blue-highlight;
+        border-bottom: 2px solid $blue-highlight;
+        transform: rotate(45deg);
       }
 
       .itemTitle {
@@ -370,18 +386,18 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 .investmentCardPremium {
   background-color: #725541;
   color: #ffffff;
-  max-width: 520px;
+  max-width: 517px;
   margin: 0 auto;
   padding: 50px 35px;
   border-radius: 28px;
   text-align: center;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 
-  /* 🔥 FORÇA REMOÇÃO DE QUALQUER BULLET */
+  /* 🔥 força remoção de QUALQUER bullet nativo */
   ul {
     list-style: none !important;
     padding: 0;
-    margin: 25px 0;
+    margin: 28px 0;
   }
 
   li {
@@ -389,11 +405,13 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   }
 }
 
-/* Texto introdutório */
+/* =============================== */
+/* TEXTO INTRODUTÓRIO */
+/* =============================== */
 .investmentIntro {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
-  margin-bottom: 16px;
+  margin-bottom: 17px;
   opacity: 0.95;
 
   strong {
@@ -402,69 +420,79 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 }
 
 /* =============================== */
-/* LISTA DE BENEFÍCIOS (CHECK DOURADO) */
+/* LISTA DE BENEFÍCIOS – INVESTIMENTO */
+/* CHECK DOURADO + CÍRCULO */
 /* =============================== */
-.benefitsList {
-  list-style: none !important; // remove marker nativo (crítico)
+.investmentBenefits {
+  list-style: none !important;
   padding: 0;
-  margin: 25px 0;
+  margin: 28px 0;
 
   li {
-    list-style: none !important; // redundância necessária para iOS
     position: relative;
-    padding-left: 34px; // espaço para o check
+    padding-left: 44px; // espaço para círculo
     margin-bottom: 16px;
 
     font-size: 15px;
     font-weight: 500;
     color: #ffffff;
+    line-height: 1.5;
+    text-align: left;
 
-    /* REMOVE qualquer marker do Safari */
+    /* remove marker nativo (Safari / iOS) */
+    list-style: none !important;
+
     &::marker {
       content: none;
     }
 
-    /* CHECK CONTROLADO */
+    /* CÍRCULO */
     &::before {
-      content: "✓";
+      content: "";
       position: absolute;
       left: 0;
-      top: 2px;
+      top: 50%;
+      transform: translateY(-50%);
 
-      color: #67bccb; // 🔥 azul correto
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid #e8c17f; // dourado
+      background: transparent;
+    }
+
+    /* CHECK CENTRALIZADO */
+    &::after {
+      content: "✓";
+      position: absolute;
+      left: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      font-size: 14px;
       font-weight: 900;
-      font-size: 18px;
+      color: #e8c17f; // dourado
       line-height: 1;
     }
   }
 }
+
 /* =============================== */
 /* PREÇOS */
 /* =============================== */
 .priceBox {
-  margin: 35px 0;
+  margin: 37px 0;
 }
 
 .oldPrice {
   display: inline-block;
-  padding: 6px 14px;
+  padding: 7px 14px;
   border: 1px solid rgba(232, 193, 127, 0.6);
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 15px;
   color: #ff4d4d;
   text-decoration: line-through;
   margin-bottom: 12px;
-}
-
-.oldprice {
-  content: "";
-  position: absolute;
-  left: 10%;
-  top: 50%;
-  height: 3px;
-  background-color: #ff4d4d;
-  transform: translateY(-50%);
-  border-radius: 2px;
 }
 
 .mainPrice {
@@ -476,35 +504,30 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 }
 
 .installments {
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 700;
   color: #ffffff;
 }
 
 .priceValue {
   font-family: "Playfair Display", serif;
-  font-size: 64px;
+  font-size: 65px;
   font-weight: 900;
   color: #e8c17f;
   line-height: 1;
 }
 
-.priceInstallment {
-  font-size: 16px;
-  font-weight: 600;
-  color: #ffffff;
-  opacity: 0.9;
-}
-
 .cashPrice {
   margin-top: 8px;
-  font-size: 15px;
+  font-size: 16px;
   opacity: 0.9;
 }
 
-/* Nota final */
+/* =============================== */
+/* NOTA FINAL */
+/* =============================== */
 .investmentNote {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.6;
   margin: 25px 0;
   opacity: 0.95;
@@ -541,45 +564,48 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
     transform: scale(0.98);
   }
 }
-/* MOBILE */
+
+/* =============================== */
+/* RESPONSIVO */
+/* =============================== */
 @media (max-width: 768px) {
   .investmentCardPremium {
     padding: 40px 25px;
   }
 
   .priceValue {
-    font-size: 52px;
+    font-size: 55px;
   }
 }
 .garantiaContainer {
-  max-width: 700px;
+  max-width: 750px;
   margin: 0 auto;
   text-align: center;
-  padding: 40px 20px;
+  padding: 32px 20px;
 
   h3 {
-    font-size: 28px;
+    font-size: 27px;
     font-weight: 900;
     color: $text-dark;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
   }
 
   p {
-    font-size: 17px;
-    line-height: 1.6;
+    font-size: 19px;
+    line-height: 1.5;
     margin-bottom: 10px;
   }
 }
 
 .garantiaImage {
-  width: 160px;
+  width: 165px;
   margin-bottom: 20px;
 }
 
 .garantiaHighlight {
   display: block;
   margin-top: 10px;
-  font-weight: 700;
+  font-weight: 790;
   color: $blue-highlight;
 }
 /* ================================================= */
@@ -642,23 +668,34 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   margin-bottom: 24px;
   text-align: center;
 }
-
 .paraQuemList {
   list-style: none;
   padding: 0;
 
   li {
     display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 14px; // 👈 respiro entre pontos
+    align-items: center; // 🔹 alinha texto com o ícone
+    gap: 12px;
+    margin-bottom: 14px;
     font-size: 15px;
     line-height: 1.5;
+    color: #ffffff;
 
     &::before {
       content: "✓";
+      display: flex; // 🔥 ESSENCIAL
+      align-items: center; // 🔥 centraliza vertical
+      justify-content: center; // 🔥 centraliza horizontal
+
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+
+      border: 2px solid $gold-highlight;
       color: $gold-highlight;
-      font-weight: bold;
+      font-size: 11px;
+      font-weight: 900;
+      flex-shrink: 0;
     }
   }
 }

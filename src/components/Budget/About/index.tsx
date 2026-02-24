@@ -230,12 +230,10 @@ const About = () => {
               </p>
 
               <ul className={styles.investmentBenefits}>
-                <li>
-                  ✔ 3 horas de implementação estratégica em aulas práticas
-                </li>
-                <li>✔ Material de apoio em PDF</li>
-                <li>✔ Desafio de aplicação</li>
-                <li>✔ 1 ano de acesso</li>
+                <li>3 horas de implementação estratégica em aulas práticas</li>
+                <li>Material de apoio em PDF</li>
+                <li> Desafio de aplicação</li>
+                <li> 1 ano de acesso</li>
               </ul>
 
               <div className={styles.priceBox}>

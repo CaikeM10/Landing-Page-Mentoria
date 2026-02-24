@@ -1,6 +1,6 @@
 $gold-dark: #b58d48;
 $gold-light: #e8c17f;
-
+$blue-highlight: #67bccb;
 .container {
   background-image: url("/imagemnovainicio.webp");
   background-size: cover;
@@ -46,13 +46,13 @@ $gold-light: #e8c17f;
   color: #fff;
   font-family: "Playfair Display", serif;
   font-size: clamp(24px, 7vw, 32px);
-  font-weight: 900;
+  font-weight: 920;
   line-height: 1.1;
-  margin-bottom: 18px;
-  letter-spacing: -0.02em;
+  margin-bottom: 19px;
+  letter-spacing: -0.01em;
 
   .goldText {
-    color: $gold-light;
+    color: $blue-highlight;
     display: inline-block;
     text-shadow: 0px 2px 10px rgba(232, 193, 127, 0.3);
   }
@@ -63,8 +63,8 @@ $gold-light: #e8c17f;
   font-family: "Playfair Display", serif;
   font-size: 17px;
   line-height: 1.4; /* leitura mais leve */
-  margin-bottom: 20px;
-  font-weight: 700;
+  margin-bottom: 19px;
+  font-weight: 670;
 }
 
 .normalText {
