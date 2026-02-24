@@ -18,26 +18,27 @@ const BannerDesktop = () => {
           </h1>
 
           <p className={styles.description}>
-            Treinamento estratégico para profissionais da saúde que querem
-            crescer com organização, clareza de posicionamento e qualidade.
+            Treinamento estratégico para profissionais da saúde que já vivem de
+            clinicar e querem crescer com organização, clareza e posicionamento
+            estruturado.
+          </p>
+
+          <p className={`${styles.description} ${styles.middleHighlight}`}>
+            Profissional da saúde, se sua agenda está instável e sua clínica
+            ainda funciona no improviso, o problema não é falta de demanda. É
+            falta de estrutura estratégica.
           </p>
 
           <p className={styles.description}>
-            Profissional da Saúde, você já está crescendo na clínica. Agora
-            precisa estruturar esse crescimento para seguir crescendo com
-            qualidade.
-          </p>
-
-          <p className={styles.description}>
-            Se sua agenda está cheia, mas a clínica ainda funciona no improviso,
-            o problema não é demanda.{" "}
-            <span className={styles.highlightStrong}>
-              É falta de estrutura estratégica.
+            Agora é hora de organizar seu plano de crescimento e transformar sua
+            prática em um{" "}
+            <span className={`${styles.middleHighlight} ${styles.finalStrong}`}>
+              Consultório Sustentável para viver sua expansão consciente.
             </span>
           </p>
 
           <button className={styles.ctaButton} onClick={handlePurchaseRedirect}>
-            Quero garantir meu acesso agora
+            Quero meu consultório sustentável
           </button>
         </div>
 

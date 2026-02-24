@@ -27,15 +27,18 @@ const About = () => {
             <div className={styles.cardContainer}>
               <div className={styles.card}>
                 <h4 className={styles.cardTitle}>Mas percebe que:</h4>
-                <h5 className={styles.cardText}>
-                  • Vive sobrecarregada.
-                  <br />• Aceita demandas fora do seu foco.
-                  <br />• Cresce, mas sem organização estratégica.
-                  <br />• Trabalha muito para sustentar o ritmo.
-                  <br />• Não tem estrutura clara para expandir.
-                </h5>
-              </div>
 
+                <ul className={styles.problemList}>
+                  <li>Vive sobrecarregada.</li>
+                  <li>Aceita demandas fora do seu foco.</li>
+                  <li>
+                    Ainda não consegue comunicar no digital a qualidade do seu
+                    trabalho.
+                  </li>
+                  <li>Trabalha muito para sustentar o ritmo.</li>
+                  <li>Não tem estrutura clara para expandir.</li>
+                </ul>
+              </div>
               <div className={styles.card}>
                 <h5 className={styles.cardText}>
                   <span className={styles.cardMiniTitle}>

@@ -105,12 +105,16 @@ $blue-highlight: #67bccb;
 }
 
 .image {
-  max-width: 537px; /* 🔥 reduzida */
+  max-width: 540px; /* 🔥 reduzida */
   width: 100%;
   height: auto;
   filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.35));
 }
 .highlightStrong {
   color: #5a3f2c; // marrom mais forte (premium, não pesado)
+  font-weight: 700;
+}
+.middleHighlight {
+  color: #4a2f22; // marrom forte do desktop
   font-weight: 700;
 }

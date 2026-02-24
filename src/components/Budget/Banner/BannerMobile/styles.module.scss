@@ -57,7 +57,9 @@ $blue-highlight: #67bccb;
     text-shadow: 0px 2px 10px rgba(232, 193, 127, 0.3);
   }
 }
-
+.trainingText {
+  color: #724441;
+}
 .description {
   color: #fff;
   font-family: "Playfair Display", serif;
@@ -68,12 +70,12 @@ $blue-highlight: #67bccb;
 }
 
 .normalText {
-  color: #fff;
+  color: #4a2f22;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px; /* levemente menor para hierarquia */
   line-height: 1.6;
-  font-weight: 500;
-  opacity: 0.85;
+  font-weight: 600;
+  opacity: 1;
   margin-bottom: 12px;
 }
 
