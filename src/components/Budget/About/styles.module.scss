@@ -173,7 +173,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   margin-bottom: 16px;
 }
 /* =============================== */
-/* LISTA DE PROBLEMAS – X COM CÍRCULO */
+/* LISTA DE PROBLEMAS – CHECK VERDE COM CÍRCULO */
 /* =============================== */
 .problemList {
   list-style: none;
@@ -193,13 +193,14 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 
     list-style: none;
 
+    /* Remove qualquer marker nativo (Safari / iOS) */
     &::marker {
       content: none;
     }
 
-    /* CÍRCULO + X CENTRALIZADO */
+    /* CÍRCULO + CHECK CENTRALIZADO */
     &::before {
-      content: "×";
+      content: "✓";
       position: absolute;
       left: 0;
       top: 2px;
@@ -212,10 +213,10 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
       align-items: center;
       justify-content: center;
 
-      border: 2px solid #d9534f;
-      color: #d9534f;
+      border: 2px solid #4caf50; // verde elegante
+      color: #4caf50;
 
-      font-size: 18px;
+      font-size: 14px;
       font-weight: 900;
       line-height: 1;
     }
@@ -334,7 +335,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 
   .aboutLight,
   .aboutDark {
-    padding: 40px 0;
+    padding: 30px 0;
   }
 }
 /* ================================================= */
@@ -346,7 +347,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   gap: 80px;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 15px;
   flex-wrap: wrap;
 }
 
@@ -468,81 +469,98 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 }
 
 /* =============================== */
-/* LISTA DE BENEFÍCIOS – INVESTIMENTO */
-/* CHECK DOURADO + CÍRCULO */
+/* CARD DE INVESTIMENTO PREMIUM */
+/* =============================== */
+.investmentCardPremium {
+  background-color: #725541;
+  color: #ffffff;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 48px 36px;
+  border-radius: 28px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* =============================== */
+/* TEXTO INTRODUTÓRIO */
+/* =============================== */
+.investmentIntro {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  opacity: 0.95;
+
+  strong {
+    color: #e8c17f;
+    font-weight: 700;
+  }
+}
+
+/* =============================== */
+/* LISTA DE BENEFÍCIOS */
 /* =============================== */
 .investmentBenefits {
-  list-style: none !important;
+  list-style: none;
   padding: 0;
-  margin: 28px 0;
+  margin: 26px 0;
 
   li {
     position: relative;
-    padding-left: 44px; // espaço para círculo
+    padding-left: 42px;
     margin-bottom: 16px;
 
     font-size: 15px;
     font-weight: 500;
-    color: #ffffff;
     line-height: 1.5;
+    color: #ffffff;
     text-align: left;
 
-    /* remove marker nativo (Safari / iOS) */
-    list-style: none !important;
-
-    &::marker {
-      content: none;
-    }
-
-    /* CÍRCULO */
     &::before {
-      content: "";
+      content: "✓";
       position: absolute;
       left: 0;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 1px;
 
       width: 22px;
       height: 22px;
       border-radius: 50%;
-      border: 2px solid #e8c17f; // dourado
-      background: transparent;
-    }
 
-    /* CHECK CENTRALIZADO */
-    &::after {
-      content: "✓";
-      position: absolute;
-      left: 6px;
-      top: 50%;
-      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 2px solid #e8c17f;
+      color: #e8c17f;
 
       font-size: 14px;
       font-weight: 900;
-      color: #e8c17f; // dourado
-      line-height: 1;
     }
   }
 }
 
 /* =============================== */
-/* PREÇOS */
+/* BLOCO DE PREÇO */
 /* =============================== */
 .priceBox {
-  margin: 37px 0;
+  margin: 36px 0 26px;
 }
 
+/* 🔥 PREÇO ORIGINAL — RISCADO, LEGÍVEL E PREMIUM */
 .oldPrice {
   display: inline-block;
-  padding: 7px 14px;
-  border: 1px solid rgba(232, 193, 127, 0.6);
-  border-radius: 20px;
-  font-size: 15px;
-  color: #ff4d4d;
+  font-size: 17px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 14px;
+
   text-decoration: line-through;
-  margin-bottom: 12px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: rgba(232, 193, 127, 0.95);
+  letter-spacing: 0.03em;
 }
 
+/* PREÇO PRINCIPAL */
 .mainPrice {
   display: flex;
   justify-content: center;
@@ -552,14 +570,14 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 }
 
 .installments {
-  font-size: 23px;
+  font-size: 22px;
   font-weight: 700;
   color: #ffffff;
 }
 
 .priceValue {
   font-family: "Playfair Display", serif;
-  font-size: 65px;
+  font-size: 64px;
   font-weight: 900;
   color: #e8c17f;
   line-height: 1;
@@ -577,27 +595,33 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 .investmentNote {
   font-size: 16px;
   line-height: 1.6;
-  margin: 25px 0;
+  margin: 24px 0 30px;
   opacity: 0.95;
+
+  strong {
+    font-weight: 700;
+  }
 }
 
 /* =============================== */
-/* CTA PREMIUM */
+/* CTA INVESTIMENTO */
 /* =============================== */
 .ctaInvestment {
-  background: linear-gradient(90deg, #e8c17f, #ffd700);
-  color: #ffffff;
-  font-family: "Playfair Display", serif;
-  font-size: 18px;
-  font-weight: 900;
+  width: 100%;
   padding: 16px 30px;
   border-radius: 10px;
   border: none;
-  cursor: pointer;
-  text-transform: uppercase;
-  width: 100%;
-  letter-spacing: 0.04em;
 
+  background: linear-gradient(90deg, #e8c17f, #a18505);
+  color: #ffffff;
+
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  cursor: pointer;
   box-shadow: 0 8px 30px rgba(232, 193, 127, 0.5);
   transition:
     transform 0.2s ease,
@@ -646,7 +670,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 }
 
 .garantiaImage {
-  width: 165px;
+  width: 170px;
   margin-bottom: 20px;
 }
 
@@ -704,7 +728,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
 }
 
 .paraQuemWrapper {
-  padding: 60px 20px; // espaço em cima e embaixo + laterais
+  padding: 0px 1px; // espaço em cima e embaixo + laterais
   display: flex;
   justify-content: center;
 }
@@ -713,7 +737,7 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
   color: $blue-highlight;
   font-size: 22px;
   font-weight: 800;
-  margin-bottom: 24px;
+  margin-bottom: 2px;
   text-align: center;
 }
 .paraQuemList {
@@ -745,5 +769,263 @@ $card-bg-transparente: rgba(103, 188, 203, 0.2);
       font-weight: 900;
       flex-shrink: 0;
     }
+  }
+}
+/* =============================== */
+/* CARROSSEL – TRANSFORMAÇÃO */
+/* =============================== */
+
+.experienceCarousel {
+  width: 100%;
+  padding: 32px 0 48px; // 🔥 menos espaço vertical
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* TÍTULO ACIMA DO CARROSSEL */
+.carouselTitle {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 18px;
+  max-width: 520px;
+  line-height: 1.3;
+
+  color: #725541; // ✅ marrom base
+}
+
+.carouselHighlight {
+  color: $blue-highlight; // ✅ azul do site
+}
+
+/* LIMITADOR REAL DO SWIPER */
+.experienceCarousel :global(.swiper) {
+  width: 100%;
+  max-width: 420px;
+  padding-bottom: 24px;
+}
+
+/* SLIDE */
+.experienceCarousel :global(.swiper-slide) {
+  display: flex;
+  justify-content: center;
+}
+
+/* IMAGEM */
+.experienceCarousel :global(.swiper-slide img) {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px; // 🔥 arredondamento premium
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+}
+/* =============================== */
+/* SETAS – PREMIUM, FINAS, DISCRETAS */
+/* =============================== */
+
+.experienceCarousel :global(.swiper-button-next),
+.experienceCarousel :global(.swiper-button-prev) {
+  color: rgba(232, 193, 127, 0.85); // dourado elegante
+  width: 26px;
+  height: 26px;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.experienceCarousel :global(.swiper-button-next::after),
+.experienceCarousel :global(.swiper-button-prev::after) {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* POSIÇÃO – MAIS PRÓXIMAS, SEM POLUIR */
+.experienceCarousel :global(.swiper-button-prev) {
+  left: -32px;
+}
+
+.experienceCarousel :global(.swiper-button-next) {
+  right: -32px;
+}
+
+/* HOVER SUTIL */
+.experienceCarousel :global(.swiper-button-next:hover),
+.experienceCarousel :global(.swiper-button-prev:hover) {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .experienceCarousel {
+    padding: 24px 0 32px;
+  }
+
+  .carouselTitle {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .experienceCarousel :global(.swiper) {
+    max-width: 340px;
+  }
+
+  .experienceCarousel :global(.swiper-button-prev),
+  .experienceCarousel :global(.swiper-button-next) {
+    display: none;
+  }
+}
+/* SETAS SOBRE A IMAGEM – INDICADOR VISUAL */
+.experienceCarousel :global(.swiper-slide)::after {
+  content: "‹ ›";
+  position: absolute;
+  bottom: 14px;
+  right: 18px;
+
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 6px;
+
+  color: rgba(10, 171, 211, 0.75);
+  pointer-events: none;
+}
+.experienceCarousel :global(.swiper-button-next),
+.experienceCarousel :global(.swiper-button-prev) {
+  color: rgba(232, 193, 127, 0.85);
+  width: 26px;
+  height: 26px;
+}
+
+.experienceCarousel :global(.swiper-button-next::after),
+.experienceCarousel :global(.swiper-button-prev::after) {
+  font-size: 20px;
+  font-weight: 400;
+}
+/* =============================== */
+/* SEÇÃO – GARANTIA 7 DIAS */
+/* =============================== */
+
+.garantiaContainer {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 28px 20px 32px; // 🔥 menos espaço vertical
+  text-align: center;
+}
+
+/* IMAGEM DA GARANTIA */
+.garantiaImage {
+  width: 180px; // 🔥 imagem maior
+  height: auto;
+
+  margin-top: -24px; // 🔥 sobe a imagem para aproximar do investimento
+  margin-bottom: 16px;
+
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.25));
+}
+
+/* TÍTULO */
+.garantiaContainer h3 {
+  font-size: 26px;
+  font-weight: 900;
+  color: #725541; // marrom do site
+  margin-bottom: 12px;
+}
+
+/* TEXTO */
+.garantiaContainer p {
+  font-size: 16px;
+  line-height: 1.55;
+  margin-bottom: 8px;
+  color: #725541;
+}
+
+/* FRASE FINAL DE DESTAQUE */
+.garantiaHighlight {
+  display: block;
+  margin-top: 6px;
+  font-weight: 700;
+  color: #67bccb; // azul highlight
+}
+
+/* =============================== */
+/* AJUSTES MOBILE */
+/* =============================== */
+@media (max-width: 768px) {
+  .garantiaContainer {
+    padding: 22px 18px 26px; // 🔥 ainda mais compacto no mobile
+  }
+
+  .garantiaImage {
+    width: 139px;
+    margin-top: -14px; // 🔥 sobe menos no mobile
+    margin-bottom: 10px;
+  }
+
+  .garantiaContainer h3 {
+    font-size: 23px;
+  }
+
+  .garantiaContainer p {
+    font-size: 15px;
+  }
+}
+.garantiaSection {
+  background: #f6efeb; // mesmo tom claro do site
+  padding: 70px 20px 80px; // desktop elegante
+  display: flex;
+  justify-content: center;
+}
+
+.garantiaContainer {
+  max-width: 640px;
+  text-align: center;
+}
+
+.garantiaImage {
+  width: 130px; // maior e mais presente
+  margin: 0 auto 18px;
+  display: block;
+}
+
+.garantiaContainer h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: #5a3f2c;
+  margin-bottom: 14px;
+}
+
+.garantiaContainer p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #5a3f2c;
+  margin-bottom: 10px;
+}
+
+.garantiaHighlight {
+  font-weight: 700;
+  color: #67bccb;
+  font-size: 16px;
+}
+
+/* 🔽 MOBILE */
+@media (max-width: 768px) {
+  .garantiaSection {
+    padding: 45px 18px 55px;
+  }
+
+  .garantiaImage {
+    width: 110px;
+  }
+
+  .garantiaContainer h3 {
+    font-size: 22px;
+  }
+
+  .garantiaContainer p {
+    font-size: 15px;
   }
 }

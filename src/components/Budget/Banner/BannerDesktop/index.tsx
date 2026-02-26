@@ -18,15 +18,14 @@ const BannerDesktop = () => {
           </h1>
 
           <p className={styles.description}>
-            Treinamento estratégico para profissionais da saúde que já vivem de
-            clinicar e querem crescer com organização, clareza e posicionamento
-            estruturado.
+            Estruture o posicionamento do seu consultório e viva de clinicar com
+            crescimento sustentável.
           </p>
 
           <p className={`${styles.description} ${styles.middleHighlight}`}>
-            Profissional da saúde, se sua agenda está instável e sua clínica
-            ainda funciona no improviso, o problema não é falta de demanda. É
-            falta de estrutura estratégica.
+            Treinamento prático e estratégico para profissionais da saúde que já
+            vivem de clinicar e querem consolidar organização, estabilidade e
+            autoridade no mercado.
           </p>
 
           <p className={styles.description}>

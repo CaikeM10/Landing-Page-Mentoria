@@ -15,24 +15,17 @@ const BannerMobile = () => {
         </h1>
 
         <p className={styles.description}>
-          Treinamento estratégico para profissionais da saúde que já vivem de
-          clinicar e querem crescer com organização, clareza e posicionamento
-          estruturado.
+          Estruture o posicionamento do seu consultório e viva de clinicar com
+          crescimento sustentável.
         </p>
 
         <div className={styles.eventInfo}>
           <p className={styles.normalText}>
-            Profissional da saúde, se sua agenda está instável e sua clínica
-            ainda funciona no improviso, o problema não é falta de demanda. É
-            falta de estrutura estratégica.
+            Treinamento prático e estratégico para profissionais da saúde que já
+            vivem de clinicar e querem consolidar organização, estabilidade e
+            autoridade no mercado.
           </p>
         </div>
-
-        <p className={styles.lightInfo}>
-          Agora é hora de organizar seu plano de crescimento e transformar sua
-          prática em um Consultório Sustentável para viver sua expansão
-          consciente.
-        </p>
 
         <div className={styles.buttonContainer}>
           <button className={styles.ctaButton} onClick={handlePurchaseRedirect}>
