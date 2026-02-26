@@ -28,14 +28,6 @@ const BannerDesktop = () => {
             autoridade no mercado.
           </p>
 
-          <p className={styles.description}>
-            Agora é hora de organizar seu plano de crescimento e transformar sua
-            prática em um{" "}
-            <span className={`${styles.middleHighlight} ${styles.finalStrong}`}>
-              Consultório Sustentável para viver sua expansão consciente.
-            </span>
-          </p>
-
           <button className={styles.ctaButton} onClick={handlePurchaseRedirect}>
             Quero meu consultório sustentável
           </button>
