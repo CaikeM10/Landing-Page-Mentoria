@@ -81,7 +81,7 @@ const About = () => {
                 será capaz de:
               </h2>
               <p className={styles.subTitle}>
-                Organizar Sua base estratégica de posicionamento para clínica e
+                Organizar sua base estratégica de posicionamento para clinicar e
                 crescer com qualidade.
               </p>
             </div>
